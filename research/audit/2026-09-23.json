@@ -2,14 +2,14 @@
   "date":"2026-09-23",
   "run_type":"manual_test_update",
   "papers_selected":5,
-  "pdf_download":{"attempted":false,"reason":"F: drive and F:\\文献整理 were not available on this machine during the test; no PDF was fabricated."},
-  "fallback_cache":".work-2026-09-23/download-cache not populated in this first test; can be used on the next run.",
+  "pdf_download":{"attempted":false,"reason":"The document's F: drive path is not available on this machine during the test; no PDF was fabricated."},
+  "fallback_cache":"C:\\Users\\华硕\\Documents\\Codex\\2026-09-23\\ni\\.work-2026-09-23\\download-cache was not populated in this first test; it is the local fallback for the next run.",
   "zotero":{"data_dir":"C:\\Users\\华硕\\Zotero","running":false,"sqlite_backup":false,"imported":false,"reason":"No local PDFs available for import."},
   "github":{"repository_initialized":false,"remote_configured":false,"pushed":false,"reason":"Workspace had no .git directory or remote URL. Need target repository URL and GitHub authentication."},
   "download_requirements":[
     "No new software is required for this local test.",
-    "Optional PDF retrieval: use the five arXiv source links in data/latest_papers.json; the preferred destination is F:\\文献整理\\每日精读论文\\2026\\09\\23.",
-    "For GitHub push: provide a repository URL and authenticate Git (GitHub Desktop or a personal access token/SSH key)."
+    "Optional PDF retrieval: use the five arXiv source links in data/latest_papers.json; save test downloads under C:\\Users\\华硕\\Documents\\Codex\\2026-09-23\\ni\\.work-2026-09-23\\download-cache.",
+    "For GitHub push: the remote is configured as https://github.com/coolyoji/commen.git; this environment still needs network access to github.com and GitHub authentication."
   ],
   "limitations":["Local PDF verification pending","Zotero import pending","GitHub push pending"]
 }

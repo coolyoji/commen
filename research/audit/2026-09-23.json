@@ -3,12 +3,12 @@
   "run_type":"manual_test_update",
   "papers_selected":5,
   "pdf_download":{"attempted":false,"reason":"The document's F: drive path is not available on this machine during the test; no PDF was fabricated."},
-  "fallback_cache":"C:\\Users\\华硕\\Documents\\Codex\\2026-09-23\\ni\\.work-2026-09-23\\download-cache was not populated in this first test; it is the local fallback for the next run.",
+  "fallback_cache":"D:\\CV-Literature\\commen\\.work-2026-09-23\\download-cache was not populated in this first test; it is the local fallback for the next run.",
   "zotero":{"data_dir":"C:\\Users\\华硕\\Zotero","running":false,"sqlite_backup":false,"imported":false,"reason":"No local PDFs available for import."},
   "github":{"repository_initialized":true,"remote_configured":true,"remote":"https://github.com/coolyoji/commen.git","remote_existing_content_preserved":["test2-27.sln"],"pushed":false,"reason":"The local branch was merged with the remote main branch, but push returned GitHub HTTP 401 Unauthorized because no GitHub credentials are configured in this environment."},
   "download_requirements":[
     "No new software is required for this local test.",
-    "Optional PDF retrieval: use the five arXiv source links in data/latest_papers.json; save test downloads under C:\\Users\\华硕\\Documents\\Codex\\2026-09-23\\ni\\.work-2026-09-23\\download-cache.",
+    "Optional PDF retrieval: use the five arXiv source links in data/latest_papers.json; save test downloads under D:\\CV-Literature\\commen\\.work-2026-09-23\\download-cache.",
     "For GitHub push: the remote is configured as https://github.com/coolyoji/commen.git; sign in through Git Credential Manager/GitHub Desktop or configure an SSH key, then rerun the push."
   ],
   "limitations":["Local PDF verification pending","Zotero import pending","GitHub push pending"]

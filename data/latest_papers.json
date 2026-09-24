@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-23",
+  "status": "test_update",
+  "papers": [
+    {"id":"arxiv:2608.11135","title":"Is There Really a Camouflaged Object? Towards Realistic Camouflaged Object Detection","category":"COD","source":"https://arxiv.org/abs/2608.11135","evidence":"abstract_and_public_page; local_pdf_pending"},
+    {"id":"arxiv:2607.04125","title":"FRFDet: Efficient UAV Small Object Detection with Symmetric Sampling and Scalable Fusion","category":"UAV","source":"https://arxiv.org/abs/2607.04125","evidence":"abstract_and_public_page; local_pdf_pending"},
+    {"id":"arxiv:2502.12258","title":"SmokeNet: Efficient Smoke Segmentation Leveraging Multiscale Convolutions and Multiview Attention Mechanisms","category":"smoke_segmentation","source":"https://arxiv.org/abs/2502.12258","evidence":"abstract_and_public_page; local_pdf_pending"},
+    {"id":"arxiv:2601.05552","title":"One Language-Free Foundation Model Is Enough for Universal Vision Anomaly Detection","category":"anomaly_open_set","source":"https://arxiv.org/abs/2601.05552","evidence":"abstract_and_public_page; local_pdf_pending"},
+    {"id":"arxiv:2505.09265","title":"MetaUAS: Universal Anomaly Segmentation with One-Prompt Meta-Learning","category":"frontier_anomaly","source":"https://arxiv.org/abs/2505.09265","evidence":"abstract_and_public_page; local_pdf_pending"}
+  ]
+}

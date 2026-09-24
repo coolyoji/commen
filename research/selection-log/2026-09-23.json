@@ -1,0 +1,9 @@
+{
+  "date":"2026-09-23",
+  "seed":"cv-2026-09-23",
+  "method":"quality_filter_then_theme_bucket_then_fixed_order",
+  "candidate_order":["arxiv:2608.11135","arxiv:2607.04125","arxiv:2502.12258","arxiv:2601.05552","arxiv:2505.09265"],
+  "buckets":{"COD":["arxiv:2608.11135"],"UAV":["arxiv:2607.04125"],"smoke_segmentation":["arxiv:2502.12258"],"anomaly_open_set":["arxiv:2601.05552"],"frontier_anomaly":["arxiv:2505.09265"]},
+  "selected_order":["arxiv:2608.11135","arxiv:2607.04125","arxiv:2502.12258","arxiv:2601.05552","arxiv:2505.09265"],
+  "selection_note":"测试批次优先保证 COD/UAV/烟雾分割/异常/OOD/前沿发散五类覆盖；尚未完成本地 PDF 导入。"
+}

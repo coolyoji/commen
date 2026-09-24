@@ -1,11 +1,12 @@
 {
-  "date": "2026-09-23",
-  "status": "test_update",
-  "papers": [
-    {"id":"arxiv:2608.11135","title":"Is There Really a Camouflaged Object? Towards Realistic Camouflaged Object Detection","category":"COD","source":"https://arxiv.org/abs/2608.11135","evidence":"abstract_and_public_page; local_pdf_pending"},
-    {"id":"arxiv:2607.04125","title":"FRFDet: Efficient UAV Small Object Detection with Symmetric Sampling and Scalable Fusion","category":"UAV","source":"https://arxiv.org/abs/2607.04125","evidence":"abstract_and_public_page; local_pdf_pending"},
-    {"id":"arxiv:2502.12258","title":"SmokeNet: Efficient Smoke Segmentation Leveraging Multiscale Convolutions and Multiview Attention Mechanisms","category":"smoke_segmentation","source":"https://arxiv.org/abs/2502.12258","evidence":"abstract_and_public_page; local_pdf_pending"},
-    {"id":"arxiv:2601.05552","title":"One Language-Free Foundation Model Is Enough for Universal Vision Anomaly Detection","category":"anomaly_open_set","source":"https://arxiv.org/abs/2601.05552","evidence":"abstract_and_public_page; local_pdf_pending"},
-    {"id":"arxiv:2505.09265","title":"MetaUAS: Universal Anomaly Segmentation with One-Prompt Meta-Learning","category":"frontier_anomaly","source":"https://arxiv.org/abs/2505.09265","evidence":"abstract_and_public_page; local_pdf_pending"}
+  "date": "2026-09-24",
+  "status": "daily_1_deep_5_browse",
+  "deep_read": {"id":"arxiv:2501.12295","title":"Towards Accurate Unified Anomaly Segmentation","code":"https://github.com/Mwxinnn/UniAS","local_pdf_verified":true},
+  "browse": [
+    {"id":"arxiv:2604.23542","title":"AusSmoke meets MultiNatSmoke: a fully-labelled diverse smoke segmentation dataset","category":"smoke_segmentation","source":"https://arxiv.org/abs/2604.23542"},
+    {"id":"arxiv:2602.10858","title":"Hyperspectral Smoke Segmentation via Mixture of Prototypes","category":"smoke_segmentation","source":"https://arxiv.org/abs/2602.10858"},
+    {"id":"arxiv:2608.08308","title":"Open-World Semantic Segmentation with Sensitivity Modeling","category":"open_world_anomaly","source":"https://arxiv.org/abs/2608.08308"},
+    {"id":"arxiv:2609.23061","title":"HDMamba-YOLO: Efficient State-Space Perception and Local Spatial Reconstruction for UAV Small Object","category":"UAV","source":"https://arxiv.org/abs/2609.23061"},
+    {"id":"arxiv:2609.24510","title":"0.5%>100%: Bidirectional Reciprocal Learning for Referring Image Segmentation","category":"frontier_vlm","source":"https://arxiv.org/abs/2609.24510"}
   ]
 }

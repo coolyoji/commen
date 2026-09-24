@@ -1,6 +1,7 @@
 {
   "updated_at":"2026-09-24",
   "days":[
-    {"date":"2026-09-23","selected":["arxiv:2608.11135","arxiv:2607.04125","arxiv:2502.12258","arxiv:2601.05552","arxiv:2505.09265"],"status":"test_update"}
+    {"date":"2026-09-23","selected":["arxiv:2608.11135","arxiv:2607.04125","arxiv:2502.12258","arxiv:2601.05552","arxiv:2505.09265"],"status":"test_update"},
+    {"date":"2026-09-24","deep_read":["arxiv:2501.12295"],"browse":["arxiv:2604.23542","arxiv:2602.10858","arxiv:2608.08308","arxiv:2609.23061","arxiv:2609.24510"],"status":"daily_1_deep_5_browse"}
   ]
 }

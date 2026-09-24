@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-24",
+  "count": 5,
+  "downloaded": false,
+  "papers": [
+    {"id":"arxiv:2604.23542","title":"AusSmoke meets MultiNatSmoke: a fully-labelled diverse smoke segmentation dataset","category":"smoke_segmentation","source":"https://arxiv.org/abs/2604.23542","code":"https://github.com/henryzhao0615/MultiNatSmoke"},
+    {"id":"arxiv:2602.10858","title":"Hyperspectral Smoke Segmentation via Mixture of Prototypes","category":"smoke_segmentation","source":"https://arxiv.org/abs/2602.10858"},
+    {"id":"arxiv:2608.08308","title":"Open-World Semantic Segmentation with Sensitivity Modeling","category":"open_world_anomaly","source":"https://arxiv.org/abs/2608.08308"},
+    {"id":"arxiv:2609.23061","title":"HDMamba-YOLO: Efficient State-Space Perception and Local Spatial Reconstruction for UAV Small Object","category":"UAV","source":"https://arxiv.org/abs/2609.23061"},
+    {"id":"arxiv:2609.24510","title":"0.5%>100%: Bidirectional Reciprocal Learning for Referring Image Segmentation","category":"frontier_vlm","source":"https://arxiv.org/abs/2609.24510","code":"https://github.com/xiaoqiang-lu/BRL"}
+  ]
+}

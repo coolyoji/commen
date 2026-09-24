@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-24",
+  "paper_id": "arxiv:2501.12295",
+  "title": "Towards Accurate Unified Anomaly Segmentation",
+  "venue": "WACV 2025",
+  "pdf": ".work-2026-09-24/download-cache/2501.12295-UniAS.pdf",
+  "code": "https://github.com/Mwxinnn/UniAS",
+  "local_pdf_verified": true,
+  "zotero_imported": false,
+  "zotero_import_note": "SQLite backup created; PDF retained in local cache pending verified child-attachment import.",
+  "longform": "docs/md/longform/2026-09/2026-09-24-unias.md"
+}

@@ -1,9 +1,9 @@
 {
   "date":"2026-09-24",
   "run_type":"daily_1_deep_5_browse",
-  "deep_read":{"paper_id":"arxiv:2501.12295","pdf_path":"C:\\Users\\华硕\\Zotero\\storage\\5HFXJDBP\\Ma 等 - 2025 - Towards Accurate Unified Anomaly Segmentation.pdf","pdf_downloaded":true,"pdf_verified":true,"code":"https://github.com/Mwxinnn/UniAS"},
+  "deep_read":{"paper_id":"arxiv:2501.12295","pdf_path":"C:\\Users\\华硕\\Zotero\\storage\\5HFXJDBP\\Ma 等 - 2025 - Towards Accurate Unified Anomaly Segmentation.pdf","pdf_downloaded":true,"pdf_verified":true,"temporary_pdf_cleaned":true,"code":"https://github.com/Mwxinnn/UniAS"},
   "browse":{"count":5,"pdf_downloaded":false,"reason":"Per user rule, browse papers are documented only."},
   "zotero":{"data_dir":"C:\\Users\\华硕\\Zotero","sqlite_backup":"D:\\CV-Literature\\commen\\.work-2026-09-24\\zotero.sqlite.pre-import-20260925-124018.bak","imported":true,"collection":"每日精读论文/2026/09/24","item_id":877,"item_key":"7AHLNBL7","attachment_id":876,"attachment_key":"5HFXJDBP","storage_path":"C:\\Users\\华硕\\Zotero\\storage\\5HFXJDBP\\Ma 等 - 2025 - Towards Accurate Unified Anomaly Segmentation.pdf","verified":true},
-  "github":{"remote":"https://github.com/coolyoji/commen.git","commit_attempted":false,"push_attempted":false,"pushed":false,"reason":"Pending Zotero import correction commit."},
+  "github":{"remote":"https://github.com/coolyoji/commen.git","commit":"431834d","commit_attempted":true,"push_attempted":true,"pushed":true},
   "limitations":["Browse papers are based on primary abstracts/project pages, not local PDFs"]
 }

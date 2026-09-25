@@ -1,9 +1,9 @@
 {
   "date":"2026-09-24",
   "run_type":"daily_1_deep_5_browse",
-  "deep_read":{"paper_id":"arxiv:2501.12295","pdf_path":"D:\\CV-Literature\\commen\\.work-2026-09-24\\download-cache\\2501.12295-UniAS.pdf","pdf_downloaded":true,"pdf_verified":true,"code":"https://github.com/Mwxinnn/UniAS"},
+  "deep_read":{"paper_id":"arxiv:2501.12295","pdf_path":"C:\\Users\\华硕\\Zotero\\storage\\5HFXJDBP\\Ma 等 - 2025 - Towards Accurate Unified Anomaly Segmentation.pdf","pdf_downloaded":true,"pdf_verified":true,"code":"https://github.com/Mwxinnn/UniAS"},
   "browse":{"count":5,"pdf_downloaded":false,"reason":"Per user rule, browse papers are documented only."},
-  "zotero":{"data_dir":"C:\\Users\\华硕\\Zotero","running":false,"sqlite_backup":"D:\\CV-Literature\\commen\\.work-2026-09-24\\zotero.sqlite.2026-09-24.bak","imported":false,"reason":"PDF is retained in local cache pending verified child-attachment import; no false success recorded."},
-  "github":{"remote":"https://github.com/coolyoji/commen.git","commit":"847cf46","commit_attempted":true,"push_attempted":true,"pushed":false,"reason":"Local commit succeeded; GitHub push was retried and failed because the connection to github.com:443 was reset/unavailable."},
-  "limitations":["UniAS PDF and code claim verified; Zotero child-attachment import remains pending","Browse papers are based on primary abstracts/project pages, not local PDFs"]
+  "zotero":{"data_dir":"C:\\Users\\华硕\\Zotero","sqlite_backup":"D:\\CV-Literature\\commen\\.work-2026-09-24\\zotero.sqlite.pre-import-20260925-124018.bak","imported":true,"collection":"每日精读论文/2026/09/24","item_id":877,"item_key":"7AHLNBL7","attachment_id":876,"attachment_key":"5HFXJDBP","storage_path":"C:\\Users\\华硕\\Zotero\\storage\\5HFXJDBP\\Ma 等 - 2025 - Towards Accurate Unified Anomaly Segmentation.pdf","verified":true},
+  "github":{"remote":"https://github.com/coolyoji/commen.git","commit_attempted":false,"push_attempted":false,"pushed":false,"reason":"Pending Zotero import correction commit."},
+  "limitations":["Browse papers are based on primary abstracts/project pages, not local PDFs"]
 }

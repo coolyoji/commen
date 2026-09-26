@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-26",
   "count": 5,
   "downloaded": false,
   "papers": [
-    {"id":"arxiv:2604.23542","title":"AusSmoke meets MultiNatSmoke: a fully-labelled diverse smoke segmentation dataset","category":"smoke_segmentation","source":"https://arxiv.org/abs/2604.23542","code":"https://github.com/henryzhao0615/MultiNatSmoke"},
-    {"id":"arxiv:2602.10858","title":"Hyperspectral Smoke Segmentation via Mixture of Prototypes","category":"smoke_segmentation","source":"https://arxiv.org/abs/2602.10858"},
-    {"id":"arxiv:2608.08308","title":"Open-World Semantic Segmentation with Sensitivity Modeling","category":"open_world_anomaly","source":"https://arxiv.org/abs/2608.08308"},
-    {"id":"arxiv:2609.23061","title":"HDMamba-YOLO: Efficient State-Space Perception and Local Spatial Reconstruction for UAV Small Object","category":"UAV","source":"https://arxiv.org/abs/2609.23061"},
-    {"id":"arxiv:2609.24510","title":"0.5%>100%: Bidirectional Reciprocal Learning for Referring Image Segmentation","category":"frontier_vlm","source":"https://arxiv.org/abs/2609.24510","code":"https://github.com/xiaoqiang-lu/BRL"}
+    {"id":"arxiv:2608.11135","title":"Is There Really a Camouflaged Object? Towards Realistic Camouflaged Object Detection","category":"COD","source":"https://arxiv.org/abs/2608.11135","code":"https://github.com/2231122/OPCOD"},
+    {"id":"doi:10.1016/j.cviu.2026.104637","title":"HFC-UAVDet: Unsupervised Domain Adaptation Object Detection for Unmanned Aerial Vehicle","category":"UAV","source":"https://doi.org/10.1016/j.cviu.2026.104637","code":"https://github.com/alex-yimingyang/UAVDet"},
+    {"id":"smokeviz:neurips2025","title":"SmokeViz: A Large-Scale Satellite Dataset for Wildfire Smoke Detection and Segmentation","category":"smoke_segmentation","source":"https://github.com/reykoki/SmokeViz","code":"https://github.com/reykoki/SmokeViz"},
+    {"id":"openreview:WdrjIAdhmp","title":"Improving Satellite-based Wildfire Smoke Plume Detection with Deep Ensembles","category":"smoke_uncertainty","source":"https://openreview.net/forum?id=WdrjIAdhmp"},
+    {"id":"arxiv:2605.15894","title":"Uncertainty-Aware Wildfire Smoke Density Classification from Satellite Imagery via CBAM-Augmented EfficientNet with Evidential Deep Learning","category":"smoke_uncertainty","source":"https://arxiv.org/abs/2605.15894"}
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "date":"2026-09-26",
+  "seed":"cv-2026-09-26",
+  "rule":"one_deep_five_browse",
+  "deep_read":{"id":"arxiv:2602.19944","reason":"CVPR 2026, official public code, training-free progressive discovery-segmentation-selection design, direct COD value"},
+  "browse_order":["arxiv:2608.11135","doi:10.1016/j.cviu.2026.104637","smokeviz:neurips2025","openreview:WdrjIAdhmp","arxiv:2605.15894"],
+  "buckets":{"COD":["arxiv:2608.11135"],"UAV":["doi:10.1016/j.cviu.2026.104637"],"smoke_data":["smokeviz:neurips2025"],"smoke_uncertainty":["openreview:WdrjIAdhmp","arxiv:2605.15894"]},
+  "downloads":{"deep_read":1,"browse":0}
+}

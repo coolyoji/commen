@@ -1,15 +1,15 @@
 {
-  "date": "2026-09-24",
-  "paper_id": "arxiv:2501.12295",
-  "title": "Towards Accurate Unified Anomaly Segmentation",
-  "venue": "WACV 2025",
-  "pdf": "C:/Users/华硕/Zotero/storage/5HFXJDBP/Ma 等 - 2025 - Towards Accurate Unified Anomaly Segmentation.pdf",
-  "code": "https://github.com/Mwxinnn/UniAS",
+  "date": "2026-09-26",
+  "paper_id": "arxiv:2602.19944",
+  "title": "Discover, Segment, and Select: A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation",
+  "venue": "CVPR 2026",
+  "pdf": "C:/Users/华硕/Zotero/storage/JMNNJ2VN/Yang 等 - 2026 - Discover, Segment, and Select A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation.pdf",
+  "code": "https://github.com/ynulonger/DSS",
   "local_pdf_verified": true,
   "zotero_imported": true,
-  "zotero_item_key": "7AHLNBL7",
-  "zotero_attachment_key": "5HFXJDBP",
-  "zotero_collection": "每日精读论文/2026/09/24",
+  "zotero_item_key": "N2S9XQ8G",
+  "zotero_attachment_key": "JMNNJ2VN",
+  "zotero_collection": "每日精读论文/2026/09/26",
   "zotero_import_note": "Imported as a child PDF attachment and verified in the local Zotero database and storage directory.",
-  "longform": "docs/md/longform/2026-09/2026-09-24-unias.md"
+  "longform": "docs/md/longform/2026-09/2026-09-26-dss.md"
 }

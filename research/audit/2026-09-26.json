@@ -4,6 +4,6 @@
   "deep_read":{"paper_id":"arxiv:2602.19944","pdf_path":"C:\\Users\\华硕\\Zotero\\storage\\JMNNJ2VN\\Yang 等 - 2026 - Discover, Segment, and Select A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation.pdf","pdf_downloaded":true,"pdf_verified":true,"temporary_pdf":"D:\\CV-Literature\\commen\\.work-2026-09-26\\download-cache\\DSS-2026-CVPR.pdf","temporary_pdf_cleaned":true,"code":"https://github.com/ynulonger/DSS"},
   "browse":{"count":5,"pdf_downloaded":false,"reason":"Per user rule, browse papers are documented only."},
   "zotero":{"data_dir":"C:\\Users\\华硕\\Zotero","sqlite_backup":"D:\\CV-Literature\\commen\\.work-2026-09-26\\zotero.sqlite.pre-import-20260926-231249.bak","imported":true,"collection":"每日精读论文/2026/09/26","item_id":887,"item_key":"N2S9XQ8G","attachment_id":888,"attachment_key":"JMNNJ2VN","storage_path":"C:\\Users\\华硕\\Zotero\\storage\\JMNNJ2VN\\Yang 等 - 2026 - Discover, Segment, and Select A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation.pdf","verified":true},
-  "github":{"remote":"https://github.com/coolyoji/commen.git","commit_attempted":false,"push_attempted":false,"pushed":false},
+  "github":{"remote":"https://github.com/coolyoji/commen.git","commit":"2cda3e2","commit_attempted":true,"push_attempted":true,"pushed":true},
   "limitations":["Browse papers are based on primary abstracts/project pages and repository documentation, not local PDFs"]
 }

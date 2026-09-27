@@ -1,0 +1,10 @@
+{
+  "date":"2026-09-27",
+  "seed":"cv-2026-09-27-followup",
+  "rule":"user_requested_followup_deep_read",
+  "deep_read":{"id":"cvpr:2026:depthsam","reason":"CVPR 2026, public code and project page, geometric-structure innovation directly relevant to COD, UAV and cautious smoke transfer"},
+  "publication_month":"2026-06",
+  "read_month":"2026-09",
+  "browse_order":[],
+  "downloads":{"deep_read":1,"browse":0}
+}

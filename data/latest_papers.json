@@ -1,12 +1,6 @@
 {
-  "date":"2026-09-26",
-  "status":"daily_1_deep_5_browse",
-  "deep_read":{"id":"arxiv:2602.19944","title":"Discover, Segment, and Select: A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation","code":"https://github.com/ynulonger/DSS","local_pdf_verified":true,"zotero_imported":true},
-  "browse":[
-    {"id":"arxiv:2608.11135","title":"Is There Really a Camouflaged Object? Towards Realistic Camouflaged Object Detection","category":"COD","source":"https://arxiv.org/abs/2608.11135"},
-    {"id":"doi:10.1016/j.cviu.2026.104637","title":"HFC-UAVDet: Unsupervised Domain Adaptation Object Detection for Unmanned Aerial Vehicle","category":"UAV","source":"https://doi.org/10.1016/j.cviu.2026.104637"},
-    {"id":"smokeviz:neurips2025","title":"SmokeViz: A Large-Scale Satellite Dataset for Wildfire Smoke Detection and Segmentation","category":"smoke_segmentation","source":"https://github.com/reykoki/SmokeViz"},
-    {"id":"openreview:WdrjIAdhmp","title":"Improving Satellite-based Wildfire Smoke Plume Detection with Deep Ensembles","category":"smoke_uncertainty","source":"https://openreview.net/forum?id=WdrjIAdhmp"},
-    {"id":"arxiv:2605.15894","title":"Uncertainty-Aware Wildfire Smoke Density Classification from Satellite Imagery via CBAM-Augmented EfficientNet with Evidential Deep Learning","category":"smoke_uncertainty","source":"https://arxiv.org/abs/2605.15894"}
-  ]
+  "date":"2026-09-27",
+  "status":"followup_deep_read_only",
+  "deep_read":{"id":"cvpr:2026:depthsam","title":"Beyond Appearance: Camouflaged Object Detection via Geometric Structure","code":"https://github.com/hjy0518/DepthSAM","publication_month":"2026-06","read_month":"2026-09","local_pdf_verified":true,"zotero_imported":true,"zotero_collection":"每日精读论文/2026/09"},
+  "browse":[]
 }

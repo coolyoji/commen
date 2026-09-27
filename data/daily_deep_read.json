@@ -1,15 +1,17 @@
 {
-  "date": "2026-09-26",
-  "paper_id": "arxiv:2602.19944",
-  "title": "Discover, Segment, and Select: A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation",
+  "date": "2026-09-27",
+  "paper_id": "cvpr:2026:depthsam",
+  "title": "Beyond Appearance: Camouflaged Object Detection via Geometric Structure",
   "venue": "CVPR 2026",
-  "pdf": "C:/Users/华硕/Zotero/storage/JMNNJ2VN/Yang 等 - 2026 - Discover, Segment, and Select A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation.pdf",
-  "code": "https://github.com/ynulonger/DSS",
+  "publication_month": "2026-06",
+  "read_month": "2026-09",
+  "pdf": "C:/Users/华硕/Zotero/storage/N5AQT4XR/Han 等 - 2026 - Beyond Appearance Camouflaged Object Detection via Geometric Structure.pdf",
+  "code": "https://github.com/hjy0518/DepthSAM",
   "local_pdf_verified": true,
   "zotero_imported": true,
-  "zotero_item_key": "N2S9XQ8G",
-  "zotero_attachment_key": "JMNNJ2VN",
-  "zotero_collection": "每日精读论文/2026/09/26",
+  "zotero_item_key": "CAXEBLLG",
+  "zotero_attachment_key": "N5AQT4XR",
+  "zotero_collection": "每日精读论文/2026/09",
   "zotero_import_note": "Imported as a child PDF attachment and verified in the local Zotero database and storage directory.",
-  "longform": "docs/md/longform/2026-09/2026-09-26-dss.md"
+  "longform": "docs/md/longform/2026-09/2026-09-27-depthsam.md"
 }

@@ -2,6 +2,7 @@
   "month": "2026-09",
   "deep_reads": [
     {"date":"2026-09-24","paper_id":"arxiv:2501.12295","title":"Towards Accurate Unified Anomaly Segmentation","longform":"docs/md/longform/2026-09/2026-09-24-unias.md","code":"https://github.com/Mwxinnn/UniAS"},
-    {"date":"2026-09-26","paper_id":"arxiv:2602.19944","title":"Discover, Segment, and Select: A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation","longform":"docs/md/longform/2026-09/2026-09-26-dss.md","code":"https://github.com/ynulonger/DSS"}
+    {"date":"2026-09-26","paper_id":"arxiv:2602.19944","title":"Discover, Segment, and Select: A Progressive Mechanism for Zero-shot Camouflaged Object Segmentation","longform":"docs/md/longform/2026-09/2026-09-26-dss.md","code":"https://github.com/ynulonger/DSS"},
+    {"date":"2026-09-27","paper_id":"cvpr:2026:depthsam","title":"Beyond Appearance: Camouflaged Object Detection via Geometric Structure","publication_month":"2026-06","read_month":"2026-09","longform":"docs/md/longform/2026-09/2026-09-27-depthsam.md","code":"https://github.com/hjy0518/DepthSAM"}
   ]
 }

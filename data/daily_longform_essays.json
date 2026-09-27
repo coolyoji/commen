@@ -1,6 +1,6 @@
 {
-  "date":"2026-09-26",
+  "date":"2026-09-27",
   "essays":[
-    {"paper_id":"arxiv:2602.19944","path":"../docs/md/longform/2026-09/2026-09-26-dss.md","status":"pdf_verified_zotero_imported"}
+    {"paper_id":"cvpr:2026:depthsam","path":"../docs/md/longform/2026-09/2026-09-27-depthsam.md","status":"pdf_verified_zotero_imported","publication_month":"2026-06","read_month":"2026-09"}
   ]
 }

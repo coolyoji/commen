@@ -1,0 +1,10 @@
+{
+  "date":"2026-09-27",
+  "run_type":"user_requested_followup_deep_read",
+  "deep_read":{"paper_id":"cvpr:2026:depthsam","pdf_path":"C:\\Users\\华硕\\Zotero\\storage\\N5AQT4XR\\Han 等 - 2026 - Beyond Appearance Camouflaged Object Detection via Geometric Structure.pdf","pdf_downloaded":true,"pdf_verified":true,"temporary_pdf":"D:\\CV-Literature\\commen\\.work-2026-09-27\\download-cache\\DepthSAM-CVPR2026.pdf","temporary_pdf_cleaned":true,"code":"https://github.com/hjy0518/DepthSAM","publication_month":"2026-06","read_month":"2026-09"},
+  "browse":{"count":0,"pdf_downloaded":false,"reason":"Follow-up deep read only; yesterday's five browse papers were not repeated."},
+  "zotero":{"data_dir":"C:\\Users\\华硕\\Zotero","sqlite_backup":"D:\\CV-Literature\\commen\\.work-2026-09-27\\zotero.sqlite.pre-depthsam-20260927-104940.bak","imported":true,"read_month_collection":"每日精读论文/2026/09","item_id":889,"item_key":"CAXEBLLG","attachment_id":890,"attachment_key":"N5AQT4XR","storage_path":"C:\\Users\\华硕\\Zotero\\storage\\N5AQT4XR\\Han 等 - 2026 - Beyond Appearance Camouflaged Object Detection via Geometric Structure.pdf","verified":true},
+  "collection_correction":{"performed":"2026-09-27","rule":"按阅读月份归档，不精确到日期；论文发表月份只做出处元数据","collection":"每日精读论文/2026/09","backup":"D:\\CV-Literature\\commen\\.work-2026-09-27\\zotero.sqlite.pre-read-month-migration-20260927-105745.bak"},
+  "github":{"commit_attempted":false,"push_attempted":false,"pushed":false},
+  "limitations":["This was a user-requested follow-up deep read, so no new browse set was generated."]
+}

@@ -1,6 +1,7 @@
 {
-  "date":"2026-09-27",
+  "date":"2026-09-28",
   "essays":[
-    {"paper_id":"cvpr:2026:depthsam","path":"../docs/md/longform/2026-09/2026-09-27-depthsam.md","status":"pdf_verified_zotero_imported","publication_month":"2026-06","read_month":"2026-09"}
+    {"paper_id":"arxiv:2507.05427","path":"../docs/md/longform/2026-09/openworldsam.md","status":"pdf_verified_zotero_imported","publication_month":"2025-07","read_month":"2026-09"},
+    {"paper_id":"arxiv:2602.23339","path":"../docs/md/longform/2026-09/retrieve-and-segment.md","status":"pdf_verified_zotero_imported","publication_month":"2026-02","read_month":"2026-09"}
   ]
 }

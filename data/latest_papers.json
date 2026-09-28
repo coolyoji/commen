@@ -1,6 +1,15 @@
 {
-  "date":"2026-09-27",
-  "status":"followup_deep_read_only",
-  "deep_read":{"id":"cvpr:2026:depthsam","title":"Beyond Appearance: Camouflaged Object Detection via Geometric Structure","code":"https://github.com/hjy0518/DepthSAM","publication_month":"2026-06","read_month":"2026-09","local_pdf_verified":true,"zotero_imported":true,"zotero_collection":"每日精读论文/2026/09"},
-  "browse":[]
+  "date":"2026-09-28",
+  "status":"two_deep_five_browse",
+  "deep_reads":[
+    {"id":"arxiv:2507.05427","title":"OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts","code":"https://github.com/GinnyXiao/OpenWorldSAM","publication_month":"2025-07","read_month":"2026-09","local_pdf_verified":true,"zotero_imported":true,"zotero_collection":"每日精读论文/2026/09"},
+    {"id":"arxiv:2602.23339","title":"Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?","code":"https://github.com/TilemahosAravanis/Retrieve-and-Segment","publication_month":"2026-02","read_month":"2026-09","local_pdf_verified":true,"zotero_imported":true,"zotero_collection":"每日精读论文/2026/09"}
+  ],
+  "browse":[
+    {"id":"iccv:2023:openseed","title":"OpenSeeD: A Simple Framework for Open-Vocabulary Segmentation and Detection","code":"https://github.com/IDEA-Research/OpenSeeD"},
+    {"id":"cvpr:2023:xdecoder","title":"X-Decoder: Generalized Decoding for Pixel, Image, and Language","code":"https://github.com/microsoft/X-Decoder"},
+    {"id":"cvpr:2023:odise","title":"ODISE: Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models","code":"https://github.com/NVlabs/ODISE"},
+    {"id":"cvpr:2024:catseg","title":"CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation","code":"https://github.com/cvlab-kaist/CAT-Seg"},
+    {"id":"neurips:2023:seem","title":"SEEM: Segment Everything Everywhere All at Once","code":"https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once"}
+  ]
 }

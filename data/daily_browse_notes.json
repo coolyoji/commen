@@ -1,12 +1,13 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-28",
   "count": 5,
   "downloaded": false,
+  "theme": "开放场景与场景理解",
   "papers": [
-    {"id":"arxiv:2608.11135","title":"Is There Really a Camouflaged Object? Towards Realistic Camouflaged Object Detection","category":"COD","source":"https://arxiv.org/abs/2608.11135","code":"https://github.com/2231122/OPCOD"},
-    {"id":"doi:10.1016/j.cviu.2026.104637","title":"HFC-UAVDet: Unsupervised Domain Adaptation Object Detection for Unmanned Aerial Vehicle","category":"UAV","source":"https://doi.org/10.1016/j.cviu.2026.104637","code":"https://github.com/alex-yimingyang/UAVDet"},
-    {"id":"smokeviz:neurips2025","title":"SmokeViz: A Large-Scale Satellite Dataset for Wildfire Smoke Detection and Segmentation","category":"smoke_segmentation","source":"https://github.com/reykoki/SmokeViz","code":"https://github.com/reykoki/SmokeViz"},
-    {"id":"openreview:WdrjIAdhmp","title":"Improving Satellite-based Wildfire Smoke Plume Detection with Deep Ensembles","category":"smoke_uncertainty","source":"https://openreview.net/forum?id=WdrjIAdhmp"},
-    {"id":"arxiv:2605.15894","title":"Uncertainty-Aware Wildfire Smoke Density Classification from Satellite Imagery via CBAM-Augmented EfficientNet with Evidential Deep Learning","category":"smoke_uncertainty","source":"https://arxiv.org/abs/2605.15894"}
+    {"id":"iccv:2023:openseed","title":"OpenSeeD: A Simple Framework for Open-Vocabulary Segmentation and Detection","category":"open_scene_understanding","source":"https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_OpenSeeD_A_Simple_Framework_for_Open-Vocabulary_Segmentation_and_Detection_ICCV_2023_paper.html","code":"https://github.com/IDEA-Research/OpenSeeD"},
+    {"id":"cvpr:2023:xdecoder","title":"X-Decoder: Generalized Decoding for Pixel, Image, and Language","category":"open_scene_understanding","source":"https://openaccess.thecvf.com/content/CVPR2023/html/Zou_X-Decoder_Generalized_Decoding_for_Pixel_Image_and_Language_CVPR_2023_paper.html","code":"https://github.com/microsoft/X-Decoder"},
+    {"id":"cvpr:2023:odise","title":"ODISE: Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models","category":"open_scene_understanding","source":"https://openaccess.thecvf.com/content/CVPR2023/html/Han_ODISE_Open-Vocabulary_Panoptic_Segmentation_with_Text-to-Image_Diffusion_Models_CVPR_2023_paper.html","code":"https://github.com/NVlabs/ODISE"},
+    {"id":"cvpr:2024:catseg","title":"CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation","category":"open_scene_understanding","source":"https://openaccess.thecvf.com/content/CVPR2024/html/chan_CAT-Seg_Cost_Aggregation_for_Open-Vocabulary_Semantic_Segmentation_CVPR_2024_paper.html","code":"https://github.com/cvlab-kaist/CAT-Seg"},
+    {"id":"neurips:2023:seem","title":"SEEM: Segment Everything Everywhere All at Once","category":"open_scene_understanding","source":"https://openreview.net/forum?id=dzwKj6wG1a","code":"https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once"}
   ]
 }

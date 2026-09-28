@@ -1,17 +1,33 @@
 {
-  "date": "2026-09-27",
-  "paper_id": "cvpr:2026:depthsam",
-  "title": "Beyond Appearance: Camouflaged Object Detection via Geometric Structure",
-  "venue": "CVPR 2026",
-  "publication_month": "2026-06",
+  "date": "2026-09-28",
   "read_month": "2026-09",
-  "pdf": "C:/Users/华硕/Zotero/storage/N5AQT4XR/Han 等 - 2026 - Beyond Appearance Camouflaged Object Detection via Geometric Structure.pdf",
-  "code": "https://github.com/hjy0518/DepthSAM",
-  "local_pdf_verified": true,
-  "zotero_imported": true,
-  "zotero_item_key": "CAXEBLLG",
-  "zotero_attachment_key": "N5AQT4XR",
   "zotero_collection": "每日精读论文/2026/09",
-  "zotero_import_note": "Imported as a child PDF attachment and verified in the local Zotero database and storage directory.",
-  "longform": "docs/md/longform/2026-09/2026-09-27-depthsam.md"
+  "deep_reads": [
+    {
+      "paper_id": "arxiv:2507.05427",
+      "title": "OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts",
+      "venue": "NeurIPS 2025",
+      "publication_month": "2025-07",
+      "pdf": "C:/Users/华硕/Zotero/storage/AI70IQDA/Xiao et al - 2025 - OpenWorldSAM Extending SAM2 for Universal Image Segmentation with Language Prompts.pdf",
+      "code": "https://github.com/GinnyXiao/OpenWorldSAM",
+      "local_pdf_verified": true,
+      "zotero_imported": true,
+      "zotero_item_key": "W71RCMBV",
+      "zotero_attachment_key": "AI70IQDA",
+      "longform": "docs/md/longform/2026-09/openworldsam.md"
+    },
+    {
+      "paper_id": "arxiv:2602.23339",
+      "title": "Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?",
+      "venue": "CVPR 2026",
+      "publication_month": "2026-02",
+      "pdf": "C:/Users/华硕/Zotero/storage/M32A94VC/Aravanis et al - 2026 - Retrieve and Segment Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation.pdf",
+      "code": "https://github.com/TilemahosAravanis/Retrieve-and-Segment",
+      "local_pdf_verified": true,
+      "zotero_imported": true,
+      "zotero_item_key": "35XPQ0WC",
+      "zotero_attachment_key": "M32A94VC",
+      "longform": "docs/md/longform/2026-09/retrieve-and-segment.md"
+    }
+  ]
 }

@@ -1,0 +1,16 @@
+{
+  "read_month":"2026-09",
+  "request":"增加开放场景、场景理解论文；选择两篇有公开代码的精读并导入 Zotero",
+  "deep_reads":[
+    {"paper_id":"arxiv:2507.05427","title":"OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts","selection_reasons":["开放词汇场景分割","公开代码","统一语言提示与 SAM2","有多实例与跨任务实验"],"code_verified":"https://github.com/GinnyXiao/OpenWorldSAM","pdf_verified":true},
+    {"paper_id":"arxiv:2602.23339","title":"Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?","selection_reasons":["开放词汇分割","公开代码","少量像素标注支持","检索增强测试时适配","可直接迁移到跨域 COD/UAV/烟雾"],"code_verified":"https://github.com/TilemahosAravanis/Retrieve-and-Segment","pdf_verified":true}
+  ],
+  "browse_pool":[
+    {"title":"OpenSeeD: A Simple Framework for Open-Vocabulary Segmentation and Detection","code":"https://github.com/IDEA-Research/OpenSeeD"},
+    {"title":"X-Decoder: Generalized Decoding for Pixel, Image, and Language","code":"https://github.com/microsoft/X-Decoder"},
+    {"title":"ODISE: Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models","code":"https://github.com/NVLabs/ODISE"},
+    {"title":"CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation","code":"https://github.com/cvlab-kaist/CAT-Seg"},
+    {"title":"SEEM: Segment Everything Everywhere All at Once","code":"https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once"}
+  ],
+  "rule":"精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读月份分开记录"
+}

@@ -1,8 +1,17 @@
 {
-  "date":"2026-09-27",
-  "deep_count":1,
-  "browse_count":0,
-  "deep_read":{"paper_id":"cvpr:2026:depthsam","title":"Beyond Appearance: Camouflaged Object Detection via Geometric Structure","status":"pdf_verified_zotero_imported","publication_month":"2026-06","read_month":"2026-09","zotero_collection":"每日精读论文/2026/09"},
-  "browse":[],
-  "note":"Follow-up deep read requested by user; yesterday's DSS deep read was not repeated."
+  "date":"2026-09-28",
+  "deep_count":2,
+  "browse_count":5,
+  "deep_reads":[
+    {"paper_id":"arxiv:2507.05427","title":"OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts","status":"pdf_verified_zotero_imported","publication_month":"2025-07","read_month":"2026-09","zotero_collection":"每日精读论文/2026/09","longform":"docs/md/longform/2026-09/openworldsam.md"},
+    {"paper_id":"arxiv:2602.23339","title":"Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?","status":"pdf_verified_zotero_imported","publication_month":"2026-02","read_month":"2026-09","zotero_collection":"每日精读论文/2026/09","longform":"docs/md/longform/2026-09/retrieve-and-segment.md"}
+  ],
+  "browse":[
+    {"paper_id":"iccv:2023:openseed","title":"OpenSeeD: A Simple Framework for Open-Vocabulary Segmentation and Detection"},
+    {"paper_id":"cvpr:2023:xdecoder","title":"X-Decoder: Generalized Decoding for Pixel, Image, and Language"},
+    {"paper_id":"cvpr:2023:odise","title":"ODISE: Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models"},
+    {"paper_id":"cvpr:2024:catseg","title":"CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation"},
+    {"paper_id":"neurips:2023:seem","title":"SEEM: Segment Everything Everywhere All at Once"}
+  ],
+  "note":"User requested more open-scene and scene-understanding literature; two code-available papers were deep-read, downloaded, and imported into the September reading collection."
 }

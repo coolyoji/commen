@@ -1,21 +1,24 @@
 {
   "read_month":"2026-09",
-  "deep_read_count":2,
-  "browse_count":5,
+  "deep_read_count":3,
+  "browse_count":10,
   "pdf_cache":"D:\\CV-Literature\\commen\\.work-2026-09-28\\download-cache",
   "temporary_pdfs":[
     {"file":"openworldsam.pdf","bytes":48625834,"sha1":"2c33507a8533dc6027c929c34788a0a54054ffb0"},
-    {"file":"retrieve-segment.pdf","bytes":12363378,"sha1":"9a5eb0e81d2bef4d8d5b5529eaa615a4f8aa9742"}
+    {"file":"retrieve-segment.pdf","bytes":12363378,"sha1":"9a5eb0e81d2bef4d8d5b5529eaa615a4f8aa9742"},
+    {"file":"unigeoseg.pdf","bytes":23509458,"sha1":"860503ff792e867f0a12b75f5a3878868b2c1147"}
   ],
   "zotero":{
     "data_dir":"C:\\Users\\华硕\\Zotero",
-    "sqlite_backup":"D:\\CV-Literature\\commen\\.work-2026-09-28\\zotero.sqlite.pre-import-20260928.bak",
+    "sqlite_backup":"D:\\CV-Literature\\commen\\.work-2026-09-28\\zotero.sqlite.pre-unigeoseg-20260928.bak",
     "collection":"每日精读论文/2026/09",
     "items":[
       {"title":"OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts","item_id":891,"item_key":"W71RCMBV","attachment_id":892,"attachment_key":"AI70IQDA","storage_path":"C:\\Users\\华硕\\Zotero\\storage\\AI70IQDA\\Xiao et al - 2025 - OpenWorldSAM Extending SAM2 for Universal Image Segmentation with Language Prompts.pdf","verified":true},
       {"title":"Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?","item_id":893,"item_key":"35XPQ0WC","attachment_id":894,"attachment_key":"M32A94VC","storage_path":"C:\\Users\\华硕\\Zotero\\storage\\M32A94VC\\Aravanis et al - 2026 - Retrieve and Segment Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation.pdf","verified":true}
+      ,{"title":"UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes","item_id":896,"item_key":"749UDXSP","attachment_id":897,"attachment_key":"ZYQM856F","storage_path":"C:\\Users\\华硕\\Zotero\\storage\\ZYQM856F\\Ni et al - 2026 - UniGeoSeg Towards Unified Open-World Segmentation for Geospatial Scenes.pdf","verified":true}
     ]
   },
+  "automation":{"rrule":"FREQ=DAILY;BYHOUR=22;BYMINUTE=0;BYSECOND=0","status":"ACTIVE","checked_at":"2026-09-28 22:40 Asia/Shanghai","run_observed":false,"resaved":true},
   "github":{"commit_attempted":false,"push_attempted":false,"pushed":false},
   "limitations":["当前临时下载缓存仍保留，推送前清理。","泛读只核验论文/代码入口，不下载全文。"]
 }

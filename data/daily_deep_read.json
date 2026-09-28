@@ -28,6 +28,19 @@
       "zotero_item_key": "35XPQ0WC",
       "zotero_attachment_key": "M32A94VC",
       "longform": "docs/md/longform/2026-09/retrieve-and-segment.md"
+    },
+    {
+      "paper_id": "arxiv:2511.23332",
+      "title": "UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes",
+      "venue": "CVPR 2026",
+      "publication_month": "2026-06",
+      "pdf": "C:/Users/华硕/Zotero/storage/ZYQM856F/Ni et al - 2026 - UniGeoSeg Towards Unified Open-World Segmentation for Geospatial Scenes.pdf",
+      "code": "https://github.com/MiliLab/UniGeoSeg",
+      "local_pdf_verified": true,
+      "zotero_imported": true,
+      "zotero_item_key": "749UDXSP",
+      "zotero_attachment_key": "ZYQM856F",
+      "longform": "docs/md/longform/2026-09/unigeoseg.md"
     }
   ]
 }

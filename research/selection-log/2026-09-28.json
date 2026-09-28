@@ -12,5 +12,6 @@
     {"title":"CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation","code":"https://github.com/cvlab-kaist/CAT-Seg"},
     {"title":"SEEM: Segment Everything Everywhere All at Once","code":"https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once"}
   ],
+  "recovery_run":{"trigger":"22:00 heartbeat 未唤起，22:40 核查后补跑","deep_read":{"paper_id":"arxiv:2511.23332","title":"UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes","selection_reasons":["CVPR 2026","开放世界地理场景","公开代码与数据","直接关联 UAV/遥感","包含指代、交互、推理分割"],"code_verified":"https://github.com/MiliLab/UniGeoSeg","pdf_verified":true},"browse_pool":["arxiv:2609.21400","arxiv:2512.22966","arxiv:2609.19499","arxiv:2609.07506","arxiv:2609.19829"]},
   "rule":"精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读月份分开记录"
 }

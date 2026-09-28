@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "count": 5,
+  "count": 10,
   "downloaded": false,
   "theme": "开放场景与场景理解",
   "papers": [
@@ -8,6 +8,11 @@
     {"id":"cvpr:2023:xdecoder","title":"X-Decoder: Generalized Decoding for Pixel, Image, and Language","category":"open_scene_understanding","source":"https://openaccess.thecvf.com/content/CVPR2023/html/Zou_X-Decoder_Generalized_Decoding_for_Pixel_Image_and_Language_CVPR_2023_paper.html","code":"https://github.com/microsoft/X-Decoder"},
     {"id":"cvpr:2023:odise","title":"ODISE: Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models","category":"open_scene_understanding","source":"https://openaccess.thecvf.com/content/CVPR2023/html/Han_ODISE_Open-Vocabulary_Panoptic_Segmentation_with_Text-to-Image_Diffusion_Models_CVPR_2023_paper.html","code":"https://github.com/NVlabs/ODISE"},
     {"id":"cvpr:2024:catseg","title":"CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation","category":"open_scene_understanding","source":"https://openaccess.thecvf.com/content/CVPR2024/html/chan_CAT-Seg_Cost_Aggregation_for_Open-Vocabulary_Semantic_Segmentation_CVPR_2024_paper.html","code":"https://github.com/cvlab-kaist/CAT-Seg"},
-    {"id":"neurips:2023:seem","title":"SEEM: Segment Everything Everywhere All at Once","category":"open_scene_understanding","source":"https://openreview.net/forum?id=dzwKj6wG1a","code":"https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once"}
+    {"id":"neurips:2023:seem","title":"SEEM: Segment Everything Everywhere All at Once","category":"open_scene_understanding","source":"https://openreview.net/forum?id=dzwKj6wG1a","code":"https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once"},
+    {"id":"arxiv:2609.21400","title":"A Scene Language Model for Open-Vocabulary Scene Mapping","category":"open_scene_understanding","source":"https://arxiv.org/abs/2609.21400"},
+    {"id":"arxiv:2512.22966","title":"OGScene3D: Open-vocabulary 3D Scene Understanding","category":"open_scene_understanding","source":"https://arxiv.org/abs/2512.22966"},
+    {"id":"arxiv:2609.19499","title":"Open-World Video Segmentation: Unifying Detection, Tracking, and Segmentation","category":"open_world_video","source":"https://arxiv.org/abs/2609.19499"},
+    {"id":"arxiv:2609.07506","title":"LENS: Multi-Scale Reasoning over Appearance and 3D Geometry for Open-Vocabulary 3D Scene Understanding","category":"open_scene_understanding","source":"https://arxiv.org/abs/2609.07506"},
+    {"id":"arxiv:2609.19829","title":"Learning to Segment Anything with Unified Reinforced Reasoning","category":"reasoning_segmentation","source":"https://arxiv.org/abs/2609.19829"}
   ]
 }

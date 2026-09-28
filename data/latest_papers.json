@@ -1,9 +1,10 @@
 {
   "date":"2026-09-28",
-  "status":"two_deep_five_browse",
+  "status":"scheduled_recovery_three_deep_ten_browse",
   "deep_reads":[
     {"id":"arxiv:2507.05427","title":"OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts","code":"https://github.com/GinnyXiao/OpenWorldSAM","publication_month":"2025-07","read_month":"2026-09","local_pdf_verified":true,"zotero_imported":true,"zotero_collection":"每日精读论文/2026/09"},
     {"id":"arxiv:2602.23339","title":"Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?","code":"https://github.com/TilemahosAravanis/Retrieve-and-Segment","publication_month":"2026-02","read_month":"2026-09","local_pdf_verified":true,"zotero_imported":true,"zotero_collection":"每日精读论文/2026/09"}
+    ,{"id":"arxiv:2511.23332","title":"UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes","code":"https://github.com/MiliLab/UniGeoSeg","publication_month":"2026-06","read_month":"2026-09","local_pdf_verified":true,"zotero_imported":true,"zotero_collection":"每日精读论文/2026/09"}
   ],
   "browse":[
     {"id":"iccv:2023:openseed","title":"OpenSeeD: A Simple Framework for Open-Vocabulary Segmentation and Detection","code":"https://github.com/IDEA-Research/OpenSeeD"},
@@ -11,5 +12,10 @@
     {"id":"cvpr:2023:odise","title":"ODISE: Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models","code":"https://github.com/NVlabs/ODISE"},
     {"id":"cvpr:2024:catseg","title":"CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation","code":"https://github.com/cvlab-kaist/CAT-Seg"},
     {"id":"neurips:2023:seem","title":"SEEM: Segment Everything Everywhere All at Once","code":"https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once"}
+    ,{"id":"arxiv:2609.21400","title":"A Scene Language Model for Open-Vocabulary Scene Mapping"},
+    {"id":"arxiv:2512.22966","title":"OGScene3D: Open-vocabulary 3D Scene Understanding"},
+    {"id":"arxiv:2609.19499","title":"Open-World Video Segmentation: Unifying Detection, Tracking, and Segmentation"},
+    {"id":"arxiv:2609.07506","title":"LENS: Multi-Scale Reasoning over Appearance and 3D Geometry for Open-Vocabulary 3D Scene Understanding"},
+    {"id":"arxiv:2609.19829","title":"Learning to Segment Anything with Unified Reinforced Reasoning"}
   ]
 }

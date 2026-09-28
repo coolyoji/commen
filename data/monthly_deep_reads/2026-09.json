@@ -6,5 +6,6 @@
     {"date":"2026-09-27","paper_id":"cvpr:2026:depthsam","title":"Beyond Appearance: Camouflaged Object Detection via Geometric Structure","publication_month":"2026-06","read_month":"2026-09","longform":"docs/md/longform/2026-09/2026-09-27-depthsam.md","code":"https://github.com/hjy0518/DepthSAM"},
     {"paper_id":"arxiv:2507.05427","title":"OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts","publication_month":"2025-07","read_month":"2026-09","longform":"docs/md/longform/2026-09/openworldsam.md","code":"https://github.com/GinnyXiao/OpenWorldSAM","zotero_collection":"每日精读论文/2026/09"},
     {"paper_id":"arxiv:2602.23339","title":"Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?","publication_month":"2026-02","read_month":"2026-09","longform":"docs/md/longform/2026-09/retrieve-and-segment.md","code":"https://github.com/TilemahosAravanis/Retrieve-and-Segment","zotero_collection":"每日精读论文/2026/09"}
+    ,{"paper_id":"arxiv:2511.23332","title":"UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes","publication_month":"2026-06","read_month":"2026-09","longform":"docs/md/longform/2026-09/unigeoseg.md","code":"https://github.com/MiliLab/UniGeoSeg","zotero_collection":"每日精读论文/2026/09"}
   ]
 }

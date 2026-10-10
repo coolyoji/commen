@@ -37,9 +37,11 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "commit_attempted": false,
-    "push_attempted": false,
-    "pushed": false
+    "commit_attempted": true,
+    "commit": "ec6ce9a",
+    "push_attempted": true,
+    "pushed": true,
+    "branch": "main"
   },
   "limitations": [
     "泛读仅保留原文和项目入口，没有下载 PDF。",

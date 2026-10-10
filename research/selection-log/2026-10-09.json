@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-09",
+  "request": "每天 1 篇精读、5 篇泛读；优先开放场景和场景理解，并说明对 COD/UAV/烟雾分割的迁移价值。",
+  "deep_read": {
+    "paper_id": "arxiv:2603.29271",
+    "title": "ConInfer: Context-Aware Inference for Training-Free Open-Vocabulary Remote Sensing Segmentation",
+    "publication_month": "2026-03",
+    "read_month": "2026-10",
+    "selection_reasons": [
+      "CVPR 2026 Findings / arXiv 原文可核验",
+      "公开代码可核验",
+      "training-free、即插即用，方法创新点明确",
+      "直接覆盖遥感与 UAV 场景，能解释上下文如何修正开放词汇分割",
+      "对 COD、UAV、烟雾分割都有可检验的迁移假设"
+    ],
+    "source": "https://arxiv.org/abs/2603.29271",
+    "code": "https://github.com/Dog-Yang/ConInfer",
+    "pdf_verified": true,
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "VCDOBXPG",
+    "zotero_attachment_key": "ZKRF9PCE"
+  },
+  "browse_pool": [
+    {"paper_id":"arxiv:2609.21400","title":"A Scene Language Model for Open-Vocabulary Scene Mapping","reason":"持久语言场景地图与开放词汇查询"},
+    {"paper_id":"arxiv:2610.07569","title":"OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception","reason":"3DGS 稠密语义与结构化场景图结合"},
+    {"paper_id":"arxiv:2610.09518","title":"ActiveLang: Active Open-Vocabulary 3D Mapping with Semantic-Uncertainty-Guided Exploration","reason":"将语义不确定性转为主动探索信号"},
+    {"paper_id":"arxiv:2609.34853","title":"EviSplat: Preserving Multi-View Evidence in 3D Gaussian Splatting for Open-Vocabulary Segmentation","reason":"保留多视角证据，查询时再聚合"},
+    {"paper_id":"arxiv:2609.19542","title":"PerSeM: Persistent Semantic Memory for Long-Horizon Open-Vocabulary UAV Mapping","reason":"UAV 长时段持久语义记忆与时序稳定性"}
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+}

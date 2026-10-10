@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-09
+
+精读 ConInfer（上下文感知、training-free 开放词汇遥感分割），PDF 已导入 Zotero `每日精读论文/2026/10`。泛读补充 SceneLM、OpenSplatGraph、ActiveLang、EviSplat、PerSeM，重点覆盖开放场景映射、3D 场景图、主动探索、多视角证据和 UAV 持久语义记忆。详见 [当天页面](md/2026-10-09.md) 和 [10 月精读长文](md/longform/2026-10/)。
+
 ## 2026-09-28
 
 新增两篇开放场景方向精读：OpenWorldSAM（开放语言 + SAM2）和 Retrieve and Segment（检索增强的测试时适配）。两篇 PDF 均已导入 Zotero `每日精读论文/2026/09`。泛读集中补充 OpenSeeD、X-Decoder、ODISE、CAT-Seg、SEEM 五篇开放场景/场景理解论文。详见 [当天页面](md/2026-09-28.md) 和 [9 月精读长文](md/longform/2026-09/)。

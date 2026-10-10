@@ -1,46 +1,21 @@
 {
-  "date": "2026-09-28",
-  "read_month": "2026-09",
-  "zotero_collection": "每日精读论文/2026/09",
+  "date": "2026-10-09",
+  "read_month": "2026-10",
+  "zotero_collection": "每日精读论文/2026/10",
   "deep_reads": [
     {
-      "paper_id": "arxiv:2507.05427",
-      "title": "OpenWorldSAM: Extending SAM2 for Universal Image Segmentation with Language Prompts",
-      "venue": "NeurIPS 2025",
-      "publication_month": "2025-07",
-      "pdf": "C:/Users/华硕/Zotero/storage/AI70IQDA/Xiao et al - 2025 - OpenWorldSAM Extending SAM2 for Universal Image Segmentation with Language Prompts.pdf",
-      "code": "https://github.com/GinnyXiao/OpenWorldSAM",
+      "paper_id": "arxiv:2603.29271",
+      "title": "ConInfer: Context-Aware Inference for Training-Free Open-Vocabulary Remote Sensing Segmentation",
+      "venue": "CVPR 2026 Findings / arXiv",
+      "publication_month": "2026-03",
+      "pdf": "C:/Users/华硕/Zotero/storage/ZKRF9PCE/Chen et al - 2026 - ConInfer Context-Aware Inference for Training-Free Open-Vocabulary Remote Sensing Segmentation.pdf",
+      "code": "https://github.com/Dog-Yang/ConInfer",
       "local_pdf_verified": true,
       "zotero_imported": true,
-      "zotero_item_key": "W71RCMBV",
-      "zotero_attachment_key": "AI70IQDA",
-      "longform": "docs/md/longform/2026-09/openworldsam.md"
-    },
-    {
-      "paper_id": "arxiv:2602.23339",
-      "title": "Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?",
-      "venue": "CVPR 2026",
-      "publication_month": "2026-02",
-      "pdf": "C:/Users/华硕/Zotero/storage/M32A94VC/Aravanis et al - 2026 - Retrieve and Segment Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation.pdf",
-      "code": "https://github.com/TilemahosAravanis/Retrieve-and-Segment",
-      "local_pdf_verified": true,
-      "zotero_imported": true,
-      "zotero_item_key": "35XPQ0WC",
-      "zotero_attachment_key": "M32A94VC",
-      "longform": "docs/md/longform/2026-09/retrieve-and-segment.md"
-    },
-    {
-      "paper_id": "arxiv:2511.23332",
-      "title": "UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes",
-      "venue": "CVPR 2026",
-      "publication_month": "2026-06",
-      "pdf": "C:/Users/华硕/Zotero/storage/ZYQM856F/Ni et al - 2026 - UniGeoSeg Towards Unified Open-World Segmentation for Geospatial Scenes.pdf",
-      "code": "https://github.com/MiliLab/UniGeoSeg",
-      "local_pdf_verified": true,
-      "zotero_imported": true,
-      "zotero_item_key": "749UDXSP",
-      "zotero_attachment_key": "ZYQM856F",
-      "longform": "docs/md/longform/2026-09/unigeoseg.md"
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "VCDOBXPG",
+      "zotero_attachment_key": "ZKRF9PCE",
+      "longform": "docs/md/longform/2026-10/coninfer.md"
     }
   ]
 }

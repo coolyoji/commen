@@ -1,0 +1,18 @@
+{
+  "month": "2026-10",
+  "deep_reads": [
+    {
+      "date": "2026-10-09",
+      "paper_id": "arxiv:2603.29271",
+      "title": "ConInfer: Context-Aware Inference for Training-Free Open-Vocabulary Remote Sensing Segmentation",
+      "publication_month": "2026-03",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/coninfer.md",
+      "code": "https://github.com/Dog-Yang/ConInfer",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "VCDOBXPG",
+      "zotero_attachment_key": "ZKRF9PCE",
+      "pdf_verified": true
+    }
+  ]
+}

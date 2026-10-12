@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-12",
+  "read_month": "2026-10",
+  "deep_read": {
+    "paper_id": "arxiv:2609.34528",
+    "pdf_downloaded": true,
+    "temporary_pdf": "D:\\CV-Literature\\commen\\.work-2026-10-10\\download-cache\\preference-guided-adaptation.pdf",
+    "pdf_bytes": 5692751,
+    "pdf_sha1": "97A2530F692033A7BE15A5AD6D6B7EF63D1D16AA",
+    "pdf_verified": true,
+    "code": "https://github.com/blue-531/pref-ovss",
+    "publication_month": "2026-09",
+    "read_month": "2026-10"
+  },
+  "zotero": {
+    "data_dir": "C:\\Users\\华硕\\Zotero",
+    "running_during_import": false,
+    "sqlite_backup": "D:\\CV-Literature\\commen\\.work-2026-10-10\\zotero.sqlite.pre-import-20261011-final.bak",
+    "collection": "每日精读论文/2026/10",
+    "collection_id": 17,
+    "item_id": 972,
+    "item_key": "HWLXZKU6",
+    "attachment_id": 973,
+    "attachment_key": "BJRYCUU1",
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\ITLSYHFJ\\Jang et al - 2026 - Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement.pdf",
+    "storage_sha1": "97A2530F692033A7BE15A5AD6D6B7EF63D1D16AA",
+    "top_level_item_verified": true,
+    "month_collection_verified": true,
+    "child_attachment_verified": true,
+    "storage_pdf_verified": true,
+    "metadata_corrected_to": "arXiv:2609.34528"
+  },
+  "browse": {
+    "count": 5,
+    "downloaded": false,
+    "source_entries_verified": true,
+    "source_entries": [
+      "arxiv:2609.22834",
+      "arxiv:2610.00855",
+      "arxiv:2609.37602",
+      "arxiv:2610.10359",
+      "arxiv:2609.31005"
+    ]
+  },
+  "github": {
+    "remote": "https://github.com/coolyoji/commen.git",
+    "commit_attempted": false,
+    "push_attempted": false,
+    "status": "pending_verification"
+  },
+  "limitations": [
+    "泛读仅保留原文和项目入口，没有下载 PDF。",
+    "精读论文的偏好 oracle 主要由真实 mask 模拟，真实人工成本仍需单独测量。",
+    "烟雾迁移仍需要带时间、天气、热红外和难负例的实验。",
+    "本次归档按阅读日 2026-10-12 记录，精读和 Zotero 仍按阅读月份 2026-10 归档。"
+  ]
+}

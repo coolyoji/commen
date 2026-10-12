@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-12
+
+精读 Preference-Guided Adaptation（prompt 分歧、局部偏好优化、区域外一致性），PDF 已导入 Zotero `每日精读论文/2026/10`。泛读补充 SatOV、Lang3DSeg、When to Adapt、MultiFly、TRACKGRAPH，重点覆盖空间先验恢复、跨模态 UAV 感知、在线适配触发和开放词汇 3D 场景图。详见 [当天页面](md/2026-10-12.md) 和 [10 月精读长文](md/longform/2026-10/preference-guided-adaptation.md)。
+
 ## 2026-10-09
 
 精读 ConInfer（上下文感知、training-free 开放词汇遥感分割），PDF 已导入 Zotero `每日精读论文/2026/10`。泛读补充 SceneLM、OpenSplatGraph、ActiveLang、EviSplat、PerSeM，重点覆盖开放场景映射、3D 场景图、主动探索、多视角证据和 UAV 持久语义记忆。详见 [当天页面](md/2026-10-09.md) 和 [10 月精读长文](md/longform/2026-10/)。

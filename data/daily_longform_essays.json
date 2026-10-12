@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-12",
   "essays": [
     {
-      "paper_id": "arxiv:2603.29271",
-      "path": "../docs/md/longform/2026-10/coninfer.md",
+      "paper_id": "arxiv:2609.34528",
+      "path": "../docs/md/longform/2026-10/preference-guided-adaptation.md",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-03",
+      "publication_month": "2026-09",
       "read_month": "2026-10"
     }
   ]

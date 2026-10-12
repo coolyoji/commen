@@ -1,45 +1,44 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-12",
   "count": 5,
   "downloaded": false,
-  "theme": "开放场景、开放词汇 3D 理解与 UAV 持久语义记忆",
+  "theme": "开放场景、开放词汇分割、UAV 多模态感知与在线适配",
   "papers": [
     {
-      "id": "arxiv:2609.21400",
-      "title": "A Scene Language Model for Open-Vocabulary Scene Mapping",
+      "id": "arxiv:2609.22834",
+      "title": "SatOV: Restoring Spatial Priors for Training-Free Open-Vocabulary Segmentation in Remote Sensing Imagery",
       "publication_month": "2026-09",
-      "category": "open_scene_mapping",
-      "source": "https://arxiv.org/abs/2609.21400",
-      "project": "https://goldengait.github.io/scenelm/"
+      "category": "remote_sensing_open_vocabulary_segmentation",
+      "source": "https://arxiv.org/abs/2609.22834"
     },
     {
-      "id": "arxiv:2610.07569",
-      "title": "OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception",
+      "id": "arxiv:2610.00855",
+      "title": "Lang3DSeg: Annotation-Free Open-Vocabulary 3D Segmentation with Point Transformers",
       "publication_month": "2026-10",
+      "category": "open_vocabulary_lidar_segmentation",
+      "source": "https://arxiv.org/abs/2610.00855"
+    },
+    {
+      "id": "arxiv:2609.37602",
+      "title": "When to Adapt: Multi-Signal Domain Shift Detection for Efficient Training-Free Adaptation in Open-Vocabulary Segmentation",
+      "publication_month": "2026-09",
+      "category": "continual_test_time_adaptation",
+      "source": "https://arxiv.org/abs/2609.37602"
+    },
+    {
+      "id": "arxiv:2610.10359",
+      "title": "MultiFly: A Real-World Multimodal Aerial Dataset with Annotation-Efficient Label Transfer and Cross-Modal Semantic Consistency",
+      "publication_month": "2026-10",
+      "category": "multimodal_uav_dataset",
+      "source": "https://arxiv.org/abs/2610.10359",
+      "project": "https://github.com/markus-42/multifly"
+    },
+    {
+      "id": "arxiv:2609.31005",
+      "title": "TRACKGRAPH: Online Open-Vocabulary 3D Scene Graphs via Image-Space Tracking",
+      "publication_month": "2026-09",
       "category": "open_vocabulary_3d_scene_graph",
-      "source": "https://arxiv.org/abs/2610.07569",
-      "project": "https://csiro-robotics.github.io/OpenSplatGraph"
-    },
-    {
-      "id": "arxiv:2610.09518",
-      "title": "ActiveLang: Active Open-Vocabulary 3D Mapping with Semantic-Uncertainty-Guided Exploration",
-      "publication_month": "2026-10",
-      "category": "active_open_vocabulary_mapping",
-      "source": "https://arxiv.org/abs/2610.09518"
-    },
-    {
-      "id": "arxiv:2609.34853",
-      "title": "EviSplat: Preserving Multi-View Evidence in 3D Gaussian Splatting for Open-Vocabulary Segmentation",
-      "publication_month": "2026-09",
-      "category": "open_vocabulary_3d_segmentation",
-      "source": "https://arxiv.org/abs/2609.34853"
-    },
-    {
-      "id": "arxiv:2609.19542",
-      "title": "PerSeM: Persistent Semantic Memory for Long-Horizon Open-Vocabulary UAV Mapping",
-      "publication_month": "2026-09",
-      "category": "uav_persistent_semantic_memory",
-      "source": "https://arxiv.org/abs/2609.19542"
+      "source": "https://arxiv.org/abs/2609.31005"
     }
   ],
   "note": "泛读只核验论文原文和项目入口，不下载 PDF；论文出处月份与阅读归档月份分开记录。"

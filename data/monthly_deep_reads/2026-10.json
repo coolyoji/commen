@@ -13,6 +13,19 @@
       "zotero_item_key": "VCDOBXPG",
       "zotero_attachment_key": "ZKRF9PCE",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-12",
+      "paper_id": "arxiv:2609.34528",
+      "title": "Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement",
+      "publication_month": "2026-09",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/preference-guided-adaptation.md",
+      "code": "https://github.com/blue-531/pref-ovss",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "HWLXZKU6",
+      "zotero_attachment_key": "BJRYCUU1",
+      "pdf_verified": true
     }
   ]
 }

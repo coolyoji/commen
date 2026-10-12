@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-12",
   "deep_count": 1,
   "browse_count": 5,
   "deep_reads": [
     {
-      "paper_id": "arxiv:2603.29271",
-      "title": "ConInfer: Context-Aware Inference for Training-Free Open-Vocabulary Remote Sensing Segmentation",
+      "paper_id": "arxiv:2609.34528",
+      "title": "Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-03",
+      "publication_month": "2026-09",
       "read_month": "2026-10",
       "zotero_collection": "每日精读论文/2026/10",
-      "longform": "docs/md/longform/2026-10/coninfer.md"
+      "longform": "docs/md/longform/2026-10/preference-guided-adaptation.md"
     }
   ]
 }

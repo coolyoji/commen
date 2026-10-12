@@ -1,13 +1,13 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-12",
   "count": 6,
-  "theme": "开放场景、开放词汇 3D 理解与 UAV 持久语义记忆",
+  "theme": "开放场景、开放词汇分割、UAV 多模态感知与在线适配",
   "deep_reads": [
     {
-      "id": "arxiv:2603.29271",
-      "title": "ConInfer: Context-Aware Inference for Training-Free Open-Vocabulary Remote Sensing Segmentation",
-      "code": "https://github.com/Dog-Yang/ConInfer",
-      "publication_month": "2026-03",
+      "id": "arxiv:2609.34528",
+      "title": "Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement",
+      "code": "https://github.com/blue-531/pref-ovss",
+      "publication_month": "2026-09",
       "read_month": "2026-10",
       "local_pdf_verified": true,
       "zotero_imported": true,
@@ -15,10 +15,10 @@
     }
   ],
   "browse": [
-    {"id":"arxiv:2609.21400","title":"A Scene Language Model for Open-Vocabulary Scene Mapping","publication_month":"2026-09"},
-    {"id":"arxiv:2610.07569","title":"OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception","publication_month":"2026-10"},
-    {"id":"arxiv:2610.09518","title":"ActiveLang: Active Open-Vocabulary 3D Mapping with Semantic-Uncertainty-Guided Exploration","publication_month":"2026-10"},
-    {"id":"arxiv:2609.34853","title":"EviSplat: Preserving Multi-View Evidence in 3D Gaussian Splatting for Open-Vocabulary Segmentation","publication_month":"2026-09"},
-    {"id":"arxiv:2609.19542","title":"PerSeM: Persistent Semantic Memory for Long-Horizon Open-Vocabulary UAV Mapping","publication_month":"2026-09"}
+    {"id":"arxiv:2609.22834","title":"SatOV: Restoring Spatial Priors for Training-Free Open-Vocabulary Segmentation in Remote Sensing Imagery","publication_month":"2026-09"},
+    {"id":"arxiv:2610.00855","title":"Lang3DSeg: Annotation-Free Open-Vocabulary 3D Segmentation with Point Transformers","publication_month":"2026-10"},
+    {"id":"arxiv:2609.37602","title":"When to Adapt: Multi-Signal Domain Shift Detection for Efficient Training-Free Adaptation in Open-Vocabulary Segmentation","publication_month":"2026-09"},
+    {"id":"arxiv:2610.10359","title":"MultiFly: A Real-World Multimodal Aerial Dataset with Annotation-Efficient Label Transfer and Cross-Modal Semantic Consistency","publication_month":"2026-10"},
+    {"id":"arxiv:2609.31005","title":"TRACKGRAPH: Online Open-Vocabulary 3D Scene Graphs via Image-Space Tracking","publication_month":"2026-09"}
   ]
 }

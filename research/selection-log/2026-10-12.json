@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-12",
+  "request": "每天 1 篇精读、5 篇泛读；优先开放场景和场景理解，并说明对 COD/UAV/烟雾分割的迁移价值。",
+  "deep_read": {
+    "paper_id": "arxiv:2609.34528",
+    "title": "Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement",
+    "publication_month": "2026-09",
+    "read_month": "2026-10",
+    "selection_reasons": [
+      "NeurIPS 2026 接收，arXiv 原文和完整实验可核验",
+      "公开代码仓库可核验",
+      "方法创新明确：prompt disagreement、局部偏好查询、RLPO、一致性正则",
+      "覆盖多个专业域，能直接解释域偏移下的开放词汇分割适配",
+      "对 COD、UAV、烟雾分割都有可检验迁移假设"
+    ],
+    "source": "https://arxiv.org/abs/2609.34528",
+    "code": "https://github.com/blue-531/pref-ovss",
+    "pdf_verified": true,
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "HWLXZKU6",
+    "zotero_attachment_key": "BJRYCUU1"
+  },
+  "browse_pool": [
+    {"paper_id":"arxiv:2609.22834","title":"SatOV: Restoring Spatial Priors for Training-Free Open-Vocabulary Segmentation in Remote Sensing Imagery","reason":"恢复遥感开放词汇分割中的空间结构和高分辨率边界"},
+    {"paper_id":"arxiv:2610.00855","title":"Lang3DSeg: Annotation-Free Open-Vocabulary 3D Segmentation with Point Transformers","reason":"修复 2D 到 3D 投影的深度歧义并支持室外 LiDAR"},
+    {"paper_id":"arxiv:2609.37602","title":"When to Adapt: Multi-Signal Domain Shift Detection for Efficient Training-Free Adaptation in Open-Vocabulary Segmentation","reason":"用多信号决定何时触发在线适配，适合长期 UAV 部署"},
+    {"paper_id":"arxiv:2610.10359","title":"MultiFly: A Real-World Multimodal Aerial Dataset with Annotation-Efficient Label Transfer and Cross-Modal Semantic Consistency","reason":"提供 RGB、热红外、LiDAR、雷达的低空 UAV 多模态数据基础"},
+    {"paper_id":"arxiv:2609.31005","title":"TRACKGRAPH: Online Open-Vocabulary 3D Scene Graphs via Image-Space Tracking","reason":"用关键帧和帧间传播构建高效开放词汇 3D 场景图"}
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+}

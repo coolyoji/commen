@@ -47,9 +47,9 @@
     "commit_attempted": true,
     "commit": "7a00290",
     "push_attempted": true,
-    "pushed": false,
-    "status": "local_commit_preserved_remote_unreachable",
-    "push_error": "Connection to github.com:443 failed/reset during both push attempts"
+    "pushed": true,
+    "status": "pushed",
+    "initial_push_error": "Connection to github.com:443 failed/reset during the first two attempts; final retry succeeded"
   },
   "limitations": [
     "泛读仅保留原文和项目入口，没有下载 PDF。",

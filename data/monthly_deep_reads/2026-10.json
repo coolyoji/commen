@@ -26,6 +26,19 @@
       "zotero_item_key": "HWLXZKU6",
       "zotero_attachment_key": "BJRYCUU1",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-13",
+      "paper_id": "arxiv:2610.12901",
+      "title": "JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/jmt-yolo.md",
+      "code": "https://github.com/25043221/JMT-YOLO",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "WAIK8K5P",
+      "zotero_attachment_key": "J8BQI9EQ",
+      "pdf_verified": true
     }
   ]
 }

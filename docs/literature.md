@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-13
+
+精读 JMT-YOLO（分割监督、DenseRFB 和遮挡一致性），PDF 已导入 Zotero `每日精读论文/2026/10`。泛读补充 OpenSplatGraph、ActiveLang、EmbPASS、SelectOccFlow 和几何变换自适应遥感分割，重点覆盖持久 3D 场景图、主动探索、跨具身平台、选择性时空融合和测试时稳定性。详见 [当天页面](md/2026-10-13.md) 和 [10 月精读长文](md/longform/2026-10/jmt-yolo.md)。
+
 ## 2026-10-12
 
 精读 Preference-Guided Adaptation（prompt 分歧、局部偏好优化、区域外一致性），PDF 已导入 Zotero `每日精读论文/2026/10`。泛读补充 SatOV、Lang3DSeg、When to Adapt、MultiFly、TRACKGRAPH，重点覆盖空间先验恢复、跨模态 UAV 感知、在线适配触发和开放词汇 3D 场景图。详见 [当天页面](md/2026-10-12.md) 和 [10 月精读长文](md/longform/2026-10/preference-guided-adaptation.md)。

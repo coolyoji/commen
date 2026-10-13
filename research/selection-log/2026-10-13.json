@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-13",
+  "request": "每天 1 篇精读、5 篇泛读；优先开放场景和场景理解，并说明对 COD/UAV/烟雾分割的迁移价值。",
+  "deep_read": {
+    "paper_id": "arxiv:2610.12901",
+    "title": "JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning",
+    "publication_month": "2026-10",
+    "read_month": "2026-10",
+    "selection_reasons": [
+      "论文全文、摘要、实验表格和消融可核验",
+      "作者提供可运行的 GitHub 实现和训练/测试说明",
+      "方法创新明确：辅助语义分割、DenseRFB、多任务一致性和随机遮挡",
+      "覆盖艺术风格、雾天和跨相机三个域偏移场景",
+      "对 UAV 和烟雾分割有明确的结构监督、伪标签和跨域迁移价值"
+    ],
+    "source": "https://arxiv.org/abs/2610.12901",
+    "code": "https://github.com/25043221/JMT-YOLO",
+    "pdf_verified": true,
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "WAIK8K5P",
+    "zotero_attachment_key": "J8BQI9EQ"
+  },
+  "browse_pool": [
+    {"paper_id":"arxiv:2610.07569","title":"OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception","reason":"把稠密开放词汇语义地图组织成持久 3D 对象和关系"},
+    {"paper_id":"arxiv:2610.09518","title":"ActiveLang: Active Open-Vocabulary 3D Mapping with Semantic-Uncertainty-Guided Exploration","reason":"用语义不确定性选择最有信息量的主动探索视角"},
+    {"paper_id":"arxiv:2610.03248","title":"EmbPASS: Towards Cross-Embodiment Open Panoramic Segmentation","reason":"把 Vehicle、Drone、Wearable、Quadruped 平台差异纳入全景分割 benchmark"},
+    {"paper_id":"arxiv:2610.04356","title":"SelectOccFlow: Selective Spatiotemporal Aggregation for 3D Occupancy and Scene Flow Prediction","reason":"选择性融合图像、历史帧和体素结构，适合动态场景理解"},
+    {"paper_id":"arxiv:2610.04300","title":"A Geometric-Transformation Feature-Adaptive Manifold Restoration Method for Open-Vocabulary Semantic Segmentation of Remote Sensing Images","reason":"用 D4 等价视图和轻量测试时适配检测遥感分割不稳定"}
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+}

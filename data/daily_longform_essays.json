@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "essays": [
     {
-      "paper_id": "arxiv:2609.34528",
-      "path": "../docs/md/longform/2026-10/preference-guided-adaptation.md",
+      "paper_id": "arxiv:2610.12901",
+      "path": "../docs/md/longform/2026-10/jmt-yolo.md",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-09",
+      "publication_month": "2026-10",
       "read_month": "2026-10"
     }
   ]

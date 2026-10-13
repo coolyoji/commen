@@ -1,16 +1,18 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "deep_count": 1,
   "browse_count": 5,
   "deep_reads": [
     {
-      "paper_id": "arxiv:2609.34528",
-      "title": "Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement",
+      "paper_id": "arxiv:2610.12901",
+      "title": "JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-09",
+      "publication_month": "2026-10",
       "read_month": "2026-10",
       "zotero_collection": "每日精读论文/2026/10",
-      "longform": "docs/md/longform/2026-10/preference-guided-adaptation.md"
+      "zotero_item_key": "WAIK8K5P",
+      "zotero_attachment_key": "J8BQI9EQ",
+      "longform": "docs/md/longform/2026-10/jmt-yolo.md"
     }
   ]
 }

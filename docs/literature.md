@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-14
+
+精读 OP3DSG（开放词汇、部件感知的统一 3D 场景图），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 Context-Nav、FineCog-Nav、Vireo、分割失败选择和不完整感知方向，重点覆盖视点验证、UAV 认知模块、几何辅助跨域分割、可靠性选择以及 belief-centric 4D 场景表示。详见 [当天页面](md/2026-10-14.md) 和 [10 月精读长文](md/longform/2026-10/op3dsg.md)。
+
 ## 2026-10-13
 
 精读 JMT-YOLO（分割监督、DenseRFB 和遮挡一致性），PDF 已导入 Zotero `每日精读论文/2026/10`。泛读补充 OpenSplatGraph、ActiveLang、EmbPASS、SelectOccFlow 和几何变换自适应遥感分割，重点覆盖持久 3D 场景图、主动探索、跨具身平台、选择性时空融合和测试时稳定性。详见 [当天页面](md/2026-10-13.md) 和 [10 月精读长文](md/longform/2026-10/jmt-yolo.md)。

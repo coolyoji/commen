@@ -1,21 +1,21 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "read_month": "2026-10",
   "zotero_collection": "每日精读论文/2026/10",
   "deep_reads": [
     {
-      "paper_id": "arxiv:2610.12901",
-      "title": "JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning",
+      "paper_id": "arxiv:2606.29786",
+      "title": "OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments",
       "venue": "arXiv",
-      "publication_month": "2026-10",
-      "pdf": "C:/Users/华硕/Zotero/storage/J8BQI9EQ/Yu 等 - 2026 - JMT-YOLO Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning.pdf",
-      "code": "https://github.com/25043221/JMT-YOLO",
+      "publication_month": "2026-08",
+      "pdf": "C:/Users/华硕/Zotero/storage/5G6GWX4T/Kim和Kim - 2026 - OP3DSG Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments.pdf",
+      "code": "https://github.com/AutoCompSysLab/OP3DSG",
       "local_pdf_verified": true,
       "zotero_imported": true,
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "WAIK8K5P",
-      "zotero_attachment_key": "J8BQI9EQ",
-      "longform": "docs/md/longform/2026-10/jmt-yolo.md"
+      "zotero_item_key": "9UMBQC8B",
+      "zotero_attachment_key": "5G6GWX4T",
+      "longform": "docs/md/longform/2026-10/op3dsg.md"
     }
   ]
 }

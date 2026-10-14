@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "essays": [
     {
-      "paper_id": "arxiv:2610.12901",
-      "path": "../docs/md/longform/2026-10/jmt-yolo.md",
+      "paper_id": "arxiv:2606.29786",
+      "path": "../docs/md/longform/2026-10/op3dsg.md",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-10",
+      "publication_month": "2026-08",
       "read_month": "2026-10"
     }
   ]

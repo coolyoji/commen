@@ -39,6 +39,20 @@
       "zotero_item_key": "WAIK8K5P",
       "zotero_attachment_key": "J8BQI9EQ",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-14",
+      "paper_id": "arxiv:2606.29786",
+      "title": "OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments",
+      "publication_month": "2026-08",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/op3dsg.md",
+      "code": "https://github.com/AutoCompSysLab/OP3DSG",
+      "project": "https://k2room.github.io/OP3DSG",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "9UMBQC8B",
+      "zotero_attachment_key": "5G6GWX4T",
+      "pdf_verified": true
     }
   ]
 }

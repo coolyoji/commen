@@ -1,26 +1,47 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "count": 6,
-  "theme": "跨域鲁棒性、开放词汇 3D 场景图、主动探索、跨平台全景分割与时空占据",
+  "theme": "部件级开放场景、UAV 导航、开放词汇跨域分割、可靠性选择和不完整感知",
   "deep_reads": [
     {
-      "id": "arxiv:2610.12901",
-      "title": "JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning",
-      "code": "https://github.com/25043221/JMT-YOLO",
-      "publication_month": "2026-10",
+      "id": "arxiv:2606.29786",
+      "title": "OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments",
+      "code": "https://github.com/AutoCompSysLab/OP3DSG",
+      "project": "https://k2room.github.io/OP3DSG",
+      "publication_month": "2026-08",
       "read_month": "2026-10",
       "local_pdf_verified": true,
       "zotero_imported": true,
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "WAIK8K5P",
-      "zotero_attachment_key": "J8BQI9EQ"
+      "zotero_item_key": "9UMBQC8B",
+      "zotero_attachment_key": "5G6GWX4T"
     }
   ],
   "browse": [
-    {"id":"arxiv:2610.07569","title":"OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception","publication_month":"2026-10"},
-    {"id":"arxiv:2610.09518","title":"ActiveLang: Active Open-Vocabulary 3D Mapping with Semantic-Uncertainty-Guided Exploration","publication_month":"2026-10"},
-    {"id":"arxiv:2610.03248","title":"EmbPASS: Towards Cross-Embodiment Open Panoramic Segmentation","publication_month":"2026-10"},
-    {"id":"arxiv:2610.04356","title":"SelectOccFlow: Selective Spatiotemporal Aggregation for 3D Occupancy and Scene Flow Prediction","publication_month":"2026-10"},
-    {"id":"arxiv:2610.04300","title":"A Geometric-Transformation Feature-Adaptive Manifold Restoration Method for Open-Vocabulary Semantic Segmentation of Remote Sensing Images","publication_month":"2026-10"}
+    {
+      "id": "arxiv:2603.09506",
+      "title": "Context-Nav: Context-Driven Exploration and Viewpoint-Aware 3D Spatial Reasoning for Instance Navigation",
+      "publication_month": "2026-03"
+    },
+    {
+      "id": "arxiv:2604.16298",
+      "title": "FineCog-Nav: Integrating Fine-grained Cognitive Modules for Zero-shot Multimodal UAV Navigation",
+      "publication_month": "2026-04"
+    },
+    {
+      "id": "arxiv:2506.09881",
+      "title": "Leveraging Depth and Language for Open-Vocabulary Domain-Generalized Semantic Segmentation",
+      "publication_month": "2025-06"
+    },
+    {
+      "id": "arxiv:2610.16058",
+      "title": "From Failure Prediction to Component Selection in Semantic Segmentation",
+      "publication_month": "2026-10"
+    },
+    {
+      "id": "arxiv:2610.18670",
+      "title": "Perception Beyond the Visible: Incompleteness-Aware Scene Understanding for Robot Autonomy",
+      "publication_month": "2026-10"
+    }
   ]
 }

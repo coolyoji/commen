@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-14",
+  "request": "每天 1 篇精读、5 篇泛读；优先开放场景和场景理解，并说明对 COD/UAV/烟雾分割的迁移价值。",
+  "deep_read": {
+    "paper_id": "arxiv:2606.29786",
+    "title": "OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments",
+    "publication_month": "2026-08",
+    "read_month": "2026-10",
+    "selection_reasons": [
+      "全文、方法、消融、效率和补充材料可核验",
+      "项目页和代码入口公开，具备继续复现和迁移的基础",
+      "方法创新明确：对象-部件知识控制、颜色辅助部件融合、几何先验图和验证门控 LLM 推理",
+      "UniGraph3D 同时评估对象、部件、空间/功能关系和可供性",
+      "对 UAV 场景记忆、COD 区域持久身份和烟雾动态区域图有清晰迁移价值"
+    ],
+    "source": "https://arxiv.org/abs/2606.29786",
+    "project": "https://k2room.github.io/OP3DSG",
+    "code": "https://github.com/AutoCompSysLab/OP3DSG",
+    "pdf_verified": true,
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "9UMBQC8B",
+    "zotero_attachment_key": "5G6GWX4T"
+  },
+  "browse_pool": [
+    {
+      "paper_id": "arxiv:2603.09506",
+      "title": "Context-Nav: Context-Driven Exploration and Viewpoint-Aware 3D Spatial Reasoning for Instance Navigation",
+      "reason": "用完整语言描述指导探索，并通过视点感知的 3D 关系验证避免错误停止"
+    },
+    {
+      "paper_id": "arxiv:2604.16298",
+      "title": "FineCog-Nav: Integrating Fine-grained Cognitive Modules for Zero-shot Multimodal UAV Navigation",
+      "reason": "把语言、感知、注意、记忆、想象、推理和决策拆成可审计的 UAV 认知模块"
+    },
+    {
+      "paper_id": "arxiv:2506.09881",
+      "title": "Leveraging Depth and Language for Open-Vocabulary Domain-Generalized Semantic Segmentation",
+      "reason": "用深度几何和语言先验同时解决开放词汇和跨域分割"
+    },
+    {
+      "paper_id": "arxiv:2610.16058",
+      "title": "From Failure Prediction to Component Selection in Semantic Segmentation",
+      "reason": "区分失败预测分数与实际保留决策价值，适合可靠分割和拒识"
+    },
+    {
+      "paper_id": "arxiv:2610.18670",
+      "title": "Perception Beyond the Visible: Incompleteness-Aware Scene Understanding for Robot Autonomy",
+      "reason": "把遮挡、未知类别和传感器退化统一为不完整感知与 belief-centric 4D 表示"
+    }
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+}

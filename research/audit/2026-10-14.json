@@ -44,9 +44,10 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "commit_attempted": false,
-    "push_attempted": false,
-    "status": "pending"
+    "commit_attempted": true,
+    "push_attempted": true,
+    "status": "pushed",
+    "commit": "b18d8cd"
   },
   "limitations": [
     "OP3DSG 的主 benchmark 是室内 RGB-D，不能直接当作 UAV 或烟雾分割结果。",

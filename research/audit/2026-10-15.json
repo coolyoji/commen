@@ -43,9 +43,10 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "commit_attempted": false,
-    "push_attempted": false,
-    "status": "pending"
+    "commit_attempted": true,
+    "push_attempted": true,
+    "status": "pushed",
+    "commit": "68f3cd5"
   },
   "limitations": [
     "RTAformer 的主 benchmark 是 Action Genome 室内视频场景图，不能直接当成烟雾分割结果。",

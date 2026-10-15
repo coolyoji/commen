@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-15
+
+精读 RTAformer（关系转换感知的视频场景图生成），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 SAM3RL、Adaptive Observation Control、OLiVES、SMORE 和 ActiveEvidence，重点覆盖强化学习记忆控制、主动视野、低照度视频分割、可修正 3D 记忆和证据获取。详见 [当天页面](md/2026-10-15.md) 和 [10 月精读长文](md/longform/2026-10/rtaformer.md)。
+
 ## 2026-10-14
 
 精读 OP3DSG（开放词汇、部件感知的统一 3D 场景图），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 Context-Nav、FineCog-Nav、Vireo、分割失败选择和不完整感知方向，重点覆盖视点验证、UAV 认知模块、几何辅助跨域分割、可靠性选择以及 belief-centric 4D 场景表示。详见 [当天页面](md/2026-10-14.md) 和 [10 月精读长文](md/longform/2026-10/op3dsg.md)。

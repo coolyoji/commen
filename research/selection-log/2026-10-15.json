@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-15",
+  "request": "每天 1 篇精读、5 篇泛读；优先开放场景和场景理解，并说明对 COD/UAV/烟雾分割的迁移价值。",
+  "deep_read": {
+    "paper_id": "arxiv:2610.20091",
+    "title": "Relation-Transition-Aware Transformer for Video Scene Graph Generation",
+    "publication_month": "2026-10",
+    "read_month": "2026-10",
+    "selection_reasons": [
+      "全文、方法、消融、transition 子集和补充材料可核验",
+      "作者主页公开官方代码仓库 sejong-rcv/RTAformer",
+      "提出明确且少见的问题：关系语义惯性",
+      "TADI 和 SSIA 对时序关系变化有可解释机制",
+      "对 COD 边界变化、UAV 巡检事件和烟雾动态关系有直接迁移价值"
+    ],
+    "source": "https://arxiv.org/abs/2610.20091",
+    "code": "https://github.com/sejong-rcv/RTAformer",
+    "pdf_verified": true,
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "48E8SIIL",
+    "zotero_attachment_key": "QRMRASI3"
+  },
+  "browse_pool": [
+    {
+      "paper_id": "arxiv:2610.19931",
+      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
+      "reason": "用强化学习控制视频分割记忆库，适合解释长期证据选择"
+    },
+    {
+      "paper_id": "arxiv:2610.19624",
+      "title": "Adaptive Observation Control for Active Visual Recognition",
+      "reason": "联合学习观察尺度、fixation 数量和提前停止，适合 UAV 主动观测"
+    },
+    {
+      "paper_id": "arxiv:2610.20501",
+      "title": "OLiVES: An Outdoor Low-Light Video Benchmark for Enhancement and Segmentation",
+      "reason": "把户外低照度增强与视频目标分割统一评测"
+    },
+    {
+      "paper_id": "arxiv:2610.19674",
+      "title": "Remember, Revisit, Revise: Scaffold Memory for Long-Horizon 3D Geometry",
+      "reason": "允许冻结几何模型通过可修正外部记忆回写长期场景错误"
+    },
+    {
+      "paper_id": "arxiv:2610.20532",
+      "title": "ActiveEvidence: Decision-Focused Evidence Graphs with Verifiable Acquisition Gaps",
+      "reason": "按决策影响和成本获取证据，并提供可验证停止证书"
+    }
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+}

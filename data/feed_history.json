@@ -1,5 +1,5 @@
 {
-  "updated_at":"2026-10-12",
+  "updated_at":"2026-10-15",
   "days":[
     {"date":"2026-09-23","selected":["arxiv:2608.11135","arxiv:2607.04125","arxiv:2502.12258","arxiv:2601.05552","arxiv:2505.09265"],"status":"test_update"},
     {"date":"2026-09-24","deep_read":["arxiv:2501.12295"],"browse":["arxiv:2604.23542","arxiv:2602.10858","arxiv:2608.08308","arxiv:2609.23061","arxiv:2609.24510"],"status":"daily_1_deep_5_browse"},
@@ -10,6 +10,7 @@
     {"date":"2026-10-09","deep_read":["arxiv:2603.29271"],"browse":["arxiv:2609.21400","arxiv:2610.07569","arxiv:2610.09518","arxiv:2609.34853","arxiv:2609.19542"],"status":"daily_1_deep_5_browse_open_scene"},
     {"date":"2026-10-12","deep_read":["arxiv:2609.34528"],"browse":["arxiv:2609.22834","arxiv:2610.00855","arxiv:2609.37602","arxiv:2610.10359","arxiv:2609.31005"],"status":"daily_1_deep_5_browse_open_scene_uav"},
     {"date":"2026-10-13","deep_read":["arxiv:2610.12901"],"browse":["arxiv:2610.07569","arxiv:2610.09518","arxiv:2610.03248","arxiv:2610.04356","arxiv:2610.04300"],"status":"daily_1_deep_5_browse_domain_scene_uav"},
-    {"date":"2026-10-14","deep_read":["arxiv:2606.29786"],"browse":["arxiv:2603.09506","arxiv:2604.16298","arxiv:2506.09881","arxiv:2610.16058","arxiv:2610.18670"],"status":"daily_1_deep_5_browse_parts_uav_reliability"}
+    {"date":"2026-10-14","deep_read":["arxiv:2606.29786"],"browse":["arxiv:2603.09506","arxiv:2604.16298","arxiv:2506.09881","arxiv:2610.16058","arxiv:2610.18670"],"status":"daily_1_deep_5_browse_parts_uav_reliability"},
+    {"date":"2026-10-15","deep_read":["arxiv:2610.20091"],"browse":["arxiv:2610.19931","arxiv:2610.19624","arxiv:2610.20501","arxiv:2610.19674","arxiv:2610.20532"],"status":"daily_1_deep_5_browse_temporal_memory_active_observation"}
   ]
 }

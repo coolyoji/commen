@@ -53,6 +53,19 @@
       "zotero_item_key": "9UMBQC8B",
       "zotero_attachment_key": "5G6GWX4T",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-15",
+      "paper_id": "arxiv:2610.20091",
+      "title": "Relation-Transition-Aware Transformer for Video Scene Graph Generation",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/rtaformer.md",
+      "code": "https://github.com/sejong-rcv/RTAformer",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "48E8SIIL",
+      "zotero_attachment_key": "QRMRASI3",
+      "pdf_verified": true
     }
   ]
 }

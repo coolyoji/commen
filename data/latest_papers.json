@@ -1,46 +1,45 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "count": 6,
-  "theme": "部件级开放场景、UAV 导航、开放词汇跨域分割、可靠性选择和不完整感知",
+  "theme": "视频关系变化、强化学习记忆控制、主动观测、低照度视频、可修正 3D 记忆和证据获取",
   "deep_reads": [
     {
-      "id": "arxiv:2606.29786",
-      "title": "OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments",
-      "code": "https://github.com/AutoCompSysLab/OP3DSG",
-      "project": "https://k2room.github.io/OP3DSG",
-      "publication_month": "2026-08",
+      "id": "arxiv:2610.20091",
+      "title": "Relation-Transition-Aware Transformer for Video Scene Graph Generation",
+      "code": "https://github.com/sejong-rcv/RTAformer",
+      "publication_month": "2026-10",
       "read_month": "2026-10",
       "local_pdf_verified": true,
       "zotero_imported": true,
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "9UMBQC8B",
-      "zotero_attachment_key": "5G6GWX4T"
+      "zotero_item_key": "48E8SIIL",
+      "zotero_attachment_key": "QRMRASI3"
     }
   ],
   "browse": [
     {
-      "id": "arxiv:2603.09506",
-      "title": "Context-Nav: Context-Driven Exploration and Viewpoint-Aware 3D Spatial Reasoning for Instance Navigation",
-      "publication_month": "2026-03"
-    },
-    {
-      "id": "arxiv:2604.16298",
-      "title": "FineCog-Nav: Integrating Fine-grained Cognitive Modules for Zero-shot Multimodal UAV Navigation",
-      "publication_month": "2026-04"
-    },
-    {
-      "id": "arxiv:2506.09881",
-      "title": "Leveraging Depth and Language for Open-Vocabulary Domain-Generalized Semantic Segmentation",
-      "publication_month": "2025-06"
-    },
-    {
-      "id": "arxiv:2610.16058",
-      "title": "From Failure Prediction to Component Selection in Semantic Segmentation",
+      "id": "arxiv:2610.19931",
+      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
       "publication_month": "2026-10"
     },
     {
-      "id": "arxiv:2610.18670",
-      "title": "Perception Beyond the Visible: Incompleteness-Aware Scene Understanding for Robot Autonomy",
+      "id": "arxiv:2610.19624",
+      "title": "Adaptive Observation Control for Active Visual Recognition",
+      "publication_month": "2026-10"
+    },
+    {
+      "id": "arxiv:2610.20501",
+      "title": "OLiVES: An Outdoor Low-Light Video Benchmark for Enhancement and Segmentation",
+      "publication_month": "2026-10"
+    },
+    {
+      "id": "arxiv:2610.19674",
+      "title": "Remember, Revisit, Revise: Scaffold Memory for Long-Horizon 3D Geometry",
+      "publication_month": "2026-10"
+    },
+    {
+      "id": "arxiv:2610.20532",
+      "title": "ActiveEvidence: Decision-Focused Evidence Graphs with Verifiable Acquisition Gaps",
       "publication_month": "2026-10"
     }
   ]

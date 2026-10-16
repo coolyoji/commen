@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-16
+
+精读 AeroTrack（无人机开放词汇视频实例分割），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 PixDLM、SegFly、OTAS、OVI-MAP 和 DAAAM，重点覆盖语言驱动 UAV 3D 感知、RGB-T 分割、token 级开放词汇对齐、持久 3D 语义地图和任意时刻视频指代。详见 [当天页面](md/2026-10-16.md) 和 [10 月精读长文](md/longform/2026-10/aerotrack.md)。
+
 ## 2026-10-15
 
 精读 RTAformer（关系转换感知的视频场景图生成），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 SAM3RL、Adaptive Observation Control、OLiVES、SMORE 和 ActiveEvidence，重点覆盖强化学习记忆控制、主动视野、低照度视频分割、可修正 3D 记忆和证据获取。详见 [当天页面](md/2026-10-15.md) 和 [10 月精读长文](md/longform/2026-10/rtaformer.md)。

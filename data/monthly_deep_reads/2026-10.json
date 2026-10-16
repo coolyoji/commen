@@ -66,6 +66,19 @@
       "zotero_item_key": "48E8SIIL",
       "zotero_attachment_key": "QRMRASI3",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-16",
+      "paper_id": "arxiv:2607.08075",
+      "title": "UA V-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation",
+      "publication_month": "2026-07",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/aerotrack.md",
+      "code": "https://github.com/Dmygithub/AeroTrack",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "SCXXPUIJ",
+      "zotero_attachment_key": "RB4GKYG6",
+      "pdf_verified": true
     }
   ]
 }

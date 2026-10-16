@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "essays": [
     {
-      "paper_id": "arxiv:2610.20091",
-      "path": "../docs/md/longform/2026-10/rtaformer.md",
+      "paper_id": "arxiv:2607.08075",
+      "path": "../docs/md/longform/2026-10/aerotrack.md",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-10",
+      "publication_month": "2026-07",
       "read_month": "2026-10"
     }
   ]

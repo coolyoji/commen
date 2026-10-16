@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-16",
+  "request": "每天 1 篇精读、5 篇泛读；方向保持发散，优先开放场景、场景理解、UAV、COD 和烟雾分割迁移价值。",
+  "deep_read": {
+    "paper_id": "arxiv:2607.08075",
+    "title": "UA V-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation",
+    "publication_month": "2026-07",
+    "read_month": "2026-10",
+    "selection_reasons": [
+      "全文、方法、消融、显存分析和四个评测集合可核验",
+      "作者公开 AeroTrack 代码和统一推理框架",
+      "提出明确的 UAV-OVVIS 任务，直接覆盖开放词汇、实例 mask 和全局身份",
+      "Recognizer、Segmenter、LIA 的系统分解对 UAV 和烟雾视频有可迁移价值",
+      "AeroVIS、LIA 消融和长视频压力测试提供可复核证据"
+    ],
+    "source": "https://arxiv.org/abs/2607.08075",
+    "code": "https://github.com/Dmygithub/AeroTrack",
+    "pdf_verified": true,
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "SCXXPUIJ",
+    "zotero_attachment_key": "RB4GKYG6"
+  },
+  "browse_pool": [
+    {
+      "paper_id": "arxiv:2604.15670",
+      "title": "PixDLM: Language-Driven Unified 3D Perception for UAVs",
+      "reason": "把语言查询、区域定位和 UAV 3D 感知统一，适合开放场景和空间关系解释"
+    },
+    {
+      "paper_id": "arxiv:2603.17920",
+      "title": "SegFly: A Lightweight RGB-T Semantic Segmentation Network for UAVs",
+      "reason": "RGB 与热红外互补，适合夜间 UAV 和烟雾/火源分割迁移"
+    },
+    {
+      "paper_id": "arxiv:2507.08851",
+      "title": "OTAS: Open-vocabulary Token Alignment for Segmentation in Outdoor Scenes",
+      "reason": "把开放词汇从全局图文匹配推进到 token 级空间证据"
+    },
+    {
+      "paper_id": "arxiv:2603.26541",
+      "title": "OVI-MAP: Open-Vocabulary Instance and Semantic Mapping",
+      "reason": "将开放词汇实例与语义写入持久 3D 地图，适合 UAV 重访和长期记忆"
+    },
+    {
+      "paper_id": "arxiv:2512.00565",
+      "title": "Describe Anything Anywhere at Any Moment",
+      "reason": "支持任意时刻的语言指代和视频区域检索，适合开放场景交互"
+    }
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+}

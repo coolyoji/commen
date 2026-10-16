@@ -11,6 +11,7 @@
     {"date":"2026-10-12","deep_read":["arxiv:2609.34528"],"browse":["arxiv:2609.22834","arxiv:2610.00855","arxiv:2609.37602","arxiv:2610.10359","arxiv:2609.31005"],"status":"daily_1_deep_5_browse_open_scene_uav"},
     {"date":"2026-10-13","deep_read":["arxiv:2610.12901"],"browse":["arxiv:2610.07569","arxiv:2610.09518","arxiv:2610.03248","arxiv:2610.04356","arxiv:2610.04300"],"status":"daily_1_deep_5_browse_domain_scene_uav"},
     {"date":"2026-10-14","deep_read":["arxiv:2606.29786"],"browse":["arxiv:2603.09506","arxiv:2604.16298","arxiv:2506.09881","arxiv:2610.16058","arxiv:2610.18670"],"status":"daily_1_deep_5_browse_parts_uav_reliability"},
-    {"date":"2026-10-15","deep_read":["arxiv:2610.20091"],"browse":["arxiv:2610.19931","arxiv:2610.19624","arxiv:2610.20501","arxiv:2610.19674","arxiv:2610.20532"],"status":"daily_1_deep_5_browse_temporal_memory_active_observation"}
+    {"date":"2026-10-15","deep_read":["arxiv:2610.20091"],"browse":["arxiv:2610.19931","arxiv:2610.19624","arxiv:2610.20501","arxiv:2610.19674","arxiv:2610.20532"],"status":"daily_1_deep_5_browse_temporal_memory_active_observation"},
+    {"date":"2026-10-16","deep_read":["arxiv:2607.08075"],"browse":["arxiv:2604.15670","arxiv:2603.17920","arxiv:2507.08851","arxiv:2603.26541","arxiv:2512.00565"],"status":"daily_1_deep_5_browse_uav_open_vocabulary_3d_rgbt"}
   ]
 }

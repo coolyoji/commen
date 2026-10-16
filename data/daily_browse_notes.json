@@ -1,46 +1,48 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "count": 5,
   "downloaded": false,
-  "theme": "视频关系变化、强化学习记忆控制、主动观测、低照度视频、可修正 3D 记忆和证据获取",
+  "theme": "开放词汇 UAV 视频分割、统一 3D 感知、RGB-T、token 对齐与开放场景视频交互",
   "papers": [
     {
-      "id": "arxiv:2610.19931",
-      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
-      "publication_month": "2026-10",
-      "category": "reinforcement_learning_memory_control",
-      "source": "https://arxiv.org/abs/2610.19931"
+      "id": "arxiv:2604.15670",
+      "title": "PixDLM: Language-Driven Unified 3D Perception for UAVs",
+      "publication_month": "2026-04",
+      "category": "uav_unified_3d_perception",
+      "source": "https://arxiv.org/abs/2604.15670"
     },
     {
-      "id": "arxiv:2610.19624",
-      "title": "Adaptive Observation Control for Active Visual Recognition",
-      "publication_month": "2026-10",
-      "category": "active_visual_observation",
-      "source": "https://arxiv.org/abs/2610.19624",
-      "project": "https://github.com/GZHU-DVL/LI-Dikai"
+      "id": "arxiv:2603.17920",
+      "title": "SegFly: A Lightweight RGB-T Semantic Segmentation Network for UAVs",
+      "publication_month": "2026-03",
+      "category": "uav_rgb_thermal_segmentation",
+      "source": "https://arxiv.org/abs/2603.17920",
+      "code": "https://github.com/markus-42/SegFly"
     },
     {
-      "id": "arxiv:2610.20501",
-      "title": "OLiVES: An Outdoor Low-Light Video Benchmark for Enhancement and Segmentation",
-      "publication_month": "2026-10",
-      "category": "outdoor_low_light_video_segmentation",
-      "source": "https://arxiv.org/abs/2610.20501",
-      "project": "https://anonymous-OLiVES.github.io/"
+      "id": "arxiv:2507.08851",
+      "title": "OTAS: Open-vocabulary Token Alignment for Segmentation in Outdoor Scenes",
+      "publication_month": "2025-07",
+      "category": "open_vocabulary_token_alignment",
+      "source": "https://arxiv.org/abs/2507.08851",
+      "code": "https://github.com/SimonSchwaiger/otas"
     },
     {
-      "id": "arxiv:2610.19674",
-      "title": "Remember, Revisit, Revise: Scaffold Memory for Long-Horizon 3D Geometry",
-      "publication_month": "2026-10",
-      "category": "revisable_3d_scene_memory",
-      "source": "https://arxiv.org/abs/2610.19674"
+      "id": "arxiv:2603.26541",
+      "title": "OVI-MAP: Open-Vocabulary Instance and Semantic Mapping",
+      "publication_month": "2026-03",
+      "category": "open_vocabulary_3d_mapping",
+      "source": "https://arxiv.org/abs/2603.26541",
+      "code": "https://github.com/OVI-MAP/OVI-MAP"
     },
     {
-      "id": "arxiv:2610.20532",
-      "title": "ActiveEvidence: Decision-Focused Evidence Graphs with Verifiable Acquisition Gaps",
-      "publication_month": "2026-10",
-      "category": "decision_focused_active_evidence",
-      "source": "https://arxiv.org/abs/2610.20532"
+      "id": "arxiv:2512.00565",
+      "title": "Describe Anything Anywhere at Any Moment",
+      "publication_month": "2025-12",
+      "category": "open_world_video_referring_understanding",
+      "source": "https://arxiv.org/abs/2512.00565",
+      "project": "https://github.com/ejcgt/DAAAM"
     }
   ],
-  "note": "泛读只核验论文原文和项目入口，不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+  "note": "泛读只核验论文原文和项目入口，不下载 PDF；出处月份与阅读归档月份分开记录。"
 }

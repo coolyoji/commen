@@ -44,9 +44,10 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "commit_attempted": false,
-    "push_attempted": false,
-    "status": "pending"
+    "commit_attempted": true,
+    "push_attempted": true,
+    "status": "pushed",
+    "commit": "e3fa94e"
   },
   "limitations": [
     "AeroTrack 的主要基准是 UAV 目标视频实例分割，不是烟雾像素分割。",

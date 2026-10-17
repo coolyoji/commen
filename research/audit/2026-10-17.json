@@ -45,8 +45,10 @@
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
     "commit_attempted": false,
-    "push_attempted": false,
-    "status": "pending"
+    "push_attempted": true,
+    "status": "local_commit_remote_unreachable",
+    "commit": "f408d85",
+    "error": "Failed to connect to github.com:443"
   },
   "limitations": [
     "SPAR 的主实验是静态开放词汇分割，不直接证明视频、UAV 或烟雾分割效果。",

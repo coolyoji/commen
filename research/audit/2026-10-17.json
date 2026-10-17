@@ -44,10 +44,10 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "commit_attempted": false,
+    "commit_attempted": true,
     "push_attempted": true,
     "status": "local_commit_remote_unreachable",
-    "commit": "f408d85",
+    "commit": "34975f3",
     "error": "Failed to connect to github.com:443"
   },
   "limitations": [

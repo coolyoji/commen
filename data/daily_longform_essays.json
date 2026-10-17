@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "essays": [
     {
-      "paper_id": "arxiv:2607.08075",
-      "path": "../docs/md/longform/2026-10/aerotrack.md",
+      "paper_id": "arxiv:2604.02252",
+      "path": "../docs/md/longform/2026-10/spar.md",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-07",
+      "publication_month": "2026-04",
       "read_month": "2026-10"
     }
   ]

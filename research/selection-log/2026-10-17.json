@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-17",
+  "request": "每天 1 篇精读、5 篇泛读；方向保持发散，优先开放场景、场景理解、UAV、COD 和烟雾分割迁移价值。",
+  "deep_read": {
+    "paper_id": "arxiv:2604.02252",
+    "title": "SPAR: Single-Pass Any-Resolution ViT for Open-vocabulary Segmentation",
+    "publication_month": "2026-04",
+    "read_month": "2026-10",
+    "selection_reasons": [
+      "作者公开代码，论文全文、主表、消融、分辨率曲线和补充材料可核验",
+      "解决高分辨率开放词汇分割中精度与单次前向速度的核心矛盾",
+      "同一方法兼容 SigLIP2、OpenCLIP 和 DINOv3.txt，方法边界清晰",
+      "特征蒸馏可迁移到 UAV 大图、COD 细边界和烟雾细粒度区域",
+      "报告最高 10.5 mIoU 提升和 52 倍加速，证据链完整"
+    ],
+    "source": "https://arxiv.org/abs/2604.02252",
+    "code": "https://github.com/naomikombol/SPAR",
+    "pdf_verified": true,
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "K9JVC7WW",
+    "zotero_attachment_key": "57GP4Q3Q"
+  },
+  "browse_pool": [
+    {
+      "paper_id": "arxiv:2603.23030",
+      "title": "Looking Beyond the Window: Global-Local Aligned CLIP for Training-free Open-Vocabulary Semantic Segmentation",
+      "reason": "解决高分辨率滑动窗口之间的语义断裂和小目标 attention 偏置"
+    },
+    {
+      "paper_id": "arxiv:2603.17528",
+      "title": "MM-OVSeg: Multimodal Optical-SAR Fusion for Open-Vocabulary Segmentation in Remote Sensing",
+      "reason": "用光学-SAR 互补证据应对云雾和恶劣天气的开放词汇分割"
+    },
+    {
+      "paper_id": "arxiv:2607.11008",
+      "title": "SynCLIP: Synonym-Coherent Language-Image Pretraining for Robust Open-Vocabulary Dense Perception",
+      "reason": "约束同义词的空间 grounding 一致性，适合开放词汇可靠性分析"
+    },
+    {
+      "paper_id": "arxiv:2603.21386",
+      "title": "Mitigating Objectness Bias and Region-to-Text Misalignment for Open-Vocabulary Panoptic Segmentation",
+      "reason": "解释未知类别为何在 objectness 阶段被当成背景，并修正区域-文本错配"
+    },
+    {
+      "paper_id": "arxiv:2508.06146",
+      "title": "Text-guided Visual Prompt DINO for Generic Segmentation",
+      "reason": "通过视觉/文本 prompt 对齐和生成式数据引擎扩大开放世界覆盖"
+    }
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；论文出处月份与阅读归档月份分开记录。"
+}

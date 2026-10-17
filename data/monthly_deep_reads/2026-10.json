@@ -79,6 +79,19 @@
       "zotero_item_key": "SCXXPUIJ",
       "zotero_attachment_key": "RB4GKYG6",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-17",
+      "paper_id": "arxiv:2604.02252",
+      "title": "SPAR: Single-Pass Any-Resolution ViT for Open-vocabulary Segmentation",
+      "publication_month": "2026-04",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/spar.md",
+      "code": "https://github.com/naomikombol/SPAR",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "K9JVC7WW",
+      "zotero_attachment_key": "57GP4Q3Q",
+      "pdf_verified": true
     }
   ]
 }

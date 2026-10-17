@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-17
+
+精读 SPAR（单次前向任意分辨率 ViT），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 GLA-CLIP、MM-OVSeg、SynCLIP、OVRCOAT 和 Prompt-DINO，重点覆盖跨窗口全局语义、多模态遥感、同义词 grounding、一致性全景分割和开放世界数据引擎。详见 [当天页面](md/2026-10-17.md) 和 [10 月精读长文](md/longform/2026-10/spar.md)。
+
 ## 2026-10-16
 
 精读 AeroTrack（无人机开放词汇视频实例分割），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 PixDLM、SegFly、OTAS、OVI-MAP 和 DAAAM，重点覆盖语言驱动 UAV 3D 感知、RGB-T 分割、token 级开放词汇对齐、持久 3D 语义地图和任意时刻视频指代。详见 [当天页面](md/2026-10-16.md) 和 [10 月精读长文](md/longform/2026-10/aerotrack.md)。

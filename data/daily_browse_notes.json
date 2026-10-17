@@ -1,47 +1,47 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "count": 5,
   "downloaded": false,
-  "theme": "开放词汇 UAV 视频分割、统一 3D 感知、RGB-T、token 对齐与开放场景视频交互",
+  "theme": "高分辨率开放词汇分割、跨窗口语义一致性、多模态遥感、同义词鲁棒性与开放世界数据引擎",
   "papers": [
     {
-      "id": "arxiv:2604.15670",
-      "title": "PixDLM: Language-Driven Unified 3D Perception for UAVs",
-      "publication_month": "2026-04",
-      "category": "uav_unified_3d_perception",
-      "source": "https://arxiv.org/abs/2604.15670"
-    },
-    {
-      "id": "arxiv:2603.17920",
-      "title": "SegFly: A Lightweight RGB-T Semantic Segmentation Network for UAVs",
+      "id": "arxiv:2603.23030",
+      "title": "Looking Beyond the Window: Global-Local Aligned CLIP for Training-free Open-Vocabulary Semantic Segmentation",
       "publication_month": "2026-03",
-      "category": "uav_rgb_thermal_segmentation",
-      "source": "https://arxiv.org/abs/2603.17920",
-      "code": "https://github.com/markus-42/SegFly"
+      "category": "global_local_open_vocabulary_segmentation",
+      "source": "https://arxiv.org/abs/2603.23030",
+      "code": "https://github.com/2btlFe/GLA-CLIP"
     },
     {
-      "id": "arxiv:2507.08851",
-      "title": "OTAS: Open-vocabulary Token Alignment for Segmentation in Outdoor Scenes",
-      "publication_month": "2025-07",
-      "category": "open_vocabulary_token_alignment",
-      "source": "https://arxiv.org/abs/2507.08851",
-      "code": "https://github.com/SimonSchwaiger/otas"
-    },
-    {
-      "id": "arxiv:2603.26541",
-      "title": "OVI-MAP: Open-Vocabulary Instance and Semantic Mapping",
+      "id": "arxiv:2603.17528",
+      "title": "MM-OVSeg: Multimodal Optical-SAR Fusion for Open-Vocabulary Segmentation in Remote Sensing",
       "publication_month": "2026-03",
-      "category": "open_vocabulary_3d_mapping",
-      "source": "https://arxiv.org/abs/2603.26541",
-      "code": "https://github.com/OVI-MAP/OVI-MAP"
+      "category": "multimodal_optical_sar_segmentation",
+      "source": "https://arxiv.org/abs/2603.17528"
     },
     {
-      "id": "arxiv:2512.00565",
-      "title": "Describe Anything Anywhere at Any Moment",
-      "publication_month": "2025-12",
-      "category": "open_world_video_referring_understanding",
-      "source": "https://arxiv.org/abs/2512.00565",
-      "project": "https://github.com/ejcgt/DAAAM"
+      "id": "arxiv:2607.11008",
+      "title": "SynCLIP: Synonym-Coherent Language-Image Pretraining for Robust Open-Vocabulary Dense Perception",
+      "publication_month": "2026-07",
+      "category": "synonym_coherent_dense_perception",
+      "source": "https://arxiv.org/abs/2607.11008",
+      "code": "https://github.com/Justlovesmile/SynCLIP"
+    },
+    {
+      "id": "arxiv:2603.21386",
+      "title": "Mitigating Objectness Bias and Region-to-Text Misalignment for Open-Vocabulary Panoptic Segmentation",
+      "publication_month": "2026-03",
+      "category": "open_vocabulary_panoptic_segmentation",
+      "source": "https://arxiv.org/abs/2603.21386",
+      "code": "https://github.com/nickormushev/OVRCOAT"
+    },
+    {
+      "id": "arxiv:2508.06146",
+      "title": "Text-guided Visual Prompt DINO for Generic Segmentation",
+      "publication_month": "2025-08",
+      "category": "open_world_visual_prompt_segmentation",
+      "source": "https://arxiv.org/abs/2508.06146",
+      "code": "https://github.com/WeChatCV/WeVisionOne"
     }
   ],
   "note": "泛读只核验论文原文和项目入口，不下载 PDF；出处月份与阅读归档月份分开记录。"

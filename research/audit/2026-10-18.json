@@ -51,8 +51,10 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "commit_attempted": false,
-    "push_attempted": false
+    "commit_attempted": true,
+    "push_attempted": true,
+    "status": "pushed",
+    "commit": "11db512"
   },
   "limitations": [
     "NOVA3R 的训练视图主要为 1–2 张，静态场景和输入视锥约束仍存在。",

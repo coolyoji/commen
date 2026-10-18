@@ -1,48 +1,44 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "count": 5,
   "downloaded": false,
-  "theme": "高分辨率开放词汇分割、跨窗口语义一致性、多模态遥感、同义词鲁棒性与开放世界数据引擎",
+  "theme": "三维 amodal 补全、生成式完整形状、视频遮挡一致性与测试时三维占据适配",
   "papers": [
     {
-      "id": "arxiv:2603.23030",
-      "title": "Looking Beyond the Window: Global-Local Aligned CLIP for Training-free Open-Vocabulary Semantic Segmentation",
-      "publication_month": "2026-03",
-      "category": "global_local_open_vocabulary_segmentation",
-      "source": "https://arxiv.org/abs/2603.23030",
-      "code": "https://github.com/2btlFe/GLA-CLIP"
+      "id": "arxiv:2503.13439",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "publication_month": "2025-03",
+      "category": "object_amodal_3d_reconstruction",
+      "source": "https://arxiv.org/abs/2503.13439"
     },
     {
-      "id": "arxiv:2603.17528",
-      "title": "MM-OVSeg: Multimodal Optical-SAR Fusion for Open-Vocabulary Segmentation in Remote Sensing",
-      "publication_month": "2026-03",
-      "category": "multimodal_optical_sar_segmentation",
-      "source": "https://arxiv.org/abs/2603.17528"
+      "id": "arxiv:2511.21945",
+      "title": "GENA3D: Generative Amodal 3D Modeling",
+      "publication_month": "2025-11",
+      "category": "generative_amodal_3d_modeling",
+      "source": "https://arxiv.org/abs/2511.21945"
     },
     {
-      "id": "arxiv:2607.11008",
-      "title": "SynCLIP: Synonym-Coherent Language-Image Pretraining for Robust Open-Vocabulary Dense Perception",
-      "publication_month": "2026-07",
-      "category": "synonym_coherent_dense_perception",
-      "source": "https://arxiv.org/abs/2607.11008",
-      "code": "https://github.com/Justlovesmile/SynCLIP"
+      "id": "arxiv:2503.12049",
+      "title": "TACO: Test-Time Adaptation for Occlusion-Robust 3D Reconstruction",
+      "publication_month": "2025-03",
+      "category": "test_time_adaptation_occlusion",
+      "source": "https://arxiv.org/abs/2503.12049"
     },
     {
-      "id": "arxiv:2603.21386",
-      "title": "Mitigating Objectness Bias and Region-to-Text Misalignment for Open-Vocabulary Panoptic Segmentation",
-      "publication_month": "2026-03",
-      "category": "open_vocabulary_panoptic_segmentation",
-      "source": "https://arxiv.org/abs/2603.21386",
-      "code": "https://github.com/nickormushev/OVRCOAT"
+      "id": "arxiv:2507.08137",
+      "title": "Occlusion-Aware Temporally Consistent Amodal Completion",
+      "publication_month": "2025-07",
+      "category": "video_amodal_completion",
+      "source": "https://arxiv.org/abs/2507.08137"
     },
     {
-      "id": "arxiv:2508.06146",
-      "title": "Text-guided Visual Prompt DINO for Generic Segmentation",
-      "publication_month": "2025-08",
-      "category": "open_world_visual_prompt_segmentation",
-      "source": "https://arxiv.org/abs/2508.06146",
-      "code": "https://github.com/WeChatCV/WeVisionOne"
+      "id": "arxiv:2501.17008",
+      "title": "OccTTA: Fast and Memory-Efficient Test-Time Adaptation for 3D Occupancy Prediction",
+      "publication_month": "2025-01",
+      "category": "3d_occupancy_domain_adaptation",
+      "source": "https://arxiv.org/abs/2501.17008"
     }
   ],
-  "note": "泛读只核验论文原文和项目入口，不下载 PDF；出处月份与阅读归档月份分开记录。"
+  "note": "泛读只核验论文原文和公开入口，不下载 PDF；出处月份与阅读归档月份分开记录。"
 }

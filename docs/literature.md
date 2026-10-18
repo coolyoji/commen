@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-18
+
+精读 NOVA3R（非像素对齐的三维 amodal 场景重建），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 Amodal3R、GENA3D、TACO、视频时间一致 amodal completion 和 OccTTA，重点覆盖完整形状先验、生成式多解、时间一致性、测试时适配和 unknown-aware 3D occupancy。当天页面还包含每篇论文的 ARIS 问题诊断与 3 个研究 idea，详见 [当天页面](md/2026-10-18.md)、[精读长文](md/longform/2026-10/nova3r.md) 和 [ARIS 记录](../research/aris/2026-10-18.json)。
+
 ## 2026-10-17
 
 精读 SPAR（单次前向任意分辨率 ViT），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 GLA-CLIP、MM-OVSeg、SynCLIP、OVRCOAT 和 Prompt-DINO，重点覆盖跨窗口全局语义、多模态遥感、同义词 grounding、一致性全景分割和开放世界数据引擎。详见 [当天页面](md/2026-10-17.md) 和 [10 月精读长文](md/longform/2026-10/spar.md)。

@@ -92,6 +92,20 @@
       "zotero_item_key": "K9JVC7WW",
       "zotero_attachment_key": "57GP4Q3Q",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-18",
+      "paper_id": "arxiv:2603.04179",
+      "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction",
+      "publication_month": "2026-03",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/nova3r.md",
+      "code": "https://github.com/wrchen530/nova3r",
+      "project": "https://wrchen530.github.io/nova3r",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "4BS8IYJG",
+      "zotero_attachment_key": "T4BMVDRT",
+      "pdf_verified": true
     }
   ]
 }

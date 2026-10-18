@@ -1,21 +1,21 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "read_month": "2026-10",
   "zotero_collection": "每日精读论文/2026/10",
   "deep_reads": [
     {
-      "paper_id": "arxiv:2604.02252",
-      "title": "SPAR: Single-Pass Any-Resolution ViT for Open-vocabulary Segmentation",
+      "paper_id": "arxiv:2603.04179",
+      "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction",
       "venue": "arXiv",
-      "publication_month": "2026-04",
-      "pdf": "C:/Users/华硕/Zotero/storage/57GP4Q3Q/Kombol 等 - 2026 - SPAR Single-Pass Any-Resolution ViT for Open-vocabulary Segmentation.pdf",
-      "code": "https://github.com/naomikombol/SPAR",
+      "publication_month": "2026-03",
+      "pdf": "C:/Users/华硕/Zotero/storage/T4BMVDRT/Chen 等 - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf",
+      "code": "https://github.com/wrchen530/nova3r",
       "local_pdf_verified": true,
       "zotero_imported": true,
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "K9JVC7WW",
-      "zotero_attachment_key": "57GP4Q3Q",
-      "longform": "docs/md/longform/2026-10/spar.md"
+      "zotero_item_key": "4BS8IYJG",
+      "zotero_attachment_key": "T4BMVDRT",
+      "longform": "docs/md/longform/2026-10/nova3r.md"
     }
   ]
 }

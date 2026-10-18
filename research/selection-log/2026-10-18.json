@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-18",
+  "theme": "amodal 3D completion, scene reconstruction, temporal consistency and test-time adaptation",
+  "selection_policy": {
+    "deep_count": 1,
+    "browse_count": 5,
+    "deep_priority": [
+      "公开代码或项目页",
+      "全文和实验可核验",
+      "方法有明确表示层或训练机制创新",
+      "直接迁移到 amodal 补全、三维重建或三维 amodal 补全"
+    ],
+    "browse_policy": "不下载 PDF，优先补足生成式、多视图、视频和跨域部署视角"
+  },
+  "deep_read": {
+    "paper_id": "arxiv:2603.04179",
+    "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction",
+    "reason_selected": "直接研究无姿态图像到完整三维场景/物体的非像素对齐重建，包含公开代码、明确的 scene-token 与 flow-matching 机制，实验同时覆盖场景级和物体级 completion。",
+    "publication_month": "2026-03",
+    "code": "https://github.com/wrchen530/nova3r",
+    "zotero_imported": true
+  },
+  "browse": [
+    {
+      "paper_id": "arxiv:2503.13439",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "reason_selected": "对象级 amodal 3D 的直接基线，帮助比较 NOVA3R 的场景级扩展。",
+      "publication_month": "2025-03"
+    },
+    {
+      "paper_id": "arxiv:2511.21945",
+      "title": "GENA3D: Generative Amodal 3D Modeling",
+      "reason_selected": "补充生成式多解和不确定性路线，避免只沿确定性回归思路阅读。",
+      "publication_month": "2025-11"
+    },
+    {
+      "paper_id": "arxiv:2503.12049",
+      "title": "TACO: Test-Time Adaptation for Occlusion-Robust 3D Reconstruction",
+      "reason_selected": "补充部署时遮挡与域偏移适应，连接离线重建和真实场景。",
+      "publication_month": "2025-03"
+    },
+    {
+      "paper_id": "arxiv:2507.08137",
+      "title": "Occlusion-Aware Temporally Consistent Amodal Completion",
+      "reason_selected": "补充视频时间一致性，针对 NOVA3R 静态场景局限。",
+      "publication_month": "2025-07"
+    },
+    {
+      "paper_id": "arxiv:2501.17008",
+      "title": "OccTTA: Fast and Memory-Efficient Test-Time Adaptation for 3D Occupancy Prediction",
+      "reason_selected": "补充 3D occupancy 和跨域测试时适配，为三维 amodal 的 unknown/occupied 区分提供迁移线索。",
+      "publication_month": "2025-01"
+    }
+  ]
+}

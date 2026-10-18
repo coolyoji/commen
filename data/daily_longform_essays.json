@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "essays": [
     {
-      "paper_id": "arxiv:2604.02252",
-      "path": "../docs/md/longform/2026-10/spar.md",
+      "paper_id": "arxiv:2603.04179",
+      "path": "../docs/md/longform/2026-10/nova3r.md",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-04",
+      "publication_month": "2026-03",
       "read_month": "2026-10"
     }
   ]

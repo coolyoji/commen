@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-18",
+  "direction": "amodal completion, 3D reconstruction and 3D amodal completion",
+  "method": "ARIS research-lit style gap analysis followed by idea-creator style hypotheses; no GPU experiments launched",
+  "papers": [
+    {
+      "paper_id": "arxiv:2603.04179",
+      "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction",
+      "labels": {
+        "paper_fact": [
+          "Uses learnable scene tokens to aggregate unposed image views.",
+          "Uses a flow-matching 3D decoder to generate complete point clouds.",
+          "Evaluates scene and object completion on SCRREAM, 7-Scenes, NRGBD and GSO."
+        ],
+        "evidence_explanation": [
+          "A global non-pixel-aligned representation reduces duplicated geometry because multiple views share one scene representation.",
+          "Flow matching is a better fit than nearest-neighbor Chamfer for unordered point generation in the reported ablation."
+        ],
+        "research_hypothesis": [
+          "Separating observed, inferred and uncertain tokens will improve calibration of hidden geometry.",
+          "Multi-hypothesis outputs will be more honest than a single deterministic completion under severe occlusion."
+        ]
+      },
+      "problem_gap": "Pixel-aligned reconstruction is tied to visible rays, leaving holes and duplicated structures in overlapping views.",
+      "why_method_needed": "The bottleneck is the output representation, so a post-hoc hole-filling module cannot fully solve global consistency.",
+      "why_may_work": "Scene tokens fuse views globally; a 3D generative decoder can use shape priors to produce points without pixel supervision.",
+      "failure_conditions": [
+        "Too few views or tokens for large scenes.",
+        "Dynamic objects violate the static-scene assumption.",
+        "Hidden geometry is underdetermined and may be plausible but wrong."
+      ],
+      "evidence_boundary": "Strong geometry evidence on the reported benchmarks; no direct evidence for long videos, UAV outdoor domain or semantic correctness of occluded surfaces.",
+      "ideas": [
+        {
+          "name": "Evidence-decomposed scene tokens",
+          "method": "Use separate observed, inferred and uncertainty token groups and predict source labels with geometry.",
+          "minimal_experiment": "Compare CD, hole ratio and confidence calibration by occlusion level on SCRREAM.",
+          "risk": "Extra token groups may only add capacity."
+        },
+        {
+          "name": "Temporal NOVA3R",
+          "method": "Add temporal tokens, object tokens and cross-frame 3D consistency.",
+          "minimal_experiment": "Evaluate 3–5 frame inputs on synthetic dynamic scenes using jitter and hidden-region CD.",
+          "risk": "Tracking errors can fuse moving objects."
+        },
+        {
+          "name": "Multi-hypothesis completion",
+          "method": "Sample several point clouds and rank them by visible reprojection and cross-view consistency.",
+          "minimal_experiment": "Report best-of-N CD, coverage and calibration under increasing occlusion.",
+          "risk": "Diversity may be noise rather than meaningful ambiguity."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2503.13439",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "labels": {
+        "paper_fact": [
+          "Targets complete 3D object reconstruction from occluded 2D observations.",
+          "Uses an object-level amodal 3D latent representation."
+        ],
+        "evidence_explanation": [
+          "Direct 3D completion avoids cascading an uncertain 2D inpainting error into geometry.",
+          "The object-level prior is useful for regular shapes but can bias unusual objects toward common templates."
+        ],
+        "research_hypothesis": [
+          "Explicit occluder geometry and depth ordering will improve hidden-surface recovery.",
+          "Category-agnostic structural tokens can reduce long-tail template bias."
+        ]
+      },
+      "problem_gap": "Single-view 3D methods often recover only visible surfaces or depend on clean object crops.",
+      "why_method_needed": "The target is complete object geometry, so the model must reason beyond pixels rather than only estimate visible depth.",
+      "why_may_work": "An object-level latent can store shape priors and infer hidden parts jointly.",
+      "failure_conditions": [
+        "Unusual topology or non-rigid objects.",
+        "Cluttered scenes and incorrect object masks.",
+        "Strong category imbalance."
+      ],
+      "evidence_boundary": "Directly relevant object-level evidence; scene-level, open-world and temporal claims remain unverified.",
+      "ideas": [
+        {
+          "name": "Occluder-aware amodal latent",
+          "method": "Condition on visible mask, occluder mask and depth order.",
+          "minimal_experiment": "Stratify by occlusion ratio and compare hidden-surface CD.",
+          "risk": "Depth order may be unavailable in real data."
+        },
+        {
+          "name": "Category-agnostic structural tokens",
+          "method": "Disentangle category semantics from geometric structure tokens.",
+          "minimal_experiment": "Train on seen categories and test on held-out categories.",
+          "risk": "Disentanglement may remove useful shape priors."
+        },
+        {
+          "name": "Multi-view amodal fusion",
+          "method": "Generate per-view shape hypotheses and fuse with cross-view consistency.",
+          "minimal_experiment": "Measure gains from one, two and four unposed views.",
+          "risk": "View association errors can create conflicting shapes."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2511.21945",
+      "title": "GENA3D: Generative Amodal 3D Modeling",
+      "labels": {
+        "paper_fact": [
+          "Frames amodal 3D modeling as conditional generation.",
+          "Uses a 3D latent denoising/generative process to recover complete shapes."
+        ],
+        "evidence_explanation": [
+          "A generative model can represent multiple plausible hidden shapes instead of averaging them.",
+          "Visible-region consistency is needed to prevent attractive but input-inconsistent generations."
+        ],
+        "research_hypothesis": [
+          "Sampling diversity can be calibrated against hidden-region uncertainty.",
+          "Scene relation constraints can remove geometrically plausible but physically impossible completions."
+        ]
+      },
+      "problem_gap": "Deterministic regressors collapse multiple valid hidden shapes into one average prediction.",
+      "why_method_needed": "Occluded geometry is intrinsically multi-solution, so a single point estimate hides uncertainty.",
+      "why_may_work": "Latent diffusion provides a prior over complete 3D shapes conditioned on visible evidence.",
+      "failure_conditions": [
+        "Weak conditioning causes hallucinated geometry.",
+        "Sampling is expensive.",
+        "Generated diversity may not match real ambiguity."
+      ],
+      "evidence_boundary": "Supports generative amodal modeling at object level; requires stronger reprojection, multi-view and scene-level validation.",
+      "ideas": [
+        {
+          "name": "Evidence-ranked sampling",
+          "method": "Rank generated shapes by visible reprojection, depth ordering and local geometry.",
+          "minimal_experiment": "Compare random, likelihood and evidence-ranked selection.",
+          "risk": "Ranking can favor visually conservative but incomplete shapes."
+        },
+        {
+          "name": "Diffusion uncertainty calibration",
+          "method": "Map sample variance to hidden-surface error.",
+          "minimal_experiment": "Evaluate calibration error across occlusion levels.",
+          "risk": "Variance may reflect model noise rather than epistemic uncertainty."
+        },
+        {
+          "name": "Scene-graph constrained generation",
+          "method": "Reject samples violating support, contact or occlusion relations.",
+          "minimal_experiment": "Measure physical violation rate before and after constraints.",
+          "risk": "Relation annotations are expensive."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2503.12049",
+      "title": "TACO: Test-Time Adaptation for Occlusion-Robust 3D Reconstruction",
+      "labels": {
+        "paper_fact": [
+          "Studies test-time adaptation under occlusion and deployment shift.",
+          "Uses unlabeled test observations to adapt a reconstruction model."
+        ],
+        "evidence_explanation": [
+          "Adaptation changes the model's interpretation of the current scene; it does not create new geometric evidence.",
+          "Restricting updates to reliable visible regions is safer than adapting on all pseudo-labels."
+        ],
+        "research_hypothesis": [
+          "Occlusion-confidence gated updates reduce drift.",
+          "Temporal consistency can make test-time adaptation safer for video."
+        ]
+      },
+      "problem_gap": "A model trained on one occlusion and sensor distribution can fail when deployment conditions change.",
+      "why_method_needed": "Collecting dense labels for every new domain is expensive, so the model needs a label-free adaptation path.",
+      "why_may_work": "Current inputs contain self-consistency signals from visible regions, views and geometry.",
+      "failure_conditions": [
+        "Bad pseudo-labels reinforce errors.",
+        "Online updates can drift or forget the base model.",
+        "Fast motion and camera changes break consistency signals."
+      ],
+      "evidence_boundary": "Useful deployment principle; not evidence that adaptation alone solves 3D amodal ambiguity.",
+      "ideas": [
+        {
+          "name": "Confidence-gated adaptation",
+          "method": "Update only from high-confidence visible regions and freeze the decoder.",
+          "minimal_experiment": "Compare global, visible-only and random updates under domain shift.",
+          "risk": "High-confidence regions may be systematically biased."
+        },
+        {
+          "name": "Cross-frame stable adaptation",
+          "method": "Use short-window temporal consistency as a self-supervised signal.",
+          "minimal_experiment": "Measure drift and reconstruction error on videos.",
+          "risk": "Wrong tracking can corrupt the update."
+        },
+        {
+          "name": "Adaptation plus hypothesis selection",
+          "method": "Generate several amodal candidates and select after adaptation.",
+          "minimal_experiment": "Compare single prediction with best-of-N under shift.",
+          "risk": "Inference cost increases."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2507.08137",
+      "title": "Occlusion-Aware Temporally Consistent Amodal Completion",
+      "labels": {
+        "paper_fact": [
+          "Uses temporal information for amodal completion in videos.",
+          "Treats visible and occluded regions with different reliability."
+        ],
+        "evidence_explanation": [
+          "Adjacent frames can provide extra evidence, but only when correspondence is reliable.",
+          "Occlusion-aware weighting prevents unknown regions from being forced to match a false target."
+        ],
+        "research_hypothesis": [
+          "2D temporal consistency and 3D shape consistency should be optimized jointly.",
+          "Segmenting occlusion events is better than using one temporal loss for all motion patterns."
+        ]
+      },
+      "problem_gap": "Frame-wise amodal predictions can flicker and change shape without physical reason.",
+      "why_method_needed": "Video supplies repeated observations that can constrain otherwise ambiguous hidden regions.",
+      "why_may_work": "Flow/tracking aligns evidence over time and stabilizes object identity and boundaries.",
+      "failure_conditions": [
+        "Fast motion, camera shake or object reappearance.",
+        "Tracking errors propagate old mistakes.",
+        "Long occlusions provide no fresh evidence."
+      ],
+      "evidence_boundary": "Supports temporal stability; direct 3D geometry and UAV-scale scene claims need separate validation.",
+      "ideas": [
+        {
+          "name": "Bidirectional 2D-3D consistency",
+          "method": "Jointly constrain mask tracks and 3D shape tracks.",
+          "minimal_experiment": "Compare 2D-only, 3D-only and bidirectional losses.",
+          "risk": "A wrong 3D estimate can contaminate the 2D track."
+        },
+        {
+          "name": "Occlusion-event segmentation",
+          "method": "Use separate models for short, long and reappearing occlusions.",
+          "minimal_experiment": "Stratify accuracy by event duration.",
+          "risk": "Event labels may be noisy."
+        },
+        {
+          "name": "Error-propagation detector",
+          "method": "Drop or reset memory when visible reprojection error rises.",
+          "minimal_experiment": "Measure recovery after deliberately injected tracking failures.",
+          "risk": "Frequent resets reduce temporal benefit."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2501.17008",
+      "title": "OccTTA: Fast and Memory-Efficient Test-Time Adaptation for 3D Occupancy Prediction",
+      "labels": {
+        "paper_fact": [
+          "Targets test-time adaptation for 3D occupancy prediction.",
+          "Focuses on memory and speed constraints in deployment."
+        ],
+        "evidence_explanation": [
+          "Occupancy adaptation addresses domain shift but does not resolve the multi-solution nature of hidden geometry.",
+          "An explicit unknown state is safer than forcing invisible voxels to occupied or free."
+        ],
+        "research_hypothesis": [
+          "Unknown-aware occupancy can improve 3D amodal calibration.",
+          "Only updating tokens involved in cross-view conflicts may reduce drift."
+        ]
+      },
+      "problem_gap": "3D occupancy models degrade across cities, weather, sensors and camera conditions.",
+      "why_method_needed": "A fixed model cannot cover every deployment domain, while dense target-domain labels are unavailable.",
+      "why_may_work": "Spatial continuity, multi-view agreement and prediction statistics provide label-free adaptation signals.",
+      "failure_conditions": [
+        "Large spatial errors create correlated voxel mistakes.",
+        "Domain shift and real dynamics can be confused.",
+        "Online updates can damage previously learned geometry."
+      ],
+      "evidence_boundary": "Relevant for deployment robustness; not a direct amodal completion method.",
+      "ideas": [
+        {
+          "name": "Unknown-aware occupancy",
+          "method": "Use visible, unknown and occupied states and calibrate unknown-to-occupied confidence.",
+          "minimal_experiment": "Evaluate hidden-voxel calibration by occlusion ratio.",
+          "risk": "Unknown may become a dumping class."
+        },
+        {
+          "name": "Conflict-driven adaptation",
+          "method": "Update only features linked to multi-view spatial conflicts.",
+          "minimal_experiment": "Compare global and conflict-local updates under weather shift.",
+          "risk": "Conflict detection may be noisy."
+        },
+        {
+          "name": "Static/dynamic split",
+          "method": "Adapt static occupancy while freezing dynamic object memory.",
+          "minimal_experiment": "Separate static and moving-object metrics.",
+          "risk": "Incorrect motion masks can route updates wrongly."
+        }
+      ]
+    }
+  ]
+}

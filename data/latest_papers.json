@@ -1,46 +1,47 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "count": 6,
-  "theme": "高分辨率开放词汇分割、跨窗口语义一致性、多模态遥感、同义词鲁棒性与开放世界数据引擎",
+  "theme": "三维 amodal 补全、生成式完整形状、视频遮挡一致性与测试时三维占据适配",
   "deep_reads": [
     {
-      "id": "arxiv:2604.02252",
-      "title": "SPAR: Single-Pass Any-Resolution ViT for Open-vocabulary Segmentation",
-      "code": "https://github.com/naomikombol/SPAR",
-      "publication_month": "2026-04",
+      "id": "arxiv:2603.04179",
+      "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction",
+      "code": "https://github.com/wrchen530/nova3r",
+      "project": "https://wrchen530.github.io/nova3r",
+      "publication_month": "2026-03",
       "read_month": "2026-10",
       "local_pdf_verified": true,
       "zotero_imported": true,
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "K9JVC7WW",
-      "zotero_attachment_key": "57GP4Q3Q"
+      "zotero_item_key": "4BS8IYJG",
+      "zotero_attachment_key": "T4BMVDRT"
     }
   ],
   "browse": [
     {
-      "id": "arxiv:2603.23030",
-      "title": "Looking Beyond the Window: Global-Local Aligned CLIP for Training-free Open-Vocabulary Semantic Segmentation",
-      "publication_month": "2026-03"
+      "id": "arxiv:2503.13439",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "publication_month": "2025-03"
     },
     {
-      "id": "arxiv:2603.17528",
-      "title": "MM-OVSeg: Multimodal Optical-SAR Fusion for Open-Vocabulary Segmentation in Remote Sensing",
-      "publication_month": "2026-03"
+      "id": "arxiv:2511.21945",
+      "title": "GENA3D: Generative Amodal 3D Modeling",
+      "publication_month": "2025-11"
     },
     {
-      "id": "arxiv:2607.11008",
-      "title": "SynCLIP: Synonym-Coherent Language-Image Pretraining for Robust Open-Vocabulary Dense Perception",
-      "publication_month": "2026-07"
+      "id": "arxiv:2503.12049",
+      "title": "TACO: Test-Time Adaptation for Occlusion-Robust 3D Reconstruction",
+      "publication_month": "2025-03"
     },
     {
-      "id": "arxiv:2603.21386",
-      "title": "Mitigating Objectness Bias and Region-to-Text Misalignment for Open-Vocabulary Panoptic Segmentation",
-      "publication_month": "2026-03"
+      "id": "arxiv:2507.08137",
+      "title": "Occlusion-Aware Temporally Consistent Amodal Completion",
+      "publication_month": "2025-07"
     },
     {
-      "id": "arxiv:2508.06146",
-      "title": "Text-guided Visual Prompt DINO for Generic Segmentation",
-      "publication_month": "2025-08"
+      "id": "arxiv:2501.17008",
+      "title": "OccTTA: Fast and Memory-Efficient Test-Time Adaptation for 3D Occupancy Prediction",
+      "publication_month": "2025-01"
     }
   ]
 }

@@ -65,8 +65,10 @@
     "remote": "https://github.com/coolyoji/commen.git",
     "commit_attempted": true,
     "local_commit": "347d6ca",
-    "push_attempted": false,
-    "status": "pending"
+    "audit_commit": "59a07fd",
+    "push_attempted": true,
+    "status": "local_commits_ready_remote_push_timeout",
+    "push_error": "GitHub HTTPS connection timed out after 300030 ms"
   },
   "limitations": [
     "S2C-3D 的实验主要是室内静态场景，开放世界、UAV 和动态物体迁移仍是研究假设。",

@@ -1,0 +1,362 @@
+{
+  "date": "2026-10-19",
+  "direction": "amodal completion, 3D reconstruction and 3D amodal completion",
+  "method": "ARIS research-lit style problem-gap analysis followed by idea-creator style hypotheses; no GPU experiments launched",
+  "papers": [
+    {
+      "paper_id": "arxiv:2605.05664",
+      "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes",
+      "source": ["arXiv:2605.05664", "SIGGRAPH 2026", "https://gapszju.github.io/S2C-3D"],
+      "labels": {
+        "paper_fact": [
+          "Uses pi3 for sparse-view camera and point-cloud initialization.",
+          "Finetunes a scene-specific diffusion model on degraded and input images.",
+          "Plans virtual cameras with information gain and uses view-consistency conditioned sampling."
+        ],
+        "evidence_explanation": [
+          "The three components address domain gap, insufficient coverage and cross-view conflicts as a causal loop.",
+          "The ablation table supports the necessity of mask finetuning, trajectory planning and consistency conditioning."
+        ],
+        "research_hypothesis": [
+          "Separating observed, inferred and uncertain Gaussian evidence can improve hidden-geometry calibration.",
+          "UAV view selection should optimize uncertainty reduction rather than only geometric coverage.",
+          "Object-centric temporal memory can prevent moving objects from corrupting static-scene Gaussian optimization."
+        ]
+      },
+      "problem_gap": "Sparse-view reconstruction leaves unseen regions, domain mismatch and cross-view conflicts; post-hoc hole filling does not enforce one global explanation.",
+      "why_method_needed": "The failure is a closed-loop acquisition and consistency problem, not only an image quality problem.",
+      "why_may_work": "Scene adaptation supplies target-specific priors, information gain adds new evidence, and reprojection energy constrains repaired views to a shared geometry.",
+      "assumptions_and_failures": [
+        "Requires usable coarse cameras and depth from pi3.",
+        "Static-scene and input-frustum assumptions exclude many dynamic/open scenes.",
+        "Concave rooms, random cameras inside objects and greedy planning can produce wrong geometry."
+      ],
+      "author_claims_and_evidence": "Table 1 reports best PSNR/SSIM/LPIPS across ScanNet++, Replica and S2C-Scene; Table 2 shows degradation when each of the three key components is removed.",
+      "unresolved_gaps": "No explicit observed/inferred/unknown labels, calibrated uncertainty, dynamic-object memory or multi-hypothesis output.",
+      "ideas": [
+        {
+          "name": "Evidence-Decomposed S2C",
+          "method": "Predict observed, inferred and uncertain evidence types for each Gaussian and use visibility-aware losses.",
+          "core_hypothesis": "Evidence separation reduces high-confidence hallucination in hidden regions.",
+          "minimum_experiment": "Occlusion-stratified hidden-region CD, PSNR and calibration error on Replica/ScanNet++.",
+          "expected_contribution": "A source-aware 3D amodal representation.",
+          "risk": "Extra branches may only add capacity.",
+          "relation": "Extends S2C-3D scene adaptation and consistency loop."
+        },
+        {
+          "name": "Uncertainty-Guided UAV Active Completion",
+          "method": "Generate multiple completions, estimate uncertainty reduction for candidate views and choose a safe UAV waypoint.",
+          "core_hypothesis": "Uncertainty reduction is a better next-view objective than coverage alone.",
+          "minimum_experiment": "Compare random, coverage-greedy and uncertainty-guided trajectories in synthetic outdoor scenes.",
+          "expected_contribution": "A bridge between 3D amodal completion and active perception.",
+          "risk": "Uncertainty may measure sampling noise rather than true error.",
+          "relation": "Replaces S2C-3D information gain with uncertainty gain."
+        },
+        {
+          "name": "Dynamic Object Tokens",
+          "method": "Maintain static background Gaussians and object-centric temporal tokens with reprojection-based memory reset.",
+          "core_hypothesis": "Separating moving objects prevents temporal fusion artifacts.",
+          "minimum_experiment": "Three-to-five-frame sparse inputs; measure 3D jitter, hidden-region CD and identity drift.",
+          "expected_contribution": "A video-ready S2C variant.",
+          "risk": "Tracking errors can route wrong evidence into object memory.",
+          "relation": "Targets the paper's static-scene limitation."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2503.13439",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "source": ["arXiv:2503.13439", "https://sm0kywu.github.io/Amodal3R/"],
+      "labels": {
+        "paper_fact": [
+          "Uses a conditional 3D generative model for occluded 2D observations.",
+          "Introduces mask-weighted multi-head cross-attention and occlusion-aware attention.",
+          "Trains on synthetic data and evaluates real occluded scenes."
+        ],
+        "evidence_explanation": [
+          "Direct 3D generation avoids cascading 2D inpainting boundary errors.",
+          "Occlusion attention can inject shape priors but may bias unusual objects toward common templates."
+        ],
+        "research_hypothesis": [
+          "Explicit occluder geometry and depth order will improve hidden-surface recovery.",
+          "Category-agnostic structural tokens can reduce long-tail template bias."
+        ]
+      },
+      "problem_gap": "Visible-surface reconstruction and 2D-completion-then-3D pipelines do not directly model hidden 3D structure.",
+      "why_method_needed": "The target is a complete object, so the model must reason beyond visible pixels in 3D.",
+      "why_may_work": "Object-level latent features combine visible evidence with learned shape priors and occlusion weighting.",
+      "assumptions_and_failures": [
+        "Depends on reliable object crops and masks.",
+        "Synthetic-to-real shift and nonstandard topology can cause plausible but wrong completions.",
+        "Scene-level clutter and unknown categories remain unproven."
+      ],
+      "author_claims_and_evidence": "The abstract states synthetic-only training, occlusion-aware attention and gains over 2D completion followed by 3D reconstruction.",
+      "unresolved_gaps": "Open-world scene completion, multi-view fusion, temporal consistency and uncertainty calibration.",
+      "ideas": [
+        {
+          "name": "Occluder-aware latent",
+          "method": "Condition on visible mask, occluder mask and depth order.",
+          "core_hypothesis": "Explicit occluder geometry improves hidden-surface inference.",
+          "minimum_experiment": "Compare hidden-surface CD by occlusion ratio.",
+          "expected_contribution": "A geometry-aware amodal latent.",
+          "risk": "Depth order may be unavailable in real data.",
+          "relation": "Adds scene evidence to Amodal3R."
+        },
+        {
+          "name": "Category-agnostic structural tokens",
+          "method": "Disentangle category semantics from reusable geometric structure tokens.",
+          "core_hypothesis": "Structure tokens generalize better to held-out categories.",
+          "minimum_experiment": "Train on seen categories and test on held-out categories.",
+          "expected_contribution": "Reduced template bias.",
+          "risk": "Disentanglement may discard useful category priors.",
+          "relation": "Keeps Amodal3R's latent but changes factorization."
+        },
+        {
+          "name": "Multi-view amodal fusion",
+          "method": "Generate per-view hypotheses and fuse them with cross-view consistency.",
+          "core_hypothesis": "Additional unposed views reduce ambiguity without requiring dense pose labels.",
+          "minimum_experiment": "Compare one, two and four views.",
+          "expected_contribution": "Object-to-scene amodal extension.",
+          "risk": "View association errors create conflicting shapes.",
+          "relation": "Connects Amodal3R to S2C-3D."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2511.21945",
+      "title": "GENA3D: Generative Amodal 3D Modeling by Bridging 2D Priors and 3D Coherence",
+      "source": ["arXiv:2511.21945", "ECCV 2026", "https://colezwhy.github.io/gena3d/"],
+      "labels": {
+        "paper_fact": [
+          "Bridges learned 2D generative priors and explicit 3D reasoning.",
+          "Uses View-Wise Cross-Attention and Stereo-Conditioned Cross-Attention.",
+          "Reports synthetic and real-world amodal evaluations."
+        ],
+        "evidence_explanation": [
+          "2D priors improve plausible appearance while stereo-conditioned attention anchors geometry.",
+          "Cross-view alignment is necessary to prevent independently attractive but incompatible views."
+        ],
+        "research_hypothesis": [
+          "Evidence-ranked sampling can improve geometric validity without retraining the generator.",
+          "Scene relation constraints can reject physically impossible completions."
+        ]
+      },
+      "problem_gap": "2D priors lack reliable 3D coherence; pure 3D generation may lack expressive appearance priors.",
+      "why_method_needed": "Amodal completion needs both plausible hidden appearance and a single coherent 3D explanation.",
+      "why_may_work": "View-wise attention aligns observations and stereo conditioning injects spatial relationships.",
+      "assumptions_and_failures": [
+        "Requires meaningful view relationships and reliable matching.",
+        "A strong 2D prior can hallucinate attractive but input-inconsistent details.",
+        "Sampling cost and calibration are not established by the abstract alone."
+      ],
+      "author_claims_and_evidence": "The abstract explicitly claims improved synthetic and real-world amodal modeling; detailed numerical verification is deferred because the PDF was not downloaded for browse reading.",
+      "unresolved_gaps": "Uncertainty calibration, open-world categories, dynamic objects and scene-level physical relations.",
+      "ideas": [
+        {
+          "name": "Evidence-ranked sampling",
+          "method": "Rank generated candidates by visible reprojection, depth order and local geometry.",
+          "core_hypothesis": "Evidence ranking improves correctness without changing the generator.",
+          "minimum_experiment": "Random versus evidence-ranked selection under increasing occlusion.",
+          "expected_contribution": "A test-time reliability layer.",
+          "risk": "Ranking may favor conservative incomplete shapes.",
+          "relation": "Uses GENA3D outputs as hypotheses."
+        },
+        {
+          "name": "Diffusion uncertainty calibration",
+          "method": "Map sample variance to hidden-surface error and calibrate confidence.",
+          "core_hypothesis": "Diversity is informative when conditioned on visible evidence.",
+          "minimum_experiment": "Calibration error across occlusion levels.",
+          "expected_contribution": "Uncertainty-aware amodal evaluation.",
+          "risk": "Variance may reflect aleatoric and model noise together.",
+          "relation": "Extends GENA3D's generative strength."
+        },
+        {
+          "name": "Scene-graph constrained generation",
+          "method": "Filter samples violating support, contact or occlusion relations.",
+          "core_hypothesis": "Physical relations remove plausible-looking but impossible geometry.",
+          "minimum_experiment": "Physical violation rate before and after constraints.",
+          "expected_contribution": "Scene-level 3D amodal consistency.",
+          "risk": "Relation labels and estimators can be noisy.",
+          "relation": "Adds scene context absent from object-only modeling."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2503.12049",
+      "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion",
+      "source": ["arXiv:2503.12049", "ICCV 2025", "https://jason-aplp.github.io/TACO"],
+      "labels": {
+        "paper_fact": [
+          "Targets video amodal completion in unstructured real-world videos.",
+          "Uses a conditional video diffusion model and progressive fine-tuning.",
+          "Builds synthetic occlusion videos and tests downstream reconstruction and pose estimation."
+        ],
+        "evidence_explanation": [
+          "Temporal diffusion manifolds provide repeated evidence but can also propagate an early mistake.",
+          "Progressive difficulty reduces training instability under severe occlusion."
+        ],
+        "research_hypothesis": [
+          "Joint 2D-3D temporal consistency is safer than 2D temporal consistency alone.",
+          "Memory reset based on visible reprojection can limit error accumulation."
+        ]
+      },
+      "problem_gap": "Frame-wise amodal completion flickers and fails on in-the-wild occlusions.",
+      "why_method_needed": "Video provides repeated observations that can constrain hidden content and identity.",
+      "why_may_work": "Video diffusion captures temporal structure; curriculum-like fine-tuning exposes increasing occlusion difficulty.",
+      "assumptions_and_failures": [
+        "Requires usable correspondence and motion estimation.",
+        "Long complete occlusion supplies no new evidence.",
+        "Camera shake, fast motion and object reappearance can break temporal assumptions."
+      ],
+      "author_claims_and_evidence": "The abstract supports broad real-video evaluation and downstream reconstruction/pose applications; no unverified numeric claims are recorded here.",
+      "unresolved_gaps": "3D correctness, long-occlusion uncertainty, dynamic non-rigid objects and domain-specific UAV data.",
+      "ideas": [
+        {
+          "name": "Bidirectional 2D-3D consistency",
+          "method": "Jointly constrain mask tracks and 3D shape tracks.",
+          "core_hypothesis": "3D reprojection catches temporally stable but geometrically wrong 2D completion.",
+          "minimum_experiment": "2D-only, 3D-only and joint loss comparison.",
+          "expected_contribution": "Video-to-3D amodal bridge.",
+          "risk": "Wrong 3D estimates can contaminate 2D tracks.",
+          "relation": "Extends TACO downstream reconstruction."
+        },
+        {
+          "name": "Occlusion-event segmentation",
+          "method": "Use separate handling for short, long and reappearing occlusions.",
+          "core_hypothesis": "One temporal loss cannot cover all visibility transitions.",
+          "minimum_experiment": "Stratify results by event duration.",
+          "expected_contribution": "Failure-aware temporal completion.",
+          "risk": "Event labels may be noisy.",
+          "relation": "Makes TACO's curriculum explicit at inference."
+        },
+        {
+          "name": "Memory reset detector",
+          "method": "Reset temporal memory when visible reprojection error rises.",
+          "core_hypothesis": "A visible-region diagnostic can detect stale hidden predictions.",
+          "minimum_experiment": "Inject tracking failures and measure recovery.",
+          "expected_contribution": "Safer online completion.",
+          "risk": "Frequent resets may remove temporal benefits.",
+          "relation": "Adds reliability control to TACO."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2507.08137",
+      "title": "Occlusion-Aware Temporally Consistent Amodal Completion for 3D Human-Object Interaction Reconstruction",
+      "source": ["arXiv:2507.08137", "ACM MM 2025", "doi:10.1145/3746027.3754769"],
+      "labels": {
+        "paper_fact": [
+          "Targets dynamic human-object interaction reconstruction from monocular video.",
+          "Uses amodal completion and temporal context under mutual occlusion.",
+          "Validates with 3D Gaussian Splatting on challenging videos."
+        ],
+        "evidence_explanation": [
+          "Object-centric temporal reasoning is needed because human and object motion violate static-scene assumptions.",
+          "Temporal coherence stabilizes recovery but can propagate tracking errors."
+        ],
+        "research_hypothesis": [
+          "Visibility-state transitions should be modeled explicitly.",
+          "Contact and support relations can improve dynamic amodal geometry."
+        ]
+      },
+      "problem_gap": "Static or fully visible 3D reconstruction breaks for mutual occlusion in dynamic interactions.",
+      "why_method_needed": "The hidden structure and identity of human/object parts must remain coherent across frames.",
+      "why_may_work": "Temporal context supplies repeated evidence, while amodal completion fills currently hidden structure.",
+      "assumptions_and_failures": [
+        "Needs stable tracking and depth ordering.",
+        "Fast motion, camera shake and reappearance can corrupt incremental refinement.",
+        "Template-free prediction may struggle with unusual geometry."
+      ],
+      "author_claims_and_evidence": "The abstract states improved occlusion handling and temporal stability with 3DGS; detailed metrics remain unverified in browse mode.",
+      "unresolved_gaps": "Open-world object categories, cross-camera transfer, uncertainty and UAV-scale scenes.",
+      "ideas": [
+        {
+          "name": "Object-centric temporal memory",
+          "method": "Separate static background Gaussians from instance-level temporal tokens.",
+          "core_hypothesis": "Motion-aware memory reduces fusion artifacts.",
+          "minimum_experiment": "Measure 3D jitter and identity drift under synthetic occlusion.",
+          "expected_contribution": "Dynamic 3D amodal memory.",
+          "risk": "Tracking errors can route wrong evidence.",
+          "relation": "Generalizes the paper's temporal refinement."
+        },
+        {
+          "name": "Visibility-state transition model",
+          "method": "Predict visible, occluded and reappeared states and use state-specific losses.",
+          "core_hypothesis": "Different visibility transitions require different update rules.",
+          "minimum_experiment": "Evaluate by transition type.",
+          "expected_contribution": "Explicit failure diagnosis.",
+          "risk": "State labels are noisy.",
+          "relation": "Makes occlusion awareness measurable."
+        },
+        {
+          "name": "Contact-aware completion",
+          "method": "Add hand-object contact and support constraints to the hidden geometry.",
+          "core_hypothesis": "Physical relations reduce impossible completions.",
+          "minimum_experiment": "Contact geometry violation rate.",
+          "expected_contribution": "Interaction-aware amodal completion.",
+          "risk": "Contact estimation is itself uncertain.",
+          "relation": "Adds scene relation evidence to the interaction setting."
+        }
+      ]
+    },
+    {
+      "paper_id": "arxiv:2506.21544",
+      "title": "DeOcc-1-to-3: 3D De-Occlusion from a Single Image via Self-Supervised Multi-View Diffusion",
+      "source": ["arXiv:2506.21544", "https://quyans.github.io/DeOcc123/"],
+      "labels": {
+        "paper_fact": [
+          "Generates six structurally consistent novel views from one occluded image.",
+          "Uses occluded/unoccluded pairs and pseudo-ground-truth views for self-supervised training.",
+          "Introduces an occlusion-aware reconstruction benchmark."
+        ],
+        "evidence_explanation": [
+          "Multiple generated views turn a single partial observation into several geometric constraints.",
+          "Structural consistency is necessary so the views describe one object rather than independent hallucinations."
+        ],
+        "research_hypothesis": [
+          "Selecting a reliable subset of generated views can improve 3D reconstruction.",
+          "Keeping multiple view sets is more honest than collapsing to one completion under severe occlusion."
+        ]
+      },
+      "problem_gap": "Single-image 3D reconstruction assumes full visibility and degrades when the object is occluded.",
+      "why_method_needed": "The missing views can be synthesized to provide complementary constraints without manual hidden-surface labels.",
+      "why_may_work": "Self-supervised occlusion pairs teach structure-aware completion and multi-view diffusion supplies consistent observations.",
+      "assumptions_and_failures": [
+        "Synthetic occlusion must resemble real occlusion.",
+        "Generated view consistency may still hide a shared wrong prior.",
+        "Long-tail, asymmetric and non-rigid objects remain difficult."
+      ],
+      "author_claims_and_evidence": "The abstract supports six-view generation, end-to-end fine-tuning and a new benchmark; no numeric result is asserted here.",
+      "unresolved_gaps": "Uncertainty calibration, open-world multi-object scenes and cross-view depth verification.",
+      "ideas": [
+        {
+          "name": "Geometry-ranked view set",
+          "method": "Rank generated views by depth and reprojection consistency before 3D reconstruction.",
+          "core_hypothesis": "Discarding inconsistent synthetic views improves geometry.",
+          "minimum_experiment": "Random six-view versus ranked subsets.",
+          "expected_contribution": "A reliability layer for 1-to-3.",
+          "risk": "Ranking may prefer over-smoothed views.",
+          "relation": "Uses DeOcc-1-to-3 outputs unchanged."
+        },
+        {
+          "name": "Multi-hypothesis 1-to-3",
+          "method": "Generate multiple six-view sets and retain a calibrated candidate set.",
+          "core_hypothesis": "Hidden geometry is multi-solution and should not be averaged.",
+          "minimum_experiment": "Best-of-N CD, coverage and calibration by occlusion level.",
+          "expected_contribution": "Uncertainty-aware single-image amodal reconstruction.",
+          "risk": "Inference cost increases.",
+          "relation": "Extends the paper's generative multi-view idea."
+        },
+        {
+          "name": "Open-world relation conditioning",
+          "method": "Condition view generation on support, contact and occlusion relations in cluttered scenes.",
+          "core_hypothesis": "Scene relations constrain object completion better than appearance alone.",
+          "minimum_experiment": "Physical relation violation rate in multi-object scenes.",
+          "expected_contribution": "Scene-level de-occlusion.",
+          "risk": "Relation detection errors can misguide generation.",
+          "relation": "Moves from isolated objects to open scenes."
+        }
+      ]
+    }
+  ]
+}

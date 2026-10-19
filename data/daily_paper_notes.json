@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "deep_count": 1,
   "browse_count": 5,
   "deep_reads": [
     {
-      "paper_id": "arxiv:2603.04179",
-      "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction",
+      "paper_id": "arxiv:2605.05664",
+      "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes",
       "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-03",
+      "publication_month": "2026-07",
       "read_month": "2026-10",
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "4BS8IYJG",
-      "zotero_attachment_key": "T4BMVDRT",
-      "longform": "docs/md/longform/2026-10/nova3r.md"
+      "zotero_item_key": "T3MJDPEW",
+      "zotero_attachment_key": "YQ8D4Z8A",
+      "longform": "docs/md/longform/2026-10/s2c-3d.md"
     }
   ]
 }

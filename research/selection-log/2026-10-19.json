@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-19",
+  "theme": "sparse-to-complete reconstruction, amodal 3D and dynamic occlusion reasoning",
+  "selection_policy": {
+    "deep_count": 1,
+    "browse_count": 5,
+    "deep_priority": [
+      "公开项目、代码或数据入口",
+      "全文和实验可核验",
+      "方法有明确的生成、表示或观测机制创新",
+      "直接迁移到 amodal 补全、三维重建或三维 amodal 补全"
+    ],
+    "browse_policy": "不下载 PDF；用 arXiv API、公开摘要、项目页和出处核对标题、月份和方法，重点覆盖对象、视频、单图多视角和开放场景迁移"
+  },
+  "deep_read": {
+    "paper_id": "arxiv:2605.05664",
+    "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes",
+    "reason_selected": "论文直接处理稀疏视角下的完整场景重建，公开项目页和代码/数据入口齐全；场景专用扩散修复、信息增益相机轨迹和跨视角一致性条件分别对应域差异、观测不足和遮挡推理三类核心问题。",
+    "publication_month": "2026-07",
+    "preprint_month": "2026-05",
+    "code": "https://gapszju.github.io/S2C-3D",
+    "zotero_imported": true
+  },
+  "browse": [
+    {
+      "paper_id": "arxiv:2503.13439",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "reason_selected": "直接对象级 amodal 3D 基线，补足场景级 S2C-3D 的对象形状先验视角。",
+      "publication_month": "2025-03"
+    },
+    {
+      "paper_id": "arxiv:2511.21945",
+      "title": "GENA3D: Generative Amodal 3D Modeling by Bridging 2D Priors and 3D Coherence",
+      "reason_selected": "补充 2D 生成先验与 3D 几何一致性桥接，以及多假设和不确定性路线。",
+      "publication_month": "2025-11"
+    },
+    {
+      "paper_id": "arxiv:2503.12049",
+      "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion",
+      "reason_selected": "补充真实视频中的时间一致性和渐进式遮挡训练，覆盖 S2C-3D 未验证的动态场景。",
+      "publication_month": "2025-03"
+    },
+    {
+      "paper_id": "arxiv:2507.08137",
+      "title": "Occlusion-Aware Temporally Consistent Amodal Completion for 3D Human-Object Interaction Reconstruction",
+      "reason_selected": "补充动态人-物交互中的互相遮挡、3DGS 和时间稳定性。",
+      "publication_month": "2025-07"
+    },
+    {
+      "paper_id": "arxiv:2506.21544",
+      "title": "DeOcc-1-to-3: 3D De-Occlusion from a Single Image via Self-Supervised Multi-View Diffusion",
+      "reason_selected": "补充单图到多视角的自监督去遮挡，连接对象级补全与三维几何约束。",
+      "publication_month": "2025-06"
+    }
+  ]
+}

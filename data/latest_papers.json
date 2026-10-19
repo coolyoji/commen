@@ -1,20 +1,20 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "count": 6,
-  "theme": "三维 amodal 补全、生成式完整形状、视频遮挡一致性与测试时三维占据适配",
+  "theme": "稀疏视角场景补全、对象级 amodal 3D、多视角扩散和动态交互重建",
   "deep_reads": [
     {
-      "id": "arxiv:2603.04179",
-      "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction",
-      "code": "https://github.com/wrchen530/nova3r",
-      "project": "https://wrchen530.github.io/nova3r",
-      "publication_month": "2026-03",
+      "id": "arxiv:2605.05664",
+      "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes",
+      "code": "https://gapszju.github.io/S2C-3D",
+      "publication_month": "2026-07",
+      "preprint_month": "2026-05",
       "read_month": "2026-10",
       "local_pdf_verified": true,
       "zotero_imported": true,
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "4BS8IYJG",
-      "zotero_attachment_key": "T4BMVDRT"
+      "zotero_item_key": "T3MJDPEW",
+      "zotero_attachment_key": "YQ8D4Z8A"
     }
   ],
   "browse": [
@@ -25,23 +25,23 @@
     },
     {
       "id": "arxiv:2511.21945",
-      "title": "GENA3D: Generative Amodal 3D Modeling",
+      "title": "GENA3D: Generative Amodal 3D Modeling by Bridging 2D Priors and 3D Coherence",
       "publication_month": "2025-11"
     },
     {
       "id": "arxiv:2503.12049",
-      "title": "TACO: Test-Time Adaptation for Occlusion-Robust 3D Reconstruction",
+      "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion",
       "publication_month": "2025-03"
     },
     {
       "id": "arxiv:2507.08137",
-      "title": "Occlusion-Aware Temporally Consistent Amodal Completion",
+      "title": "Occlusion-Aware Temporally Consistent Amodal Completion for 3D Human-Object Interaction Reconstruction",
       "publication_month": "2025-07"
     },
     {
-      "id": "arxiv:2501.17008",
-      "title": "OccTTA: Fast and Memory-Efficient Test-Time Adaptation for 3D Occupancy Prediction",
-      "publication_month": "2025-01"
+      "id": "arxiv:2506.21544",
+      "title": "DeOcc-1-to-3: 3D De-Occlusion from a Single Image via Self-Supervised Multi-View Diffusion",
+      "publication_month": "2025-06"
     }
   ]
 }

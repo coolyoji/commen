@@ -106,6 +106,20 @@
       "zotero_item_key": "4BS8IYJG",
       "zotero_attachment_key": "T4BMVDRT",
       "pdf_verified": true
+    },
+    {
+      "date": "2026-10-19",
+      "paper_id": "arxiv:2605.05664",
+      "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes",
+      "publication_month": "2026-07",
+      "preprint_month": "2026-05",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/s2c-3d.md",
+      "code": "https://gapszju.github.io/S2C-3D",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "T3MJDPEW",
+      "zotero_attachment_key": "YQ8D4Z8A",
+      "pdf_verified": true
     }
   ]
 }

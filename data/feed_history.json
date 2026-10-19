@@ -1,5 +1,5 @@
 {
-  "updated_at":"2026-10-15",
+  "updated_at":"2026-10-19",
   "days":[
     {"date":"2026-09-23","selected":["arxiv:2608.11135","arxiv:2607.04125","arxiv:2502.12258","arxiv:2601.05552","arxiv:2505.09265"],"status":"test_update"},
     {"date":"2026-09-24","deep_read":["arxiv:2501.12295"],"browse":["arxiv:2604.23542","arxiv:2602.10858","arxiv:2608.08308","arxiv:2609.23061","arxiv:2609.24510"],"status":"daily_1_deep_5_browse"},
@@ -14,6 +14,7 @@
     {"date":"2026-10-15","deep_read":["arxiv:2610.20091"],"browse":["arxiv:2610.19931","arxiv:2610.19624","arxiv:2610.20501","arxiv:2610.19674","arxiv:2610.20532"],"status":"daily_1_deep_5_browse_temporal_memory_active_observation"},
     {"date":"2026-10-16","deep_read":["arxiv:2607.08075"],"browse":["arxiv:2604.15670","arxiv:2603.17920","arxiv:2507.08851","arxiv:2603.26541","arxiv:2512.00565"],"status":"daily_1_deep_5_browse_uav_open_vocabulary_3d_rgbt"},
     {"date":"2026-10-17","deep_read":["arxiv:2604.02252"],"browse":["arxiv:2603.23030","arxiv:2603.17528","arxiv:2607.11008","arxiv:2603.21386","arxiv:2508.06146"],"status":"daily_1_deep_5_browse_high_resolution_open_vocabulary_multimodal"},
-    {"date":"2026-10-18","deep_read":["arxiv:2603.04179"],"browse":["arxiv:2503.13439","arxiv:2511.21945","arxiv:2503.12049","arxiv:2507.08137","arxiv:2501.17008"],"status":"daily_1_deep_5_browse_amodal_3d_completion"}
+    {"date":"2026-10-18","deep_read":["arxiv:2603.04179"],"browse":["arxiv:2503.13439","arxiv:2511.21945","arxiv:2503.12049","arxiv:2507.08137","arxiv:2501.17008"],"status":"daily_1_deep_5_browse_amodal_3d_completion"},
+    {"date":"2026-10-19","deep_read":["arxiv:2605.05664"],"browse":["arxiv:2503.13439","arxiv:2511.21945","arxiv:2503.12049","arxiv:2507.08137","arxiv:2506.21544"],"status":"daily_1_deep_5_browse_sparse_to_complete_amodal_3d"}
   ]
 }

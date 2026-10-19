@@ -1,5 +1,9 @@
 # CV 文献长期归档
 
+## 2026-10-19
+
+精读 S2C-3D（Sparse-to-Complete，稀疏视角到完整三维场景），PDF 已下载、校验并导入 Zotero `每日精读论文/2026/10`。论文把场景专用扩散修复、信息增益相机轨迹和跨视角一致性条件串成闭环，精读长文包含 Nature Reader 式结构、公式、图表核对、缺陷和三维 amodal 迁移分析。泛读补充 Amodal3R、GENA3D、TACO、动态人-物交互 amodal completion 和 DeOcc-1-to-3，六篇论文的 ARIS 问题诊断与 idea 见 [当天页面](md/2026-10-19.md) 和 [ARIS 记录](../research/aris/2026-10-19.json)。
+
 ## 2026-10-18
 
 精读 NOVA3R（非像素对齐的三维 amodal 场景重建），PDF 已下载并导入 Zotero `每日精读论文/2026/10`。泛读补充 Amodal3R、GENA3D、TACO、视频时间一致 amodal completion 和 OccTTA，重点覆盖完整形状先验、生成式多解、时间一致性、测试时适配和 unknown-aware 3D occupancy。当天页面还包含每篇论文的 ARIS 问题诊断与 3 个研究 idea，详见 [当天页面](md/2026-10-18.md)、[精读长文](md/longform/2026-10/nova3r.md) 和 [ARIS 记录](../research/aris/2026-10-18.json)。

@@ -63,7 +63,8 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "commit_attempted": false,
+    "commit_attempted": true,
+    "local_commit": "347d6ca",
     "push_attempted": false,
     "status": "pending"
   },

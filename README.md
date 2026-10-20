@@ -20,6 +20,7 @@
 - `data/`：论文列表、每日记录和月度精读索引。
 - `research/selection-log/`：选文顺序和筛选依据。
 - `research/audit/`：PDF、Zotero、Git 和失败项审计。
+- `docs/analysis-depth-standard.md`：每篇论文的根因、因果链、迁移条件和反证实验规范。
 
 ## 当前规则
 

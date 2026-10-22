@@ -1,0 +1,10 @@
+{
+  "call_number": 1,
+  "purpose": "deep evidence audit",
+  "agent_id": "/root/audit_deep",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "status": "completed_with_four_corrections",
+  "trace_completeness": "partial reconstructed; timestamps/model not inferred"
+}

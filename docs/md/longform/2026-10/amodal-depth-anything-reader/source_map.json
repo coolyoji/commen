@@ -1,0 +1,680 @@
+{
+  "paper": {
+    "title": "Amodal Depth Anything: Amodal Depth Estimation in the Wild",
+    "venue": "ICCV 2025",
+    "source_type": "pdf",
+    "source_url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Amodal_Depth_Anything_Amodal_Depth_Estimation_in_the_Wild_ICCV_2025_paper.pdf",
+    "version": "ICCV 2025 accepted paper, 10 pages, pp.9673-9682",
+    "source_sha256": "714d311ca6a0511b4ac5c8a042a9af7795573b02d598d4902e828a0281842a44",
+    "language": "en",
+    "total_pages": 10
+  },
+  "scope": {
+    "mode": "structured source-grounded excerpt reader; not full translation",
+    "visually_checked_pages": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_page_text_extracted": true,
+    "unverified": [
+      "full supplementary material",
+      "visual details of figures 1,2,7,8",
+      "local inference/training",
+      "calibrated multi-sample coverage"
+    ]
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1
+      ],
+      "order": 1,
+      "label": "摘要",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S002",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "order": 2,
+      "label": "引言与相关工作",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S003",
+      "type": "note",
+      "page": 2,
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "order": 3,
+      "label": "输入输出",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S004",
+      "type": "note",
+      "page": 4,
+      "pages": [
+        4
+      ],
+      "order": 4,
+      "label": "数据",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S005",
+      "type": "note",
+      "page": 4,
+      "pages": [
+        4,
+        5
+      ],
+      "order": 5,
+      "label": "模型",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S006",
+      "type": "note",
+      "page": 5,
+      "pages": [
+        5,
+        7
+      ],
+      "order": 6,
+      "label": "训练推理",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S007",
+      "type": "note",
+      "page": 6,
+      "pages": [
+        6,
+        7
+      ],
+      "order": 7,
+      "label": "实验",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S008",
+      "type": "note",
+      "page": 7,
+      "pages": [
+        7,
+        8
+      ],
+      "order": 8,
+      "label": "讨论",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "S009",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "order": 9,
+      "label": "证据边界",
+      "confidence": "medium",
+      "mode": "source-grounded Chinese interpretation, not verbatim translation"
+    },
+    {
+      "id": "F001",
+      "page": 4,
+      "type": "figure",
+      "order": 10,
+      "label": "图3：训练数据构造",
+      "bbox": [
+        125,
+        142,
+        598,
+        393
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/fig3.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "F002",
+      "page": 5,
+      "type": "figure",
+      "order": 11,
+      "label": "图4：DAV2条件支路",
+      "bbox": [
+        116,
+        143,
+        598,
+        298
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/fig4.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "F003",
+      "page": 5,
+      "type": "figure",
+      "order": 12,
+      "label": "图5：DepthFM条件流",
+      "bbox": [
+        644,
+        141,
+        1118,
+        408
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/fig5.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "T001",
+      "page": 6,
+      "type": "table",
+      "order": 13,
+      "label": "表1：不可见区域比较",
+      "bbox": [
+        119,
+        752,
+        1117,
+        1114
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/table1.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "T002",
+      "page": 7,
+      "type": "table",
+      "order": 14,
+      "label": "表2–3：两种分支消融",
+      "bbox": [
+        123,
+        139,
+        1117,
+        318
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/tables2-3.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "E001",
+      "page": 4,
+      "type": "equation",
+      "order": 15,
+      "label": "原式1",
+      "bbox": [
+        657,
+        330,
+        1126,
+        401
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E001.png",
+      "visual_checked_source_page": true,
+      "latex": "(s,t)=\\operatorname*{argmin}_{s,t}\\sum_{i=1}^{N}(s d_i^b+t-d_i^o)^2,\\quad i\\in M_{\\mathrm{vis}}.",
+      "equation_number": "1"
+    },
+    {
+      "id": "E002",
+      "page": 4,
+      "type": "equation",
+      "order": 16,
+      "label": "原式2",
+      "bbox": [
+        780,
+        548,
+        1124,
+        593
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E002.png",
+      "visual_checked_source_page": true,
+      "latex": "D_{\\mathrm{aligned}}=sD_b+t.",
+      "equation_number": "2"
+    },
+    {
+      "id": "E003",
+      "page": 5,
+      "type": "equation",
+      "order": 17,
+      "label": "Silog",
+      "bbox": [
+        185,
+        838,
+        528,
+        922
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E003.png",
+      "visual_checked_source_page": true,
+      "latex": "\\mathcal L_{si}=\\alpha\\sqrt{\\frac{1}{N}\\sum_{i\\in M_a}g_i^2-\\frac{\\lambda}{N^2}\\left(\\sum_{i\\in M_a}g_i\\right)^2},\\qquad\ng_i=\\log\\tilde d_i-\\log d_i.",
+      "equation_number": null
+    },
+    {
+      "id": "E004",
+      "page": 5,
+      "type": "equation",
+      "order": 18,
+      "label": "Flow matching",
+      "bbox": [
+        174,
+        1314,
+        543,
+        1368
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E004.png",
+      "visual_checked_source_page": true,
+      "latex": "\\min_\\theta\\mathbb E_{t,z,p(x_0)}\n\\left\\|v_\\theta(t,\\phi_t(x_0))-(x_1-x_0)\\right\\|,\\qquad\n\\phi_t(x\\mid z)=tx_1+(1-t)x_0.",
+      "equation_number": null
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 4,
+      "type": "equation",
+      "order": 15,
+      "label": "原式1",
+      "bbox": [
+        657,
+        330,
+        1126,
+        401
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E001.png",
+      "visual_checked_source_page": true,
+      "latex": "(s,t)=\\operatorname*{argmin}_{s,t}\\sum_{i=1}^{N}(s d_i^b+t-d_i^o)^2,\\quad i\\in M_{\\mathrm{vis}}.",
+      "equation_number": "1"
+    },
+    {
+      "id": "E002",
+      "page": 4,
+      "type": "equation",
+      "order": 16,
+      "label": "原式2",
+      "bbox": [
+        780,
+        548,
+        1124,
+        593
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E002.png",
+      "visual_checked_source_page": true,
+      "latex": "D_{\\mathrm{aligned}}=sD_b+t.",
+      "equation_number": "2"
+    },
+    {
+      "id": "E003",
+      "page": 5,
+      "type": "equation",
+      "order": 17,
+      "label": "Silog",
+      "bbox": [
+        185,
+        838,
+        528,
+        922
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E003.png",
+      "visual_checked_source_page": true,
+      "latex": "\\mathcal L_{si}=\\alpha\\sqrt{\\frac{1}{N}\\sum_{i\\in M_a}g_i^2-\\frac{\\lambda}{N^2}\\left(\\sum_{i\\in M_a}g_i\\right)^2},\\qquad\ng_i=\\log\\tilde d_i-\\log d_i.",
+      "equation_number": null
+    },
+    {
+      "id": "E004",
+      "page": 5,
+      "type": "equation",
+      "order": 18,
+      "label": "Flow matching",
+      "bbox": [
+        174,
+        1314,
+        543,
+        1368
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/equations/E004.png",
+      "visual_checked_source_page": true,
+      "latex": "\\min_\\theta\\mathbb E_{t,z,p(x_0)}\n\\left\\|v_\\theta(t,\\phi_t(x_0))-(x_1-x_0)\\right\\|,\\qquad\n\\phi_t(x\\mid z)=tx_1+(1-t)x_0.",
+      "equation_number": null
+    }
+  ],
+  "glossary": [
+    {
+      "term": "amodal mask",
+      "translation": "包含被遮住部分的目标轮廓",
+      "role": "定义目标归属与支持域",
+      "failure": "缺失会混淆目标；扩张错误会逼模型补不存在区域"
+    },
+    {
+      "term": "relative depth",
+      "translation": "相对深度，刻度未必为米",
+      "role": "用自然图像教师获得规模化几何监督",
+      "failure": "当成米制会错误融合多视角"
+    },
+    {
+      "term": "scale-and-shift alignment",
+      "translation": "换刻度和零点",
+      "role": "匹配可见区的规约，再外推",
+      "failure": "近等深样本无法稳定分离两参数"
+    },
+    {
+      "term": "guidance convolution",
+      "translation": "条件卷积支路",
+      "role": "把深度和轮廓接入已有表示",
+      "failure": "没有条件会弱化目标选择；错误条件也会误导"
+    },
+    {
+      "term": "Silog",
+      "translation": "对数深度误差的尺度抑制项",
+      "role": "降低整体比例对优化的影响",
+      "failure": "不代表平移也无所谓；可见面积会影响梯度占比"
+    },
+    {
+      "term": "conditional flow matching",
+      "translation": "学条件速度场",
+      "role": "在 latent 中学习图像到深度的路径",
+      "failure": "没有新增测量，先验错误不会因“生成式”自动消失"
+    },
+    {
+      "term": "pseudo ground truth",
+      "translation": "伪真值，教师产物",
+      "role": "替代难取得的完整深度监督",
+      "failure": "教师偏差可被学生继承，必须用独立真值审计"
+    }
+  ],
+  "figures": [
+    {
+      "id": "F001",
+      "page": 4,
+      "type": "figure",
+      "order": 10,
+      "label": "图3：训练数据构造",
+      "bbox": [
+        125,
+        142,
+        598,
+        393
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/fig3.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "F002",
+      "page": 5,
+      "type": "figure",
+      "order": 11,
+      "label": "图4：DAV2条件支路",
+      "bbox": [
+        116,
+        143,
+        598,
+        298
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/fig4.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "F003",
+      "page": 5,
+      "type": "figure",
+      "order": 12,
+      "label": "图5：DepthFM条件流",
+      "bbox": [
+        644,
+        141,
+        1118,
+        408
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/fig5.png",
+      "visual_checked_source_page": true
+    }
+  ],
+  "tables": [
+    {
+      "id": "T001",
+      "page": 6,
+      "type": "table",
+      "order": 13,
+      "label": "表1：不可见区域比较",
+      "bbox": [
+        119,
+        752,
+        1117,
+        1114
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/table1.png",
+      "visual_checked_source_page": true
+    },
+    {
+      "id": "T002",
+      "page": 7,
+      "type": "table",
+      "order": 14,
+      "label": "表2–3：两种分支消融",
+      "bbox": [
+        123,
+        139,
+        1117,
+        318
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "confidence": "medium",
+      "image_path": "assets/tables2-3.png",
+      "visual_checked_source_page": true
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "block_ids": [
+        "S001",
+        "S002",
+        "S009"
+      ]
+    },
+    {
+      "page": 2,
+      "block_ids": [
+        "S002",
+        "S003",
+        "S009"
+      ]
+    },
+    {
+      "page": 3,
+      "block_ids": [
+        "S002",
+        "S003",
+        "S009"
+      ]
+    },
+    {
+      "page": 4,
+      "block_ids": [
+        "S003",
+        "S004",
+        "S005",
+        "S009",
+        "F001",
+        "E001",
+        "E002"
+      ]
+    },
+    {
+      "page": 5,
+      "block_ids": [
+        "S005",
+        "S006",
+        "S009",
+        "F002",
+        "F003",
+        "E003",
+        "E004"
+      ]
+    },
+    {
+      "page": 6,
+      "block_ids": [
+        "S007",
+        "S009",
+        "T001"
+      ]
+    },
+    {
+      "page": 7,
+      "block_ids": [
+        "S006",
+        "S007",
+        "S008",
+        "S009",
+        "T002"
+      ]
+    },
+    {
+      "page": 8,
+      "block_ids": [
+        "S008",
+        "S009"
+      ]
+    },
+    {
+      "page": 9,
+      "block_ids": []
+    },
+    {
+      "page": 10,
+      "block_ids": []
+    }
+  ]
+}

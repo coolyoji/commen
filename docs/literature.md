@@ -1,5 +1,11 @@
 # CV 文献长期归档
 
+## 2026-10-22
+
+精读 **Amodal Depth Anything**（ICCV 2025-10，非今日新发）：正式版 PDF 已导入 Zotero `每日精读论文/2026/10`，条目 `TD5LA8C6`，附件 `UM6KKHEX`，下载/storage SHA-256 一致。新增有源页码、原图/公式裁剪和不确定性说明的 [Nature Reader 附加读本](md/longform/2026-10/amodal-depth-anything-reader/paper.md)。
+
+泛读 **TriFold、VolFill、Dense4D、触觉/本体感知三维重建、MapAnything**，只读 HTML，不下载 PDF。六篇完整笔记、深层根因、迁移条件及18个待验证 ARIS idea 见[当天页面](md/2026-10-22.md)；[精读长文](md/longform/2026-10/amodal-depth-anything.md)、[ARIS](../research/aris/2026-10-22.json)、[版本与执行审计](../research/audit/2026-10-22.json)。本轮没有运行 GPU，也未宣称 idea 已通过查新。
+
 ## 2026-10-19
 
 精读 S2C-3D（Sparse-to-Complete，稀疏视角到完整三维场景），PDF 已下载、校验并导入 Zotero `每日精读论文/2026/10`。论文把场景专用扩散修复、信息增益相机轨迹和跨视角一致性条件串成闭环，精读长文包含 Nature Reader 式结构、公式、图表核对、缺陷和三维 amodal 迁移分析。泛读补充 Amodal3R、GENA3D、TACO、动态人-物交互 amodal completion 和 DeOcc-1-to-3，六篇论文的 ARIS 问题诊断与 idea 见 [当天页面](md/2026-10-19.md) 和 [ARIS 记录](../research/aris/2026-10-19.json)。

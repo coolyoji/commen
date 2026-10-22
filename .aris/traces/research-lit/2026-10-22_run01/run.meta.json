@@ -1,0 +1,10 @@
+{
+  "skill": "research-lit",
+  "run_id": "2026-10-22_run01",
+  "executor": "codex",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "D:\\CV-Literature\\commen",
+  "trace_completeness": "partial reconstructed after context compaction; not verbatim"
+}

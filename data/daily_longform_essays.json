@@ -1,12 +1,13 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-22",
   "essays": [
     {
-      "paper_id": "arxiv:2605.05664",
-      "path": "../docs/md/longform/2026-10/s2c-3d.md",
-      "status": "pdf_verified_zotero_imported_nature_reader_style",
-      "publication_month": "2026-07",
-      "read_month": "2026-10"
+      "paper_id": "arxiv:2412.02336",
+      "path": "../docs/md/longform/2026-10/amodal-depth-anything.md",
+      "status": "pdf_verified_zotero_imported_source_mapped_reader",
+      "publication_month": "2025-10",
+      "read_month": "2026-10",
+      "nature_reader": "../docs/md/longform/2026-10/amodal-depth-anything-reader/paper.md"
     }
   ]
 }

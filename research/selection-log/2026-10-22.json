@@ -1,0 +1,357 @@
+{
+  "date": "2026-10-22",
+  "read_month": "2026-10",
+  "deep_count": 1,
+  "browse_count": 5,
+  "papers": [
+    {
+      "id": "arxiv:2412.02336",
+      "paper_id": "arxiv:2412.02336",
+      "title": "Amodal Depth Anything: Amodal Depth Estimation in the Wild",
+      "venue": "ICCV 2025",
+      "publication_month": "2025-10",
+      "preprint_month": "2024-12",
+      "read_month": "2026-10",
+      "version_read": "ICCV 2025 accepted paper, 10 pages, pp.9673-9682",
+      "source": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_Amodal_Depth_Anything_Amodal_Depth_Estimation_in_the_Wild_ICCV_2025_paper.html",
+      "pdf_source": "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Amodal_Depth_Anything_Amodal_Depth_Estimation_in_the_Wild_ICCV_2025_paper.pdf",
+      "code": "https://github.com/zhyever/Amodal-Depth-Anything",
+      "longform": "docs/md/longform/2026-10/amodal-depth-anything.md",
+      "reader": "docs/md/longform/2026-10/amodal-depth-anything-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "TD5LA8C6",
+      "zotero_attachment_key": "UM6KKHEX",
+      "local_pdf_verified": true,
+      "zotero_imported": true,
+      "code_run_locally": false,
+      "training_documentation_complete": false,
+      "selection_note": "有代码的基础机制精读，不冒称今日新发；直接研究遮挡标签、几何条件和2.5D到3D的边界。",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\UM6KKHEX\\Li et al. - 2025 - Amodal Depth Anything.pdf",
+      "pdf_verified": true,
+      "pdf_sha256": "714d311ca6a0511b4ac5c8a042a9af7795573b02d598d4902e828a0281842a44"
+    },
+    {
+      "id": "arxiv:2610.23050",
+      "title": "TriFold: Folding irregular 3D Gaussians into structured latents for 3D Scene Generation",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.23050",
+      "fulltext": "https://arxiv.org/html/2610.23050v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "05ab17c694a7254da5fe0aa6488e3e1e2519a718cf1365364eba4f78c76366c5"
+    },
+    {
+      "id": "arxiv:2605.31466",
+      "title": "VolFill: Single-View Amodal 3D Scene Reconstruction with Volumetric Flow Matching",
+      "publication_month": "2026-05",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2605.31466",
+      "fulltext": "https://arxiv.org/html/2605.31466v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "6270b95dd9ba114388e90fb261a25c855a388a39ccc6c6ff32cb04e7aaa835c1"
+    },
+    {
+      "id": "arxiv:2610.22325",
+      "title": "Dense4D: Pixel-Level 4D Human Correspondence",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.22325",
+      "fulltext": "https://arxiv.org/html/2610.22325v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "8c5c1c29e703eaf1c3e1de2754d7a3a8c7a779958590fdfb511ec5e9174d906c"
+    },
+    {
+      "id": "arxiv:2604.09100",
+      "title": "Physically Grounded 3D Generative Reconstruction under Hand Occlusion using Proprioception and Multi-Contact Touch",
+      "publication_month": "2026-04",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2604.09100",
+      "fulltext": "https://arxiv.org/html/2604.09100v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "2649e42653491a052c31287daeca5f8dca1742c4a69a01256b876811b2c20a26"
+    },
+    {
+      "id": "arxiv:2509.13414",
+      "title": "MapAnything: Universal Feed-Forward Metric 3D Reconstruction",
+      "publication_month": "2025-09",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2509.13414",
+      "fulltext": "https://arxiv.org/html/2509.13414v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "5c669a8617e102d46c4f18fb187a94f18691d9d62edf73376de6b1eee1b26f19"
+    }
+  ],
+  "retrieval": [
+    {
+      "name": "ada-abs",
+      "url": "https://arxiv.org/abs/2412.02336",
+      "ok": true,
+      "chars": 4690,
+      "sha256": "52a76ca5f03a0067b1f6ba260e896aab4c5143a180818738bc353b12a45dee72"
+    },
+    {
+      "name": "ada-html",
+      "url": "https://arxiv.org/html/2412.02336v2",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "trifold-abs",
+      "url": "https://arxiv.org/abs/2610.23050",
+      "ok": true,
+      "chars": 4857,
+      "sha256": "7804028208ec0c9ba76c78814f20d1c6ff42c8539d9a5ad34c1e24efd61e55d4"
+    },
+    {
+      "name": "trifold-html",
+      "url": "https://arxiv.org/html/2610.23050v1",
+      "ok": true,
+      "chars": 98731,
+      "sha256": "05ab17c694a7254da5fe0aa6488e3e1e2519a718cf1365364eba4f78c76366c5"
+    },
+    {
+      "name": "dense4d-abs",
+      "url": "https://arxiv.org/abs/2610.22325",
+      "ok": true,
+      "chars": 4321,
+      "sha256": "f5233b961a4e8db9e07790c8161a5e3e000f9d1a3442adabb82ef63e9c1d2d26"
+    },
+    {
+      "name": "dense4d-html",
+      "url": "https://arxiv.org/html/2610.22325v1",
+      "ok": true,
+      "chars": 66489,
+      "sha256": "8c5c1c29e703eaf1c3e1de2754d7a3a8c7a779958590fdfb511ec5e9174d906c"
+    },
+    {
+      "name": "volfill-abs",
+      "url": "https://arxiv.org/abs/2605.31466",
+      "ok": true,
+      "chars": 4215,
+      "sha256": "9426a9efbeece459ea4adb712a6663293d2d5d93410de92242e047b8aa7aa7fb"
+    },
+    {
+      "name": "volfill-html",
+      "url": "https://arxiv.org/html/2605.31466v1",
+      "ok": true,
+      "chars": 65775,
+      "sha256": "6270b95dd9ba114388e90fb261a25c855a388a39ccc6c6ff32cb04e7aaa835c1"
+    },
+    {
+      "name": "tactile-abs",
+      "url": "https://arxiv.org/abs/2604.09100",
+      "ok": true,
+      "chars": 5143,
+      "sha256": "447db6f25e4d205ad423a4da463d9ef8049d2867f032a84062b6339362441930"
+    },
+    {
+      "name": "tactile-html",
+      "url": "https://arxiv.org/html/2604.09100v1",
+      "ok": true,
+      "chars": 69877,
+      "sha256": "2649e42653491a052c31287daeca5f8dca1742c4a69a01256b876811b2c20a26"
+    },
+    {
+      "name": "mapanything-abs",
+      "url": "https://arxiv.org/abs/2509.13414",
+      "ok": true,
+      "chars": 4741,
+      "sha256": "1c98b78ea5bb9703897cb813c0d19e05e010ef748330def94fac2b7332f6563b"
+    },
+    {
+      "name": "mapanything-html",
+      "url": "https://arxiv.org/html/2509.13414v1",
+      "ok": true,
+      "chars": 68198,
+      "sha256": "5c669a8617e102d46c4f18fb187a94f18691d9d62edf73376de6b1eee1b26f19"
+    },
+    {
+      "name": "ada-search",
+      "url": "https://api.github.com/search/repositories?q=Amodal-Depth-Anything",
+      "ok": true,
+      "chars": 5728,
+      "sha256": "125571059234e5cc0b8b8885096fccd4628c2050ea72ee2286f0fbe65eb81869"
+    },
+    {
+      "name": "s2-ada",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2412.02336?fields=title,year,venue,externalIds,publicationDate,openAccessPdf",
+      "ok": false,
+      "error": "HTTP Error 429: "
+    },
+    {
+      "name": "ada-html-v1-fallback",
+      "url": "https://arxiv.org/html/2412.02336v1",
+      "ok": true,
+      "bytes": 240464,
+      "sha256": "acb45bb29b83e8f2b55e9dfbd94ca1970e2196ebda06172fa51e03b96617c676",
+      "record_note": "reconstructed from saved successful response; initial failure retained"
+    },
+    {
+      "name": "ada-cvf",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_Amodal_Depth_Anything_Amodal_Depth_Estimation_in_the_Wild_ICCV_2025_paper.html",
+      "ok": true,
+      "bytes": 6671,
+      "sha256": "b4c4a6fbb50e2699309ded8568dbf25e12ac0ac30a8c2541816e87cb0a7c77f2",
+      "record_note": "reconstructed from saved successful response; initial failure retained"
+    },
+    {
+      "name": "ada-code",
+      "url": "https://github.com/zhyever/Amodal-Depth-Anything",
+      "ok": true,
+      "bytes": 5221,
+      "sha256": "798449c6f2be1cb2008578a8a322b68e7361f0dbf5292dcbbe5751a3a05e2c0d",
+      "record_note": "reconstructed from saved successful response; initial failure retained"
+    },
+    {
+      "name": "trifold-project",
+      "url": "https://fantasy-amap.github.io/TriFold/",
+      "ok": true,
+      "bytes": 30220,
+      "sha256": "6da10be9740f07118bbe42c0a58e7c9635ada5837c301b55ec768b136b3243d4",
+      "record_note": "reconstructed from saved successful response; initial failure retained"
+    },
+    {
+      "name": "mapanything-code",
+      "url": "https://github.com/facebookresearch/map-anything",
+      "ok": true,
+      "bytes": 38300,
+      "sha256": "2532f640e6cbf3f62391202da2f4a97e56db47f4702eb8010b1982ae305cce6a",
+      "record_note": "reconstructed from saved successful response; initial failure retained"
+    },
+    {
+      "name": "ada-final-pdf",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Amodal_Depth_Anything_Amodal_Depth_Estimation_in_the_Wild_ICCV_2025_paper.pdf",
+      "ok": true,
+      "bytes": 3105088,
+      "sha256": "714d311ca6a0511b4ac5c8a042a9af7795573b02d598d4902e828a0281842a44",
+      "record_note": "reconstructed from saved successful response; initial failure retained"
+    }
+  ],
+  "dedup_key": "canonical arXiv ID without version; publication/read month separated",
+  "local_prior_work": {
+    "keywords": [
+      "amodal",
+      "occlusion",
+      "scene completion",
+      "reconstruction"
+    ],
+    "matches": {
+      "amodal": [
+        {
+          "item_key": "04E0D31B",
+          "title": "Amodal Completion and Size Constancy in Natural Scenes"
+        },
+        {
+          "item_key": "122A033D",
+          "title": "Amodal Instance Segmentation"
+        },
+        {
+          "item_key": "155A1FE7",
+          "title": "Semantic Amodal Segmentation"
+        },
+        {
+          "item_key": "597E7510",
+          "title": "Amodal Instance Segmentation With KINS Dataset"
+        },
+        {
+          "item_key": "2FFFEFF5",
+          "title": "Amodal Panoptic Segmentation"
+        },
+        {
+          "item_key": "98FAD255",
+          "title": "MUVA: A New Large-Scale Benchmark for Multi-View Amodal Instance Segmentation in the Shopping Scenario"
+        },
+        {
+          "item_key": "01D81E03",
+          "title": "Coarse-to-Fine Amodal Segmentation with Shape Prior"
+        },
+        {
+          "item_key": "4E07385A",
+          "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+        },
+        {
+          "item_key": "2F82413C",
+          "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+        },
+        {
+          "item_key": "F9520972",
+          "title": "Amodal Ground Truth and Completion in the Wild"
+        },
+        {
+          "item_key": "EE86A398",
+          "title": "Towards Efficient Foundation Model for Zero-shot Amodal Segmentation"
+        },
+        {
+          "item_key": "184075BA",
+          "title": "Using Diffusion Priors for Video Amodal Segmentation"
+        },
+        {
+          "item_key": "PPWSC2XA",
+          "title": "Open-World Amodal Appearance Completion"
+        },
+        {
+          "item_key": "0170C307",
+          "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion"
+        },
+        {
+          "item_key": "1D0403E5",
+          "title": "PHAC: Promptable Human Amodal Completion"
+        },
+        {
+          "item_key": "6260CFD6",
+          "title": "Image Guides Images: Consistent Video Amodal Completion with Rectified In-Context Exemplar Guidance"
+        },
+        {
+          "item_key": "6EHPK5KV",
+          "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+        },
+        {
+          "item_key": "W2FAE2ZB",
+          "title": "Integrating Multimodal Large Language Model Knowledge into Amodal Completion"
+        },
+        {
+          "item_key": "MEF2ZUMP",
+          "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+        },
+        {
+          "item_key": "4BS8IYJG",
+          "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+        }
+      ],
+      "occlusion": [
+        {
+          "item_key": "FD7A1C52",
+          "title": "Deep Occlusion-Aware Instance Segmentation With Overlapping BiLayers"
+        }
+      ],
+      "scene completion": [],
+      "reconstruction": [
+        {
+          "item_key": "4BS8IYJG",
+          "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+        },
+        {
+          "item_key": "T4BMVDRT",
+          "title": "Chen et al. - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Semantic Scholar HTTP429; no successful S2 cross-verification claimed",
+    "ADA v2 HTML 404; v1 fallback and official ICCV PDF retrieved",
+    "Web tool returned no content; saved direct primary-source retrievals used",
+    "ADA selected for mechanism relevance, not recency",
+    "latest abstract metadata and read fulltext versions may differ; numbers remain version-pinned"
+  ]
+}

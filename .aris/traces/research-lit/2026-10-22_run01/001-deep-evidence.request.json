@@ -1,0 +1,12 @@
+{
+  "call_number": 1,
+  "purpose": "deep evidence audit",
+  "tool": "spawn_agent",
+  "files_referenced": [
+    "docs/md/longform/2026-10/amodal-depth-anything.md",
+    "D:\\CV-Literature\\commen\\.work-2026-10-22\\ada-final-layout.txt"
+  ],
+  "prompt": null,
+  "prompt_summary": "Review source fidelity, baseline/version comparisons, causal claims and migration boundaries for ADA",
+  "trace_completeness": "original prompt unavailable after compaction; summary only"
+}

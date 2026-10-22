@@ -1,18 +1,97 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-22",
   "deep_count": 1,
   "browse_count": 5,
   "deep_reads": [
     {
-      "paper_id": "arxiv:2605.05664",
-      "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes",
-      "status": "pdf_verified_zotero_imported",
-      "publication_month": "2026-07",
+      "id": "arxiv:2412.02336",
+      "paper_id": "arxiv:2412.02336",
+      "title": "Amodal Depth Anything: Amodal Depth Estimation in the Wild",
+      "venue": "ICCV 2025",
+      "publication_month": "2025-10",
+      "preprint_month": "2024-12",
       "read_month": "2026-10",
+      "version_read": "ICCV 2025 accepted paper, 10 pages, pp.9673-9682",
+      "source": "https://openaccess.thecvf.com/content/ICCV2025/html/Li_Amodal_Depth_Anything_Amodal_Depth_Estimation_in_the_Wild_ICCV_2025_paper.html",
+      "pdf_source": "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Amodal_Depth_Anything_Amodal_Depth_Estimation_in_the_Wild_ICCV_2025_paper.pdf",
+      "code": "https://github.com/zhyever/Amodal-Depth-Anything",
+      "longform": "docs/md/longform/2026-10/amodal-depth-anything.md",
+      "reader": "docs/md/longform/2026-10/amodal-depth-anything-reader/paper.md",
       "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "T3MJDPEW",
-      "zotero_attachment_key": "YQ8D4Z8A",
-      "longform": "docs/md/longform/2026-10/s2c-3d.md"
+      "zotero_item_key": "TD5LA8C6",
+      "zotero_attachment_key": "UM6KKHEX",
+      "local_pdf_verified": true,
+      "zotero_imported": true,
+      "code_run_locally": false,
+      "training_documentation_complete": false,
+      "selection_note": "有代码的基础机制精读，不冒称今日新发；直接研究遮挡标签、几何条件和2.5D到3D的边界。",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\UM6KKHEX\\Li et al. - 2025 - Amodal Depth Anything.pdf",
+      "pdf_verified": true,
+      "pdf_sha256": "714d311ca6a0511b4ac5c8a042a9af7795573b02d598d4902e828a0281842a44"
     }
-  ]
+  ],
+  "browse": [
+    {
+      "id": "arxiv:2610.23050",
+      "title": "TriFold: Folding irregular 3D Gaussians into structured latents for 3D Scene Generation",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.23050",
+      "fulltext": "https://arxiv.org/html/2610.23050v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "05ab17c694a7254da5fe0aa6488e3e1e2519a718cf1365364eba4f78c76366c5"
+    },
+    {
+      "id": "arxiv:2605.31466",
+      "title": "VolFill: Single-View Amodal 3D Scene Reconstruction with Volumetric Flow Matching",
+      "publication_month": "2026-05",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2605.31466",
+      "fulltext": "https://arxiv.org/html/2605.31466v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "6270b95dd9ba114388e90fb261a25c855a388a39ccc6c6ff32cb04e7aaa835c1"
+    },
+    {
+      "id": "arxiv:2610.22325",
+      "title": "Dense4D: Pixel-Level 4D Human Correspondence",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.22325",
+      "fulltext": "https://arxiv.org/html/2610.22325v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "8c5c1c29e703eaf1c3e1de2754d7a3a8c7a779958590fdfb511ec5e9174d906c"
+    },
+    {
+      "id": "arxiv:2604.09100",
+      "title": "Physically Grounded 3D Generative Reconstruction under Hand Occlusion using Proprioception and Multi-Contact Touch",
+      "publication_month": "2026-04",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2604.09100",
+      "fulltext": "https://arxiv.org/html/2604.09100v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "2649e42653491a052c31287daeca5f8dca1742c4a69a01256b876811b2c20a26"
+    },
+    {
+      "id": "arxiv:2509.13414",
+      "title": "MapAnything: Universal Feed-Forward Metric 3D Reconstruction",
+      "publication_month": "2025-09",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2509.13414",
+      "fulltext": "https://arxiv.org/html/2509.13414v1",
+      "version_read": "v1",
+      "source_format": "html",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "5c669a8617e102d46c4f18fb187a94f18691d9d62edf73376de6b1eee1b26f19"
+    }
+  ],
+  "notes": "docs/md/2026-10-22.md",
+  "aris": "research/aris/2026-10-22.json"
 }

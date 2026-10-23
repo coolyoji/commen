@@ -147,6 +147,38 @@
       "pdf": "C:\\Users\\华硕\\Zotero\\storage\\UM6KKHEX\\Li et al. - 2025 - Amodal Depth Anything.pdf",
       "pdf_verified": true,
       "pdf_sha256": "714d311ca6a0511b4ac5c8a042a9af7795573b02d598d4902e828a0281842a44"
+    },
+    {
+      "date": "2026-10-23",
+      "id": "arxiv:2610.29061",
+      "paper_id": "arxiv:2610.29061",
+      "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation",
+      "authors": [
+        "Genpei Zhang"
+      ],
+      "venue": "arXiv preprint",
+      "first_submitted": "2026-10-21",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "version_read": "2610.29061v1, 20 pages",
+      "source": "https://arxiv.org/abs/2610.29061",
+      "fulltext": "https://arxiv.org/html/2610.29061v1",
+      "pdf_source": "https://arxiv.org/pdf/2610.29061v1",
+      "code": "https://github.com/zgp110/occjepa",
+      "code_commit_sha": "7aa8e3a1da5103a876a2889fb67df455e527d875",
+      "code_tree_sha": "b602849c4b93a9dc8586c780d8767c1eb74619b2",
+      "code_run_locally": false,
+      "checkpoint_download_url_verified": false,
+      "longform": "docs/md/longform/2026-10/occjepa.md",
+      "reader": "docs/md/longform/2026-10/occjepa-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "LO1DWIQW",
+      "zotero_attachment_key": "K2MWSR8T",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\K2MWSR8T\\Zhang - 2026 - OccJEPA.pdf",
+      "pdf_verified": true,
+      "pdf_sha256": "734edefb6c813edc38928a5a06c823bb5f7220505d41810ac7f7af92ca07a75d",
+      "zotero_imported": true,
+      "selection_note": "Official source code and controlled predictor-initialization evidence; task checkpoint URL not verified, no local model execution."
     }
   ]
 }

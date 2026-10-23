@@ -1,0 +1,10 @@
+{
+  "call_number": 2,
+  "purpose": "bounded correction recheck",
+  "tool": "collaboration.followup_task",
+  "agent_id": "/root/oct23_claim_review",
+  "message": "已按四项修正更新精读与Reader，并额外明确TAO AP为框IoU越阈值帧比例。请只读复核这四点是否已解决，重点检查Idea C公平基线与正文迁移段是否仍有visible mask当完整silhouette的问题。只回复resolved/unresolved及残留行；不扩展新审查范围、不写文件。",
+  "trace_completeness": "verbatim request",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional"
+}

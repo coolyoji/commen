@@ -1,0 +1,16 @@
+{
+  "call_number": 1,
+  "agent_id": "/root/oct23_claim_review",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "trace_completeness": "verbatim request and completed response; no reconstructed prompt",
+  "status": "four corrections applied and parent checked primary source passages",
+  "corrections": [
+    "Official kept scoring selects nonzero eroded hidden IoU, not simply predicted hidden area",
+    "Retain highest-coverage token if all tokens otherwise dropped",
+    "Existing first-pair negative control argues against window overlap as the main temporal-gap cause",
+    "Use correct depth-derived free/unknown baseline; visible-mask carving is deliberately mismatched control only"
+  ],
+  "experiments_run": false,
+  "novelty_validation": false
+}

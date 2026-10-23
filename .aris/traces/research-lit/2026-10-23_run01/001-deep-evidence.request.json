@@ -1,0 +1,10 @@
+{
+  "call_number": 1,
+  "purpose": "source claim and causal boundary review",
+  "tool": "collaboration.spawn_agent",
+  "agent_id": "/root/oct23_claim_review",
+  "reviewer_route": "inherited Codex same-family",
+  "prompt": "只读证据审核，勿改共享文件、勿下载PDF、勿跑实验。审核 D:\\CV-Literature\\commen\\docs\\md\\longform\\2026-10\\occjepa.md 和 occjepa-reader\\paper.md，及 .work-2026-10-23\\occjepa-layout.txt、occjepa-html.txt、occjepa-model.txt、occjepa-download.txt；可按需读五个 browse-1.md 至browse-5.md 与相应已保存HTML文本，重点数字/协议/因果措辞。找出会误导用户的错误，而非泛泛建议：预训练vs下游损失，predictor是否微调，Table1/2/3/4/6与S13数值/分母/时序边界，z/f和OR路径，三维迁移是不是被误说成已证明。审查三个idea是否可证伪且阳性/阴性/无信号解释不是循环论证。请优先核对精读，顺带抽查泛读重大数字。不要推测未读取源码/论文内容。返回每项具体文件行与原文页节，若无问题明确说明审核范围及缺口。此审核same-family provisional，不是独立跨族验证、系统查新或实验审计通过。",
+  "trace_completeness": "verbatim request",
+  "acceptance_status": "provisional"
+}

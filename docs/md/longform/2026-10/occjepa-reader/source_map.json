@@ -1,0 +1,860 @@
+{
+  "paper": {
+    "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation",
+    "venue": "arXiv preprint",
+    "source_type": "pdf",
+    "language": "en",
+    "source_url": "https://arxiv.org/pdf/2610.29061v1",
+    "source_path": "C:\\Users\\华硕\\Zotero\\storage\\K2MWSR8T\\Zhang - 2026 - OccJEPA.pdf",
+    "source_sha256": "734edefb6c813edc38928a5a06c823bb5f7220505d41810ac7f7af92ca07a75d",
+    "version": "2610.29061v1",
+    "total_pages": 20
+  },
+  "scope": {
+    "mode": "section-structured source-grounded excerpt and interpretation; not full translation",
+    "all_pages_text_extracted": true,
+    "visually_checked_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      18
+    ],
+    "unverified": [
+      "all supplementary qualitative figures individually",
+      "full paragraph-by-paragraph bilingual translation",
+      "checkpoint download, inference and training",
+      "systematic novelty validation"
+    ]
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1,
+        8
+      ],
+      "label": "摘要与结论",
+      "order": 1,
+      "mode": "source-grounded interpretation, not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S002",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "label": "问题与相关工作",
+      "order": 2,
+      "mode": "source-grounded interpretation, not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S003",
+      "type": "note",
+      "page": 3,
+      "pages": [
+        3,
+        4
+      ],
+      "label": "方法与训练",
+      "order": 3,
+      "mode": "source-grounded interpretation, not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S004",
+      "type": "note",
+      "page": 4,
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        18
+      ],
+      "label": "结果与不利证据",
+      "order": 4,
+      "mode": "source-grounded interpretation, not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S005",
+      "type": "note",
+      "page": 6,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "label": "讨论和补充范围",
+      "order": 5,
+      "mode": "source-grounded interpretation, not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S006",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "label": "边界",
+      "order": 6,
+      "mode": "source-grounded interpretation, not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "F001",
+      "type": "figure",
+      "page": 3,
+      "order": 7,
+      "label": "Figure 2",
+      "bbox": [
+        118,
+        145,
+        1118,
+        505
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/fig2.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T001",
+      "type": "table",
+      "page": 5,
+      "order": 8,
+      "label": "Table 2",
+      "bbox": [
+        113,
+        640,
+        600,
+        802
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table2.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T002",
+      "type": "table",
+      "page": 8,
+      "order": 9,
+      "label": "Table 4",
+      "bbox": [
+        114,
+        546,
+        598,
+        834
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table4.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T003",
+      "type": "table",
+      "page": 8,
+      "order": 10,
+      "label": "Table 6",
+      "bbox": [
+        638,
+        1028,
+        1121,
+        1120
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table6.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T004",
+      "type": "table",
+      "page": 18,
+      "order": 11,
+      "label": "Table S13",
+      "bbox": [
+        637,
+        142,
+        1120,
+        281
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/tableS13.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "E001",
+      "type": "equation",
+      "page": 3,
+      "order": 12,
+      "label": "1",
+      "bbox": [
+        182,
+        810,
+        595,
+        867
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E001.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "1",
+      "latex": "\\min_{E,P}\\left\\|P(E(x_K),D)-\\operatorname{sg}(\\bar E(x))_D\\right\\|_1."
+    },
+    {
+      "id": "E002",
+      "type": "equation",
+      "page": 3,
+      "order": 13,
+      "label": "2",
+      "bbox": [
+        159,
+        1178,
+        597,
+        1210
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E002.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "2",
+      "latex": "s_t=\\min\\!\\left(\\max\\!\\left(2\\max(h_t,w_t),s_{\\min}\\right),s_{\\max}\\right)."
+    },
+    {
+      "id": "E003",
+      "type": "equation",
+      "page": 3,
+      "order": 14,
+      "label": "3",
+      "bbox": [
+        781,
+        768,
+        1127,
+        831
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E003.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "3",
+      "latex": "\\rho_i=\\frac{1}{|V_i|}\\sum_{p\\in V_i}\\tilde m(p),\\qquad\nK=\\{i:\\rho_i\\geq\\tau\\},\\quad \\tau=0.25."
+    },
+    {
+      "id": "E004",
+      "type": "equation",
+      "page": 3,
+      "order": 15,
+      "label": "4",
+      "bbox": [
+        671,
+        1110,
+        1142,
+        1202
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E004.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "4",
+      "latex": "\\hat z_D=P(E(x_K),D),\\qquad\nf_i=\\begin{cases}\\hat z_i,&i\\in D,\\\\z_i,&i\\in K.\\end{cases}"
+    },
+    {
+      "id": "E005",
+      "type": "equation",
+      "page": 4,
+      "order": 16,
+      "label": "5",
+      "bbox": [
+        244,
+        625,
+        596,
+        663
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E005.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "5",
+      "latex": "\\hat a_t=\\Pi_t(\\ell_t>0)\\lor m_t."
+    },
+    {
+      "id": "E006",
+      "type": "equation",
+      "page": 4,
+      "order": 17,
+      "label": "6",
+      "bbox": [
+        122,
+        936,
+        600,
+        988
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E006.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "6",
+      "latex": "\\mathcal L=\\operatorname{BCE}(\\ell,a)+1-\n\\frac{2\\sum ya+1}{\\sum y+\\sum a+1},\\qquad y=\\sigma(\\ell)."
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "type": "equation",
+      "page": 3,
+      "order": 12,
+      "label": "1",
+      "bbox": [
+        182,
+        810,
+        595,
+        867
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E001.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "1",
+      "latex": "\\min_{E,P}\\left\\|P(E(x_K),D)-\\operatorname{sg}(\\bar E(x))_D\\right\\|_1."
+    },
+    {
+      "id": "E002",
+      "type": "equation",
+      "page": 3,
+      "order": 13,
+      "label": "2",
+      "bbox": [
+        159,
+        1178,
+        597,
+        1210
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E002.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "2",
+      "latex": "s_t=\\min\\!\\left(\\max\\!\\left(2\\max(h_t,w_t),s_{\\min}\\right),s_{\\max}\\right)."
+    },
+    {
+      "id": "E003",
+      "type": "equation",
+      "page": 3,
+      "order": 14,
+      "label": "3",
+      "bbox": [
+        781,
+        768,
+        1127,
+        831
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E003.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "3",
+      "latex": "\\rho_i=\\frac{1}{|V_i|}\\sum_{p\\in V_i}\\tilde m(p),\\qquad\nK=\\{i:\\rho_i\\geq\\tau\\},\\quad \\tau=0.25."
+    },
+    {
+      "id": "E004",
+      "type": "equation",
+      "page": 3,
+      "order": 15,
+      "label": "4",
+      "bbox": [
+        671,
+        1110,
+        1142,
+        1202
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E004.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "4",
+      "latex": "\\hat z_D=P(E(x_K),D),\\qquad\nf_i=\\begin{cases}\\hat z_i,&i\\in D,\\\\z_i,&i\\in K.\\end{cases}"
+    },
+    {
+      "id": "E005",
+      "type": "equation",
+      "page": 4,
+      "order": 16,
+      "label": "5",
+      "bbox": [
+        244,
+        625,
+        596,
+        663
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E005.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "5",
+      "latex": "\\hat a_t=\\Pi_t(\\ell_t>0)\\lor m_t."
+    },
+    {
+      "id": "E006",
+      "type": "equation",
+      "page": 4,
+      "order": 17,
+      "label": "6",
+      "bbox": [
+        122,
+        936,
+        600,
+        988
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E006.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "6",
+      "latex": "\\mathcal L=\\operatorname{BCE}(\\ell,a)+1-\n\\frac{2\\sum ya+1}{\\sum y+\\sum a+1},\\qquad y=\\sigma(\\ell)."
+    }
+  ],
+  "figures": [
+    {
+      "id": "F001",
+      "type": "figure",
+      "page": 3,
+      "order": 7,
+      "label": "Figure 2",
+      "bbox": [
+        118,
+        145,
+        1118,
+        505
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/fig2.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    }
+  ],
+  "tables": [
+    {
+      "id": "T001",
+      "type": "table",
+      "page": 5,
+      "order": 8,
+      "label": "Table 2",
+      "bbox": [
+        113,
+        640,
+        600,
+        802
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table2.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T002",
+      "type": "table",
+      "page": 8,
+      "order": 9,
+      "label": "Table 4",
+      "bbox": [
+        114,
+        546,
+        598,
+        834
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table4.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T003",
+      "type": "table",
+      "page": 8,
+      "order": 10,
+      "label": "Table 6",
+      "bbox": [
+        638,
+        1028,
+        1121,
+        1120
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table6.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T004",
+      "type": "table",
+      "page": 18,
+      "order": 11,
+      "label": "Table S13",
+      "bbox": [
+        637,
+        142,
+        1120,
+        281
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/tableS13.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    }
+  ],
+  "glossary": [
+    {
+      "term": "JEPA",
+      "translation": "预测缺失位置的抽象描述",
+      "role": "特征先验，不画RGB",
+      "failure": "同类别不同隐藏姿态"
+    },
+    {
+      "term": "Tubelet",
+      "translation": "视频的小块压缩单元",
+      "role": "控制token量、建立时空上下文",
+      "failure": "薄结构混进遮挡物"
+    },
+    {
+      "term": "LoRA",
+      "translation": "小型低秩权重更新",
+      "role": "让encoder适配分割而少训参数",
+      "failure": "不是零样本、仍受标注偏差"
+    },
+    {
+      "term": "Predictor",
+      "translation": "对删除位置提出特征",
+      "role": "搬运预训练预测知识",
+      "failure": "永久不可见、多解"
+    },
+    {
+      "term": "Re-crop",
+      "translation": "按首轮预测重新取样",
+      "role": "修复输入支持域截断",
+      "failure": "幻觉带偏、分辨率稀释"
+    },
+    {
+      "term": "Fixed-frame scoring",
+      "translation": "同一批帧、漏报记零",
+      "role": "减少选择性漏报偏差",
+      "failure": "单均值仍掩盖错误类型"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "block_ids": [
+        "S001",
+        "S002",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 2,
+      "block_ids": [
+        "S002",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 3,
+      "block_ids": [
+        "S002",
+        "S003",
+        "S006",
+        "F001",
+        "E001",
+        "E002",
+        "E003",
+        "E004"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 4,
+      "block_ids": [
+        "S003",
+        "S004",
+        "S006",
+        "E005",
+        "E006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 5,
+      "block_ids": [
+        "S004",
+        "S006",
+        "T001"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 6,
+      "block_ids": [
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 7,
+      "block_ids": [
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 8,
+      "block_ids": [
+        "S001",
+        "S004",
+        "S005",
+        "S006",
+        "T002",
+        "T003"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 9,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 10,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 11,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 12,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 13,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 14,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 15,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 16,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 17,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 18,
+      "block_ids": [
+        "S004",
+        "S005",
+        "S006",
+        "T004"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 19,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    },
+    {
+      "page": 20,
+      "block_ids": [
+        "S005",
+        "S006"
+      ],
+      "text_extracted": true
+    }
+  ]
+}

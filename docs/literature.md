@@ -1,5 +1,11 @@
 # CV 文献长期归档
 
+## 2026-10-23
+
+精读 **OccJEPA**（arXiv，2026-10，v1）：[精读长文](md/longform/2026-10/occjepa.md)、[Nature Reader](md/longform/2026-10/occjepa-reader/paper.md)。已导入Zotero `每日精读论文/2026/10`，条目 `LO1DWIQW`，PDF子附件 `K2MWSR8T`，下载/storage哈希一致。官方源码公开，但任务权重直链尚未核验；未跑模型。
+
+泛读 **GenIA、Building Rome、RGBD-to-3D、T3lescope、ARROW**，只读HTML，不下载PDF。[六篇完整笔记](md/2026-10-23.md)含根因、因果链、迁移条件、18个未验证ARIS idea；不利的时序结果与评价协议边界也保留。[十月精读汇总](md/longform/2026-10/index.md) · [ARIS](../research/aris/2026-10-23.json) · [执行审计](../research/audit/2026-10-23.json)。
+
 ## 2026-10-22
 
 精读 **Amodal Depth Anything**（ICCV 2025-10，非今日新发）：正式版 PDF 已导入 Zotero `每日精读论文/2026/10`，条目 `TD5LA8C6`，附件 `UM6KKHEX`，下载/storage SHA-256 一致。新增有源页码、原图/公式裁剪和不确定性说明的 [Nature Reader 附加读本](md/longform/2026-10/amodal-depth-anything-reader/paper.md)。

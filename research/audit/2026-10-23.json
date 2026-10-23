@@ -1,0 +1,296 @@
+{
+  "date": "2026-10-23",
+  "read_month": "2026-10",
+  "status": "content_validated_publication_pending",
+  "deep_read": {
+    "id": "arxiv:2610.29061",
+    "paper_id": "arxiv:2610.29061",
+    "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation",
+    "authors": [
+      "Genpei Zhang"
+    ],
+    "venue": "arXiv preprint",
+    "first_submitted": "2026-10-21",
+    "publication_month": "2026-10",
+    "read_month": "2026-10",
+    "version_read": "2610.29061v1, 20 pages",
+    "source": "https://arxiv.org/abs/2610.29061",
+    "fulltext": "https://arxiv.org/html/2610.29061v1",
+    "pdf_source": "https://arxiv.org/pdf/2610.29061v1",
+    "code": "https://github.com/zgp110/occjepa",
+    "code_commit_sha": "7aa8e3a1da5103a876a2889fb67df455e527d875",
+    "code_tree_sha": "b602849c4b93a9dc8586c780d8767c1eb74619b2",
+    "code_run_locally": false,
+    "checkpoint_download_url_verified": false,
+    "longform": "docs/md/longform/2026-10/occjepa.md",
+    "reader": "docs/md/longform/2026-10/occjepa-reader/paper.md",
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "LO1DWIQW",
+    "zotero_attachment_key": "K2MWSR8T",
+    "pdf": "C:\\Users\\华硕\\Zotero\\storage\\K2MWSR8T\\Zhang - 2026 - OccJEPA.pdf",
+    "pdf_verified": true,
+    "pdf_sha256": "734edefb6c813edc38928a5a06c823bb5f7220505d41810ac7f7af92ca07a75d",
+    "zotero_imported": true,
+    "selection_note": "Official source code and controlled predictor-initialization evidence; task checkpoint URL not verified, no local model execution."
+  },
+  "zotero": {
+    "status": "verified",
+    "data_dir": "C:\\Users\\华硕\\Zotero",
+    "sqlite_backup": "D:\\CV-Literature\\commen\\.work-2026-10-23\\zotero.sqlite.pre-import-20261023.bak",
+    "backup_sha256": "172ed5943c5ad72bcf60095bebbf5a1a5443efd75303ae8f6606dca8e7bcd50e",
+    "running_during_backup": false,
+    "running_during_import": false,
+    "collection": "每日精读论文/2026/10",
+    "collection_id": 17,
+    "item_type": "preprint",
+    "top_level_item_id": 1374,
+    "item_key": "LO1DWIQW",
+    "attachment_id": 1375,
+    "attachment_key": "K2MWSR8T",
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\K2MWSR8T\\Zhang - 2026 - OccJEPA.pdf",
+    "download_sha256": "734edefb6c813edc38928a5a06c823bb5f7220505d41810ac7f7af92ca07a75d",
+    "storage_sha256": "734edefb6c813edc38928a5a06c823bb5f7220505d41810ac7f7af92ca07a75d",
+    "storage_md5_matches_attachment_metadata": true,
+    "download_storage_hash_match": true,
+    "top_level_item_verified": true,
+    "month_collection_verified": true,
+    "child_attachment_verified": true,
+    "storage_pdf_verified": true,
+    "sqlite_quick_check": "ok",
+    "new_foreign_key_violations": 0,
+    "publication_month": "2026-10",
+    "read_month": "2026-10",
+    "pdf_bytes": 26320394,
+    "local_library_search_record": "local-library-matches.json",
+    "final_read_only_recheck": true,
+    "application_restored_after_read_only_recheck": true
+  },
+  "nature_reader": {
+    "skill": "nature-reader",
+    "source_format": "pdf-text",
+    "scope": "section-structured excerpt/interpretation; not full bilingual translation",
+    "reader": "docs/md/longform/2026-10/occjepa-reader/paper.md",
+    "source_map": "docs/md/longform/2026-10/occjepa-reader/source_map.json",
+    "visual_pages_checked": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      18
+    ],
+    "equations": 6,
+    "figure_crops": 1,
+    "table_crops": 4,
+    "math_validator": "passed_strict"
+  },
+  "browse": {
+    "count": 5,
+    "pdf_downloaded": false,
+    "fulltext_format": "HTML",
+    "papers": [
+      {
+        "id": "arxiv:2610.12388",
+        "title": "GenIA: Generative Reconstruction with Test-Time Input Alignment",
+        "publication_month": "2026-10",
+        "read_month": "2026-10",
+        "source": "https://arxiv.org/abs/2610.12388",
+        "fulltext": "https://arxiv.org/html/2610.12388v1",
+        "version_read": "v1",
+        "source_format": "HTML",
+        "pdf_downloaded": false,
+        "source_snapshot_sha256": "78b825658425e1b696484054e909d84ef143a757ea65d48162b10ec2afdce7e7"
+      },
+      {
+        "id": "arxiv:2610.08790",
+        "title": "Building Rome from a Single Image",
+        "publication_month": "2026-10",
+        "read_month": "2026-10",
+        "source": "https://arxiv.org/abs/2610.08790",
+        "fulltext": "https://arxiv.org/html/2610.08790v1",
+        "version_read": "v1",
+        "source_format": "HTML",
+        "pdf_downloaded": false,
+        "source_snapshot_sha256": "102c98eebdb6be23d1fd932a0b907ffb76a91fb45c0fc1f3c8465a6cf298f428"
+      },
+      {
+        "id": "arxiv:2610.11187",
+        "title": "RGBD-to-3D Object Mesh Refinement via Depth Matching and Symmetry Propagation",
+        "publication_month": "2026-10",
+        "read_month": "2026-10",
+        "source": "https://arxiv.org/abs/2610.11187",
+        "fulltext": "https://arxiv.org/html/2610.11187v1",
+        "version_read": "v1",
+        "source_format": "HTML",
+        "pdf_downloaded": false,
+        "source_snapshot_sha256": "49e853fbd4afbf93779887b01db25b86f2022fb530875675814a6feac2613f62"
+      },
+      {
+        "id": "arxiv:2610.03308",
+        "title": "T3lescope: Arbitrary-Resolution High-Fidelity Generative Surface Reconstruction from Images",
+        "publication_month": "2026-10",
+        "read_month": "2026-10",
+        "source": "https://arxiv.org/abs/2610.03308",
+        "fulltext": "https://arxiv.org/html/2610.03308v1",
+        "version_read": "v1",
+        "source_format": "HTML",
+        "pdf_downloaded": false,
+        "source_snapshot_sha256": "ad69b8978837ddf260ca5a674b0843c61bc68dc20e1191e72a12d7f5d3ec3692"
+      },
+      {
+        "id": "arxiv:2610.01314",
+        "title": "ARROW: Arbitrary Reconstruction and Tracking of 4D Observations in the Wild",
+        "publication_month": "2026-10",
+        "read_month": "2026-10",
+        "source": "https://arxiv.org/abs/2610.01314",
+        "fulltext": "https://arxiv.org/html/2610.01314v1",
+        "version_read": "v1",
+        "source_format": "HTML",
+        "pdf_downloaded": false,
+        "source_snapshot_sha256": "0644233d17ea18c34f7815bf011bbe6e438c49ea625d858c351c0cc2167249c6"
+      }
+    ]
+  },
+  "aris": {
+    "count": 6,
+    "idea_count": 18,
+    "gpu_started": false,
+    "novelty_verified": false,
+    "review_route": "same-family provisional"
+  },
+  "index_preservation": {
+    "monthly_before_this_build": 10,
+    "monthly_after": 11,
+    "historical_feed_days": 17,
+    "old_archive_pages_preserved": true,
+    "daily_json_semantics": "existing latest-day rolling indexes; history in dated md/html/ARIS/feed/monthly"
+  },
+  "github": {
+    "remote": "https://github.com/coolyoji/commen.git",
+    "branch": "main",
+    "baseline_head": "95dfbcaf82ebf2696fe6bafc5eb45343beeff279",
+    "baseline_remote_head": "95dfbcaf82ebf2696fe6bafc5eb45343beeff279",
+    "baseline_remote_check": {
+      "args": [
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "returncode": 0,
+      "stdout": "95dfbcaf82ebf2696fe6bafc5eb45343beeff279\trefs/heads/main",
+      "stderr": ""
+    },
+    "status": "publication_pending",
+    "commit_attempted_this_run": true,
+    "push_attempted_this_run": false
+  },
+  "limitations": [
+    "No local model execution or GPU experiments",
+    "Ideas not systematically novelty-verified",
+    "Nature Reader is structured excerpt and interpretation, not full translation",
+    "Not all supplementary figures visually checked",
+    "Semantic Scholar HTTP429",
+    "OccJEPA task checkpoint direct URL not verified; no GitHub releases found"
+  ],
+  "validated_at": "2026-10-23T23:02:07.740182+08:00",
+  "validation": {
+    "status": "passed",
+    "failures": [],
+    "stats": {
+      "html_tags": {
+        "html": 1,
+        "head": 1,
+        "meta": 2,
+        "title": 1,
+        "style": 1,
+        "script": 2,
+        "body": 1,
+        "nav": 1,
+        "a": 22,
+        "h1": 1,
+        "p": 245,
+        "strong": 269,
+        "code": 19,
+        "h2": 7,
+        "ul": 8,
+        "li": 67,
+        "em": 1,
+        "h3": 68,
+        "table": 12,
+        "thead": 12,
+        "tr": 92,
+        "th": 26,
+        "tbody": 12,
+        "td": 167,
+        "ol": 9,
+        "h4": 34,
+        "hr": 5
+      },
+      "json_files": 11,
+      "papers": 6,
+      "ideas": 18,
+      "diagnostic_cards": 6,
+      "checked_local_links": 57,
+      "pdf_downloads": [
+        "occjepa-v1.pdf"
+      ],
+      "historical_feed_entries_preserved": 16,
+      "monthly_before": 10,
+      "monthly_after": 11,
+      "math_validator_output": "No math validation findings. Ready: yes"
+    }
+  },
+  "browser_validation": {
+    "mode": "isolated Edge headless CDP",
+    "results": [
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "innerWidth": 1440,
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "bodyWidth": 1080,
+        "headings": 7,
+        "mathCount": 78,
+        "tableCount": 12,
+        "overflowing": []
+      },
+      {
+        "name": "mobile",
+        "width": 390,
+        "height": 844,
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390,
+        "headings": 7,
+        "mathCount": 78,
+        "tableCount": 12,
+        "overflowing": []
+      }
+    ],
+    "desktop_and_mobile_screenshots_visually_reviewed": true,
+    "formula_crop_composite_visually_reviewed": true,
+    "tableS13_crop_visually_reviewed": true,
+    "source_pages_visually_reviewed": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      18
+    ],
+    "screenshots": "ignored local work directory; not committed"
+  },
+  "review_trace": {
+    "path": ".aris/traces/research-lit/2026-10-23_run01",
+    "critic_request_response": "complete wording; normalized Markdown line endings",
+    "corrections": "4 of 4 resolved in reviewer bounded recheck",
+    "acceptance": "same-family provisional; not novelty acceptance"
+  }
+}

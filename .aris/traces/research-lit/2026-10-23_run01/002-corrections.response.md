@@ -1,0 +1,5 @@
+- 1：resolved。
+- 2：resolved。
+- 3：resolved。
+- 4：resolved。`occjepa.md:213` 明确 visible mask 不等于完整 silhouette；`:249` 已采用同样正确分账的公平主比较，将 visible-mask carving 限定为故意失配负对照。
+- 残留行：无。

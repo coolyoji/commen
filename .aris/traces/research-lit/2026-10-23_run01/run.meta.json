@@ -1,0 +1,24 @@
+{
+  "skill": "research-lit",
+  "run_id": "2026-10-23_run01",
+  "executor": "codex",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "D:\\CV-Literature\\commen",
+  "trace_completeness": "full critic request and response wording; Markdown line endings normalized",
+  "critic": "/root/oct23_claim_review",
+  "correction_recheck": "4 of 4 resolved",
+  "scope": "source claim accuracy and causal boundary review; partial browse numerical spot check",
+  "not_claimed": [
+    "independent cross-family acceptance",
+    "systematic novelty validation",
+    "inference or training reproduction",
+    "all supplementary figures individually verified"
+  ],
+  "extraction_shards": {
+    "agents": ["/root/oct23_object_notes", "/root/oct23_scene_notes"],
+    "output_preserved_in": "research/aris/2026-10-23.json",
+    "original_retrieval_shard_prompts": "not reconstructed after context compaction; only completed critic trace is complete"
+  }
+}

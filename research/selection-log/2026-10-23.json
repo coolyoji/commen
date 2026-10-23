@@ -1,0 +1,412 @@
+{
+  "date": "2026-10-23",
+  "read_month": "2026-10",
+  "deep_count": 1,
+  "browse_count": 5,
+  "source_metadata_recorded_at": "2026-10-23T22:56:03.376132+08:00",
+  "papers": [
+    {
+      "id": "arxiv:2610.29061",
+      "paper_id": "arxiv:2610.29061",
+      "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation",
+      "authors": [
+        "Genpei Zhang"
+      ],
+      "venue": "arXiv preprint",
+      "first_submitted": "2026-10-21",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "version_read": "2610.29061v1, 20 pages",
+      "source": "https://arxiv.org/abs/2610.29061",
+      "fulltext": "https://arxiv.org/html/2610.29061v1",
+      "pdf_source": "https://arxiv.org/pdf/2610.29061v1",
+      "code": "https://github.com/zgp110/occjepa",
+      "code_commit_sha": "7aa8e3a1da5103a876a2889fb67df455e527d875",
+      "code_tree_sha": "b602849c4b93a9dc8586c780d8767c1eb74619b2",
+      "code_run_locally": false,
+      "checkpoint_download_url_verified": false,
+      "longform": "docs/md/longform/2026-10/occjepa.md",
+      "reader": "docs/md/longform/2026-10/occjepa-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "LO1DWIQW",
+      "zotero_attachment_key": "K2MWSR8T",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\K2MWSR8T\\Zhang - 2026 - OccJEPA.pdf",
+      "pdf_verified": true,
+      "pdf_sha256": "734edefb6c813edc38928a5a06c823bb5f7220505d41810ac7f7af92ca07a75d",
+      "zotero_imported": true,
+      "selection_note": "Official source code and controlled predictor-initialization evidence; task checkpoint URL not verified, no local model execution."
+    },
+    {
+      "id": "arxiv:2610.12388",
+      "title": "GenIA: Generative Reconstruction with Test-Time Input Alignment",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.12388",
+      "fulltext": "https://arxiv.org/html/2610.12388v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "78b825658425e1b696484054e909d84ef143a757ea65d48162b10ec2afdce7e7"
+    },
+    {
+      "id": "arxiv:2610.08790",
+      "title": "Building Rome from a Single Image",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.08790",
+      "fulltext": "https://arxiv.org/html/2610.08790v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "102c98eebdb6be23d1fd932a0b907ffb76a91fb45c0fc1f3c8465a6cf298f428"
+    },
+    {
+      "id": "arxiv:2610.11187",
+      "title": "RGBD-to-3D Object Mesh Refinement via Depth Matching and Symmetry Propagation",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.11187",
+      "fulltext": "https://arxiv.org/html/2610.11187v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "49e853fbd4afbf93779887b01db25b86f2022fb530875675814a6feac2613f62"
+    },
+    {
+      "id": "arxiv:2610.03308",
+      "title": "T3lescope: Arbitrary-Resolution High-Fidelity Generative Surface Reconstruction from Images",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.03308",
+      "fulltext": "https://arxiv.org/html/2610.03308v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "ad69b8978837ddf260ca5a674b0843c61bc68dc20e1191e72a12d7f5d3ec3692"
+    },
+    {
+      "id": "arxiv:2610.01314",
+      "title": "ARROW: Arbitrary Reconstruction and Tracking of 4D Observations in the Wild",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.01314",
+      "fulltext": "https://arxiv.org/html/2610.01314v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "0644233d17ea18c34f7815bf011bbe6e438c49ea625d858c351c0cc2167249c6"
+    }
+  ],
+  "retrieval": [
+    {
+      "name": "occjepa-abs",
+      "url": "https://arxiv.org/abs/2610.29061",
+      "ok": true,
+      "chars": 4316,
+      "sha256": "2f94ff115e88a234261c64db9a3eb2735e9eb9fc5fdb9ab0982614be852e6930"
+    },
+    {
+      "name": "occjepa-html",
+      "url": "https://arxiv.org/html/2610.29061v1",
+      "ok": true,
+      "chars": 76461,
+      "sha256": "a92500b068617209af5d836de3c986bb22c9ea86eab6901ccf7e0829002118c5"
+    },
+    {
+      "name": "genia-abs",
+      "url": "https://arxiv.org/abs/2610.12388",
+      "ok": true,
+      "chars": 4521,
+      "sha256": "cc64fe3506b61204775feadb083b3829eeb41dc95e876e33770aa39d443fed2f"
+    },
+    {
+      "name": "genia-html",
+      "url": "https://arxiv.org/html/2610.12388v1",
+      "ok": true,
+      "chars": 87506,
+      "sha256": "78b825658425e1b696484054e909d84ef143a757ea65d48162b10ec2afdce7e7"
+    },
+    {
+      "name": "rome-abs",
+      "url": "https://arxiv.org/abs/2610.08790",
+      "ok": true,
+      "chars": 4351,
+      "sha256": "722ed0aecd822d0eeea4015f1f89fcfecd677eb86cf3818b1ed3a922ca89396e"
+    },
+    {
+      "name": "rome-html",
+      "url": "https://arxiv.org/html/2610.08790v1",
+      "ok": true,
+      "chars": 56527,
+      "sha256": "102c98eebdb6be23d1fd932a0b907ffb76a91fb45c0fc1f3c8465a6cf298f428"
+    },
+    {
+      "name": "rgbd-abs",
+      "url": "https://arxiv.org/abs/2610.11187",
+      "ok": true,
+      "chars": 4062,
+      "sha256": "cca71be8394edb50c24d38a2bc0df0ae4a9590c704c93fc95d75c4354a6403e3"
+    },
+    {
+      "name": "rgbd-html",
+      "url": "https://arxiv.org/html/2610.11187v1",
+      "ok": true,
+      "chars": 61595,
+      "sha256": "49e853fbd4afbf93779887b01db25b86f2022fb530875675814a6feac2613f62"
+    },
+    {
+      "name": "t3lescope-abs",
+      "url": "https://arxiv.org/abs/2610.03308",
+      "ok": true,
+      "chars": 4920,
+      "sha256": "6a685515c1204f72643e0d531f49cc4eecfef1b5e3e930704fa828cef2eff877"
+    },
+    {
+      "name": "t3lescope-html",
+      "url": "https://arxiv.org/html/2610.03308v1",
+      "ok": true,
+      "chars": 140237,
+      "sha256": "ad69b8978837ddf260ca5a674b0843c61bc68dc20e1191e72a12d7f5d3ec3692"
+    },
+    {
+      "name": "arrow-abs",
+      "url": "https://arxiv.org/abs/2610.01314",
+      "ok": true,
+      "chars": 4312,
+      "sha256": "7aa7508bb2053a83a401f8d5063ce5f0f261c38edb7d03d3f415f561cfd61d44"
+    },
+    {
+      "name": "arrow-html",
+      "url": "https://arxiv.org/html/2610.01314v1",
+      "ok": true,
+      "chars": 97780,
+      "sha256": "0644233d17ea18c34f7815bf011bbe6e438c49ea625d858c351c0cc2167249c6"
+    },
+    {
+      "name": "occjepa-github-search",
+      "url": "https://api.github.com/search/repositories?q=OccJEPA",
+      "ok": true,
+      "chars": 5052,
+      "sha256": "27cad9d385bf4316d8d80b905303d429aed4225cfe54dcd5e471369de5ead274"
+    },
+    {
+      "name": "s2-occjepa",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2610.29061?fields=title,year,venue,externalIds,publicationDate,openAccessPdf",
+      "ok": false,
+      "error": "HTTP Error 429: "
+    },
+    {
+      "name": "occjepa-readme",
+      "url": "https://raw.githubusercontent.com/zgp110/occjepa/main/README.md",
+      "ok": true,
+      "chars": 4614,
+      "sha256": "ae0d563a8245be58d2b0a89a329bb02906e7535a788eeb2dd4de4b0d8e657c19"
+    },
+    {
+      "name": "occjepa-tree",
+      "url": "https://api.github.com/repos/zgp110/occjepa/git/trees/main?recursive=1",
+      "ok": true,
+      "chars": 19961,
+      "sha256": "29346154704632b46ba6d6140d566d60b71165a15990c1dd7d56212c38d421b1"
+    },
+    {
+      "name": "occjepa-repo",
+      "url": "https://api.github.com/repos/zgp110/occjepa",
+      "ok": true,
+      "chars": 5049,
+      "sha256": "f4067415a2703963c312bc01777f6d91a48ede90627e97791d5b779c7de07156"
+    },
+    {
+      "name": "occjepa-license",
+      "url": "https://raw.githubusercontent.com/zgp110/occjepa/main/LICENSE",
+      "ok": true,
+      "chars": 1071,
+      "sha256": "f772ed91e9982e79a4828451b8dbfbcffa908728fec755e6c0b7907bd601495a"
+    },
+    {
+      "name": "occjepa-pdf",
+      "url": "https://arxiv.org/pdf/2610.29061v1",
+      "ok": true,
+      "bytes": 26320394,
+      "pages": 20,
+      "sha256": "734edefb6c813edc38928a5a06c823bb5f7220505d41810ac7f7af92ca07a75d"
+    },
+    {
+      "name": "occjepa-download-script",
+      "url": "https://raw.githubusercontent.com/zgp110/occjepa/main/scripts/download_weights.py",
+      "ok": true,
+      "bytes": 1711,
+      "sha256": "8dc0dcd14c43d8a35e9199f86d2d86db9cffd2b5bca1714efd766c16f74c852a",
+      "local_file": "occjepa-download.txt"
+    },
+    {
+      "name": "occjepa-model-source",
+      "url": "https://raw.githubusercontent.com/zgp110/occjepa/main/occjepa/model.py",
+      "ok": true,
+      "bytes": 8532,
+      "sha256": "71be50d6e53f355a731a0af9549cff959af8e9d0c51ed0a85e9f60b31c5f6ded",
+      "local_file": "occjepa-model.txt"
+    },
+    {
+      "name": "occjepa-project",
+      "url": "https://raw.githubusercontent.com/zgp110/occjepa/main/docs/index.html",
+      "ok": true,
+      "bytes": 29872,
+      "sha256": "3d79317eff24105ed56f5e56aa6d5537c93da0d48f438915acf947fbb4f24b35",
+      "local_file": "occjepa-project.html"
+    },
+    {
+      "name": "occjepa-releases",
+      "url": "https://api.github.com/repos/zgp110/occjepa/releases",
+      "ok": true,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "local_file": "occjepa-releases.json"
+    },
+    {
+      "name": "occjepa-commit",
+      "url": "https://api.github.com/repos/zgp110/occjepa/commits/main",
+      "ok": true,
+      "bytes": 315573,
+      "sha256": "ff5c6e0f64d6369749bef6ae708ca59ff3c8a16eee7bbb42b3b6e6d6b8a8ffe9",
+      "local_file": "occjepa-commit.json"
+    }
+  ],
+  "dedup_key": "canonical arXiv ID without version; existing repository history checked",
+  "local_prior_work": {
+    "source": "read-only local SQLite, before import",
+    "matches": {
+      "OccJEPA": [],
+      "amodal": [
+        {
+          "item_key": "04E0D31B",
+          "title": "Amodal Completion and Size Constancy in Natural Scenes"
+        },
+        {
+          "item_key": "122A033D",
+          "title": "Amodal Instance Segmentation"
+        },
+        {
+          "item_key": "155A1FE7",
+          "title": "Semantic Amodal Segmentation"
+        },
+        {
+          "item_key": "597E7510",
+          "title": "Amodal Instance Segmentation With KINS Dataset"
+        },
+        {
+          "item_key": "2FFFEFF5",
+          "title": "Amodal Panoptic Segmentation"
+        },
+        {
+          "item_key": "98FAD255",
+          "title": "MUVA: A New Large-Scale Benchmark for Multi-View Amodal Instance Segmentation in the Shopping Scenario"
+        },
+        {
+          "item_key": "01D81E03",
+          "title": "Coarse-to-Fine Amodal Segmentation with Shape Prior"
+        },
+        {
+          "item_key": "4E07385A",
+          "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+        },
+        {
+          "item_key": "2F82413C",
+          "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+        },
+        {
+          "item_key": "F9520972",
+          "title": "Amodal Ground Truth and Completion in the Wild"
+        },
+        {
+          "item_key": "EE86A398",
+          "title": "Towards Efficient Foundation Model for Zero-shot Amodal Segmentation"
+        },
+        {
+          "item_key": "184075BA",
+          "title": "Using Diffusion Priors for Video Amodal Segmentation"
+        },
+        {
+          "item_key": "PPWSC2XA",
+          "title": "Open-World Amodal Appearance Completion"
+        },
+        {
+          "item_key": "0170C307",
+          "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion"
+        },
+        {
+          "item_key": "1D0403E5",
+          "title": "PHAC: Promptable Human Amodal Completion"
+        },
+        {
+          "item_key": "6260CFD6",
+          "title": "Image Guides Images: Consistent Video Amodal Completion with Rectified In-Context Exemplar Guidance"
+        },
+        {
+          "item_key": "6EHPK5KV",
+          "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+        },
+        {
+          "item_key": "W2FAE2ZB",
+          "title": "Integrating Multimodal Large Language Model Knowledge into Amodal Completion"
+        },
+        {
+          "item_key": "MEF2ZUMP",
+          "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+        },
+        {
+          "item_key": "4BS8IYJG",
+          "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+        },
+        {
+          "item_key": "T4BMVDRT",
+          "title": "Chen et al. - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf"
+        },
+        {
+          "item_key": "5SP6T8EU",
+          "title": "MUVA: A New Large-Scale Benchmark for Multi-view Amodal Instance Segmentation in the Shopping Scenario"
+        },
+        {
+          "item_key": "TD5LA8C6",
+          "title": "Amodal Depth Anything: Amodal Depth Estimation in the Wild"
+        },
+        {
+          "item_key": "UM6KKHEX",
+          "title": "Li et al. - 2025 - Amodal Depth Anything.pdf"
+        }
+      ],
+      "occlusion": [
+        {
+          "item_key": "FD7A1C52",
+          "title": "Deep Occlusion-Aware Instance Segmentation With Overlapping BiLayers"
+        }
+      ],
+      "reconstruction": [
+        {
+          "item_key": "4BS8IYJG",
+          "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+        },
+        {
+          "item_key": "T4BMVDRT",
+          "title": "Chen et al. - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf"
+        }
+      ],
+      "GenIA": [],
+      "T3lescope": [],
+      "ARROW": []
+    }
+  },
+  "code_status": {
+    "source_available": true,
+    "license": "MIT, not covering upstream weights/datasets",
+    "checkpoint_download_url_verified": false,
+    "releases": [],
+    "download_script_requires": "OCCJEPA_CKPT_URL",
+    "local_execution": false
+  },
+  "limitations": [
+    "Semantic Scholar HTTP429; no successful S2 verification claimed",
+    "Web tool returned no content; actual direct primary-source snapshots retained",
+    "Related work bounded by local library and version-pinned cited papers; no exhaustive novelty validation"
+  ]
+}

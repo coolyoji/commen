@@ -1,7 +1,7 @@
 {
   "date": "2026-10-23",
   "read_month": "2026-10",
-  "status": "content_validated_publication_pending",
+  "status": "content_published_remote_verified",
   "deep_read": {
     "id": "arxiv:2610.29061",
     "paper_id": "arxiv:2610.29061",
@@ -182,9 +182,32 @@
       "stdout": "95dfbcaf82ebf2696fe6bafc5eb45343beeff279\trefs/heads/main",
       "stderr": ""
     },
-    "status": "publication_pending",
+    "status": "content_remote_verified",
     "commit_attempted_this_run": true,
-    "push_attempted_this_run": false
+    "push_attempted_this_run": true,
+    "content_commit": "ca88ea8605c91f1da4ecefaa358974b8c56db9a7",
+    "content_push": {
+      "args": [
+        "push",
+        "origin",
+        "main"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "To https://github.com/coolyoji/commen.git\n   95dfbca..ca88ea8  main -> main"
+    },
+    "content_remote_head": "ca88ea8605c91f1da4ecefaa358974b8c56db9a7",
+    "remote_verification": {
+      "args": [
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "returncode": 0,
+      "stdout": "ca88ea8605c91f1da4ecefaa358974b8c56db9a7\trefs/heads/main",
+      "stderr": ""
+    },
+    "audit_commit_note": "Final audit commit is verified out of band to avoid embedding its own hash."
   },
   "limitations": [
     "No local model execution or GPU experiments",

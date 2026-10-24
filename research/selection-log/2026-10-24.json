@@ -1,0 +1,895 @@
+{
+  "date": "2026-10-24",
+  "read_month": "2026-10",
+  "deep_count": 1,
+  "browse_count": 5,
+  "papers": [
+    {
+      "id": "arxiv:2603.05425",
+      "paper_id": "arxiv:2603.05425",
+      "title": "RelaxFlow: Text-Driven Amodal 3D Generation",
+      "authors": [
+        "Jiayin Zhu",
+        "Guoji Fu",
+        "Xiaolu Liu",
+        "Qiyuan He",
+        "Yicong Li",
+        "Angela Yao"
+      ],
+      "venue": "ICML 2026, PMLR 306:166962-166989; reading version arXiv v2",
+      "first_submitted": "2026-03-05",
+      "publication_month": "2026-03",
+      "version_date": "2026-05-27",
+      "read_month": "2026-10",
+      "version_read": "2603.05425v2, 28 pages",
+      "first_preprint_month": "2026-03",
+      "proceedings_month": "2026-09",
+      "proceedings_citation_month": "2026-07",
+      "publisher_publication_date": "2026-09-29",
+      "proceedings_source": "https://proceedings.mlr.press/v306/zhu26m.html",
+      "publication_month_semantics": "first preprint; conference BibTeX month 2026-07 and publisher publication date 2026-09-29 retained separately",
+      "source": "https://arxiv.org/abs/2603.05425",
+      "fulltext": "https://arxiv.org/html/2603.05425v2",
+      "pdf_source": "https://arxiv.org/pdf/2603.05425v2",
+      "code": "https://github.com/viridityzhu/RelaxFlow",
+      "code_commit_sha": "b41b6187cd25d04a26fe3940049e43485c0acc45",
+      "code_tree_sha": "da8fb0c5bad193a2456ca581f53fe7684827d5a6",
+      "code_run_locally": false,
+      "weights_downloaded": false,
+      "license": "SAM License",
+      "longform": "docs/md/longform/2026-10/relaxflow.md",
+      "reader": "docs/md/longform/2026-10/relaxflow-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "8SC9FOQH",
+      "zotero_attachment_key": "TQBKESRF",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\TQBKESRF\\Zhu - 2026 - RelaxFlow.pdf",
+      "pdf_verified": true,
+      "pdf_sha256": "20d84cd05e9670d95774d37990a0db2b063f8106310c6be61e2307eb38e17905",
+      "zotero_imported": true,
+      "selection_note": "Official source and example inference present, innovative observation/prior control; theory assumptions and instance-geometry limits explicit."
+    },
+    {
+      "id": "arxiv:2609.10743",
+      "title": "MHE-Former: Multi-Hypothesis Transformers via Entropy Maximization for 3D Mesh Recovery",
+      "first_submitted": "2026-09-09",
+      "publication_month": "2026-09",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2609.10743",
+      "fulltext": "https://arxiv.org/html/2609.10743v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "fa227abade60529fccb174bffe7ab98742bf4d3bbba4e640b7db3c58cd374088"
+    },
+    {
+      "id": "arxiv:2606.30047",
+      "title": "Argus: Metric Panoramic 3D Reconstruction for Indoor Scenes",
+      "first_submitted": "2026-06-29",
+      "publication_month": "2026-06",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2606.30047",
+      "fulltext": "https://arxiv.org/html/2606.30047v3",
+      "version_read": "v3",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "1cd1a57ce92927d699bb18a74c4540bbf5676e9553c8bdb79892ec7c174eef59"
+    },
+    {
+      "id": "arxiv:2610.22341",
+      "title": "3DCodeVerse: Exploring 3D Worlds as Code",
+      "first_submitted": "2026-10-15",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2610.22341",
+      "fulltext": "https://arxiv.org/html/2610.22341v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "789afd2a0bb0d49cb30a55c228dc2f0ceded3b8f73b82d1ab4223921e283a51d"
+    },
+    {
+      "id": "arxiv:2609.17450",
+      "title": "ORCA: Occlusion-Aware Refinement and Completion for Novel View Synthesis",
+      "first_submitted": "2026-09-15",
+      "publication_month": "2026-09",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2609.17450",
+      "fulltext": "https://arxiv.org/html/2609.17450v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "e6e1cc32c6d4c0faf0e075589fc2aa43ec286c1ece1570e1be935286a2d85f89"
+    },
+    {
+      "id": "arxiv:2507.07410",
+      "title": "EscherNet++: Simultaneous Amodal Completion and Scalable View Synthesis through Masked Fine-Tuning and Enhanced Feed-Forward 3D Reconstruction",
+      "first_submitted": "2025-07-10",
+      "publication_month": "2025-07",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint; abs page lists CVPR Findings 2026, proceedings month not independently verified",
+      "source": "https://arxiv.org/abs/2507.07410",
+      "fulltext": "https://arxiv.org/html/2507.07410v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "5c27d31f0b390aafc0147487824147204c0adb5f2eb15723d94a2775036d5d6f"
+    }
+  ],
+  "retrieval": [
+    {
+      "name": "relaxflow-abs",
+      "url": "https://arxiv.org/abs/2603.05425",
+      "ok": true,
+      "chars": 4330,
+      "sha256": "7c49236356eaba4bb1d2d17c2e3afa011ad652f06674fae8306e3e57a0afac76",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-html",
+      "url": "https://arxiv.org/html/2603.05425v1",
+      "ok": true,
+      "chars": 91001,
+      "sha256": "8dccdb015fb52f6b5fe4ab851a6a8b5b0dbbac2d21bffab0162525c0afed46d3",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "mhe-abs",
+      "url": "https://arxiv.org/abs/2609.10743",
+      "ok": true,
+      "chars": 4508,
+      "sha256": "0e96794d21a98beb25d10417fc53be9b8d46a62be92f292be8e2da328a5febcd",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "mhe-html",
+      "url": "https://arxiv.org/html/2609.10743v1",
+      "ok": true,
+      "chars": 73913,
+      "sha256": "fa227abade60529fccb174bffe7ab98742bf4d3bbba4e640b7db3c58cd374088",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "argus-abs",
+      "url": "https://arxiv.org/abs/2606.30047",
+      "ok": true,
+      "chars": 4261,
+      "sha256": "7a695a3b44b879cf7a77b5b13bdbff526cc91a10cb11c20c0d9eb2549fab49ec",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "argus-html",
+      "url": "https://arxiv.org/html/2606.30047v1",
+      "ok": true,
+      "chars": 82249,
+      "sha256": "10a93b3dfd6235556a60b3aac25124209b43e28477cd666a28f74e15c721f9e1",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "codeverse-abs",
+      "url": "https://arxiv.org/abs/2610.22341",
+      "ok": true,
+      "chars": 4763,
+      "sha256": "9127f4f14dfd81522e18d68e2771f945cd3100e6515c8ddd380ef58d398a0cf4",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "codeverse-html",
+      "url": "https://arxiv.org/html/2610.22341v1",
+      "ok": true,
+      "chars": 119052,
+      "sha256": "789afd2a0bb0d49cb30a55c228dc2f0ceded3b8f73b82d1ab4223921e283a51d",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "belief-abs",
+      "url": "https://arxiv.org/abs/2610.18670",
+      "ok": true,
+      "chars": 4446,
+      "sha256": "429650be88ea273213ed68644d477f5a82f62d73fddda26474e7be7364a5144f",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "belief-html",
+      "url": "https://arxiv.org/html/2610.18670v1",
+      "ok": true,
+      "chars": 22787,
+      "sha256": "fe10f8404529fd70bb59fab2b31fcae8ab01717e348d7fdd522faac1fd535f5d",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "escher-abs",
+      "url": "https://arxiv.org/abs/2507.07410",
+      "ok": true,
+      "chars": 4731,
+      "sha256": "3297cdd8ec40823dc15695985d3a4171dc2f367dc1d51c47bac888d194e10f0b",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "escher-html",
+      "url": "https://arxiv.org/html/2507.07410v1",
+      "ok": true,
+      "chars": 67816,
+      "sha256": "5c27d31f0b390aafc0147487824147204c0adb5f2eb15723d94a2775036d5d6f",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-code",
+      "url": "https://api.github.com/repos/viridityzhu/RelaxFlow",
+      "ok": true,
+      "chars": 5373,
+      "sha256": "f7df00891e4eccb744eaf0963aa9e57562f0b56b921de7ca6de6c2e0c5aaaa72",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-commit",
+      "url": "https://api.github.com/repos/viridityzhu/RelaxFlow/commits/main",
+      "ok": true,
+      "chars": 4822,
+      "sha256": "96dc11eda5de5f395581259287344a647caa70bad237a801579c5ecb61062abd",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-tree",
+      "url": "https://api.github.com/repos/viridityzhu/RelaxFlow/git/trees/main?recursive=1",
+      "ok": true,
+      "chars": 49016,
+      "sha256": "615d425424bc1e4e4f6f295e5e4f8b64e8ecc1debf218233c14c172837408970",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-readme",
+      "url": "https://raw.githubusercontent.com/viridityzhu/RelaxFlow/main/README.md",
+      "ok": true,
+      "chars": 6745,
+      "sha256": "ccc525ffc937492f2c73b47411e6701a0c5f11ca1690a9e7d96ac2fea0a4f21e",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-license",
+      "url": "https://raw.githubusercontent.com/viridityzhu/RelaxFlow/main/LICENSE",
+      "ok": true,
+      "chars": 8107,
+      "sha256": "b3a5a0e2d973ab80e6610ccf1cffc40756050d0ace3cd4fec879b3ec290b2e9b",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-project",
+      "url": "https://jyzhu.top/RelaxFlow_Webpage/",
+      "ok": true,
+      "chars": 12832,
+      "sha256": "bee0ae2a8f8d37c9c2b9a5bb6d0e39fd91d7f14fc666b12f80973c30969d7d84",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "s2-relaxflow",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2603.05425?fields=title,year,venue,publicationDate,externalIds",
+      "ok": false,
+      "error": "HTTP Error 429: ",
+      "retrieved_at": "2026-10-24T22:07:30.733954+08:00"
+    },
+    {
+      "name": "relaxflow-v2",
+      "url": "https://arxiv.org/html/2603.05425v2",
+      "ok": true,
+      "chars": 101506,
+      "sha256": "9cb682fa5464f6c12a774695c4fd912019defd2462ecd06643d14b2019e9236d",
+      "retrieved_at": "2026-10-24T22:10:18.333605+08:00"
+    },
+    {
+      "name": "argus-v3",
+      "url": "https://arxiv.org/html/2606.30047v3",
+      "ok": true,
+      "chars": 82262,
+      "sha256": "1cd1a57ce92927d699bb18a74c4540bbf5676e9553c8bdb79892ec7c174eef59",
+      "retrieved_at": "2026-10-24T22:10:20.321601+08:00"
+    },
+    {
+      "name": "orca-search",
+      "url": "https://export.arxiv.org/api/query?search_query=all:ORCA+AND+all:3D&max_results=5&sortBy=submittedDate&sortOrder=descending",
+      "ok": true,
+      "chars": 8826,
+      "sha256": "dc45cf30c2d20c8082e7785f9d78e46a4f491e15ed4f8e07432ef52ad4ee8cea",
+      "retrieved_at": "2026-10-24T22:10:21.379385+08:00"
+    },
+    {
+      "name": "completion-search",
+      "url": "https://arxiv.org/search/?query=amodal+3D&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "ok": true,
+      "chars": 99138,
+      "sha256": "005b10e85a9ea6b7421a356d0865a39eba7364d5cb188e19a9d93ab0fb3e990f",
+      "retrieved_at": "2026-10-24T22:10:23.493176+08:00"
+    },
+    {
+      "name": "orca-abs",
+      "url": "https://arxiv.org/abs/2609.17450",
+      "ok": true,
+      "chars": 4787,
+      "sha256": "e6f558cdafcf51cee287a6781310d852d7f77a69efb1152bb19c6a87b9d4365c",
+      "retrieved_at": "2026-10-24T22:13:32.313721+08:00"
+    },
+    {
+      "name": "orca-html",
+      "url": "https://arxiv.org/html/2609.17450v1",
+      "ok": true,
+      "chars": 38375,
+      "sha256": "e6e1cc32c6d4c0faf0e075589fc2aa43ec286c1ece1570e1be935286a2d85f89",
+      "retrieved_at": "2026-10-24T22:13:33.715917+08:00"
+    },
+    {
+      "name": "code-demo_relaxflow.py",
+      "url": "https://raw.githubusercontent.com/viridityzhu/RelaxFlow/b41b6187cd25d04a26fe3940049e43485c0acc45/demo_relaxflow.py",
+      "ok": true,
+      "chars": 10289,
+      "sha256": "8e9062ac3c9ec69bdbf03ae326a73ec42962813c5191ea4adc6dc97f775870c0"
+    },
+    {
+      "name": "code-demo_relaxflow_batch.py",
+      "url": "https://raw.githubusercontent.com/viridityzhu/RelaxFlow/b41b6187cd25d04a26fe3940049e43485c0acc45/demo_relaxflow_batch.py",
+      "ok": true,
+      "chars": 46373,
+      "sha256": "d70c387f6385b04b4d6dfd62b565d692f20c3bf070de7288bea5a0ec1c54e547"
+    },
+    {
+      "name": "code-sam3d_objects_pipeline_inference_pipeline_relaxflow.py",
+      "url": "https://raw.githubusercontent.com/viridityzhu/RelaxFlow/b41b6187cd25d04a26fe3940049e43485c0acc45/sam3d_objects/pipeline/inference_pipeline_relaxflow.py",
+      "ok": true,
+      "chars": 70030,
+      "sha256": "c0481efa0e60cc6dc229103e2e2d93f8e352060903d085f67b03ad9888498593"
+    }
+  ],
+  "related_work_discovery": {
+    "queries": [
+      {
+        "query": "all:amodal AND (all:text OR all:semantic) AND all:3D",
+        "url": "https://export.arxiv.org/api/query?search_query=all%3Aamodal+AND+%28all%3Atext+OR+all%3Asemantic%29+AND+all%3A3D&max_results=5&sortBy=submittedDate&sortOrder=descending",
+        "retrieved_at": "2026-10-24T22:35:02.912768+08:00",
+        "ok": true,
+        "entries": [
+          {
+            "id": "2606.03986v1",
+            "title": "NewtPhys: Do Foundation Models Understand Newtonian Physics?",
+            "abstract": "Previous work has evaluated physics reasoning in foundation models using synthetic or semi-synthetic scenes and visual question-answering tasks. However, these benchmarks emphasize high-level events and lack the visual fidelity required to assess true low-level Newtonian understanding. We introduce NewtPhys, a 4D physically annotated dataset built from multiview images of real-world scenes with physics-grounded simulations. The dataset provides dense, fine-grained annotations across timesteps -- including 3D forces and amodal per-pixel quantities covering physics, tracking, semantics and geometry -- bridging the gap between simplistic synthetic setups and realistic visual complexity. Using NewtPhys, we systematically evaluate 56 VLMs, including 54 open-weight models and 2 closed-source frontier models, and 10 VFMs and reveal limitations in low-level physics reasoning. Beyond benchmarking, our dataset enables future research in physics-grounded vision and the development of next-generation physics-aware evaluations. Code and datasets are available at https://astra-vision.github.io/NewtPhys.",
+            "published": "2026-06-02T17:59:12Z"
+          },
+          {
+            "id": "2605.28257v1",
+            "title": "Category-Level 3D Correspondence in Camera Space via Morphable Object Priors",
+            "abstract": "Understanding 3D objects from images is fundamental to robotics and AR/VR applications. While recent work has made progress in category-level pose estimation, current representations fail to capture the fine-grained semantics needed for reasoning about object parts, functions, and interactions. In this work, we study category-level 3D correspondence in camera space -- predicting, from a single image, 3D locations that remain consistent across instances within a category -- and show that it can emerge without explicit correspondence supervision by learning a shared morphable object prior. To enable research in this direction, we introduce HouseCorr3D, the first large-scale benchmark for monocular category-level 3D correspondence with 178k images across 50 household object categories, 280 unique instances, and 3D keypoint annotations directly on CAD models. Crucially, HouseCorr3D provides amodal correspondence labels for occluded regions and explicit symmetry annotations, addressing key limitations of existing datasets. We further propose Morpheus, a method that learns morphable category-level shape priors by disentangling canonical shape, deformation, and object pose. Through this shared canonical grounding, semantically meaningful 3D correspondences in camera space emerge implicitly. These emerging 3D correspondences set a new state of the art on HouseCorr3D, demonstrating that semantic 3D object understanding can arise without direct correspondence supervision. Data and code are publicly available at https://github.com/GenIntel/HouseCorr3D.",
+            "published": "2026-05-27T10:08:32Z"
+          },
+          {
+            "id": "2603.05425v2",
+            "title": "RelaxFlow: Text-Driven Amodal 3D Generation",
+            "abstract": "Image-to-3D generation faces inherent semantic ambiguity under occlusion, where partial observation alone is often insufficient to determine object category. In this work, we formalize text-driven amodal 3D generation, where text prompts steer the completion of unseen regions while strictly preserving input observation. Crucially, we identify that these objectives demand distinct control granularities: rigid control for the observation versus relaxed structural control for the prompt. To this end, we propose RelaxFlow, a training-free dual-branch framework that decouples control granularity via a Multi-Prior Consensus Module and a Relaxation Mechanism. Theoretically, we prove that our relaxation is equivalent to applying a low-pass filter on the generative vector field, which suppresses high-frequency instance details to isolate geometric structure that accommodates the observation. To facilitate evaluation, we introduce two diagnostic benchmarks, ExtremeOcc-3D and AmbiSem-3D. Extensive experiments demonstrate that RelaxFlow successfully steers the generation of unseen regions to match the prompt intent without compromising visual fidelity.",
+            "published": "2026-03-05T17:45:47Z"
+          },
+          {
+            "id": "2504.12264v1",
+            "title": "Towards Learning to Complete Anything in Lidar",
+            "abstract": "We propose CAL (Complete Anything in Lidar) for Lidar-based shape-completion in-the-wild. This is closely related to Lidar-based semantic/panoptic scene completion. However, contemporary methods can only complete and recognize objects from a closed vocabulary labeled in existing Lidar datasets. Different to that, our zero-shot approach leverages the temporal context from multi-modal sensor sequences to mine object shapes and semantic features of observed objects. These are then distilled into a Lidar-only instance-level completion and recognition model. Although we only mine partial shape completions, we find that our distilled model learns to infer full object shapes from multiple such partial observations across the dataset. We show that our model can be prompted on standard benchmarks for Semantic and Panoptic Scene Completion, localize objects as (amodal) 3D bounding boxes, and recognize objects beyond fixed class vocabularies. Our project page is https://research.nvidia.com/labs/dvl/projects/complete-anything-lidar",
+            "published": "2025-04-16T17:21:55Z"
+          },
+          {
+            "id": "2504.07943v1",
+            "title": "HoloPart: Generative 3D Part Amodal Segmentation",
+            "abstract": "3D part amodal segmentation--decomposing a 3D shape into complete, semantically meaningful parts, even when occluded--is a challenging but crucial task for 3D content creation and understanding. Existing 3D part segmentation methods only identify visible surface patches, limiting their utility. Inspired by 2D amodal segmentation, we introduce this novel task to the 3D domain and propose a practical, two-stage approach, addressing the key challenges of inferring occluded 3D geometry, maintaining global shape consistency, and handling diverse shapes with limited training data. First, we leverage existing 3D part segmentation to obtain initial, incomplete part segments. Second, we introduce HoloPart, a novel diffusion-based model, to complete these segments into full 3D parts. HoloPart utilizes a specialized architecture with local attention to capture fine-grained part geometry and global shape context attention to ensure overall shape consistency. We introduce new benchmarks based on the ABO and PartObjaverse-Tiny datasets and demonstrate that HoloPart significantly outperforms state-of-the-art shape completion methods. By incorporating HoloPart with existing segmentation techniques, we achieve promising results on 3D part amodal segmentation, opening new avenues for applications in geometry editing, animation, and material assignment.",
+            "published": "2025-04-10T17:53:31Z"
+          }
+        ]
+      },
+      {
+        "query": "all:\"multi-hypothesis\" AND (all:mesh OR all:entropy)",
+        "url": "https://export.arxiv.org/api/query?search_query=all%3A%22multi-hypothesis%22+AND+%28all%3Amesh+OR+all%3Aentropy%29&max_results=5&sortBy=submittedDate&sortOrder=descending",
+        "retrieved_at": "2026-10-24T22:35:04.296436+08:00",
+        "ok": true,
+        "entries": [
+          {
+            "id": "2609.34768v3",
+            "title": "Privacy-Preserving Full-Body Meshing from mmWave Radar via Mesh Foundation Model Supervision",
+            "abstract": "Millimeter-wave (mmWave) radar enables privacy-preserving human perception, but the extreme sparsity of point clouds from commercial single-chip sensors (mean ~6.5 points/frame; ~28% empty frames) has confined prior art to body-part keypoints or discrete action classification. We present a cross-modal teacher-student framework that lifts commercial radar to full-body, per-frame, metric 3D mesh reconstruction with per-joint uncertainty. Three innovations: (1) a mesh-foundation-model teacher - SAM 3D Body produces whole-body MHR ground truth (70 joints, 18,439 mesh vertices) from a single RGB frame with zero training, slashing annotation cost by orders of magnitude; (2) StudentPoseFormer - set encoding with masked attention pooling, a temporal Transformer, and a CVAE multi-hypothesis head that outputs both the pose mean and per-joint variance, honestly reporting where the radar cannot see; and (3) a multi-stage ground-truth quality pipeline (confidence gating, depth validation, temporal smoothing, bone-length consistency, bad-frame rejection) plus systematic information-lever ablations. On the public MM-Fi benchmark (same TI IWR6843 sensor, cross-subject), our full configuration reaches 7.45 cm 12-joint MPJPE, with ablations proving the causal value of point accumulation (k = 3, -0.34 cm), Doppler (-0.85 cm; -2 cm at the wrist on fast actions), and velocity loss (-0.27 cm). On our own synchronized radar + RGB-D corpus with block-level held-out splits, the pipeline achieves 21.47 cm end-to-end (per-joint hierarchy from 4.8 cm at the hip to 34.7 cm at the wrist - matching physical information limits), could be improved to 15 cm with ~30k diverse samples, and a scaling law shows sample diversity, not volume, is the binding constraint. Deployment inference is radar-only - no camera, no image.",
+            "published": "2026-09-28T09:49:08Z"
+          },
+          {
+            "id": "2609.10743v1",
+            "title": "MHE-Former: Multi-Hypothesis Transformers via Entropy Maximization for 3D Mesh Recovery",
+            "abstract": "Monocular 3D hand and body mesh recovery often suffers from severe occlusion and ambiguity. Traditional deterministic methods typically regress a single optimal solution, leading to overconfident predictions. In this paper, we introduce an exploration--exploitation paradigm for ambiguous mesh recovery with multi-hypothesis learning and selection. Specifically, during exploration, based on our probabilistic formulation and entropy maximization, we propose a novel multi-hypothesis method referred to as MHE-Former. It is a Transformer-based multi-hypothesis framework, ensuring high training efficiency and label friendliness while generating plausible and diverse hypotheses. During exploitation, we propose Hypothesis Selection, a context-aware process for multiple predictions. Especially leveraging VLM's powerful visual understanding and reasoning capabilities, it allows users to choose the most plausible and desired estimate with additional evidence and natural language intent. Extensive experiments demonstrate that our framework achieves state-of-the-art performance in accuracy and diversity across multiple datasets. The user preference study further shows the practicality of our hypothesis selection process.",
+            "published": "2026-09-09T18:39:03Z"
+          },
+          {
+            "id": "2607.00259v1",
+            "title": "Multi-Hypothesis Test-Time Adaptation to Mitigate Underspecification",
+            "abstract": "Test-Time Adaptation (TTA) seeks to improve model robustness under distribution shifts by adapting parameters using unlabeled target data. However, in the absence of supervision, entropy-based adaptation is fundamentally underconstrained: multiple distinct parameter updates can achieve similarly low entropy while inducing drastically different decision boundaries. This phenomenon, known as underspecification, renders standard TTA brittle and prone to collapse into spurious modes. In this work, we reinterpret TTA through a posterior-inspired lens induced by entropy minimization, where low-entropy solutions define a pseudo-likelihood over parameters. Instead of committing to a single point estimate, we introduce a particle-based diversification framework that explores multiple plausible adaptation trajectories simultaneously. Our method can be viewed as a structured exploration of multiple plausible adaptation solutions, implemented through multi-level diversification at the output, parameter, optimizer, and input levels. Crucially, the framework acts as a plug-and-play wrapper compatible with existing TTA methods. Extensive experiments on challenging benchmarks demonstrate consistent gains in stability and robustness, achieving improvements of 3-4% under mixed shifts, 2-3% with batch size one, and 1-2.5% under label shifts, outperforming state-of-the-art baselines. Our results suggest that treating TTA as a multi-hypothesis inference problem, rather than a single-point optimization task, is key to mitigating underspecification and enabling reliable real-world deployment.",
+            "published": "2026-06-30T23:12:36Z"
+          },
+          {
+            "id": "2509.13349v2",
+            "title": "Label-Efficient Grasp Joint Prediction with Point-JEPA",
+            "abstract": "We study whether 3D self-supervised pretraining with Point--JEPA enables label-efficient grasp joint-angle prediction. Meshes are sampled to point clouds and tokenized; a ShapeNet-pretrained Point--JEPA encoder feeds a $K{=}5$ multi-hypothesis head trained with winner-takes-all and evaluated by top--logit selection. On a multi-finger hand dataset with strict object-level splits, Point--JEPA improves top--logit RMSE and Coverage@15$^{\\circ}$ in low-label regimes (e.g., 26% lower RMSE at 25% data) and reaches parity at full supervision, suggesting JEPA-style pretraining is a practical lever for data-efficient grasp learning.",
+            "published": "2025-09-13T21:00:03Z"
+          },
+          {
+            "id": "2506.05250v1",
+            "title": "Spatiotemporal Contrastive Learning for Cross-View Video Localization in Unstructured Off-road Terrains",
+            "abstract": "Robust cross-view 3-DoF localization in GPS-denied, off-road environments remains challenging due to (1) perceptual ambiguities from repetitive vegetation and unstructured terrain, and (2) seasonal shifts that significantly alter scene appearance, hindering alignment with outdated satellite imagery. To address this, we introduce MoViX, a self-supervised cross-view video localization framework that learns viewpoint- and season-invariant representations while preserving directional awareness essential for accurate localization. MoViX employs a pose-dependent positive sampling strategy to enhance directional discrimination and temporally aligned hard negative mining to discourage shortcut learning from seasonal cues. A motion-informed frame sampler selects spatially diverse frames, and a lightweight temporal aggregator emphasizes geometrically aligned observations while downweighting ambiguous ones. At inference, MoViX runs within a Monte Carlo Localization framework, using a learned cross-view matching module in place of handcrafted models. Entropy-guided temperature scaling enables robust multi-hypothesis tracking and confident convergence under visual ambiguity. We evaluate MoViX on the TartanDrive 2.0 dataset, training on under 30 minutes of data and testing over 12.29 km. Despite outdated satellite imagery, MoViX localizes within 25 meters of ground truth 93% of the time, and within 50 meters 100% of the time in unseen regions, outperforming state-of-the-art baselines without environment-specific tuning. We further demonstrate generalization on a real-world off-road dataset from a geographically distinct site with a different robot platform.",
+            "published": "2025-06-05T17:10:29Z"
+          }
+        ]
+      },
+      {
+        "query": "all:panoramic AND all:reconstruction",
+        "url": "https://export.arxiv.org/api/query?search_query=all%3Apanoramic+AND+all%3Areconstruction&max_results=5&sortBy=submittedDate&sortOrder=descending",
+        "retrieved_at": "2026-10-24T22:35:05.669692+08:00",
+        "ok": true,
+        "entries": [
+          {
+            "id": "2610.31645v1",
+            "title": "OmniRay: Camera-Agnostic Monocular 3D Reconstruction with Composite Ray Fields",
+            "abstract": "Monocular models recover 3D geometry from a single image in one pass, but most assume a pinhole camera and produce distorted geometry on the wide-angle imagery produced by fisheye and panoramic lenses. Camera-aware models remove this assumption by predicting a per-pixel ray field. However, they represent different camera geometries using a single fixed basis to capture both the overall camera projection and its finer variations. We argue that camera geometry can be viewed as having a hierarchy of complexity for representing rays. We present OmniRay, a feed-forward model whose Ray Module is composed of three components: a monotone radial base that captures radially symmetric structure, a spherical-harmonic residual for smooth deviations from it, and a free-form residual for remaining local variation. These components are composed as successive rotations on the sphere, allowing the representation to accommodate diverse camera geometries. Given a single image, OmniRay predicts a ray direction and an up-to-scale radial distance for every pixel, from which a 3D point cloud is recovered without needing camera information at inference time. Extensive experiments across different camera configurations demonstrate that OmniRay establishes a new state-of-the-art in camera-agnostic monocular 3D reconstruction.",
+            "published": "2026-10-22T17:55:30Z"
+          },
+          {
+            "id": "2610.29845v2",
+            "title": "RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation",
+            "abstract": "Autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. While panoramic LiDAR offers full-surround coverage, learning representations within reinforcement learning (RL) is sample-inefficient under sparse rewards, and existing 3D pretrained point-cloud encoders are too memory-heavy for massively parallel RL simulation. We present RangeNav, a compact (183k parameters) LiDAR range-image encoder pretrained entirely on synthetic data. RangeNav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. We pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (BEV) prediction, then freeze it for policy learning. In simulation, adding semantic and BEV supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. Zero-shot real-world deployments on a Unitree B2-W quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. Code and models will be open-sourced. Project website: https://rangenav.github.io/.",
+            "published": "2026-10-21T15:06:08Z"
+          },
+          {
+            "id": "2610.25395v1",
+            "title": "A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation",
+            "abstract": "Turning a moving-camera perspective video into a 360° video requires more than just generating content outside the input frame: observations revealed over time must be preserved, unseen regions completed, and the resulting scene kept consistent as the camera viewpoint changes. Existing methods assign these different requirements to a single conditional video model, requiring them to be jointly learned from panoramic video data. We instead present a modular, 3D-driven framework that distributes these three responsibilities across specialized components, all connected through a shared scene representation. Input observations are reconstructed explicitly in 3D, while a pretrained panoramic image model completes unobserved content from a selected panoramic render. This generated content is lifted into the shared 3D scene, where it remains spatially anchored across camera viewpoints. Without requiring any additional panoramic-video training, our framework achieves state-of-the-art input-view fidelity, perceptual quality, and geometric consistency on a static-scene subset of the Argus evaluation set. These results support our decomposed, 3D-driven formulation as a promising alternative to direct video generation in this setting.",
+            "published": "2026-10-18T16:47:27Z"
+          },
+          {
+            "id": "2610.21297v1",
+            "title": "GeoPano: Towards Geometrically Accurate 3D Reconstruction from a Single Panorama",
+            "abstract": "Panoramic 3D reconstruction enables the holistic recovery of complete 360 $^\\circ$ scene geometry, offering significant benefits for robotics and AR/VR applications. However, directly estimating geometry from ERP images is inherently challenged by spherical distortions. To reduce spherical projection distortions, a common strategy is to decompose panoramas into distortion-free perspective views, but independently processing these views often introduces cross-view geometric inconsistencies. To address these challenges, we introduce GeoPano, a feed-forward framework for single-view panoramic 3D reconstruction that recovers a geometrically accurate and consistent point cloud from a single panorama. Our approach is driven by two key innovations: First, we propose a panoramic-aware attention aggregator, featuring a streamlined attention architecture equipped with a novel Pano-Attention mechanism, which explicitly exploits the intrinsic spherical geometry of the panorama to guide cross-view interactions, thereby suppressing geometric inconsistencies. Furthermore, we formulate a hybrid supervision strategy to jointly enforce fine-grained local details in perspective space and global structural coherence in spherical space. Experiments demonstrate that our method significantly outperforms previous SOTA approaches in reconstruction accuracy, geometric consistency, and visual fidelity.",
+            "published": "2026-10-15T05:42:59Z"
+          },
+          {
+            "id": "2610.19502v1",
+            "title": "Holi-Spatial 360: Generative Reconstruction from Sparse Panoramas for Spatial Rendering and Intelligence",
+            "abstract": "Spatial intelligence requires scalable 3D environments that are both photorealistic and semantically grounded, yet existing indoor datasets are dominated by room-scale captures and costly LiDAR acquisition. Online real-estate platforms offer abundant panoramas of diverse multi-room homes, but sparse viewpoints and texture-poor regions make reconstruction severely under-constrained. We introduce Holi-Spatial 360, a generative reconstruction and data curation framework for converting these panoramas into annotated multi-room 3D environments. Because reconstruction quality bounds subsequent generation, our Correspondence-Guided Geometric Optimization converts feed-forward reconstruction priors into reliable cross-view constraints and builds a coherent 3D Gaussian Splatting representation as 3D spatial memory. Adapted single-image and video priors then restore appearance and complete continuous trajectories while preserving observed content. The reconstructed scenes support arbitrary RGB-D rendering and an automated curation pipeline that combines end-to-end 3D grounding with VLM-based verification. Holi360 contains over 1K multi-room 3DGS scenes, more than 100K instance annotations, and 2M spatial question-answer pairs. We also introduce the Holi360 benchmark to evaluate the spatial understanding of VLMs in real-world, multi-room indoor environments. Experiments demonstrate superior reconstruction and curation quality under sparse panoramic inputs, while fine-tuning VLMs on Holi360 substantially improves spatial reasoning capabilities.",
+            "published": "2026-10-14T03:21:09Z"
+          }
+        ]
+      },
+      {
+        "query": "all:\"3D\" AND all:code AND all:spatial",
+        "url": "https://export.arxiv.org/api/query?search_query=all%3A%223D%22+AND+all%3Acode+AND+all%3Aspatial&max_results=5&sortBy=submittedDate&sortOrder=descending",
+        "retrieved_at": "2026-10-24T22:35:06.989153+08:00",
+        "ok": true,
+        "entries": [
+          {
+            "id": "2610.31671v1",
+            "title": "A Unified Framework for Image-to-3D Part Generation via Variable Granularity",
+            "abstract": "Controllable 3D part generation is pivotal for digital asset creation, yet existing methods lack the flexibility to accommodate diverse user workflows requiring varying levels of control. In this paper, we introduce FlexPart, a unified image-to-3D part generation framework that supports variable-granularity geometric conditions within a single model. By seamlessly integrating heterogeneous inputs, ranging from sparse points to dense bounding boxes and masks, via gated adaptive modulation, FlexPart unlocks a powerful cross-modal synergy. We also propose an asymmetric geometric guidance mechanism that leverages strong spatial priors to align representations across granularities, improving geometric consistency and facilitating inter-task synergy. Under mask conditioning on PartVerseXL, FlexPart reduces Part CD by 16.6% relative to TripoSG + SAM3D and by 10.5% relative to OmniPart, while maintaining competitive whole-mesh quality. The code can be found at https://github.com/Gucci233/FlexPart",
+            "published": "2026-10-22T17:59:53Z"
+          },
+          {
+            "id": "2610.31649v1",
+            "title": "Gate3DGen: A Pre-processing Model that Selectively Purifies Real-World Images for 3D Generation",
+            "abstract": "Single-image 3D generation has achieved high fidelity on curated benchmarks, yet degrades sharply on real-world images with uneven illumination, blur, and occlusions. Purifying such inputs requires deciding when to intervene and preserving the visual cues needed for 3D generation, while leaving clean inputs unchanged. We introduce Gate3DGen, a selective pre-processing model that gates image inputs to existing 3D generators without retraining them. A degradation-aware router bypasses inputs classified as clean and extracts features to guide purification of the remaining inputs. Conditioned on these features, a 3D-oriented one-step purifier purifies degraded inputs with spatial losses that encourage preservation of object identity, contours, and textural cues. To provide paired supervision, we construct a synthetic data engine that renders clean views of 3D assets and synthesises composite degradations. On the synthetic benchmark, the purifier improves image fidelity and downstream 3D geometry in only 2.3s on average, reducing TRELLIS.2 mesh distance by 61.5% relative to degraded inputs. VLM evaluation and human preferences on real photographs further support identity preservation and degradation correction. More demos and code are available at https://supra-3d.github.io/gate3dgen.",
+            "published": "2026-10-22T17:57:02Z"
+          },
+          {
+            "id": "2610.31080v1",
+            "title": "nnInteractive Agent: General-Purpose AI Agents as 3D Image Annotators",
+            "abstract": "Interactive 3D segmentation models such as nnInteractive turn a few spatial prompts (points, scribbles, boxes) into accurate volumetric masks, but a human still does the annotation work: finding each structure, placing prompts, checking the result and correcting it. General-purpose AI agents can now interpret images, call tools and write code. We show that such agents can take over this work without additional training: the user makes a request in plain language, and the agent works out what has to be segmented, locates the targets, prompts nnInteractive, inspects the 3D result, corrects it and responds to feedback. Asked for 'the muscles used for chewing', an agent identifies and segments the masseters and pterygoids; asked to count liver lesions, it writes its own code to find candidates and splits a merged lesion on request. Our open-source nninteractive-agent provides nnInteractive as tools over the Model Context Protocol (MCP), together with a skill that encodes how experienced users prompt it. On a benchmark spanning CT, MRI, PET and micro-CT of humans, a mouse and an ant (14 images; 51 targets from organs and tumours to muscles, foot bones, vessel trees and an insect brain), Claude Code and Codex reach a mean Dice of 0.81 and 0.84 from the request alone; when told where each target is, both reach 0.85 and prompt nearly as effectively as an oracle that places prompts using the reference segmentation. A text-prompted 3D model (VoxTell) is more accurate on most standard radiological targets but less robust: it returns an empty mask for one of them and fails on the leg muscles, the foot bones, the mouse and the ant, where the agents remain accurate. Code: https://github.com/MIC-DKFZ/nninteractive-agent",
+            "published": "2026-10-22T10:55:15Z"
+          },
+          {
+            "id": "2610.30127v1",
+            "title": "VoxProg: 3D Spatial Reasoning through Voxel Programming",
+            "abstract": "Language models' abilities to interpret tasks and generate programs offer a promising basis for 3D spatial reasoning. Yet following spatial instructions in 3D scenes requires programs to construct geometric references that language leaves implicit. In this work, we introduce VoxProg, which formulates 3D object placement through voxel programming: a language model translates task interpretations into executable programs over local voxel views of scene surfaces. Because these views index surface geometry on regular grids with explicit coordinates and neighborhood relations, an evidence program can isolate task-relevant regions and boundaries directly from scene meshes, and a downstream pose program can measure the resulting geometry to compute a target $SE(3)$ pose. Visual and numerical feedback from execution lets the model inspect intermediate selections and candidate placements to iteratively revise its code. To evaluate open-ended placement across functional use, geometric fit, and contextual arrangements, we introduce the 71-task VoxProg-Bench benchmark along with an evaluation suite pairing perceptual Intent Alignment and 3D Physical Validity. Across VoxProg-Bench and external benchmarks, VoxProg consistently outperforms relation-based, keypoint-based, and mesh-based baselines.",
+            "published": "2026-10-21T17:58:05Z"
+          },
+          {
+            "id": "2610.29232v1",
+            "title": "Think-Capture: Active 3D Geometry Acquisition for Spatial Reasoning in Vision-Language Models",
+            "abstract": "Vision-Language Models (VLMs) excel at 2D recognition but often fail to maintain consistent 3D relations across sparse viewpoints, leading to spatial hallucinations under occlusion and perspective changes. Existing methods commonly fuse all frames with dense geometry, incurring substantial computation and context overhead while encouraging blind reliance on imperfect estimators. We present Think-Capture, a query-conditioned framework that first identifies task-critical objects and then acquires their geometry on demand. A 3D toolkit lifts zero-shot masks into a common coordinate frame, and a Symbolic 3D State Abstraction compresses object and camera states into structured text. Hierarchical Group Relative Policy Optimization (GRPO) trains the VLM on cases in which geometry either helps or misleads, teaching it when to use tool evidence and when to fall back on visual cues. Think-Capture-4B reaches 54.4% on MindCube-Tiny (+21.5 points over its backbone), 39.1% on the MMSI-Bench positional subset (+7.9), and 42.8% on ViewSpatial (+5.2). It also remains robust under coordinate and mask perturbations. The full stack fits one 24 GB GPU and serves as an asynchronous high-level reasoner on an Agibot G1. Our code is available at https://github.com/819346675/Think-Capture.",
+            "published": "2026-10-21T05:42:29Z"
+          }
+        ]
+      },
+      {
+        "query": "all:occlusion AND all:\"novel view\" AND all:completion",
+        "url": "https://export.arxiv.org/api/query?search_query=all%3Aocclusion+AND+all%3A%22novel+view%22+AND+all%3Acompletion&max_results=5&sortBy=submittedDate&sortOrder=descending",
+        "retrieved_at": "2026-10-24T22:35:08.060938+08:00",
+        "ok": true,
+        "entries": [
+          {
+            "id": "2610.14685v1",
+            "title": "Demiurge: Forging Navigable 4D Worlds via Autoregressive Video Rerendering",
+            "abstract": "Recent advances in video diffusion enable novel-view video synthesis from a single input video, supporting world modeling, embodied intelligence, and robotic simulation. However, existing methods process camera trajectories independently, lacking the cross-trajectory consistency needed for coherent, navigable 4D worlds. We introduce Demiurge, an autoregressive video rerendering pipeline built on a dynamic 4D point-cloud memory cache. It promotes cross-trajectory consistency through four components: (1) an appearance video diffusion model that synthesizes photorealistic novel-view videos conditioned on the 4D memory; (2) a memory-consistent video depth completion model that aligns known-region depths with cached geometry and completes missing regions, mitigating scale ambiguity and discontinuities during memory updates; (3) memory-aware dual-stream warping that provides high-fidelity visual guidance and occlusion cues for novel-view synthesis; and (4) geometry-aware video refinement that enhances perceptual quality. Extensive experiments demonstrate state-of-the-art performance and three key capabilities: coherent spatiotemporal lattice construction over dense multi-view trajectories; large-parallax video rerendering under challenging camera motions, including 180-degree rotations with no input-view overlap; and geometry-faithful outputs that can be directly optimized into high-quality 3D Gaussian Splatting representations with minimal artifacts. Project page: https://hanxinzhu-lab.github.io/demiurge_project_page/.",
+            "published": "2026-10-10T07:57:50Z"
+          },
+          {
+            "id": "2609.17450v1",
+            "title": "ORCA: Occlusion-Aware Refinement and Completion for Novel View Synthesis",
+            "abstract": "Novel-view synthesis from a single image is a fundamentally ambiguous problem. As the camera moves away from the input viewpoint, previously hidden regions become visible, exposing missing geometry and holes in the reconstructed scene. Existing methods often rely on generative models to complete such regions. However, many of these artifacts are small gaps near depth boundaries and do not require generating new scene content. In order to eliminate expensive process of generating image we introduce ORCA, an occlusion-aware method for reconstructing and completing explorable 3D scenes from a single image. ORCA first introduces 3D structure into a Gaussian-anchor representation using monocular depth while preserving the original camera-ray correspondence. During scene exploration, missing regions are handled based on their size and structure. Small disocclusions are repaired using RGB-D information already available in the reconstruction, while generative inpainting is reserved for larger regions that cannot be reliably recovered from the scene. New Gaussian anchors are added and optimized locally without modifying the existing representation. By reducing unnecessary reliance on generative inpainting, ORCA limits generation-induced hallucinations and better preserves the content and structure of the original scene. On DIV2K, ORCA improves novel-view quality over VistaDream across all reported metrics, increasing MUSIQ from 61.60 to 68.71 and CLIP-IQA from 0.474 to 0.574. These results show that many novel-view artifacts can be repaired effectively by reusing information already present in the reconstructed scene.",
+            "published": "2026-09-15T16:53:54Z"
+          },
+          {
+            "id": "2606.29303v2",
+            "title": "Occlusion-Robust Multi-Object Decoupling for Physics-Based Robotic Interaction",
+            "abstract": "We propose a mask-free method for lossless multi-object 3D reconstruction from sparse and occluded real-world views, enabling physically plausible robotic interaction via Material Point Method (MPM) simulation. Our key insight is that object coupling stems from occlusion and limited viewpoints, which we address by formulating multi-object decoupling as a sparse-view reconstruction problem. Using 3D Gaussian Splatting as base representation, we first obtain coarse instance partitions with a SAM2-trained segmentation field. Rather than relying on masks, we reconstruct fragmented geometries by leveraging a joint Score Distillation Sampling (SDS) process, which integrates reference-view supervision with novel-view synthesis guided by 2D and 3D diffusion priors to enforce both texture fidelity and 3D consistency. Furthermore, we incorporate geometry-aware priors such as intra-object and inter-object similarity to regularize geometric reasoning. Experimental results demonstrate that our method produces complete, simulation-ready 3D objects without requiring manual masks, enabling realistic dynamic interactions on both synthetic, robotic and real-world datasets.",
+            "published": "2026-06-28T09:50:46Z"
+          },
+          {
+            "id": "2603.05882v1",
+            "title": "CylinderSplat: 3D Gaussian Splatting with Cylindrical Triplanes for Panoramic Novel View Synthesis",
+            "abstract": "Feed-forward 3D Gaussian Splatting (3DGS) has shown great promise for real-time novel view synthesis, but its application to panoramic imagery remains challenging. Existing methods often rely on multi-view cost volumes for geometric refinement, which struggle to resolve occlusions in sparse-view scenarios. Furthermore, standard volumetric representations like Cartesian Triplanes are poor in capturing the inherent geometry of $360^\\circ$ scenes, leading to distortion and aliasing. In this work, we introduce CylinderSplat, a feed-forward framework for panoramic 3DGS that addresses these limitations. The core of our method is a new {cylindrical Triplane} representation, which is better aligned with panoramic data and real-world structures adhering to the Manhattan-world assumption. We use a dual-branch architecture: a pixel-based branch reconstructs well-observed regions, while a volume-based branch leverages the cylindrical Triplane to complete occluded or sparsely-viewed areas. Our framework is designed to flexibly handle a variable number of input views, from single to multiple panoramas. Extensive experiments demonstrate that CylinderSplat achieves state-of-the-art results in both single-view and multi-view panoramic novel view synthesis, outperforming previous methods in both reconstruction quality and geometric accuracy.",
+            "published": "2026-03-06T04:04:20Z"
+          },
+          {
+            "id": "2511.21945v3",
+            "title": "GENA3D: Generative Amodal 3D Modeling by Bridging 2D Priors and 3D Coherence",
+            "abstract": "Generating complete 3D objects under partial occlusions (i.e., amodal scenarios) is a practically important yet challenging problem, as large portions of object geometry are unobserved in real-world scenarios. Existing approaches either operate directly in 3D, which ensures geometric consistency but often lacks generative expressiveness, or rely on 2D amodal completion, which provides strong appearance priors but does not guarantee reliable 3D structure. This raises a key question: how can we achieve both generative plausibility and geometric coherence in amodal 3D modeling? To answer this question, we introduce GENA3D (GENarative Amodal 3D), a framework that integrates learned 2D generative priors with explicit 3D geometric reasoning within a conditional 3D generation paradigm. The 2D priors enable the model to plausibly infer diverse occluded content, while the 3D representation enforces multi-view consistency and spatial validity. Our design incorporates a novel View-Wise Cross-Attention for multi-view alignment and a Stereo-Conditioned Cross-Attention to anchor generative predictions in 3D relationships. By combining generative imagination with structural constraints, GENA3D generates complete and coherent 3D objects from limited observations without sacrificing geometric fidelity. Experiments demonstrate that our method outperforms existing approaches in both synthetic and real-world amodal scenarios, highlighting the effectiveness of bridging 2D priors and 3D coherence in generating plausible and geometrically consistent 3D structures in complex environments.",
+            "published": "2025-11-26T22:11:56Z"
+          }
+        ]
+      },
+      {
+        "query": "all:amodal AND all:\"view synthesis\"",
+        "url": "https://export.arxiv.org/api/query?search_query=all%3Aamodal+AND+all%3A%22view+synthesis%22&max_results=5&sortBy=submittedDate&sortOrder=descending",
+        "retrieved_at": "2026-10-24T22:35:09.227853+08:00",
+        "ok": true,
+        "entries": [
+          {
+            "id": "2507.07410v1",
+            "title": "EscherNet++: Simultaneous Amodal Completion and Scalable View Synthesis through Masked Fine-Tuning and Enhanced Feed-Forward 3D Reconstruction",
+            "abstract": "We propose EscherNet++, a masked fine-tuned diffusion model that can synthesize novel views of objects in a zero-shot manner with amodal completion ability. Existing approaches utilize multiple stages and complex pipelines to first hallucinate missing parts of the image and then perform novel view synthesis, which fail to consider cross-view dependencies and require redundant storage and computing for separate stages. Instead, we apply masked fine-tuning including input-level and feature-level masking to enable an end-to-end model with the improved ability to synthesize novel views and conduct amodal completion. In addition, we empirically integrate our model with other feed-forward image-to-mesh models without extra training and achieve competitive results with reconstruction time decreased by 95%, thanks to its ability to synthesize arbitrary query views. Our method's scalable nature further enhances fast 3D reconstruction. Despite fine-tuning on a smaller dataset and batch size, our method achieves state-of-the-art results, improving PSNR by 3.9 and Volume IoU by 0.28 on occluded tasks in 10-input settings, while also generalizing to real-world occluded reconstruction.",
+            "published": "2025-07-10T04:08:28Z"
+          },
+          {
+            "id": "2104.08418v1",
+            "title": "FiG-NeRF: Figure-Ground Neural Radiance Fields for 3D Object Category Modelling",
+            "abstract": "We investigate the use of Neural Radiance Fields (NeRF) to learn high quality 3D object category models from collections of input images. In contrast to previous work, we are able to do this whilst simultaneously separating foreground objects from their varying backgrounds. We achieve this via a 2-component NeRF model, FiG-NeRF, that prefers explanation of the scene as a geometrically constant background and a deformable foreground that represents the object category. We show that this method can learn accurate 3D object category models using only photometric supervision and casually captured images of the objects. Additionally, our 2-part decomposition allows the model to perform accurate and crisp amodal segmentation. We quantitatively evaluate our method with view synthesis and image fidelity metrics, using synthetic, lab-captured, and in-the-wild data. Our results demonstrate convincing 3D object category modelling that exceed the performance of existing methods.",
+            "published": "2021-04-17T01:38:54Z"
+          }
+        ]
+      }
+    ],
+    "dedup_key": "canonical arXiv ID without version",
+    "unique_entries": [
+      {
+        "id": "2606.03986v1",
+        "title": "NewtPhys: Do Foundation Models Understand Newtonian Physics?",
+        "abstract": "Previous work has evaluated physics reasoning in foundation models using synthetic or semi-synthetic scenes and visual question-answering tasks. However, these benchmarks emphasize high-level events and lack the visual fidelity required to assess true low-level Newtonian understanding. We introduce NewtPhys, a 4D physically annotated dataset built from multiview images of real-world scenes with physics-grounded simulations. The dataset provides dense, fine-grained annotations across timesteps -- including 3D forces and amodal per-pixel quantities covering physics, tracking, semantics and geometry -- bridging the gap between simplistic synthetic setups and realistic visual complexity. Using NewtPhys, we systematically evaluate 56 VLMs, including 54 open-weight models and 2 closed-source frontier models, and 10 VFMs and reveal limitations in low-level physics reasoning. Beyond benchmarking, our dataset enables future research in physics-grounded vision and the development of next-generation physics-aware evaluations. Code and datasets are available at https://astra-vision.github.io/NewtPhys.",
+        "published": "2026-06-02T17:59:12Z"
+      },
+      {
+        "id": "2605.28257v1",
+        "title": "Category-Level 3D Correspondence in Camera Space via Morphable Object Priors",
+        "abstract": "Understanding 3D objects from images is fundamental to robotics and AR/VR applications. While recent work has made progress in category-level pose estimation, current representations fail to capture the fine-grained semantics needed for reasoning about object parts, functions, and interactions. In this work, we study category-level 3D correspondence in camera space -- predicting, from a single image, 3D locations that remain consistent across instances within a category -- and show that it can emerge without explicit correspondence supervision by learning a shared morphable object prior. To enable research in this direction, we introduce HouseCorr3D, the first large-scale benchmark for monocular category-level 3D correspondence with 178k images across 50 household object categories, 280 unique instances, and 3D keypoint annotations directly on CAD models. Crucially, HouseCorr3D provides amodal correspondence labels for occluded regions and explicit symmetry annotations, addressing key limitations of existing datasets. We further propose Morpheus, a method that learns morphable category-level shape priors by disentangling canonical shape, deformation, and object pose. Through this shared canonical grounding, semantically meaningful 3D correspondences in camera space emerge implicitly. These emerging 3D correspondences set a new state of the art on HouseCorr3D, demonstrating that semantic 3D object understanding can arise without direct correspondence supervision. Data and code are publicly available at https://github.com/GenIntel/HouseCorr3D.",
+        "published": "2026-05-27T10:08:32Z"
+      },
+      {
+        "id": "2603.05425v2",
+        "title": "RelaxFlow: Text-Driven Amodal 3D Generation",
+        "abstract": "Image-to-3D generation faces inherent semantic ambiguity under occlusion, where partial observation alone is often insufficient to determine object category. In this work, we formalize text-driven amodal 3D generation, where text prompts steer the completion of unseen regions while strictly preserving input observation. Crucially, we identify that these objectives demand distinct control granularities: rigid control for the observation versus relaxed structural control for the prompt. To this end, we propose RelaxFlow, a training-free dual-branch framework that decouples control granularity via a Multi-Prior Consensus Module and a Relaxation Mechanism. Theoretically, we prove that our relaxation is equivalent to applying a low-pass filter on the generative vector field, which suppresses high-frequency instance details to isolate geometric structure that accommodates the observation. To facilitate evaluation, we introduce two diagnostic benchmarks, ExtremeOcc-3D and AmbiSem-3D. Extensive experiments demonstrate that RelaxFlow successfully steers the generation of unseen regions to match the prompt intent without compromising visual fidelity.",
+        "published": "2026-03-05T17:45:47Z"
+      },
+      {
+        "id": "2504.12264v1",
+        "title": "Towards Learning to Complete Anything in Lidar",
+        "abstract": "We propose CAL (Complete Anything in Lidar) for Lidar-based shape-completion in-the-wild. This is closely related to Lidar-based semantic/panoptic scene completion. However, contemporary methods can only complete and recognize objects from a closed vocabulary labeled in existing Lidar datasets. Different to that, our zero-shot approach leverages the temporal context from multi-modal sensor sequences to mine object shapes and semantic features of observed objects. These are then distilled into a Lidar-only instance-level completion and recognition model. Although we only mine partial shape completions, we find that our distilled model learns to infer full object shapes from multiple such partial observations across the dataset. We show that our model can be prompted on standard benchmarks for Semantic and Panoptic Scene Completion, localize objects as (amodal) 3D bounding boxes, and recognize objects beyond fixed class vocabularies. Our project page is https://research.nvidia.com/labs/dvl/projects/complete-anything-lidar",
+        "published": "2025-04-16T17:21:55Z"
+      },
+      {
+        "id": "2504.07943v1",
+        "title": "HoloPart: Generative 3D Part Amodal Segmentation",
+        "abstract": "3D part amodal segmentation--decomposing a 3D shape into complete, semantically meaningful parts, even when occluded--is a challenging but crucial task for 3D content creation and understanding. Existing 3D part segmentation methods only identify visible surface patches, limiting their utility. Inspired by 2D amodal segmentation, we introduce this novel task to the 3D domain and propose a practical, two-stage approach, addressing the key challenges of inferring occluded 3D geometry, maintaining global shape consistency, and handling diverse shapes with limited training data. First, we leverage existing 3D part segmentation to obtain initial, incomplete part segments. Second, we introduce HoloPart, a novel diffusion-based model, to complete these segments into full 3D parts. HoloPart utilizes a specialized architecture with local attention to capture fine-grained part geometry and global shape context attention to ensure overall shape consistency. We introduce new benchmarks based on the ABO and PartObjaverse-Tiny datasets and demonstrate that HoloPart significantly outperforms state-of-the-art shape completion methods. By incorporating HoloPart with existing segmentation techniques, we achieve promising results on 3D part amodal segmentation, opening new avenues for applications in geometry editing, animation, and material assignment.",
+        "published": "2025-04-10T17:53:31Z"
+      },
+      {
+        "id": "2609.34768v3",
+        "title": "Privacy-Preserving Full-Body Meshing from mmWave Radar via Mesh Foundation Model Supervision",
+        "abstract": "Millimeter-wave (mmWave) radar enables privacy-preserving human perception, but the extreme sparsity of point clouds from commercial single-chip sensors (mean ~6.5 points/frame; ~28% empty frames) has confined prior art to body-part keypoints or discrete action classification. We present a cross-modal teacher-student framework that lifts commercial radar to full-body, per-frame, metric 3D mesh reconstruction with per-joint uncertainty. Three innovations: (1) a mesh-foundation-model teacher - SAM 3D Body produces whole-body MHR ground truth (70 joints, 18,439 mesh vertices) from a single RGB frame with zero training, slashing annotation cost by orders of magnitude; (2) StudentPoseFormer - set encoding with masked attention pooling, a temporal Transformer, and a CVAE multi-hypothesis head that outputs both the pose mean and per-joint variance, honestly reporting where the radar cannot see; and (3) a multi-stage ground-truth quality pipeline (confidence gating, depth validation, temporal smoothing, bone-length consistency, bad-frame rejection) plus systematic information-lever ablations. On the public MM-Fi benchmark (same TI IWR6843 sensor, cross-subject), our full configuration reaches 7.45 cm 12-joint MPJPE, with ablations proving the causal value of point accumulation (k = 3, -0.34 cm), Doppler (-0.85 cm; -2 cm at the wrist on fast actions), and velocity loss (-0.27 cm). On our own synchronized radar + RGB-D corpus with block-level held-out splits, the pipeline achieves 21.47 cm end-to-end (per-joint hierarchy from 4.8 cm at the hip to 34.7 cm at the wrist - matching physical information limits), could be improved to 15 cm with ~30k diverse samples, and a scaling law shows sample diversity, not volume, is the binding constraint. Deployment inference is radar-only - no camera, no image.",
+        "published": "2026-09-28T09:49:08Z"
+      },
+      {
+        "id": "2609.10743v1",
+        "title": "MHE-Former: Multi-Hypothesis Transformers via Entropy Maximization for 3D Mesh Recovery",
+        "abstract": "Monocular 3D hand and body mesh recovery often suffers from severe occlusion and ambiguity. Traditional deterministic methods typically regress a single optimal solution, leading to overconfident predictions. In this paper, we introduce an exploration--exploitation paradigm for ambiguous mesh recovery with multi-hypothesis learning and selection. Specifically, during exploration, based on our probabilistic formulation and entropy maximization, we propose a novel multi-hypothesis method referred to as MHE-Former. It is a Transformer-based multi-hypothesis framework, ensuring high training efficiency and label friendliness while generating plausible and diverse hypotheses. During exploitation, we propose Hypothesis Selection, a context-aware process for multiple predictions. Especially leveraging VLM's powerful visual understanding and reasoning capabilities, it allows users to choose the most plausible and desired estimate with additional evidence and natural language intent. Extensive experiments demonstrate that our framework achieves state-of-the-art performance in accuracy and diversity across multiple datasets. The user preference study further shows the practicality of our hypothesis selection process.",
+        "published": "2026-09-09T18:39:03Z"
+      },
+      {
+        "id": "2607.00259v1",
+        "title": "Multi-Hypothesis Test-Time Adaptation to Mitigate Underspecification",
+        "abstract": "Test-Time Adaptation (TTA) seeks to improve model robustness under distribution shifts by adapting parameters using unlabeled target data. However, in the absence of supervision, entropy-based adaptation is fundamentally underconstrained: multiple distinct parameter updates can achieve similarly low entropy while inducing drastically different decision boundaries. This phenomenon, known as underspecification, renders standard TTA brittle and prone to collapse into spurious modes. In this work, we reinterpret TTA through a posterior-inspired lens induced by entropy minimization, where low-entropy solutions define a pseudo-likelihood over parameters. Instead of committing to a single point estimate, we introduce a particle-based diversification framework that explores multiple plausible adaptation trajectories simultaneously. Our method can be viewed as a structured exploration of multiple plausible adaptation solutions, implemented through multi-level diversification at the output, parameter, optimizer, and input levels. Crucially, the framework acts as a plug-and-play wrapper compatible with existing TTA methods. Extensive experiments on challenging benchmarks demonstrate consistent gains in stability and robustness, achieving improvements of 3-4% under mixed shifts, 2-3% with batch size one, and 1-2.5% under label shifts, outperforming state-of-the-art baselines. Our results suggest that treating TTA as a multi-hypothesis inference problem, rather than a single-point optimization task, is key to mitigating underspecification and enabling reliable real-world deployment.",
+        "published": "2026-06-30T23:12:36Z"
+      },
+      {
+        "id": "2509.13349v2",
+        "title": "Label-Efficient Grasp Joint Prediction with Point-JEPA",
+        "abstract": "We study whether 3D self-supervised pretraining with Point--JEPA enables label-efficient grasp joint-angle prediction. Meshes are sampled to point clouds and tokenized; a ShapeNet-pretrained Point--JEPA encoder feeds a $K{=}5$ multi-hypothesis head trained with winner-takes-all and evaluated by top--logit selection. On a multi-finger hand dataset with strict object-level splits, Point--JEPA improves top--logit RMSE and Coverage@15$^{\\circ}$ in low-label regimes (e.g., 26% lower RMSE at 25% data) and reaches parity at full supervision, suggesting JEPA-style pretraining is a practical lever for data-efficient grasp learning.",
+        "published": "2025-09-13T21:00:03Z"
+      },
+      {
+        "id": "2506.05250v1",
+        "title": "Spatiotemporal Contrastive Learning for Cross-View Video Localization in Unstructured Off-road Terrains",
+        "abstract": "Robust cross-view 3-DoF localization in GPS-denied, off-road environments remains challenging due to (1) perceptual ambiguities from repetitive vegetation and unstructured terrain, and (2) seasonal shifts that significantly alter scene appearance, hindering alignment with outdated satellite imagery. To address this, we introduce MoViX, a self-supervised cross-view video localization framework that learns viewpoint- and season-invariant representations while preserving directional awareness essential for accurate localization. MoViX employs a pose-dependent positive sampling strategy to enhance directional discrimination and temporally aligned hard negative mining to discourage shortcut learning from seasonal cues. A motion-informed frame sampler selects spatially diverse frames, and a lightweight temporal aggregator emphasizes geometrically aligned observations while downweighting ambiguous ones. At inference, MoViX runs within a Monte Carlo Localization framework, using a learned cross-view matching module in place of handcrafted models. Entropy-guided temperature scaling enables robust multi-hypothesis tracking and confident convergence under visual ambiguity. We evaluate MoViX on the TartanDrive 2.0 dataset, training on under 30 minutes of data and testing over 12.29 km. Despite outdated satellite imagery, MoViX localizes within 25 meters of ground truth 93% of the time, and within 50 meters 100% of the time in unseen regions, outperforming state-of-the-art baselines without environment-specific tuning. We further demonstrate generalization on a real-world off-road dataset from a geographically distinct site with a different robot platform.",
+        "published": "2025-06-05T17:10:29Z"
+      },
+      {
+        "id": "2610.31645v1",
+        "title": "OmniRay: Camera-Agnostic Monocular 3D Reconstruction with Composite Ray Fields",
+        "abstract": "Monocular models recover 3D geometry from a single image in one pass, but most assume a pinhole camera and produce distorted geometry on the wide-angle imagery produced by fisheye and panoramic lenses. Camera-aware models remove this assumption by predicting a per-pixel ray field. However, they represent different camera geometries using a single fixed basis to capture both the overall camera projection and its finer variations. We argue that camera geometry can be viewed as having a hierarchy of complexity for representing rays. We present OmniRay, a feed-forward model whose Ray Module is composed of three components: a monotone radial base that captures radially symmetric structure, a spherical-harmonic residual for smooth deviations from it, and a free-form residual for remaining local variation. These components are composed as successive rotations on the sphere, allowing the representation to accommodate diverse camera geometries. Given a single image, OmniRay predicts a ray direction and an up-to-scale radial distance for every pixel, from which a 3D point cloud is recovered without needing camera information at inference time. Extensive experiments across different camera configurations demonstrate that OmniRay establishes a new state-of-the-art in camera-agnostic monocular 3D reconstruction.",
+        "published": "2026-10-22T17:55:30Z"
+      },
+      {
+        "id": "2610.29845v2",
+        "title": "RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation",
+        "abstract": "Autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. While panoramic LiDAR offers full-surround coverage, learning representations within reinforcement learning (RL) is sample-inefficient under sparse rewards, and existing 3D pretrained point-cloud encoders are too memory-heavy for massively parallel RL simulation. We present RangeNav, a compact (183k parameters) LiDAR range-image encoder pretrained entirely on synthetic data. RangeNav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. We pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (BEV) prediction, then freeze it for policy learning. In simulation, adding semantic and BEV supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. Zero-shot real-world deployments on a Unitree B2-W quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. Code and models will be open-sourced. Project website: https://rangenav.github.io/.",
+        "published": "2026-10-21T15:06:08Z"
+      },
+      {
+        "id": "2610.25395v1",
+        "title": "A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation",
+        "abstract": "Turning a moving-camera perspective video into a 360° video requires more than just generating content outside the input frame: observations revealed over time must be preserved, unseen regions completed, and the resulting scene kept consistent as the camera viewpoint changes. Existing methods assign these different requirements to a single conditional video model, requiring them to be jointly learned from panoramic video data. We instead present a modular, 3D-driven framework that distributes these three responsibilities across specialized components, all connected through a shared scene representation. Input observations are reconstructed explicitly in 3D, while a pretrained panoramic image model completes unobserved content from a selected panoramic render. This generated content is lifted into the shared 3D scene, where it remains spatially anchored across camera viewpoints. Without requiring any additional panoramic-video training, our framework achieves state-of-the-art input-view fidelity, perceptual quality, and geometric consistency on a static-scene subset of the Argus evaluation set. These results support our decomposed, 3D-driven formulation as a promising alternative to direct video generation in this setting.",
+        "published": "2026-10-18T16:47:27Z"
+      },
+      {
+        "id": "2610.21297v1",
+        "title": "GeoPano: Towards Geometrically Accurate 3D Reconstruction from a Single Panorama",
+        "abstract": "Panoramic 3D reconstruction enables the holistic recovery of complete 360 $^\\circ$ scene geometry, offering significant benefits for robotics and AR/VR applications. However, directly estimating geometry from ERP images is inherently challenged by spherical distortions. To reduce spherical projection distortions, a common strategy is to decompose panoramas into distortion-free perspective views, but independently processing these views often introduces cross-view geometric inconsistencies. To address these challenges, we introduce GeoPano, a feed-forward framework for single-view panoramic 3D reconstruction that recovers a geometrically accurate and consistent point cloud from a single panorama. Our approach is driven by two key innovations: First, we propose a panoramic-aware attention aggregator, featuring a streamlined attention architecture equipped with a novel Pano-Attention mechanism, which explicitly exploits the intrinsic spherical geometry of the panorama to guide cross-view interactions, thereby suppressing geometric inconsistencies. Furthermore, we formulate a hybrid supervision strategy to jointly enforce fine-grained local details in perspective space and global structural coherence in spherical space. Experiments demonstrate that our method significantly outperforms previous SOTA approaches in reconstruction accuracy, geometric consistency, and visual fidelity.",
+        "published": "2026-10-15T05:42:59Z"
+      },
+      {
+        "id": "2610.19502v1",
+        "title": "Holi-Spatial 360: Generative Reconstruction from Sparse Panoramas for Spatial Rendering and Intelligence",
+        "abstract": "Spatial intelligence requires scalable 3D environments that are both photorealistic and semantically grounded, yet existing indoor datasets are dominated by room-scale captures and costly LiDAR acquisition. Online real-estate platforms offer abundant panoramas of diverse multi-room homes, but sparse viewpoints and texture-poor regions make reconstruction severely under-constrained. We introduce Holi-Spatial 360, a generative reconstruction and data curation framework for converting these panoramas into annotated multi-room 3D environments. Because reconstruction quality bounds subsequent generation, our Correspondence-Guided Geometric Optimization converts feed-forward reconstruction priors into reliable cross-view constraints and builds a coherent 3D Gaussian Splatting representation as 3D spatial memory. Adapted single-image and video priors then restore appearance and complete continuous trajectories while preserving observed content. The reconstructed scenes support arbitrary RGB-D rendering and an automated curation pipeline that combines end-to-end 3D grounding with VLM-based verification. Holi360 contains over 1K multi-room 3DGS scenes, more than 100K instance annotations, and 2M spatial question-answer pairs. We also introduce the Holi360 benchmark to evaluate the spatial understanding of VLMs in real-world, multi-room indoor environments. Experiments demonstrate superior reconstruction and curation quality under sparse panoramic inputs, while fine-tuning VLMs on Holi360 substantially improves spatial reasoning capabilities.",
+        "published": "2026-10-14T03:21:09Z"
+      },
+      {
+        "id": "2610.31671v1",
+        "title": "A Unified Framework for Image-to-3D Part Generation via Variable Granularity",
+        "abstract": "Controllable 3D part generation is pivotal for digital asset creation, yet existing methods lack the flexibility to accommodate diverse user workflows requiring varying levels of control. In this paper, we introduce FlexPart, a unified image-to-3D part generation framework that supports variable-granularity geometric conditions within a single model. By seamlessly integrating heterogeneous inputs, ranging from sparse points to dense bounding boxes and masks, via gated adaptive modulation, FlexPart unlocks a powerful cross-modal synergy. We also propose an asymmetric geometric guidance mechanism that leverages strong spatial priors to align representations across granularities, improving geometric consistency and facilitating inter-task synergy. Under mask conditioning on PartVerseXL, FlexPart reduces Part CD by 16.6% relative to TripoSG + SAM3D and by 10.5% relative to OmniPart, while maintaining competitive whole-mesh quality. The code can be found at https://github.com/Gucci233/FlexPart",
+        "published": "2026-10-22T17:59:53Z"
+      },
+      {
+        "id": "2610.31649v1",
+        "title": "Gate3DGen: A Pre-processing Model that Selectively Purifies Real-World Images for 3D Generation",
+        "abstract": "Single-image 3D generation has achieved high fidelity on curated benchmarks, yet degrades sharply on real-world images with uneven illumination, blur, and occlusions. Purifying such inputs requires deciding when to intervene and preserving the visual cues needed for 3D generation, while leaving clean inputs unchanged. We introduce Gate3DGen, a selective pre-processing model that gates image inputs to existing 3D generators without retraining them. A degradation-aware router bypasses inputs classified as clean and extracts features to guide purification of the remaining inputs. Conditioned on these features, a 3D-oriented one-step purifier purifies degraded inputs with spatial losses that encourage preservation of object identity, contours, and textural cues. To provide paired supervision, we construct a synthetic data engine that renders clean views of 3D assets and synthesises composite degradations. On the synthetic benchmark, the purifier improves image fidelity and downstream 3D geometry in only 2.3s on average, reducing TRELLIS.2 mesh distance by 61.5% relative to degraded inputs. VLM evaluation and human preferences on real photographs further support identity preservation and degradation correction. More demos and code are available at https://supra-3d.github.io/gate3dgen.",
+        "published": "2026-10-22T17:57:02Z"
+      },
+      {
+        "id": "2610.31080v1",
+        "title": "nnInteractive Agent: General-Purpose AI Agents as 3D Image Annotators",
+        "abstract": "Interactive 3D segmentation models such as nnInteractive turn a few spatial prompts (points, scribbles, boxes) into accurate volumetric masks, but a human still does the annotation work: finding each structure, placing prompts, checking the result and correcting it. General-purpose AI agents can now interpret images, call tools and write code. We show that such agents can take over this work without additional training: the user makes a request in plain language, and the agent works out what has to be segmented, locates the targets, prompts nnInteractive, inspects the 3D result, corrects it and responds to feedback. Asked for 'the muscles used for chewing', an agent identifies and segments the masseters and pterygoids; asked to count liver lesions, it writes its own code to find candidates and splits a merged lesion on request. Our open-source nninteractive-agent provides nnInteractive as tools over the Model Context Protocol (MCP), together with a skill that encodes how experienced users prompt it. On a benchmark spanning CT, MRI, PET and micro-CT of humans, a mouse and an ant (14 images; 51 targets from organs and tumours to muscles, foot bones, vessel trees and an insect brain), Claude Code and Codex reach a mean Dice of 0.81 and 0.84 from the request alone; when told where each target is, both reach 0.85 and prompt nearly as effectively as an oracle that places prompts using the reference segmentation. A text-prompted 3D model (VoxTell) is more accurate on most standard radiological targets but less robust: it returns an empty mask for one of them and fails on the leg muscles, the foot bones, the mouse and the ant, where the agents remain accurate. Code: https://github.com/MIC-DKFZ/nninteractive-agent",
+        "published": "2026-10-22T10:55:15Z"
+      },
+      {
+        "id": "2610.30127v1",
+        "title": "VoxProg: 3D Spatial Reasoning through Voxel Programming",
+        "abstract": "Language models' abilities to interpret tasks and generate programs offer a promising basis for 3D spatial reasoning. Yet following spatial instructions in 3D scenes requires programs to construct geometric references that language leaves implicit. In this work, we introduce VoxProg, which formulates 3D object placement through voxel programming: a language model translates task interpretations into executable programs over local voxel views of scene surfaces. Because these views index surface geometry on regular grids with explicit coordinates and neighborhood relations, an evidence program can isolate task-relevant regions and boundaries directly from scene meshes, and a downstream pose program can measure the resulting geometry to compute a target $SE(3)$ pose. Visual and numerical feedback from execution lets the model inspect intermediate selections and candidate placements to iteratively revise its code. To evaluate open-ended placement across functional use, geometric fit, and contextual arrangements, we introduce the 71-task VoxProg-Bench benchmark along with an evaluation suite pairing perceptual Intent Alignment and 3D Physical Validity. Across VoxProg-Bench and external benchmarks, VoxProg consistently outperforms relation-based, keypoint-based, and mesh-based baselines.",
+        "published": "2026-10-21T17:58:05Z"
+      },
+      {
+        "id": "2610.29232v1",
+        "title": "Think-Capture: Active 3D Geometry Acquisition for Spatial Reasoning in Vision-Language Models",
+        "abstract": "Vision-Language Models (VLMs) excel at 2D recognition but often fail to maintain consistent 3D relations across sparse viewpoints, leading to spatial hallucinations under occlusion and perspective changes. Existing methods commonly fuse all frames with dense geometry, incurring substantial computation and context overhead while encouraging blind reliance on imperfect estimators. We present Think-Capture, a query-conditioned framework that first identifies task-critical objects and then acquires their geometry on demand. A 3D toolkit lifts zero-shot masks into a common coordinate frame, and a Symbolic 3D State Abstraction compresses object and camera states into structured text. Hierarchical Group Relative Policy Optimization (GRPO) trains the VLM on cases in which geometry either helps or misleads, teaching it when to use tool evidence and when to fall back on visual cues. Think-Capture-4B reaches 54.4% on MindCube-Tiny (+21.5 points over its backbone), 39.1% on the MMSI-Bench positional subset (+7.9), and 42.8% on ViewSpatial (+5.2). It also remains robust under coordinate and mask perturbations. The full stack fits one 24 GB GPU and serves as an asynchronous high-level reasoner on an Agibot G1. Our code is available at https://github.com/819346675/Think-Capture.",
+        "published": "2026-10-21T05:42:29Z"
+      },
+      {
+        "id": "2610.14685v1",
+        "title": "Demiurge: Forging Navigable 4D Worlds via Autoregressive Video Rerendering",
+        "abstract": "Recent advances in video diffusion enable novel-view video synthesis from a single input video, supporting world modeling, embodied intelligence, and robotic simulation. However, existing methods process camera trajectories independently, lacking the cross-trajectory consistency needed for coherent, navigable 4D worlds. We introduce Demiurge, an autoregressive video rerendering pipeline built on a dynamic 4D point-cloud memory cache. It promotes cross-trajectory consistency through four components: (1) an appearance video diffusion model that synthesizes photorealistic novel-view videos conditioned on the 4D memory; (2) a memory-consistent video depth completion model that aligns known-region depths with cached geometry and completes missing regions, mitigating scale ambiguity and discontinuities during memory updates; (3) memory-aware dual-stream warping that provides high-fidelity visual guidance and occlusion cues for novel-view synthesis; and (4) geometry-aware video refinement that enhances perceptual quality. Extensive experiments demonstrate state-of-the-art performance and three key capabilities: coherent spatiotemporal lattice construction over dense multi-view trajectories; large-parallax video rerendering under challenging camera motions, including 180-degree rotations with no input-view overlap; and geometry-faithful outputs that can be directly optimized into high-quality 3D Gaussian Splatting representations with minimal artifacts. Project page: https://hanxinzhu-lab.github.io/demiurge_project_page/.",
+        "published": "2026-10-10T07:57:50Z"
+      },
+      {
+        "id": "2609.17450v1",
+        "title": "ORCA: Occlusion-Aware Refinement and Completion for Novel View Synthesis",
+        "abstract": "Novel-view synthesis from a single image is a fundamentally ambiguous problem. As the camera moves away from the input viewpoint, previously hidden regions become visible, exposing missing geometry and holes in the reconstructed scene. Existing methods often rely on generative models to complete such regions. However, many of these artifacts are small gaps near depth boundaries and do not require generating new scene content. In order to eliminate expensive process of generating image we introduce ORCA, an occlusion-aware method for reconstructing and completing explorable 3D scenes from a single image. ORCA first introduces 3D structure into a Gaussian-anchor representation using monocular depth while preserving the original camera-ray correspondence. During scene exploration, missing regions are handled based on their size and structure. Small disocclusions are repaired using RGB-D information already available in the reconstruction, while generative inpainting is reserved for larger regions that cannot be reliably recovered from the scene. New Gaussian anchors are added and optimized locally without modifying the existing representation. By reducing unnecessary reliance on generative inpainting, ORCA limits generation-induced hallucinations and better preserves the content and structure of the original scene. On DIV2K, ORCA improves novel-view quality over VistaDream across all reported metrics, increasing MUSIQ from 61.60 to 68.71 and CLIP-IQA from 0.474 to 0.574. These results show that many novel-view artifacts can be repaired effectively by reusing information already present in the reconstructed scene.",
+        "published": "2026-09-15T16:53:54Z"
+      },
+      {
+        "id": "2606.29303v2",
+        "title": "Occlusion-Robust Multi-Object Decoupling for Physics-Based Robotic Interaction",
+        "abstract": "We propose a mask-free method for lossless multi-object 3D reconstruction from sparse and occluded real-world views, enabling physically plausible robotic interaction via Material Point Method (MPM) simulation. Our key insight is that object coupling stems from occlusion and limited viewpoints, which we address by formulating multi-object decoupling as a sparse-view reconstruction problem. Using 3D Gaussian Splatting as base representation, we first obtain coarse instance partitions with a SAM2-trained segmentation field. Rather than relying on masks, we reconstruct fragmented geometries by leveraging a joint Score Distillation Sampling (SDS) process, which integrates reference-view supervision with novel-view synthesis guided by 2D and 3D diffusion priors to enforce both texture fidelity and 3D consistency. Furthermore, we incorporate geometry-aware priors such as intra-object and inter-object similarity to regularize geometric reasoning. Experimental results demonstrate that our method produces complete, simulation-ready 3D objects without requiring manual masks, enabling realistic dynamic interactions on both synthetic, robotic and real-world datasets.",
+        "published": "2026-06-28T09:50:46Z"
+      },
+      {
+        "id": "2603.05882v1",
+        "title": "CylinderSplat: 3D Gaussian Splatting with Cylindrical Triplanes for Panoramic Novel View Synthesis",
+        "abstract": "Feed-forward 3D Gaussian Splatting (3DGS) has shown great promise for real-time novel view synthesis, but its application to panoramic imagery remains challenging. Existing methods often rely on multi-view cost volumes for geometric refinement, which struggle to resolve occlusions in sparse-view scenarios. Furthermore, standard volumetric representations like Cartesian Triplanes are poor in capturing the inherent geometry of $360^\\circ$ scenes, leading to distortion and aliasing. In this work, we introduce CylinderSplat, a feed-forward framework for panoramic 3DGS that addresses these limitations. The core of our method is a new {cylindrical Triplane} representation, which is better aligned with panoramic data and real-world structures adhering to the Manhattan-world assumption. We use a dual-branch architecture: a pixel-based branch reconstructs well-observed regions, while a volume-based branch leverages the cylindrical Triplane to complete occluded or sparsely-viewed areas. Our framework is designed to flexibly handle a variable number of input views, from single to multiple panoramas. Extensive experiments demonstrate that CylinderSplat achieves state-of-the-art results in both single-view and multi-view panoramic novel view synthesis, outperforming previous methods in both reconstruction quality and geometric accuracy.",
+        "published": "2026-03-06T04:04:20Z"
+      },
+      {
+        "id": "2511.21945v3",
+        "title": "GENA3D: Generative Amodal 3D Modeling by Bridging 2D Priors and 3D Coherence",
+        "abstract": "Generating complete 3D objects under partial occlusions (i.e., amodal scenarios) is a practically important yet challenging problem, as large portions of object geometry are unobserved in real-world scenarios. Existing approaches either operate directly in 3D, which ensures geometric consistency but often lacks generative expressiveness, or rely on 2D amodal completion, which provides strong appearance priors but does not guarantee reliable 3D structure. This raises a key question: how can we achieve both generative plausibility and geometric coherence in amodal 3D modeling? To answer this question, we introduce GENA3D (GENarative Amodal 3D), a framework that integrates learned 2D generative priors with explicit 3D geometric reasoning within a conditional 3D generation paradigm. The 2D priors enable the model to plausibly infer diverse occluded content, while the 3D representation enforces multi-view consistency and spatial validity. Our design incorporates a novel View-Wise Cross-Attention for multi-view alignment and a Stereo-Conditioned Cross-Attention to anchor generative predictions in 3D relationships. By combining generative imagination with structural constraints, GENA3D generates complete and coherent 3D objects from limited observations without sacrificing geometric fidelity. Experiments demonstrate that our method outperforms existing approaches in both synthetic and real-world amodal scenarios, highlighting the effectiveness of bridging 2D priors and 3D coherence in generating plausible and geometrically consistent 3D structures in complex environments.",
+        "published": "2025-11-26T22:11:56Z"
+      },
+      {
+        "id": "2507.07410v1",
+        "title": "EscherNet++: Simultaneous Amodal Completion and Scalable View Synthesis through Masked Fine-Tuning and Enhanced Feed-Forward 3D Reconstruction",
+        "abstract": "We propose EscherNet++, a masked fine-tuned diffusion model that can synthesize novel views of objects in a zero-shot manner with amodal completion ability. Existing approaches utilize multiple stages and complex pipelines to first hallucinate missing parts of the image and then perform novel view synthesis, which fail to consider cross-view dependencies and require redundant storage and computing for separate stages. Instead, we apply masked fine-tuning including input-level and feature-level masking to enable an end-to-end model with the improved ability to synthesize novel views and conduct amodal completion. In addition, we empirically integrate our model with other feed-forward image-to-mesh models without extra training and achieve competitive results with reconstruction time decreased by 95%, thanks to its ability to synthesize arbitrary query views. Our method's scalable nature further enhances fast 3D reconstruction. Despite fine-tuning on a smaller dataset and batch size, our method achieves state-of-the-art results, improving PSNR by 3.9 and Volume IoU by 0.28 on occluded tasks in 10-input settings, while also generalizing to real-world occluded reconstruction.",
+        "published": "2025-07-10T04:08:28Z"
+      },
+      {
+        "id": "2104.08418v1",
+        "title": "FiG-NeRF: Figure-Ground Neural Radiance Fields for 3D Object Category Modelling",
+        "abstract": "We investigate the use of Neural Radiance Fields (NeRF) to learn high quality 3D object category models from collections of input images. In contrast to previous work, we are able to do this whilst simultaneously separating foreground objects from their varying backgrounds. We achieve this via a 2-component NeRF model, FiG-NeRF, that prefers explanation of the scene as a geometrically constant background and a deformable foreground that represents the object category. We show that this method can learn accurate 3D object category models using only photometric supervision and casually captured images of the objects. Additionally, our 2-part decomposition allows the model to perform accurate and crisp amodal segmentation. We quantitatively evaluate our method with view synthesis and image fidelity metrics, using synthetic, lab-captured, and in-the-wild data. Our results demonstrate convincing 3D object category modelling that exceed the performance of existing methods.",
+        "published": "2021-04-17T01:38:54Z"
+      }
+    ],
+    "scope": "bounded discovery, not exhaustive novelty verification"
+  },
+  "local_prior_work": {
+    "source": "read-only local Zotero SQLite before import",
+    "matches": {
+      "RelaxFlow": [],
+      "MHE-Former": [],
+      "Argus": [],
+      "3DCodeVerse": [],
+      "ORCA": [],
+      "EscherNet": [],
+      "amodal": [
+        {
+          "item_key": "04E0D31B",
+          "title": "Amodal Completion and Size Constancy in Natural Scenes"
+        },
+        {
+          "item_key": "122A033D",
+          "title": "Amodal Instance Segmentation"
+        },
+        {
+          "item_key": "155A1FE7",
+          "title": "Semantic Amodal Segmentation"
+        },
+        {
+          "item_key": "597E7510",
+          "title": "Amodal Instance Segmentation With KINS Dataset"
+        },
+        {
+          "item_key": "2FFFEFF5",
+          "title": "Amodal Panoptic Segmentation"
+        },
+        {
+          "item_key": "98FAD255",
+          "title": "MUVA: A New Large-Scale Benchmark for Multi-View Amodal Instance Segmentation in the Shopping Scenario"
+        },
+        {
+          "item_key": "01D81E03",
+          "title": "Coarse-to-Fine Amodal Segmentation with Shape Prior"
+        },
+        {
+          "item_key": "4E07385A",
+          "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+        },
+        {
+          "item_key": "2F82413C",
+          "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+        },
+        {
+          "item_key": "F9520972",
+          "title": "Amodal Ground Truth and Completion in the Wild"
+        },
+        {
+          "item_key": "EE86A398",
+          "title": "Towards Efficient Foundation Model for Zero-shot Amodal Segmentation"
+        },
+        {
+          "item_key": "184075BA",
+          "title": "Using Diffusion Priors for Video Amodal Segmentation"
+        },
+        {
+          "item_key": "PPWSC2XA",
+          "title": "Open-World Amodal Appearance Completion"
+        },
+        {
+          "item_key": "0170C307",
+          "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion"
+        },
+        {
+          "item_key": "1D0403E5",
+          "title": "PHAC: Promptable Human Amodal Completion"
+        },
+        {
+          "item_key": "6260CFD6",
+          "title": "Image Guides Images: Consistent Video Amodal Completion with Rectified In-Context Exemplar Guidance"
+        },
+        {
+          "item_key": "6EHPK5KV",
+          "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+        },
+        {
+          "item_key": "W2FAE2ZB",
+          "title": "Integrating Multimodal Large Language Model Knowledge into Amodal Completion"
+        },
+        {
+          "item_key": "MEF2ZUMP",
+          "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+        },
+        {
+          "item_key": "4BS8IYJG",
+          "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+        },
+        {
+          "item_key": "T4BMVDRT",
+          "title": "Chen et al. - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf"
+        },
+        {
+          "item_key": "5SP6T8EU",
+          "title": "MUVA: A New Large-Scale Benchmark for Multi-view Amodal Instance Segmentation in the Shopping Scenario"
+        },
+        {
+          "item_key": "TD5LA8C6",
+          "title": "Amodal Depth Anything: Amodal Depth Estimation in the Wild"
+        },
+        {
+          "item_key": "UM6KKHEX",
+          "title": "Li et al. - 2025 - Amodal Depth Anything.pdf"
+        },
+        {
+          "item_key": "LO1DWIQW",
+          "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation"
+        }
+      ],
+      "reconstruction": [
+        {
+          "item_key": "4BS8IYJG",
+          "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+        },
+        {
+          "item_key": "T4BMVDRT",
+          "title": "Chen et al. - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf"
+        }
+      ],
+      "occlusion": [
+        {
+          "item_key": "FD7A1C52",
+          "title": "Deep Occlusion-Aware Instance Segmentation With Overlapping BiLayers"
+        },
+        {
+          "item_key": "LO1DWIQW",
+          "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation"
+        }
+      ]
+    }
+  },
+  "dedup_key": "canonical arXiv ID; history and local Zotero titles checked",
+  "rejected_candidates": [
+    {
+      "id": "arxiv:2610.18670",
+      "reason": "already read 2026-10-14; replaced by ORCA"
+    }
+  ],
+  "code_status": {
+    "source_available": true,
+    "commit": "b41b6187cd25d04a26fe3940049e43485c0acc45",
+    "license": "SAM License",
+    "model_run": false,
+    "weights_downloaded": false,
+    "configuration_equivalence_to_paper_verified": false
+  },
+  "proceedings_verification": {
+    "source": "https://proceedings.mlr.press/v306/zhu26m.html",
+    "venue": "ICML 2026",
+    "series": "PMLR",
+    "volume": 306,
+    "pages": "166962-166989",
+    "conference_dates": "2026-07-06/2026-07-11",
+    "proceedings_citation_month": "2026-07",
+    "publisher_publication_date": "2026-09-29",
+    "proceedings_month": "2026-09",
+    "date_semantics": "BibTeX month is conference dates; publisher citation_publication_date is later; both retained",
+    "retrieved_at": "2026-10-24T22:51:14.654629+08:00",
+    "snapshot_sha256": "fd00063b43fc814dbf337bd09a4dcef4184757d54753c811cc796cb041dad429",
+    "metadata_backup": "D:\\CV-Literature\\commen\\.work-2026-10-24\\zotero.sqlite.pre-proceedings-metadata.bak",
+    "metadata_backup_sha256": "abfa7f015f601f45b6f8176ac50eff68d0780c8e323aa0576169ef626f91e5c2",
+    "version_read_unchanged": "2603.05425v2",
+    "proceedings_pdf_pagewise_equivalence_verified": false
+  },
+  "limitations": [
+    "Semantic Scholar HTTP429",
+    "web.run returned no usable content; primary URLs fetched directly",
+    "bounded citation and query search; no systematic independent novelty validation"
+  ]
+}

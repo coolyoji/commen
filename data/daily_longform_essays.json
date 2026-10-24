@@ -1,13 +1,13 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "essays": [
     {
-      "paper_id": "arxiv:2610.29061",
-      "path": "../docs/md/longform/2026-10/occjepa.md",
-      "status": "pdf_verified_zotero_imported_source_mapped_reader",
-      "publication_month": "2026-10",
+      "paper_id": "arxiv:2603.05425",
+      "path": "../docs/md/longform/2026-10/relaxflow.md",
+      "status": "source_mapped_pdf_zotero_verified",
+      "publication_month": "2026-03",
       "read_month": "2026-10",
-      "nature_reader": "../docs/md/longform/2026-10/occjepa-reader/paper.md"
+      "nature_reader": "../docs/md/longform/2026-10/relaxflow-reader/paper.md"
     }
   ]
 }

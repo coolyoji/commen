@@ -1,0 +1,872 @@
+{
+  "paper": {
+    "title": "RelaxFlow: Text-Driven Amodal 3D Generation",
+    "venue": "ICML 2026, PMLR 306:166962-166989; reading version arXiv v2",
+    "source_type": "pdf",
+    "language": "en",
+    "source_url": "https://arxiv.org/pdf/2603.05425v2",
+    "source_path": "C:\\Users\\华硕\\Zotero\\storage\\TQBKESRF\\Zhu - 2026 - RelaxFlow.pdf",
+    "source_sha256": "20d84cd05e9670d95774d37990a0db2b063f8106310c6be61e2307eb38e17905",
+    "version": "2603.05425v2",
+    "total_pages": 28
+  },
+  "scope": {
+    "mode": "section-structured source-grounded reader; short terminology excerpts, not full bilingual translation",
+    "all_pages_text_extracted": true,
+    "visually_checked_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      18,
+      25
+    ],
+    "unverified": [
+      "all appendix figures individually",
+      "all mathematical proofs step-by-step",
+      "full paragraph-by-paragraph translation",
+      "local model execution",
+      "pagewise equivalence of proceedings PDF and read v2",
+      "systematic novelty audit"
+    ]
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1,
+        2
+      ],
+      "label": "摘要/引言",
+      "order": 1,
+      "translation": "\n## 摘要与引言\n\n**Source:** p.1–2，摘要、§1，S001。\n\n**Original:** “text-driven amodal 3D generation”\n\n**中文:** “文字驱动的amodal三维生成”。【论文原文事实】同一照片有多个合法完整解释，用户用文字选择想要的解释，方法试图保持观测部分。原文将观测保真与提示遵循作为两个目标。\n\n【基于证据的解释】“用户要沙发”是意图，不是对真实背面的测量。成像多对一时，加入意图选择一个模式与证明该模式是真实物体不同。摘要的强表述要带着后文理论假设与指标协议读。\n\n",
+      "mode": "source-grounded chapter interpretation; not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S002",
+      "type": "note",
+      "page": 2,
+      "pages": [
+        2,
+        3
+      ],
+      "label": "相关工作/信息缺口",
+      "order": 2,
+      "translation": "\n## 相关工作与信息缺口\n\n**Source:** p.2–3，§2–3.1，S002。\n\n**Original:** “Observation Constraint”\n\n**中文:** “观测约束”。【论文原文事实】已有图像到三维模型倾向观测驱动；二维编辑后转三维可能出现几何不一致；多个参考实例也不能简单当同实例多视角。作者把观测条件与用户语义条件分开表示。\n\n【基于证据的解释】前者对该实例可见部分有较高证据权重；后者只表达类别/属性，参考图带的颜色与局部形状可能是干扰。深层矛盾是条件地位与控制粒度错配，不是少一个更强的backbone。\n\n",
+      "mode": "source-grounded chapter interpretation; not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S003",
+      "type": "note",
+      "page": 3,
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "label": "理论概览和方法",
+      "order": 3,
+      "translation": "\n## 方法：先问每个分支有权改哪里\n\n**Source:** p.3–7，§3–4，S003；F001对应p.5 Figure3。\n\n**Original:** “Multi-Prior Consensus”\n\n**中文:** “多先验共识”。【论文原文事实】从提示检索或生成多个参考图，用生成器原生视觉编码器编码后拼接tokens。先验和观测在同一latent上各预测速度，先验分支做logit平滑；时间门控前期加入语义、后期退出，可见性门控减少先验对可见体素的作用。\n\n<a id=\"F001\"></a>\n**Source:** p.5 Figure3；图像为原PDF裁图，以下为中文解读。\n\n![F001 图3方法流程](assets/fig3.png)\n\n图3中文解读：照片→观测分支；提示→参考图片→视觉tokens→平滑后的先验分支；可见性mask调节两速度融合。图中的流程说明模块关系，不是独立证明每个箭头有效的实验。\n\n<a id=\"E001\"></a>\n**Source:** p.6 Eq.(8)，E001。公式经PDF视觉核对；乘积方向以原图为准。\n\n$$\n\\widetilde L=G_\\sigma*L:=\\big(G_\\sigma^{(q)}*_qL\\big)*_kG_\\sigma^{(k)}.\n$$\n\n![E001原公式裁图](assets/equations/E001.png)\n\n【论文原文事实】对query和key序列轴做归一化高斯卷积，再softmax并乘value。$\\sigma$控制平滑，观测分支attention不改。**中文说明：**减少尖锐局部匹配的影响，不等于在最终三维mesh上直接平滑几何。\n\n<a id=\"E002\"></a>\n**Source:** p.6 Eq.(9)，E002。\n\n$$\nx_{k+1}=x_k+\\Delta t\\big((1-\\alpha_k)v_{\\rm obs}+\\alpha_k\\widetilde v_{\\rm prior}\\big).\n$$\n\n![E002原公式裁图](assets/equations/E002.png)\n\n$x_k$为共享latent、$\\Delta t$步长；两分支求同状态的变化方向。中文说明：不是两条独立生成轨迹的mesh混合，而是每步更新前融合速度。\n\n<a id=\"E003\"></a>\n**Source:** p.6 Eq.(10)，E003。\n\n$$\n\\alpha_k=\\begin{cases}1-k/K,&k\\le\\lfloor\\rho K\\rfloor,\\\\0,&\\text{otherwise}.\\end{cases}\n$$\n\n![E003原公式裁图](assets/equations/E003.png)\n\n$K$总步数、$\\rho$截止比例。【基于证据的解释】早期挑模式、后期细化，旨在避免先验后期覆盖观测细节；这套粗细分工是否适合细部决定类别的物体，仍需反例测试。\n\n<a id=\"E004\"></a>\n**Source:** p.7 Eq.(11)，E004。\n\n$$\nv_i=v_{{\\rm obs},i}+(1-m_i)\\alpha_k(\\widetilde v_{{\\rm prior},i}-v_{{\\rm obs},i}).\n$$\n\n![E004原公式裁图](assets/equations/E004.png)\n\n$m_i$为soft visibility，可见时接近1，隐藏时更小。mask由backbone pose与z-buffer构造，TRELLIS无pose版本关闭mask。【基于证据的解释】估计可见性错就会分错权限；原式不是对最终观测像素的硬投影保证。\n\n",
+      "mode": "source-grounded chapter interpretation; not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S004",
+      "type": "note",
+      "page": 7,
+      "pages": [
+        7,
+        8,
+        9,
+        23,
+        25
+      ],
+      "label": "结果/扩展/成本",
+      "order": 4,
+      "translation": "\n## 结果：分别核查语义、观测、几何与开销\n\n**Source:** p.7–9 §5；p.23扩展结果；p.25 Table6，S004。\n\n【论文原文事实】ExtremeOcc-3D 264例，遮挡率至少80%；AmbiSem-3D最初21例、多意图分支，32人偏好研究，附录扩展100例。ExtremeOcc的先验来自不同实例同类别；AmbiSem用Z-Image生成，比较方法共用先验。\n\n<a id=\"T001\"></a>\n**Source:** p.7 Table1。\n\n![T001 Table1](assets/table1.png)\n\n中文解读：SAM3D到Ours，Point-FID100.38→81.11、CLIPtxt24.08→27.26、LPIPS.54→.51。三项观察不能合并为“每实例隐藏结构准确”。Point-FID在Point-E语义特征分布上计算；min-LPIPS允许选择较匹配视角，无法证明固定真实相机逐像素不变。\n\n<a id=\"T002\"></a>\n**Source:** p.8 Table2。\n\n![T002 Table2](assets/table2.png)\n\n中文解读：总体偏好68.52%，是给定案例与候选方法中的人类选择。AmbiSem本来没有唯一三维真值；不能把偏好率改写成真实恢复率。去平滑和去mask的Point-FID退化支持组件效用，但没有独立测量本文所有根因解释。\n\n<a id=\"T003\"></a>\n**Source:** p.25 Table6。\n\n![T003 Table6](assets/table6.png)\n\n中文解读：10例、A5000，SAM3D 15.59→38.40秒/例，TRELLIS12.81→23.31；显存增幅较温和，时间增幅明显。正文A40实验与该附录测时条件分开。先验检索/文生图全部端到端成本是否计入未明确，不能臆补。\n\n",
+      "mode": "source-grounded chapter interpretation; not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S005",
+      "type": "note",
+      "page": 13,
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        26,
+        27,
+        28
+      ],
+      "label": "理论条件/失败",
+      "order": 5,
+      "translation": "\n## 理论、讨论与失败条件\n\n**Source:** p.13–18附录A，p.26–28附录H，S005。\n\n【论文原文事实】附录先假设语义信号低频、误差高频，讨论平滑降低语义误差；分布稳定性上界还依赖Lipschitz与代理偏差受控。附录H展示观测/先验矛盾时的概念融合失败。\n\n<a id=\"E005\"></a>\n**Source:** p.18 Appendix A.4，未编号末行，E005。\n\n$$\n\\|\\widetilde v_\\theta(x,t,c_{\\rm prior})-v_\\theta(x,t,c_{\\rm prior})\\|\n\\le C_t\\|\\widetilde L-L\\|.\n$$\n\n![E005原公式裁图](assets/equations/E005.png)\n\n中文说明：若网络对logits足够平滑，logits改动可控制输出速度改动。这是扰动大小界；没有直接证明输出速度等于同一高斯滤波，更没有证明最终几何逐实例更准。【基于证据的解释】更紧Wasserstein上界也不等于两个真实误差已排序。谱假设若不成立、参考先验偏差增大，结论不能无条件使用。\n\n## 术语表\n\n| 英文规范名 | 中文 | 表示/推理中的作用 | 删除或失败会怎样 |\n|---|---|---|---|\n| amodal generation | 完整对象生成 | 在可见片段外补结构 | 无新观测时仍有多解 |\n| observation fidelity | 观测保真 | 保持该实例可见证据 | 先验可覆盖测量 |\n| semantic prior | 语义先验 | 选择隐藏解释 | 有偏先验会选错真实实例 |\n| Multi-Prior Consensus | 多先验共识 | 拼接共同属性、稀释实例细节 | 共同偏差反而被放大 |\n| low-pass relaxation | 低通松弛 | 平滑先验logits | 高频真信号也可能被抹 |\n| visibility-aware fusion | 可见性感知融合 | 依可见性分配引导 | pose错时权限分错 |\n| rectified flow | 整流流 | 从噪声到三维latent的速度 | 非真实物体运动 |\n| Point-FID | 点特征分布距离 | 集合级语义比较 | 不能替代隐藏面/拓扑误差 |\n\n",
+      "mode": "source-grounded chapter interpretation; not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "S006",
+      "type": "note",
+      "page": 1,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "label": "阅读边界",
+      "order": 6,
+      "translation": "\n## 阅读提示与证据边界\n\n【论文原文事实】原文提供可控生成与基准、组件消融、失败图；本次源码可访问，PDF已导入，未运行模型。**【基于证据的解释】**迁移应保留“测得表面与先验补全不同权限”；多视角重建还要独立加入自由空间、跨视角与新增真实观测，才能让先验被推翻。\n\n**【我们提出的研究假设】**优先做三个诊断：细拓扑是否被低通损坏、GT visibility能否修复观测漂移、新视角能否撤销错误隐藏候选。实验步骤与阳性/阴性/无信号解释详见独立长文。未把这些假设写成论文结论。\n",
+      "mode": "source-grounded chapter interpretation; not full translation",
+      "confidence": "medium"
+    },
+    {
+      "id": "F001",
+      "type": "figure",
+      "page": 5,
+      "label": "Figure 3",
+      "order": 7,
+      "bbox": [
+        110,
+        133,
+        1100,
+        577
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/fig3.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T001",
+      "type": "table",
+      "page": 7,
+      "label": "Table 1",
+      "order": 8,
+      "bbox": [
+        620,
+        130,
+        1105,
+        373
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table1.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T002",
+      "type": "table",
+      "page": 8,
+      "label": "Table 2",
+      "order": 9,
+      "bbox": [
+        620,
+        842,
+        1109,
+        1114
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table2.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T003",
+      "type": "table",
+      "page": 25,
+      "label": "Table 6",
+      "order": 10,
+      "bbox": [
+        305,
+        852,
+        905,
+        1057
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table6.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "E001",
+      "type": "equation",
+      "page": 6,
+      "label": "8",
+      "order": 11,
+      "bbox": [
+        700,
+        224,
+        1106,
+        259
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E001.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "8",
+      "latex": "\\widetilde L=G_\\sigma*L:=\\big(G_\\sigma^{(q)}*_qL\\big)*_kG_\\sigma^{(k)}."
+    },
+    {
+      "id": "E002",
+      "type": "equation",
+      "page": 6,
+      "label": "9",
+      "order": 12,
+      "bbox": [
+        671,
+        907,
+        1110,
+        947
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E002.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "9",
+      "latex": "x_{k+1}=x_k+\\Delta t\\big((1-\\alpha_k)v_{\\rm obs}+\\alpha_k\\widetilde v_{\\rm prior}\\big)."
+    },
+    {
+      "id": "E003",
+      "type": "equation",
+      "page": 6,
+      "label": "10",
+      "order": 13,
+      "bbox": [
+        708,
+        1010,
+        1108,
+        1090
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E003.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "10",
+      "latex": "\\alpha_k=\\begin{cases}1-k/K,&k\\le\\lfloor\\rho K\\rfloor,\\\\0,&\\text{otherwise}.\\end{cases}"
+    },
+    {
+      "id": "E004",
+      "type": "equation",
+      "page": 7,
+      "label": "11",
+      "order": 14,
+      "bbox": [
+        147,
+        256,
+        597,
+        302
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E004.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "11",
+      "latex": "v_i=v_{{\\rm obs},i}+(1-m_i)\\alpha_k(\\widetilde v_{{\\rm prior},i}-v_{{\\rm obs},i})."
+    },
+    {
+      "id": "E005",
+      "type": "equation",
+      "page": 18,
+      "label": "unnumbered Appendix A.4",
+      "order": 15,
+      "bbox": [
+        380,
+        1094,
+        866,
+        1139
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E005.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "unnumbered Appendix A.4",
+      "latex": "\\|\\widetilde v_\\theta(x,t,c_{\\rm prior})-v_\\theta(x,t,c_{\\rm prior})\\|\n\\le C_t\\|\\widetilde L-L\\|."
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "type": "equation",
+      "page": 6,
+      "label": "8",
+      "order": 11,
+      "bbox": [
+        700,
+        224,
+        1106,
+        259
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E001.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "8",
+      "latex": "\\widetilde L=G_\\sigma*L:=\\big(G_\\sigma^{(q)}*_qL\\big)*_kG_\\sigma^{(k)}."
+    },
+    {
+      "id": "E002",
+      "type": "equation",
+      "page": 6,
+      "label": "9",
+      "order": 12,
+      "bbox": [
+        671,
+        907,
+        1110,
+        947
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E002.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "9",
+      "latex": "x_{k+1}=x_k+\\Delta t\\big((1-\\alpha_k)v_{\\rm obs}+\\alpha_k\\widetilde v_{\\rm prior}\\big)."
+    },
+    {
+      "id": "E003",
+      "type": "equation",
+      "page": 6,
+      "label": "10",
+      "order": 13,
+      "bbox": [
+        708,
+        1010,
+        1108,
+        1090
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E003.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "10",
+      "latex": "\\alpha_k=\\begin{cases}1-k/K,&k\\le\\lfloor\\rho K\\rfloor,\\\\0,&\\text{otherwise}.\\end{cases}"
+    },
+    {
+      "id": "E004",
+      "type": "equation",
+      "page": 7,
+      "label": "11",
+      "order": 14,
+      "bbox": [
+        147,
+        256,
+        597,
+        302
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E004.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "11",
+      "latex": "v_i=v_{{\\rm obs},i}+(1-m_i)\\alpha_k(\\widetilde v_{{\\rm prior},i}-v_{{\\rm obs},i})."
+    },
+    {
+      "id": "E005",
+      "type": "equation",
+      "page": 18,
+      "label": "unnumbered Appendix A.4",
+      "order": 15,
+      "bbox": [
+        380,
+        1094,
+        866,
+        1139
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/equations/E005.png",
+      "confidence": "high",
+      "source_page_visually_checked": true,
+      "equation_number": "unnumbered Appendix A.4",
+      "latex": "\\|\\widetilde v_\\theta(x,t,c_{\\rm prior})-v_\\theta(x,t,c_{\\rm prior})\\|\n\\le C_t\\|\\widetilde L-L\\|."
+    }
+  ],
+  "figures": [
+    {
+      "id": "F001",
+      "type": "figure",
+      "page": 5,
+      "label": "Figure 3",
+      "order": 7,
+      "bbox": [
+        110,
+        133,
+        1100,
+        577
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/fig3.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    }
+  ],
+  "tables": [
+    {
+      "id": "T001",
+      "type": "table",
+      "page": 7,
+      "label": "Table 1",
+      "order": 8,
+      "bbox": [
+        620,
+        130,
+        1105,
+        373
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table1.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T002",
+      "type": "table",
+      "page": 8,
+      "label": "Table 2",
+      "order": 9,
+      "bbox": [
+        620,
+        842,
+        1109,
+        1114
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table2.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    },
+    {
+      "id": "T003",
+      "type": "table",
+      "page": 25,
+      "label": "Table 6",
+      "order": 10,
+      "bbox": [
+        305,
+        852,
+        905,
+        1057
+      ],
+      "bbox_unit": "rendered_pixels",
+      "render_size": [
+        1237,
+        1600
+      ],
+      "image_path": "assets/table6.png",
+      "confidence": "high",
+      "source_page_visually_checked": true
+    }
+  ],
+  "glossary": [
+    {
+      "term": "amodal generation",
+      "translation": "完整对象生成",
+      "role": "在可见片段外补结构",
+      "failure": "无新观测时仍有多解"
+    },
+    {
+      "term": "observation fidelity",
+      "translation": "观测保真",
+      "role": "保持该实例可见证据",
+      "failure": "先验可覆盖测量"
+    },
+    {
+      "term": "semantic prior",
+      "translation": "语义先验",
+      "role": "选择隐藏解释",
+      "failure": "有偏先验会选错真实实例"
+    },
+    {
+      "term": "Multi-Prior Consensus",
+      "translation": "多先验共识",
+      "role": "拼接共同属性、稀释实例细节",
+      "failure": "共同偏差反而被放大"
+    },
+    {
+      "term": "low-pass relaxation",
+      "translation": "低通松弛",
+      "role": "平滑先验logits",
+      "failure": "高频真信号也可能被抹"
+    },
+    {
+      "term": "visibility-aware fusion",
+      "translation": "可见性感知融合",
+      "role": "依可见性分配引导",
+      "failure": "pose错时权限分错"
+    },
+    {
+      "term": "rectified flow",
+      "translation": "整流流",
+      "role": "从噪声到三维latent的速度",
+      "failure": "非真实物体运动"
+    },
+    {
+      "term": "Point-FID",
+      "translation": "点特征分布距离",
+      "role": "集合级语义比较",
+      "failure": "不能替代隐藏面/拓扑误差"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S001",
+        "S006"
+      ]
+    },
+    {
+      "page": 2,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S001",
+        "S002",
+        "S006"
+      ]
+    },
+    {
+      "page": 3,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S002",
+        "S003",
+        "S006"
+      ]
+    },
+    {
+      "page": 4,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S003",
+        "S006"
+      ]
+    },
+    {
+      "page": 5,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S003",
+        "S006",
+        "F001"
+      ]
+    },
+    {
+      "page": 6,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S003",
+        "S006",
+        "E001",
+        "E002",
+        "E003"
+      ]
+    },
+    {
+      "page": 7,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S003",
+        "S004",
+        "S006",
+        "T001",
+        "E004"
+      ]
+    },
+    {
+      "page": 8,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S004",
+        "S006",
+        "T002"
+      ]
+    },
+    {
+      "page": 9,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S004",
+        "S006"
+      ]
+    },
+    {
+      "page": 10,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 11,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 12,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 13,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "page": 14,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "page": 15,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "page": 16,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "page": 17,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "page": 18,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S005",
+        "S006",
+        "E005"
+      ]
+    },
+    {
+      "page": 19,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 20,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 21,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 22,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 23,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S004",
+        "S006"
+      ]
+    },
+    {
+      "page": 24,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S006"
+      ]
+    },
+    {
+      "page": 25,
+      "text_extracted": true,
+      "visually_checked": true,
+      "block_ids": [
+        "S004",
+        "S006",
+        "T003"
+      ]
+    },
+    {
+      "page": 26,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "page": 27,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "page": 28,
+      "text_extracted": true,
+      "visually_checked": false,
+      "block_ids": [
+        "S005",
+        "S006"
+      ]
+    }
+  ]
+}

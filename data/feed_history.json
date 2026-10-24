@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23",
+  "updated_at": "2026-10-24",
   "days": [
     {
       "date": "2026-09-23",
@@ -236,6 +236,23 @@
       "markdown": "docs/md/2026-10-23.md",
       "html": "docs/html/2026-10-23.html",
       "aris": "research/aris/2026-10-23.json"
+    },
+    {
+      "date": "2026-10-24",
+      "selected": [
+        "arxiv:2603.05425",
+        "arxiv:2609.10743",
+        "arxiv:2606.30047",
+        "arxiv:2610.22341",
+        "arxiv:2609.17450",
+        "arxiv:2507.07410"
+      ],
+      "status": "content_verified_github_pending",
+      "deep_count": 1,
+      "browse_count": 5,
+      "markdown": "docs/md/2026-10-24.md",
+      "html": "docs/html/2026-10-24.html",
+      "aris": "research/aris/2026-10-24.json"
     }
   ]
 }

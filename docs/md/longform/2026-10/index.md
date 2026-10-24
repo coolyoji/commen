@@ -13,5 +13,6 @@
 - [S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes](s2c-3d.md)；原始发表月份：2026-07；Zotero：`T3MJDPEW`。
 - [Amodal Depth Anything: Amodal Depth Estimation in the Wild](amodal-depth-anything.md)；原始发表月份：2025-10；Zotero：`TD5LA8C6`。
 - [OccJEPA: Occlusion as Masking for Amodal Video Segmentation](occjepa.md)；原始发表月份：2026-10；Zotero：`LO1DWIQW`。
+- [RelaxFlow: Text-Driven Amodal 3D Generation](relaxflow.md)；预印本首发：2026-03；会议引用月：2026-07；出版社页面发布日期：2026-09-29；Zotero：`8SC9FOQH`。
 
 [全部文献](../../../literature.md) · [月索引数据](../../../../data/monthly_deep_reads/2026-10.json)

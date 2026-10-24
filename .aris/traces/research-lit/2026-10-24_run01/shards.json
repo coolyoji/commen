@@ -1,0 +1,37 @@
+{
+  "status": "same-family provisional",
+  "format": "parent-maintained summaries, not raw full transcript",
+  "requests": [
+    {
+      "agent": "/root/oct24_object_evidence",
+      "scope": [
+        "MHE-Former",
+        "EscherNet++"
+      ],
+      "read_only": true
+    },
+    {
+      "agent": "/root/oct24_scene_evidence",
+      "scope": [
+        "Argus",
+        "3DCodeVerse"
+      ],
+      "read_only": true
+    },
+    {
+      "agent": "/root/oct24_orca_and_critic",
+      "scope": [
+        "ORCA",
+        "RelaxFlow theory/cost caveats",
+        "six-note factual review"
+      ],
+      "read_only": true
+    }
+  ],
+  "response_summaries": [
+    "Object shard: flow/entropy versus uncertainty calibration; camera/shape premise; masked view synthesis versus true 3D consistency.",
+    "Scene shard: ERP does not identify absolute scale; 2M rows differ from 269597 unique programs; executable code differs from hidden truth.",
+    "ORCA/critic shard: hole area is recoverability proxy; freezing can preserve wrong geometry; logit Lipschitz bound is not exact output-frequency equivalence; upper bounds do not order actual errors; dual branches cost 2.46x/1.82x time."
+  ],
+  "parent_actions": "Wrote all notes and retained claim caveats; no GPU or novelty acceptance."
+}

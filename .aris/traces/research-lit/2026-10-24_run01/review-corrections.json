@@ -1,0 +1,62 @@
+{
+  "review_type": "same-family bounded factual review; parent applied and inspected corrections",
+  "independent_novelty_acceptance": false,
+  "items": [
+    {
+      "paper": "EscherNet++",
+      "issue": "Feature masking selection unit",
+      "resolved": "Select 25% of input image feature maps, then mask about 50% of their tokens; not 25% of multi-image training examples."
+    },
+    {
+      "paper": "EscherNet++",
+      "issue": "Image result table attribution",
+      "resolved": "PSNR/SSIM/LPIPS cited under Table 2 amodal completion; separated from Table 1 novel-view synthesis."
+    },
+    {
+      "paper": "MHE-Former",
+      "issue": "Metric dimension and units",
+      "resolved": "Table IV PA-MPJPE is in mm; Table V HO3D is 2D JPE with no stated coordinate unit."
+    },
+    {
+      "paper": "EscherNet++",
+      "issue": "Counterfactual identifiability",
+      "resolved": "Separate physically consistent all-view material rerendering from contradictory one-view stress tests."
+    },
+    {
+      "paper": "Argus",
+      "issue": "Offline perturbations versus training attribution",
+      "resolved": "Offline experiment tests constraint detectability; cannot establish the source of training gains. Depth scaling cannot generally be canceled by one global translation."
+    },
+    {
+      "paper": "RelaxFlow",
+      "issue": "Mask diagnostic versus final generation",
+      "resolved": "Separate instantaneous velocity leakage at fixed latent state from matched complete rollouts; offline z-buffer tests alone do not establish final generation correction."
+    },
+    {
+      "paper": "RelaxFlow",
+      "issue": "min-LPIPS selection protocol",
+      "resolved": "Minimum over 10 predicted views with common center-crop/resize; not fixed-camera fidelity or best random-seed generation."
+    },
+    {
+      "paper": "RelaxFlow",
+      "issue": "Extended baseline non-wins",
+      "resolved": "Retained higher text-CLIP scores for Nano Banana and other baselines; no all-metric victory claim."
+    },
+    {
+      "paper": "RelaxFlow reader",
+      "issue": "Runtime table crop clipped its final row",
+      "resolved": "Extended Table 6 crop to y=1057 and visually confirmed the complete TRELLIS overhead row."
+    },
+    {
+      "paper": "RelaxFlow bibliographic metadata",
+      "issue": "PMLR cached versus directly retrieved metadata and date semantics",
+      "resolved": "Preserved the hashed directly retrieved publisher page; kept conference BibTeX month 2026-07 and citation_publication_date 2026-09-29 separately. Read PDF remains arXiv v2; proceedings PDF equivalence not claimed."
+    }
+  ],
+  "remaining_limits": [
+    "No local model execution",
+    "No systematic independent novelty validation",
+    "No cross-family review acceptance",
+    "Reader covers chapter interpretation and selected source crops, not full paragraph translation"
+  ]
+}

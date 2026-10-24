@@ -1,5 +1,11 @@
 # CV 文献长期归档
 
+## 2026-10-24
+
+精读 **RelaxFlow**（arXiv首发2026-03，本次v2）：[长文](md/longform/2026-10/relaxflow.md)、[Nature Reader](md/longform/2026-10/relaxflow-reader/paper.md)。已导入Zotero `每日精读论文/2026/10`，条目 `8SC9FOQH`、附件 `TQBKESRF`，下载/storage哈希一致。源码公开，未跑模型；[正式ICML/PMLR论文集记录](https://proceedings.mlr.press/v306/zhu26m.html)已核验，会议引用月2026-07，出版社页面发布日期2026-09-29，未逐页比对论文集PDF与所读v2。
+
+泛读 **MHE-Former、Argus、3DCodeVerse、ORCA、EscherNet++**，只读HTML、不下载PDF。[六篇完整笔记](md/2026-10-24.md)含两层根因、实验协议、迁移必要条件、18个未验证idea与诊断卡。[十月精读](md/longform/2026-10/index.md) · [ARIS](../research/aris/2026-10-24.json) · [审计](../research/audit/2026-10-24.json)。
+
 ## 2026-10-23
 
 精读 **OccJEPA**（arXiv，2026-10，v1）：[精读长文](md/longform/2026-10/occjepa.md)、[Nature Reader](md/longform/2026-10/occjepa-reader/paper.md)。已导入Zotero `每日精读论文/2026/10`，条目 `LO1DWIQW`，PDF子附件 `K2MWSR8T`，下载/storage哈希一致。官方源码公开，但任务权重直链尚未核验；未跑模型。

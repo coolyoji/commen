@@ -1,7 +1,7 @@
 {
   "date": "2026-10-25",
   "read_month": "2026-10",
-  "status": "content_built_validation_pending",
+  "status": "content_remote_verified",
   "deep_read": {
     "id": "arxiv:2610.31649",
     "paper_id": "arxiv:2610.31649",
@@ -193,7 +193,7 @@
     "equations": 5,
     "figure_crops": 0,
     "table_crops": 0,
-    "math_validator": "pending"
+    "math_validator": "passed_strict"
   },
   "aris": {
     "count": 6,
@@ -204,15 +204,68 @@
   },
   "github": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "status": "pending",
-    "commit_attempted_this_run": false,
-    "push_attempted_this_run": false
+    "branch": "main",
+    "commit_attempted_this_run": true,
+    "push_attempted_this_run": true,
+    "content_commit": "ceb7ffa094c8c84300ef4e73af3849fd93852d56",
+    "content_remote_head": "ceb7ffa094c8c84300ef4e73af3849fd93852d56",
+    "remote_verification": {
+      "args": [
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "head": "ceb7ffa094c8c84300ef4e73af3849fd93852d56"
+    },
+    "contents_api_verification": [
+      {
+        "file": "docs/md/2026-10-25.md",
+        "local_sha256": "1df60230718c3f537a3bc1fec1cbaed046c92861092cb550c1f8b00fa3c5a19b",
+        "remote_content_sha256": "1df60230718c3f537a3bc1fec1cbaed046c92861092cb550c1f8b00fa3c5a19b",
+        "match": true
+      },
+      {
+        "file": "docs/html/2026-10-25.html",
+        "local_sha256": "6ee3a217917a4b0445a4e926d80ebf1fdb1510bd7b13cba11efe1cf82af55baf",
+        "remote_content_sha256": "6ee3a217917a4b0445a4e926d80ebf1fdb1510bd7b13cba11efe1cf82af55baf",
+        "match": true
+      },
+      {
+        "file": "docs/md/longform/2026-10/gate3dgen-reader/paper.md",
+        "local_sha256": "e0fba71b344147193a682d8526f73d5068fd14b173c340a1b8b8bcd711f5c199",
+        "remote_content_sha256": "e0fba71b344147193a682d8526f73d5068fd14b173c340a1b8b8bcd711f5c199",
+        "match": true
+      }
+    ],
+    "audit_commit_note": "Audit file is updated in the final audit commit; its own Contents API hash is verified after push and recorded out of band to avoid self-referential hash."
   },
   "limitations": [
-    "Gate3DGen synthetic degradation/reference may not match open-world images",
     "No local model execution",
-    "18 ideas unrun",
-    "Nature Reader formulas medium confidence",
-    "No visual page crops"
-  ]
+    "18 ideas unrun, systematic novelty unverified",
+    "Nature Reader is source-grounded chapter reader, not full paragraph translation",
+    "Gate3DGen synthetic degradation/reference may not match open-world images",
+    "No visual page crops; formula transcriptions marked medium confidence",
+    "GitHub contents API verified four critical files byte-for-byte"
+  ],
+  "validation": {
+    "status": "passed",
+    "failures": [],
+    "stats": {
+      "required_files": 16,
+      "papers": 6,
+      "ideas": 18,
+      "diagnostic_cards": 6,
+      "browse_idea_cards": 15,
+      "checked_local_links": 0,
+      "pdf_downloads": [
+        "gate3dgen-v1.pdf"
+      ],
+      "source_pages_text_extracted": 13,
+      "reader_math_count": 5,
+      "math_validator_output": "No math validation findings. Ready: yes",
+      "zotero_storage_hash_rechecked": true,
+      "remote_contents_checked": 4,
+      "static_html_checks": "passed; responsive CSS max-width and overflow-wrap present"
+    }
+  }
 }

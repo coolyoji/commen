@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-25",
+  "read_month": "2026-10",
+  "deep_count": 1,
+  "browse_count": 5,
+  "papers": [
+    {
+      "id": "arxiv:2610.31649",
+      "paper_id": "arxiv:2610.31649",
+      "title": "Gate3DGen: A Pre-processing Model that Selectively Purifies Real-World Images for 3D Generation",
+      "authors": [
+        "Xiaolin Li",
+        "Zihao Huang",
+        "Fanpeng Meng",
+        "Chen Yang",
+        "Guanjun Wu",
+        "Kai Zhang",
+        "Jiemin Fang",
+        "Qi Tian"
+      ],
+      "venue": "arXiv preprint",
+      "first_submitted": "2026-10-22",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "version_read": "2610.31649v1, 13 pages",
+      "source": "https://arxiv.org/abs/2610.31649",
+      "fulltext": "https://arxiv.org/html/2610.31649v1",
+      "pdf_source": "https://arxiv.org/pdf/2610.31649v1",
+      "code": "https://github.com/Supra-3D/gate3dgen",
+      "project": "https://supra-3d.github.io/gate3dgen/",
+      "code_commit_sha": "cc920625f7f84815933d54975618572fb7573a44",
+      "license": "Apache-2.0",
+      "longform": "docs/md/longform/2026-10/gate3dgen.md",
+      "reader": "docs/md/longform/2026-10/gate3dgen-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "07UP8SA6",
+      "zotero_attachment_key": "6IERBDNB",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\6IERBDNB\\Li - 2026 - Gate3DGen.pdf",
+      "pdf_verified": true,
+      "pdf_sha256": "a4976d13171eba4ca9e0c4c05b75821839bfef08624b7dbf18cbfa904bec0b39",
+      "zotero_imported": true,
+      "selection_note": "公开代码、13页全文、合成配对监督和下游3D评估均可核验；方法把输入干预与冻结下游生成器分离，适合研究可见/不可见证据路由。"
+    },
+    {
+      "id": "arxiv:2610.31645",
+      "title": "OmniRay: Camera-Agnostic Monocular 3D Reconstruction with Composite Ray Fields",
+      "authors": [
+        "Namitha Guruprasad",
+        "Abhay Yadav",
+        "Cheng Peng",
+        "Rama Chellappa",
+        "Anand Bhattad"
+      ],
+      "first_submitted": "2026-10",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2610.31645",
+      "fulltext": "https://arxiv.org/html/2610.31645v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "f3bcf87c94ed2633af5e611f29633823df6a7c363eb3935d42690dec3d62e24a"
+    },
+    {
+      "id": "arxiv:2610.31635",
+      "title": "HiP3R: Hierarchical Pose Graphs for Long-Horizon 3D Reconstruction",
+      "authors": [
+        "Zunnan Xu",
+        "Shangchen Zhou",
+        "Yihang Luo",
+        "Chen Change Loy"
+      ],
+      "first_submitted": "2026-10",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2610.31635",
+      "fulltext": "https://arxiv.org/html/2610.31635v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "3cbf80566e7b5ed7715118b82ea730b1841cfdb7c25e9a33b23ba13e9a34f92a"
+    },
+    {
+      "id": "arxiv:2610.31623",
+      "title": "F2G-Pose: Geometry-Aware Foundation Feature Lifting for Direct RGB-D Category-Level Object Pose Estimation",
+      "authors": [
+        "Jinyu Zhang",
+        "Haitao Lin",
+        "Jiashu Hou",
+        "Xiangyang Xue",
+        "Yanwei Fu"
+      ],
+      "first_submitted": "2026-10",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2610.31623",
+      "fulltext": "https://arxiv.org/html/2610.31623v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "343a55aaca21570fc2b386d8750256a43fb15a44b4ed0c86c65e93263d89d3c5"
+    },
+    {
+      "id": "arxiv:2610.31671",
+      "title": "A Unified Framework for Image-to-3D Part Generation via Variable Granularity",
+      "authors": [
+        "Qiwen Gu",
+        "Xin Zhou",
+        "Xiwu Chen",
+        "Zhongyang Zhu",
+        "Zhuo Zhang",
+        "Junqiao Zhao"
+      ],
+      "first_submitted": "2026-10",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2610.31671",
+      "fulltext": "https://arxiv.org/html/2610.31671v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "5ea906ac66b025a1e93ed416ba119d5a79a0b1600b03d0e7e58d3b3640dbd59d"
+    },
+    {
+      "id": "arxiv:2610.31668",
+      "title": "Reading, Writing, Sharing, and Interacting with the World through Video",
+      "authors": [
+        "Shengqiong Wu",
+        "Meng Luo",
+        "Bobo Li",
+        "Ziwei Liu",
+        "Shuicheng Yan",
+        "Ming-Hsuan Yang",
+        "Philip Torr",
+        "Hao Fei"
+      ],
+      "first_submitted": "2026-10",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "source": "https://arxiv.org/abs/2610.31668",
+      "fulltext": "https://arxiv.org/html/2610.31668v1",
+      "version_read": "v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "16c4c05d69540985198e8d59be83f30cd10de83518f80531681170a6f0a6650b"
+    }
+  ],
+  "retrieval": [],
+  "local_prior_work": {
+    "source": "read-only local Zotero SQLite before import",
+    "matches": {
+      "Gate3DGen": [],
+      "OmniRay": [],
+      "HiP3R": [],
+      "F2G-Pose": [],
+      "FlexPart": [],
+      "A Unified Framework for Image-to-3D Part Generation": []
+    }
+  },
+  "dedup_key": "canonical arXiv ID; local Zotero title match checked",
+  "rejected_candidates": [],
+  "code_status": {
+    "source_available": true,
+    "commit": "cc920625f7f84815933d54975618572fb7573a44",
+    "license": "Apache-2.0",
+    "model_run": false,
+    "weights_downloaded": false
+  },
+  "limitations": [
+    "未启动 GPU",
+    "未下载泛读 PDF",
+    "未做系统 novelty verification",
+    "真实照片没有 3D ground truth"
+  ]
+}

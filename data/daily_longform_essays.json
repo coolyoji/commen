@@ -1,13 +1,13 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "essays": [
     {
-      "paper_id": "arxiv:2603.05425",
-      "path": "../docs/md/longform/2026-10/relaxflow.md",
+      "paper_id": "arxiv:2610.31649",
+      "path": "../docs/md/longform/2026-10/gate3dgen.md",
       "status": "source_mapped_pdf_zotero_verified",
-      "publication_month": "2026-03",
+      "publication_month": "2026-10",
       "read_month": "2026-10",
-      "nature_reader": "../docs/md/longform/2026-10/relaxflow-reader/paper.md"
+      "nature_reader": "../docs/md/longform/2026-10/gate3dgen-reader/paper.md"
     }
   ]
 }

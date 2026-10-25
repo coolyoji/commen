@@ -1,5 +1,11 @@
 # CV 文献长期归档
 
+## 2026-10-25
+
+精读 **Gate3DGen**（原始发表月份：2026-10）：[长文](md/longform/2026-10/gate3dgen.md)、[Nature Reader](md/longform/2026-10/gate3dgen-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/10`，条目 `07UP8SA6`、附件 `6IERBDNB`，下载/storage SHA256 一致。
+
+泛读 **OmniRay、HiP3R、F2G-Pose、FlexPart、Reading/Writing/Sharing/Interacting with the World through Video**，只读 HTML、不下载 PDF。[六篇完整笔记](md/2026-10-25.md)含两层根因、迁移必要条件、PaperForge 十二段式、ARIS idea 与深层诊断卡。
+
 ## 2026-10-24
 
 精读 **RelaxFlow**（arXiv首发2026-03，本次v2）：[长文](md/longform/2026-10/relaxflow.md)、[Nature Reader](md/longform/2026-10/relaxflow-reader/paper.md)。已导入Zotero `每日精读论文/2026/10`，条目 `8SC9FOQH`、附件 `TQBKESRF`，下载/storage哈希一致。源码公开，未跑模型；[正式ICML/PMLR论文集记录](https://proceedings.mlr.press/v306/zhu26m.html)已核验，会议引用月2026-07，出版社页面发布日期2026-09-29，未逐页比对论文集PDF与所读v2。

@@ -224,6 +224,21 @@
       "pdf_sha256": "20d84cd05e9670d95774d37990a0db2b063f8106310c6be61e2307eb38e17905",
       "zotero_imported": true,
       "selection_note": "Official source and example inference present, innovative observation/prior control; theory assumptions and instance-geometry limits explicit."
+    },
+    {
+      "date": "2026-10-25",
+      "paper_id": "arxiv:2610.31649",
+      "title": "Gate3DGen: A Pre-processing Model that Selectively Purifies Real-World Images for 3D Generation",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/gate3dgen.md",
+      "reader": "docs/md/longform/2026-10/gate3dgen-reader/paper.md",
+      "code": "https://github.com/Supra-3D/gate3dgen",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "07UP8SA6",
+      "zotero_attachment_key": "6IERBDNB",
+      "pdf_verified": true,
+      "pdf_sha256": "a4976d13171eba4ca9e0c4c05b75821839bfef08624b7dbf18cbfa904bec0b39"
     }
   ]
 }

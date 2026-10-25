@@ -15,4 +15,6 @@
 - [OccJEPA: Occlusion as Masking for Amodal Video Segmentation](occjepa.md)；原始发表月份：2026-10；Zotero：`LO1DWIQW`。
 - [RelaxFlow: Text-Driven Amodal 3D Generation](relaxflow.md)；预印本首发：2026-03；会议引用月：2026-07；出版社页面发布日期：2026-09-29；Zotero：`8SC9FOQH`。
 
+- [Gate3DGen: A Pre-processing Model that Selectively Purifies Real-World Images for 3D Generation](gate3dgen.md)；原始发表月份：2026-10；Zotero：`07UP8SA6`。
+
 [全部文献](../../../literature.md) · [月索引数据](../../../../data/monthly_deep_reads/2026-10.json)

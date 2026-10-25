@@ -208,14 +208,14 @@
     "commit_attempted_this_run": true,
     "push_attempted_this_run": true,
     "content_commit": "ceb7ffa094c8c84300ef4e73af3849fd93852d56",
-    "content_remote_head": "ceb7ffa094c8c84300ef4e73af3849fd93852d56",
+    "content_remote_head": "563b0f25773dc405396bb67f16035b927d072f85",
     "remote_verification": {
       "args": [
         "ls-remote",
         "origin",
         "refs/heads/main"
       ],
-      "head": "ceb7ffa094c8c84300ef4e73af3849fd93852d56"
+      "head": "563b0f25773dc405396bb67f16035b927d072f85"
     },
     "contents_api_verification": [
       {
@@ -237,7 +237,7 @@
         "match": true
       }
     ],
-    "audit_commit_note": "Audit file is updated in the final audit commit; its own Contents API hash is verified after push and recorded out of band to avoid self-referential hash."
+    "audit_commit_note": "Final audit commit is 563b0f25773dc405396bb67f16035b927d072f85; critical files were verified byte-for-byte through GitHub Contents API after push."
   },
   "limitations": [
     "No local model execution",

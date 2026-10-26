@@ -1,13 +1,13 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "essays": [
     {
-      "paper_id": "arxiv:2610.31649",
-      "path": "../docs/md/longform/2026-10/gate3dgen.md",
+      "paper_id": "arxiv:2610.32800",
+      "path": "../docs/md/longform/2026-10/compmvr.md",
       "status": "source_mapped_pdf_zotero_verified",
       "publication_month": "2026-10",
       "read_month": "2026-10",
-      "nature_reader": "../docs/md/longform/2026-10/gate3dgen-reader/paper.md"
+      "nature_reader": "../docs/md/longform/2026-10/compmvr-reader/paper.md"
     }
   ]
 }

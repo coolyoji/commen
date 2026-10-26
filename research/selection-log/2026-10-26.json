@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-26",
+  "read_month": "2026-10",
+  "deep_count": 1,
+  "browse_count": 5,
+  "papers": [
+    {
+      "id": "arxiv:2610.32800",
+      "paper_id": "arxiv:2610.32800",
+      "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction",
+      "authors": [
+        "Dong-hwi Kim",
+        "Chaewon Moon",
+        "Hojun Song",
+        "Dongbeom Kim",
+        "Junyeong Jang",
+        "Aro Kim",
+        "Gahyeon Kim",
+        "Heejung Choi",
+        "Jehee Kim",
+        "Gianella Cravioto",
+        "Sohyun Lee",
+        "Gyeongjin Choi",
+        "EunHye Jeong",
+        "Soo Ye Kim",
+        "Jaehyup Lee",
+        "Sang-hyo Park"
+      ],
+      "venue": "SIGGRAPH Asia 2026 Conference Papers（arXiv v1）",
+      "first_submitted": "2026-10-23",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "version_read": "2610.32800v1",
+      "source": "https://arxiv.org/abs/2610.32800",
+      "fulltext": "https://arxiv.org/html/2610.32800v1",
+      "pdf_source": "https://arxiv.org/pdf/2610.32800v1",
+      "code": "https://mchaewon.github.io/CompMVR-project-page/",
+      "longform": "docs/md/longform/2026-10/compmvr.md",
+      "reader": "docs/md/longform/2026-10/compmvr-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "F81MIUGM",
+      "zotero_attachment_key": "VZTQC6ZF",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\VZTQC6ZF\\Kim et al - 2026 - CompMVR.pdf",
+      "pdf_verified": true,
+      "pdf_sha256": "4be2731588e3273fdcea2917cd809efbe06550d3b320e078a228e68881aaa05a",
+      "zotero_imported": true,
+      "selection_note": "最新候选中优先选择：公开项目页、完整可提取全文、方法直接针对多视角几何一致性，并能迁移到压缩/低照度/稀疏视角下的三维 amodal 证据恢复。"
+    },
+    {
+      "id": "arxiv:2610.32978",
+      "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
+      "authors": [
+        "Yuhan Liu",
+        "Lianhui Qin",
+        "Shenji Wan"
+      ],
+      "first_submitted": "2026-10-23",
+      "publication_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.32978",
+      "fulltext": "https://arxiv.org/html/2610.32978v1",
+      "version_read": "v1 摘要与项目页；arXiv HTML 尚未提供",
+      "code": "https://github.com/Tinaliu0123/scenebloom",
+      "source_format": "arXiv abstract + project page",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": null,
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-26.md",
+      "sections": [
+        "精读",
+        "ARIS",
+        "PaperForge",
+        "深层诊断卡"
+      ],
+      "aris_ideas": 3
+    },
+    {
+      "id": "arxiv:2610.32728",
+      "title": "CityLift: Compositional 3D Urban Generation from a Single Image",
+      "authors": [
+        "Haoran Gong",
+        "Jie Feng",
+        "Chenxu Wang"
+      ],
+      "first_submitted": "2026-10-23",
+      "publication_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.32728",
+      "fulltext": "https://arxiv.org/html/2610.32728v1",
+      "version_read": "2610.32728v1",
+      "project": "https://ranhaogong.github.io/CityLift/",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "f15fab2caad63023e1db4a5714e19d77a208300cdd36d06bff079420e6d81acf",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-26.md",
+      "sections": [
+        "精读",
+        "ARIS",
+        "PaperForge",
+        "深层诊断卡"
+      ],
+      "aris_ideas": 3
+    },
+    {
+      "id": "arxiv:2610.32250",
+      "title": "Easy-3Dfy: Object-Level Geometric Composition for Single-Image 3D Scene Construction",
+      "authors": [
+        "Ziang Zhang",
+        "Wenyou Yi",
+        "Zehan Wang",
+        "Jiachen Xu",
+        "Xintong Han",
+        "Chunchao Guo",
+        "Zhou Zhao"
+      ],
+      "first_submitted": "2026-10-23",
+      "publication_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.32250",
+      "fulltext": "https://arxiv.org/html/2610.32250v1",
+      "version_read": "2610.32250v1",
+      "project": "https://easy3dfy.github.io",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "49c9e1a8296d81533dd60381fdfed52d776491d22b1d3e14fbbba69b9abc176a",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-26.md",
+      "sections": [
+        "精读",
+        "ARIS",
+        "PaperForge",
+        "深层诊断卡"
+      ],
+      "aris_ideas": 3
+    },
+    {
+      "id": "arxiv:2610.32293",
+      "title": "Complementing DINO Features with Image Structure for Part Discovery",
+      "authors": [
+        "Samyak Rawlekar",
+        "Nikhil Chowdary Paleti",
+        "Amey Gupta",
+        "Narendra Ahuja"
+      ],
+      "first_submitted": "2026-10-23",
+      "publication_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.32293",
+      "fulltext": "https://arxiv.org/html/2610.32293v1",
+      "version_read": "2610.32293v1",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "c61f2aacc1a4b375ec12c2a3b66aef378af2a0f45cb4e3c9343a50c03954f9d1",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-26.md",
+      "sections": [
+        "精读",
+        "ARIS",
+        "PaperForge",
+        "深层诊断卡"
+      ],
+      "aris_ideas": 3
+    },
+    {
+      "id": "arxiv:2610.32663",
+      "title": "SemGeo-Gen: Unsupervised Generation of Approximate Cross-Instance Semantic-Geometric Correspondences",
+      "authors": [
+        "Roy Amoyal",
+        "Shira Ifergane",
+        "Oren Freifeld"
+      ],
+      "first_submitted": "2026-10-23",
+      "publication_month": "2026-10",
+      "source": "https://arxiv.org/abs/2610.32663",
+      "fulltext": "https://arxiv.org/html/2610.32663v1",
+      "version_read": "2610.32663v1",
+      "project": "https://bgu-cs-vil.github.io/SemGeo-Gen/",
+      "source_format": "HTML",
+      "pdf_downloaded": false,
+      "source_snapshot_sha256": "d46c7bf3e91638a436b938117b2368f126be8616222eb39aeffadc85424f51bf",
+      "read_month": "2026-10",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-26.md",
+      "sections": [
+        "精读",
+        "ARIS",
+        "PaperForge",
+        "深层诊断卡"
+      ],
+      "aris_ideas": 3
+    }
+  ],
+  "rule": "精读下载并导入 Zotero；泛读不下载 PDF；出处月份与阅读月份分开记录。"
+}

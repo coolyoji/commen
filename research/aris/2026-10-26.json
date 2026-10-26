@@ -1,0 +1,369 @@
+{
+  "date": "2026-10-26",
+  "read_month": "2026-10",
+  "paper_count": 6,
+  "scope": "amodal补全、三维重建、三维amodal补全",
+  "papers": [
+    {
+      "paper_id": "arxiv:2610.32800",
+      "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction",
+      "scope": "amodal补全/三维重建/三维amodal补全",
+      "labels": {
+        "problem": "论文原文事实",
+        "why_method": "基于证据的解释",
+        "mechanism": "基于证据的解释",
+        "ideas": "我们提出的研究假设"
+      },
+      "true_problem_and_gap": "压缩伪影破坏跨视角 correspondence，使几何估计器把编码误差当成场景差异；传统 restoration 的具体缺口是没有把三维几何可靠性写入训练目标。",
+      "why_method_needed": "如果每张图独立修复，错误会在多视角之间互相矛盾；即使单图 PSNR 变好，VGGT 的匹配和位姿仍可能变差。",
+      "why_method_may_work": "codec/QP prior 给出全局退化上下文，CAE 给出局部可靠性，correspondence loss 和 3D attention 让恢复结果共同解释多视角证据。",
+      "premises_failure_conditions_unproven": "依赖静态场景、正确对应、训练 codec 覆盖部署分布和较稳定相机；没有证明概率校准、动态视频和全视角不可见表面的真实恢复。",
+      "claimed_contribution_and_verified_evidence": "Table 3/4/5/12 支持相机、view matching 和 MEt3R 改善；Table 13 证实显存和延迟代价高；代码/数据项目页已核验，未在本机运行。",
+      "open_gaps_and_evidence_boundary": "错误对应会把几何监督变成共同错误；clean reference 和像素/感知损失无法决定隐藏多解；OOD codec、UAV运动模糊和动态物体仍未覆盖。",
+      "ideas": [
+        {
+          "name": "压缩不确定度传给三维后验",
+          "steps": "把CAE可靠性变成visible强约束和hidden三候选的权重；加入visible reprojection与hidden coverage。",
+          "hypothesis": "低可靠区域更需要多解而非单一clean target。",
+          "minimum_experiment": "20个物体、4 codec、3 QP、2遮挡比例，测visible error、hidden IoU、coverage、calibration。",
+          "positive_negative_no_signal": "阳性coverage升且visible不降；阴性说明形状先验是瓶颈；无信号说明压缩未改变多解。",
+          "contribution": "把图像恢复可靠性接到三维amodal belief。",
+          "risk": "候选共享同一错误先验。",
+          "relation": "复用CompMVR prior/correspondence，改变输出分布。"
+        },
+        {
+          "name": "反事实错误对应诊断",
+          "steps": "注入5/10/20%错误匹配，对比无/软/硬correspondence loss。",
+          "hypothesis": "几何监督只有在匹配精度过阈值后才有益。",
+          "minimum_experiment": "合成重复纹理场景，固定backbone，测inlier、Sampson、hidden coverage。",
+          "positive_negative_no_signal": "阳性软权重退化更慢；阴性说明其他线索主导；无信号说明扰动未穿透。",
+          "contribution": "确定几何监督从帮助变伤害的边界。",
+          "risk": "人工错误分布不等于自然失败。",
+          "relation": "反事实检验Table 12的因果解释。"
+        },
+        {
+          "name": "可撤销三维amodal field",
+          "steps": "维护observed/uncertain/generated三场，新视角只更新后两者并允许撤销。",
+          "hypothesis": "一致性应约束已观测部分，不能让错误补全自我强化。",
+          "minimum_experiment": "同正面异背面对象对，第二视角揭示背面，测hidden IoU、visible error、撤销率。",
+          "positive_negative_no_signal": "阳性新视角能推翻错误候选；阴性来源隔离未进入decoder；无信号第二视角无区分证据。",
+          "contribution": "把cross-view restoration改造成可证伪三维状态。",
+          "risk": "显存和候选管理成本。",
+          "relation": "由CompMVR几何一致机制迁移而来。"
+        }
+      ],
+      "migration": {
+        "source_mechanism": "用可验证的观测一致性约束生成或恢复结果，并把不确定部分与已观测部分分开。",
+        "target_isomorphism": "amodal与三维重建都面对部分观测、遮挡和多解，需要保留可见证据并对隐藏部分表达候选。",
+        "necessary_conditions": "相机/分割/深度或匹配基本可靠；表示能表达隐藏多解；新证据能更新或撤销先验。",
+        "mismatch": "论文任务的传感器、数据分布和损失与开放场景、UAV、动态物体或三维隐藏拓扑不完全相同。",
+        "adaptation": "维护 observed/unknown/generated 状态，加入可见重投影、自由空间、跨视角和不确定度校准。",
+        "failure_triggers": "全视角不可见、动态时空错配、结构性域偏移、代理指标与真实隐藏真值错位。"
+      },
+      "sources": [
+        "https://arxiv.org/html/2610.32800v1",
+        "https://mchaewon.github.io/CompMVR-project-page/"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2610.32978",
+      "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
+      "scope": "amodal补全/三维重建/三维amodal补全",
+      "labels": {
+        "problem": "论文原文事实",
+        "why_method": "基于证据的解释",
+        "mechanism": "基于证据的解释",
+        "ideas": "我们提出的研究假设"
+      },
+      "true_problem_and_gap": "布局采样与可执行三维编译的接口缺口",
+      "why_method_needed": "视觉合理不等于无碰撞、可达和功能正确",
+      "why_method_may_work": "hierarchical sampler + contract-guided compiler",
+      "premises_failure_conditions_unproven": "合同谓词覆盖真实功能；动态连续运动未证明",
+      "claimed_contribution_and_verified_evidence": "摘要声称五类房间无检测碰撞且导航成功率提升；缺完整表格",
+      "open_gaps_and_evidence_boundary": "静态门禁可能放过连续运动或隐藏悬空错误",
+      "ideas": [
+        {
+          "name": "连续扫掠门禁",
+          "steps": "把静态碰撞换成开门/行走扫掠体检查。",
+          "hypothesis": "导航收益来自连续可达性而非静态无碰撞。",
+          "minimum_experiment": "20个房间，比较静态与扫掠门禁的可达率。",
+          "positive_negative_no_signal": "阳性可达率升；阴性静态足够；无信号路径规划不是瓶颈。",
+          "contribution": "检验门禁覆盖范围。",
+          "risk": "运动轨迹分布窄。",
+          "relation": "扩展SceneBloom compiler。"
+        },
+        {
+          "name": "视觉与几何反例",
+          "steps": "构造好看但悬空的隐藏物体，比较视觉评分与门禁。",
+          "hypothesis": "几何门禁能抓住视觉代理盲区。",
+          "minimum_experiment": "同布局成对反事实场景。",
+          "positive_negative_no_signal": "阳性门禁拒绝；阴性说明检测器盲区；无信号反例太弱。",
+          "contribution": "建立可解释失败集。",
+          "risk": "反例人工设计。",
+          "relation": "挑战视觉质量替代物理正确的前提。"
+        },
+        {
+          "name": "可撤销场景belief",
+          "steps": "observed/hidden/generated三场，新视角更新hidden。",
+          "hypothesis": "新增证据应能推翻生成布局。",
+          "minimum_experiment": "同正面异背面房间对。",
+          "positive_negative_no_signal": "阳性撤销率提高；阴性来源未约束decoder；无信号视角无区分。",
+          "contribution": "迁移到三维amodal场景。",
+          "risk": "状态管理复杂。",
+          "relation": "从compiler约束迁移。"
+        }
+      ],
+      "migration": {
+        "source_mechanism": "用可验证的观测一致性约束生成或恢复结果，并把不确定部分与已观测部分分开。",
+        "target_isomorphism": "amodal与三维重建都面对部分观测、遮挡和多解，需要保留可见证据并对隐藏部分表达候选。",
+        "necessary_conditions": "相机/分割/深度或匹配基本可靠；表示能表达隐藏多解；新证据能更新或撤销先验。",
+        "mismatch": "论文任务的传感器、数据分布和损失与开放场景、UAV、动态物体或三维隐藏拓扑不完全相同。",
+        "adaptation": "维护 observed/unknown/generated 状态，加入可见重投影、自由空间、跨视角和不确定度校准。",
+        "failure_triggers": "全视角不可见、动态时空错配、结构性域偏移、代理指标与真实隐藏真值错位。"
+      },
+      "sources": [
+        "https://arxiv.org/abs/2610.32978"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2610.32728",
+      "title": "CityLift: Compositional 3D Urban Generation from a Single Image",
+      "scope": "amodal补全/三维重建/三维amodal补全",
+      "labels": {
+        "problem": "论文原文事实",
+        "why_method": "基于证据的解释",
+        "mechanism": "基于证据的解释",
+        "ideas": "我们提出的研究假设"
+      },
+      "true_problem_and_gap": "单图城市中布局、尺度和建筑完整几何耦合",
+      "why_method_needed": "全局网格细节不足，独立生成又会位置漂移",
+      "why_method_may_work": "shared scaffold + spatial inheritance + local flow",
+      "premises_failure_conditions_unproven": "mask/相机/坐标可靠；合成城市覆盖真实长尾",
+      "claimed_contribution_and_verified_evidence": "Table 1–5 支持CD/F-score和消融改善",
+      "open_gaps_and_evidence_boundary": "不可见屋顶、树木遮挡、动态UAV仍多解",
+      "ideas": [
+        {
+          "name": "scene anchor前提检验",
+          "steps": "替换相同共视但不同基线的scaffold参考。",
+          "hypothesis": "几何可辨识性比共视数量更重要。",
+          "minimum_experiment": "20个街区，比较anchor条件数与scene CD。",
+          "positive_negative_no_signal": "阳性条件数解释误差；阴性中心度已足够；无信号场景太易。",
+          "contribution": "检验spatial inheritance锚点。",
+          "risk": "需可控参考。",
+          "relation": "直接诊断CityLift坐标机制。"
+        },
+        {
+          "name": "scaffold误差反事实",
+          "steps": "固定local generator，扰动高度/平移，测错误放大。",
+          "hypothesis": "inheritance会把全局错放大成精细错。",
+          "minimum_experiment": "三档scaffold扰动，报告local CD。",
+          "positive_negative_no_signal": "阳性线性恶化；阴性局部可纠正；无信号归一化吞掉扰动。",
+          "contribution": "定位全局-局部责任。",
+          "risk": "扰动不自然。",
+          "relation": "补充Table 5消融。"
+        },
+        {
+          "name": "建筑三维amodal occupancy",
+          "steps": "输出observed/unknown/generated occupancy，第二视角更新unknown。",
+          "hypothesis": "局部高分辨率生成应只补未知体积。",
+          "minimum_experiment": "CityLift-5K合成多视角，测hidden IoU/撤销率。",
+          "positive_negative_no_signal": "阳性隐藏coverage升；阴性局部先验不足；无信号视角不揭示背面。",
+          "contribution": "从场景生成到可更新amodal。",
+          "risk": "需要完整mesh真值。",
+          "relation": "复用spatial inheritance。"
+        }
+      ],
+      "migration": {
+        "source_mechanism": "用可验证的观测一致性约束生成或恢复结果，并把不确定部分与已观测部分分开。",
+        "target_isomorphism": "amodal与三维重建都面对部分观测、遮挡和多解，需要保留可见证据并对隐藏部分表达候选。",
+        "necessary_conditions": "相机/分割/深度或匹配基本可靠；表示能表达隐藏多解；新证据能更新或撤销先验。",
+        "mismatch": "论文任务的传感器、数据分布和损失与开放场景、UAV、动态物体或三维隐藏拓扑不完全相同。",
+        "adaptation": "维护 observed/unknown/generated 状态，加入可见重投影、自由空间、跨视角和不确定度校准。",
+        "failure_triggers": "全视角不可见、动态时空错配、结构性域偏移、代理指标与真实隐藏真值错位。"
+      },
+      "sources": [
+        "https://arxiv.org/abs/2610.32728"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2610.32250",
+      "title": "Easy-3Dfy: Object-Level Geometric Composition for Single-Image 3D Scene Construction",
+      "scope": "amodal补全/三维重建/三维amodal补全",
+      "labels": {
+        "problem": "论文原文事实",
+        "why_method": "基于证据的解释",
+        "mechanism": "基于证据的解释",
+        "ideas": "我们提出的研究假设"
+      },
+      "true_problem_and_gap": "高质量对象生成与场景布局的模块接口",
+      "why_method_needed": "端到端系统互相牵制，局部mesh与scene pointmap需要几何桥",
+      "why_method_may_work": "object generator + partial pointmap + RPF aligner",
+      "premises_failure_conditions_unproven": "mask和点图属于同一对象；对称和稀疏点下不一定",
+      "claimed_contribution_and_verified_evidence": "摘要支持超过SAM-3Dfy，但完整数值需进一步核验",
+      "open_gaps_and_evidence_boundary": "错误对象也可能被稳定对齐",
+      "ideas": [
+        {
+          "name": "RPF点密度阈值",
+          "steps": "逐步降低partial pointmap密度，测对齐/补全分界。",
+          "hypothesis": "存在可辨识点密度阈值。",
+          "minimum_experiment": "30个物体，四档点密度。",
+          "positive_negative_no_signal": "阳性出现阈值；阴性语义先验主导；无信号对齐器不依赖点图。",
+          "contribution": "量化接口可靠性。",
+          "risk": "点噪声模型简化。",
+          "relation": "检验RPF核心前提。"
+        },
+        {
+          "name": "错误mask反事实",
+          "steps": "mask膨胀/收缩/交换，比较RPF/ICP/语义匹配。",
+          "hypothesis": "错误mask会把错误物体稳定对齐。",
+          "minimum_experiment": "20个同类对象，四种mask错误。",
+          "positive_negative_no_signal": "阳性错误传播可见；阴性对齐稳健；无信号扰动太小。",
+          "contribution": "发现接口错误责任。",
+          "risk": "mask错误不代表真实分割。",
+          "relation": "扩展RPF分析。"
+        },
+        {
+          "name": "observed-locked hidden completion",
+          "steps": "固定观测点，只生成unknown surface候选。",
+          "hypothesis": "不让生成器改写观测可降低几何幻觉。",
+          "minimum_experiment": "同正面异背面对象，测hidden IoU/visible Chamfer。",
+          "positive_negative_no_signal": "阳性可见稳定且隐藏coverage升；阴性先验不足；无信号未揭示差异。",
+          "contribution": "模块化三维amodal。",
+          "risk": "候选生成开销。",
+          "relation": "沿用object generator与aligner。"
+        }
+      ],
+      "migration": {
+        "source_mechanism": "用可验证的观测一致性约束生成或恢复结果，并把不确定部分与已观测部分分开。",
+        "target_isomorphism": "amodal与三维重建都面对部分观测、遮挡和多解，需要保留可见证据并对隐藏部分表达候选。",
+        "necessary_conditions": "相机/分割/深度或匹配基本可靠；表示能表达隐藏多解；新证据能更新或撤销先验。",
+        "mismatch": "论文任务的传感器、数据分布和损失与开放场景、UAV、动态物体或三维隐藏拓扑不完全相同。",
+        "adaptation": "维护 observed/unknown/generated 状态，加入可见重投影、自由空间、跨视角和不确定度校准。",
+        "failure_triggers": "全视角不可见、动态时空错配、结构性域偏移、代理指标与真实隐藏真值错位。"
+      },
+      "sources": [
+        "https://arxiv.org/abs/2610.32250"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2610.32293",
+      "title": "Complementing DINO Features with Image Structure for Part Discovery",
+      "scope": "amodal补全/三维重建/三维amodal补全",
+      "labels": {
+        "problem": "论文原文事实",
+        "why_method": "基于证据的解释",
+        "mechanism": "基于证据的解释",
+        "ideas": "我们提出的研究假设"
+      },
+      "true_problem_and_gap": "ViT patch跨部件边界导致语义特征混合",
+      "why_method_needed": "语义表征强不代表边界纯度高",
+      "why_method_may_work": "RAMP/Watershed regions + DINO pooling/clustering",
+      "premises_failure_conditions_unproven": "低层对比度边界大致对应部件；阴影会制造假边界",
+      "claimed_contribution_and_verified_evidence": "26,459 patches及CUB/PartImageNet指标支持边界诊断",
+      "open_gaps_and_evidence_boundary": "固定K、低对比和强阴影限制开放场景",
+      "ideas": [
+        {
+          "name": "结构边界与光照边界",
+          "steps": "注入光照梯度并对比RAMP/语义边界。",
+          "hypothesis": "低层边界并不总是部件边界。",
+          "minimum_experiment": "CUB/CelebA配对扰动，测ARI和边界一致性。",
+          "positive_negative_no_signal": "阳性结构边界更稳；阴性低层足够；无信号分辨率限制。",
+          "contribution": "检验Part-DINO最脆弱前提。",
+          "risk": "光照编辑伪影。",
+          "relation": "扩展RAMP分析。"
+        },
+        {
+          "name": "assignment反事实",
+          "steps": "固定DINO特征，替换patch/region assignment。",
+          "hypothesis": "region单元是主要因果作用点。",
+          "minimum_experiment": "同图比较四种assignment。",
+          "positive_negative_no_signal": "阳性region解释大部分收益；阴性prototype更重要；无信号region差异太小。",
+          "contribution": "区分边界与聚类贡献。",
+          "risk": "只测离线特征。",
+          "relation": "直接对应Table 3。"
+        },
+        {
+          "name": "三维part belief",
+          "steps": "region token与深度/遮挡mask lift到3D，hidden part输出多候选。",
+          "hypothesis": "边界和语义需在三维中分离。",
+          "minimum_experiment": "20个同前景异背面对象。",
+          "positive_negative_no_signal": "阳性hidden coverage升且visible稳定；阴性先验不足；无信号数据无多解。",
+          "contribution": "从2D part discovery迁移到3D amodal。",
+          "risk": "需要3D part真值。",
+          "relation": "保留region pooling，改变状态表示。"
+        }
+      ],
+      "migration": {
+        "source_mechanism": "用可验证的观测一致性约束生成或恢复结果，并把不确定部分与已观测部分分开。",
+        "target_isomorphism": "amodal与三维重建都面对部分观测、遮挡和多解，需要保留可见证据并对隐藏部分表达候选。",
+        "necessary_conditions": "相机/分割/深度或匹配基本可靠；表示能表达隐藏多解；新证据能更新或撤销先验。",
+        "mismatch": "论文任务的传感器、数据分布和损失与开放场景、UAV、动态物体或三维隐藏拓扑不完全相同。",
+        "adaptation": "维护 observed/unknown/generated 状态，加入可见重投影、自由空间、跨视角和不确定度校准。",
+        "failure_triggers": "全视角不可见、动态时空错配、结构性域偏移、代理指标与真实隐藏真值错位。"
+      },
+      "sources": [
+        "https://arxiv.org/abs/2610.32293"
+      ]
+    },
+    {
+      "paper_id": "arxiv:2610.32663",
+      "title": "SemGeo-Gen: Unsupervised Generation of Approximate Cross-Instance Semantic-Geometric Correspondences",
+      "scope": "amodal补全/三维重建/三维amodal补全",
+      "labels": {
+        "problem": "论文原文事实",
+        "why_method": "基于证据的解释",
+        "mechanism": "基于证据的解释",
+        "ideas": "我们提出的研究假设"
+      },
+      "true_problem_and_gap": "跨实例精确对应标注不可扩展且本身多解",
+      "why_method_needed": "强行点级标签会制造假监督，需approximate+coverage",
+      "why_method_may_work": "DINO feature lifting + CPA + semantic pruning",
+      "premises_failure_conditions_unproven": "粗旋转对齐、刚性对象和语义特征稳定",
+      "claimed_contribution_and_verified_evidence": "PCK与GT-used rate、SPair transfer支持近似监督有用",
+      "open_gaps_and_evidence_boundary": "coverage下降可能掩盖未匹配的困难部件",
+      "ideas": [
+        {
+          "name": "对齐扰动阈值",
+          "steps": "0/5/10/20度扰动粗canonical alignment。",
+          "hypothesis": "approximate correspondence存在可识别稳定区间。",
+          "minimum_experiment": "KeypointNet子集，测PCK与coverage。",
+          "positive_negative_no_signal": "阳性有阈值；阴性语义足够；无信号数据太简单。",
+          "contribution": "量化alignment前提。",
+          "risk": "旋转扰动不涵盖非刚性。",
+          "relation": "检验CPA适用范围。"
+        },
+        {
+          "name": "pruning与registration顺序",
+          "steps": "交换semantic pruning和CPA registration顺序。",
+          "hypothesis": "先过滤可减少局部形变自强化。",
+          "minimum_experiment": "固定DINO特征和参数，比较错误对应。",
+          "positive_negative_no_signal": "阳性先过滤更稳；阴性顺序无关；无信号误差太小。",
+          "contribution": "定位pipeline因果。",
+          "risk": "顺序改变实现成本。",
+          "relation": "补充SemGeo-Gen消融。"
+        },
+        {
+          "name": "coverage-aware 3D amodal correspondence",
+          "steps": "把approximate correspondence作为hidden候选，新视角更新候选权重。",
+          "hypothesis": "coverage与uncertainty比硬对应更适合隐藏部件。",
+          "minimum_experiment": "30个同正面异背面对象，测hidden coverage/撤销率。",
+          "positive_negative_no_signal": "阳性新证据可撤销；阴性候选共享错误先验；无信号视角无区分。",
+          "contribution": "可更新三维part belief。",
+          "risk": "候选匹配复杂。",
+          "relation": "从approximate supervision迁移。"
+        }
+      ],
+      "migration": {
+        "source_mechanism": "用可验证的观测一致性约束生成或恢复结果，并把不确定部分与已观测部分分开。",
+        "target_isomorphism": "amodal与三维重建都面对部分观测、遮挡和多解，需要保留可见证据并对隐藏部分表达候选。",
+        "necessary_conditions": "相机/分割/深度或匹配基本可靠；表示能表达隐藏多解；新证据能更新或撤销先验。",
+        "mismatch": "论文任务的传感器、数据分布和损失与开放场景、UAV、动态物体或三维隐藏拓扑不完全相同。",
+        "adaptation": "维护 observed/unknown/generated 状态，加入可见重投影、自由空间、跨视角和不确定度校准。",
+        "failure_triggers": "全视角不可见、动态时空错配、结构性域偏移、代理指标与真实隐藏真值错位。"
+      },
+      "sources": [
+        "https://arxiv.org/abs/2610.32663"
+      ]
+    }
+  ]
+}

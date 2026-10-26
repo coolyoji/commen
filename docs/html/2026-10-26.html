@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-10-26｜压缩感知、多视角几何与三维 amodal</title>
+<style>
+*{box-sizing:border-box}body{max-width:1120px;margin:auto;padding:24px;color:#242424;background:#fff;font:17px/1.8 system-ui,sans-serif;overflow-wrap:anywhere}
+h1{font-size:30px}h2{font-size:24px;margin-top:2em;border-bottom:1px solid #bbb}h3{font-size:20px}h4{font-size:18px}
+a{color:#075c9b}table{display:block;overflow-x:auto;border-collapse:collapse;max-width:100%;font-size:15px}
+th,td{padding:8px 12px;border:1px solid #bbb;min-width:110px}th{background:#edf2f4}
+img{max-width:100%;height:auto}pre{overflow:auto}code{overflow-wrap:anywhere}
+@media(max-width:600px){body{padding:14px;font-size:16px}h1{font-size:25px}h2{font-size:22px}}
+</style></head><body><nav><a href="../index.html">全部归档</a> · <a href="../md/2026-10-26.md">Markdown</a> · <a href="../md/longform/2026-10/index.md">十月精读</a></nav>
+<h1 id="2026-10-26-cv">2026-10-26 CV 文献更新</h1>
+<blockquote>
+<p>今日结构：1 篇精读 + 5 篇泛读。精读 PDF 已导入 Zotero <code>每日精读论文/2026/10</code>；泛读只读取 HTML/摘要，不下载 PDF。主题：压缩感知、多视角几何、场景/物体组合、部件边界与可更新三维 amodal。</p>
+</blockquote>
+<h2 id="compmvr">精读｜CompMVR：压缩不是画质问题，而是跨视角几何证据被破坏</h2>
+<p>原始出处：<a href="https://arxiv.org/abs/2610.32800">arXiv:2610.32800</a>，首次公开 <strong>2026 年 10 月</strong>；正式信息标为 <strong>SIGGRAPH Asia 2026 Conference Papers</strong>。阅读版本 v1。PDF 已下载并导入 Zotero <code>每日精读论文/2026/10</code>，条目 <code>F81MIUGM</code>、附件 <code>VZTQC6ZF</code>，下载与 storage SHA256 均为 <code>4be2731588e3273fdcea2917cd809efbe06550d3b320e078a228e68881aaa05a</code>。没有在本机启动模型或下载权重。</p>
+<h3 id="1">1. 先说人话</h3>
+<p>多视角三维重建通常默认：不同相机看到的是同一个场景，只是角度不同。压缩会破坏这个默认条件。HEVC、AV1、JPEG 等编码在每张图上产生的块效应、边缘振铃和细节抹除并不相同；同一把椅子的边缘在视角 A 里可能被保留，在视角 B 里却被抹平。二维上看，图片只是“更糊”；三维上看，特征匹配、相机位姿、深度和新视角渲染会把这种不一致解释成错误的几何。</p>
+<p>CompMVR 的核心不是让每张图单独变清晰，而是让一组压缩视图共同恢复出<strong>几何上可互相解释的证据</strong>。Stage 1 学一个 codec/QP-aware compression prior；Stage 2 用多视角 diffusion，同时估计局部压缩伪影，并用跨视角 correspondence loss 与 3D attention 约束恢复结果。</p>
+<p>最重要的边界：论文证明了“恢复后的输入更适合下游几何估计”，没有证明被压缩或遮挡后完全不可见的表面被真实恢复。生成模型可以把错误细节在多个视角中一致地复制；一致性是必要条件，不是隐藏真值的充分条件。</p>
+<h3 id="2">2. 摘要拆解：它真正解决什么</h3>
+<p>【论文原文事实】作者把 compression-induced cross-view geometric inconsistency 定义为一个独立问题：压缩伪影会破坏 feature matching、dense correspondence、camera estimation 和 downstream 3D reconstruction。CompMVR 构造多 codec、多 QP 的压缩数据，并把 learned compression priors 与 cross-view correspondence 放进 diffusion restoration。</p>
+<p>【基于证据的解释】第一层根因是压缩误差的<strong>视角依赖性</strong>：编码器按照局部纹理复杂度分配比特，同一三维边缘在不同视角里的二维频率、面积和遮挡关系不同。第二层根因是三维估计器使用跨图像的相对关系，而传统 restoration 的目标是逐图像素/感知质量；两种目标的梯度方向不一致，单图更漂亮可能让匹配点更不稳定。</p>
+<h3 id="3">3. 方法流程与因果链</h3>
+<ol>
+<li><strong>压缩视图 → Stage 1 latent</strong>：CPE 预测 codec 类型与 QP，同时做图像重建。codec 分类提供离散退化类型，QP 回归提供严重程度。</li>
+<li><strong>latent + 压缩多视图 → Stage 2 diffusion</strong>：CAE 从输入估计 spatially varying artifact map，捕捉边缘、纹理和高频区域的局部可靠性。</li>
+<li><strong>多视图 latent → cross-view attention/correspondence loss</strong>：对应区域的恢复结果被拉到一致，避免每张视图各自“幻觉”。</li>
+<li><strong>恢复视图 → VGGT/MEt3R/新视角渲染</strong>：评估相机位姿、view matching、multi-view consistency 与 novel-view synthesis。</li>
+</ol>
+<p>因果链可写成：</p>
+<p><code>压缩 RGB → codec/QP context + local artifact map → geometry-aware diffusion latent → correspondence-consistent restoration → 更稳定的匹配/位姿/新视角 → 失效于 codec OOD、错误对应、动态物体和真实不可见表面。</code></p>
+<h3 id="4">4. 关键术语直白解释</h3>
+<ul>
+<li><strong>Compression prior</strong>：不是“记住一张压缩图长什么样”，而是把 codec 类型和 QP 等退化条件编码成条件变量。它解决全局退化上下文缺失；删除后模型只能从局部纹理猜压缩严重程度。QP 只描述量化强度，不包含完整编码结构，因此 QP 相同也不意味着伪影相同。</li>
+<li><strong>CAE（Compression Artifact Estimator）</strong>：一个轻量卷积网络，输出每个位置的伪影残差图。它解决“同一 QP 下复杂边缘比平坦天空更难恢复”的空间不均匀性。删掉后，模型会用全局条件平均处理所有区域；最易失败是把真实细线、烟雾边界当成压缩噪声。</li>
+<li><strong>Cross-view correspondence loss</strong>：不是简单让图片像 GT，而是把不同视角中对应点的恢复特征/几何关系拉近。它的作用是让优化目标包含三维可用性；但对应关系一旦错，损失会把两个不同表面强行对齐。</li>
+<li><strong>3D attention</strong>：让多视图 token 在一个隐空间里交互，给每一张图提供其他视角的补充证据。它不等于显式重建了真实体积；当所有视角都看不到某个表面时，attention 只能调用先验。</li>
+<li><strong>MEt3R</strong>：衡量生成视图的多视角一致性。低分说明视图间更一致，不代表每个隐藏细节真实存在。</li>
+</ul>
+<h3 id="5">5. 公式与优化行为</h3>
+<p><a id="E001"></a>
+<strong>Source:</strong> HTML §3.1 · Eq. (1–3)</p>
+<p>$$
+\mathcal{L}<em>{\mathrm{CaRL}}=\lVert I</em>{\mathrm{recon}}-I_{\mathrm{gt}}\rVert_1+
+\lambda_{\mathrm{QP}}\mathcal{L}<em>{\mathrm{QP}}+
+\lambda</em>{\mathrm{codec}}\mathcal{L}_{\mathrm{codec}}.
+$$</p>
+<p>Stage 1 要求 latent 同时保留可重建的视觉信息，并能预测 codec/QP。因果上，它把“退化是什么”从恢复网络的隐式猜测变成显式条件。</p>
+<p><a id="E002"></a>
+<strong>Source:</strong> HTML §3.2 · spatial artifact estimator</p>
+<p>$$
+e(I)=|\partial_x I|+|\partial_y I|.
+$$</p>
+<p>梯度能量把边缘和纹理标为高复杂区域。它不是压缩伪影的真值；论文用它说明局部复杂度与残差规模相关，再由 CAE 从压缩输入直接估计残差。</p>
+<p><a id="E003"></a>
+<strong>Source:</strong> HTML §3.2.1 · Eq. (10)</p>
+<p>$$
+\mathcal{L}=\mathcal{L}<em>{\mathrm{CAE}}+\mathcal{L}</em>{\mathrm{corr}}+\mathcal{L}<em>{\mathrm{per}},
+\qquad
+\mathcal{L}</em>{\mathrm{per}}=\mathcal{L}<em>{\mathrm{recon}}+\mathcal{L}</em>{\mathrm{DISTS}}.
+$$</p>
+<p>三个分量分别约束局部退化、跨视角几何和二维感知/重建质量。删除 $\mathcal{L}_{\mathrm{corr}}$，论文 Table 12 报告 AUC@5 从 0.531 降到 0.516、MEt3R 从 0.132 变为 0.138，说明其几何作用有独立贡献，但增益并不大到可以替代真实深度。</p>
+<h3 id="6">6. 图表和实验：问题 → 设计 → 答案</h3>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>实验设计</th>
+<th>论文回答与边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>压缩是否真的损伤几何？</td>
+<td>RealEstate10K，多 codec/QP，VGGT view matching</td>
+<td>HEVC QP42 的压缩输入 AUC@5 为 22.59；CompMVR 为 24.34，接近未压缩 GT 的 24.55。说明匹配改善，不能推出隐藏表面真实。</td>
+</tr>
+<tr>
+<td>跨视角约束是否有用？</td>
+<td>Table 12 去掉/保留 $\mathcal{L}_{corr}$</td>
+<td>inlier ratio 0.801→0.805，Sampson 0.082→0.078，AUC@5 0.516→0.531，MEt3R 0.138→0.132。支持“几何目标”而非单纯图像变清。</td>
+</tr>
+<tr>
+<td>codec OOD 能否泛化？</td>
+<td>训练未含 VVC/H.266，Free 数据集测试</td>
+<td>PSNR 23.4970→23.6228，NIQE 3.3412→3.2610，CLIPIQA 0.6917→0.6981。改善很小，不能说已解决任意 codec。</td>
+</tr>
+<tr>
+<td>代价是什么？</td>
+<td>Table 13 比较参数、时间、显存</td>
+<td>Ours 276.171M、1.073 s、11.01 GB；比 DiQP 79.373M/0.422 s/1.02 GB 明显更重。</td>
+</tr>
+</tbody>
+</table>
+<p>【原文事实】作者在多个 codec、QP 和数据上报告 novel-view synthesis、camera pose、view matching 的提升。Table 3 的多项 AUC@15/30 由 Ours 取得最高或次高，Table 5 的 MEt3R 为 0.132；同时作者明确承认不是 fully feed-forward、显存更高、codec-specific priors 仍不足。</p>
+<h3 id="7">7. 贡献、缺陷与深层根因</h3>
+<p><strong>贡献可核验</strong>：提出压缩感知多视角 diffusion；把 global codec/QP prior、local artifact map、cross-view correspondence 放进同一恢复目标；构造跨 codec 的多视角压缩评测；用下游几何而非只用 PSNR 评估。</p>
+<p><strong>缺陷 1：合成压缩和真实传输链不完全同构。</strong> 第一层是数据只覆盖预设 codec/QP；真实链路可能经历多次转码、缩放、锐化、屏幕拍摄和时间压缩。第二层是这些操作会改变 correspondence 的空间分布与相机估计难度，训练中的 codec label 不再有唯一解释。迁移到 UAV 时还会叠加运动模糊、滚动快门、风振和极小目标。</p>
+<p><strong>缺陷 2：跨视角一致可能放大共同错误。</strong> 第一层是 correspondence loss 假定匹配正确；重复纹理、反射、透明表面和动态物体会生成错误对应。第二层是多视图网络把同一错误在多个视角中复制，MEt3R 变好而 hidden geometry 变差，形成“自洽幻觉”。</p>
+<p><strong>缺陷 3：压缩恢复仍以 clean view 为目标。</strong> 第一层是像素/感知项偏向某个参考外观；第二层是三维观测本来存在不可观测多解，clean reference 并不能告诉模型被遮挡表面哪一种是真实的。它适合恢复测得的可见证据，不应被解释为 amodal 真值生成器。</p>
+<h3 id="8-amodal-amodal">8. 对 amodal 补全、三维重建、三维 amodal 补全的迁移</h3>
+<ul>
+<li><strong>源机制</strong>：恢复输入时同时保持局部证据质量与跨视角关系。</li>
+<li><strong>目标同构</strong>：amodal 任务也有 observed pixels/depth 与 hidden geometry；三维重建也要求跨视角一致。</li>
+<li><strong>必要条件</strong>：正确相机/深度、可验证的 visible reprojection、把 unknown 与 generated 分开存储、允许新视角撤销先验。</li>
+<li><strong>错配</strong>：CompMVR 处理的是压缩噪声，目标三维 amodal 还包含遮挡、反射、透明、动态和对象级多解；correspondence loss 不能替代形状先验。</li>
+<li><strong>改造</strong>：把 $\mathcal{L}_{corr}$ 分成 visible correspondence 与 hidden belief consistency；只对可见表面做强一致，对不可见区域输出多个候选并校准不确定度。</li>
+<li><strong>失败触发器</strong>：所有视角都看不到背面、动态物体跨帧错配、UAV 小目标没有足够像素、域外 codec/传感器使 CAE 把真实结构当伪影。</li>
+</ul>
+<h3 id="9-aris">9. ARIS 七项诊断</h3>
+<ol>
+<li><strong>真正问题与缺口</strong>：现有恢复优化二维质量，忽略压缩导致的跨视角几何错配。</li>
+<li><strong>为什么需要该方法</strong>：三维估计依赖相对证据；单图修复无法保证同一结构在不同视角被同样恢复。</li>
+<li><strong>为什么可能有效</strong>：codec/QP prior 提供退化上下文，CAE 处理空间异质性，correspondence loss 把几何可靠性写入训练信号。</li>
+<li><strong>依赖与失败</strong>：依赖正确对应、静态场景、压缩分布覆盖和稳定相机；论文没有证明概率校准或真实隐藏面恢复。</li>
+<li><strong>作者贡献与证据</strong>：Table 3/4/5/12 支持几何指标改善；Table 13 支持计算代价高；没有消融“错误匹配”或“全视角不可见”条件。</li>
+<li><strong>未解决缺口与边界</strong>：多解表示、动态场景、真实传输链、可撤销补全、端侧算力。</li>
+<li><strong>研究 ideas</strong>：见下方三张 idea 卡，全部是【我们提出的研究假设】，未运行。</li>
+</ol>
+<h4 id="idea-a">Idea A：压缩不确定度是否应传给三维后验</h4>
+<ul>
+<li>方法步骤：保留 Stage 1/2，把 CAE 输出转成每像素 reliability；visible surface 用强重投影，低 reliability 区域输出 3 个 hidden occupancy 候选。</li>
+<li>核心假设：压缩伪影最严重的区域正是隐藏几何最不确定的区域；将其当成单一 clean target 会过度自信。</li>
+<li>最小实验：合成 20 个 ShapeNet/GSO 物体，四 codec、三 QP、两种遮挡比例；比较 deterministic completion 与 3-hypothesis 的 visible reprojection、hidden IoU、coverage 和 calibration。</li>
+<li>阳性/阴性/无信号：阳性是 hidden coverage 提高且 visible error 不升；阴性说明主要瓶颈是形状先验；无信号说明压缩并未改变任务多解。</li>
+<li>贡献：把图像恢复的 reliability 接到三维 amodal belief。</li>
+<li>风险：需要真实 hidden ground truth；候选可能共享同一错误先验。</li>
+<li>与原论文关系：复用 compression prior 与 correspondence，改变输出目标，不宣称原文已有。</li>
+</ul>
+<h4 id="idea-b">Idea B：反事实错误对应诊断</h4>
+<ul>
+<li>方法步骤：保持压缩强度不变，随机替换 5%/10%/20% 的跨视角匹配；分别训练无 $\mathcal{L}_{corr}$、软权重 correspondence、硬 correspondence。</li>
+<li>核心假设：论文的几何增益只有在匹配精度超过阈值时才成立；错误对应会把恢复网络训练成一致地错。</li>
+<li>最小实验：RealEstate10K 小子集或合成平面/重复纹理场景，固定 backbone 与采样，报告 inlier ratio、Sampson、hidden coverage。</li>
+<li>阳性/阴性/无信号：阳性是软权重在错误匹配下退化更慢；阴性是几何损失仍稳定，说明网络靠其他线索；无信号表示扰动未穿透训练。</li>
+<li>贡献：回答“几何监督何时从帮助变成伤害”。</li>
+<li>风险：人工错误匹配与自然失败分布不同。</li>
+<li>与原论文关系：直接反事实检验 Table 12 的因果解释。</li>
+</ul>
+<h4 id="idea-c-amodal-field">Idea C：跨视角可撤销的三维 amodal field</h4>
+<ul>
+<li>方法步骤：场景表示拆成 observed、uncertain、generated 三个 field；CompMVR 只修复 observed evidence；新视角到来时用深度/轮廓更新 uncertain，若冲突则撤销 generated。</li>
+<li>核心假设：一致性应约束已观察部分，而不是让错误补全在所有视角中自我强化。</li>
+<li>最小实验：同正面异背面的对象对，首视角压缩、第二视角揭示背面，比较单场和三场的 hidden IoU、visible error、撤销率。</li>
+<li>阳性/阴性/无信号：阳性是新视角能推翻错误候选且 visible 不漂移；阴性说明生成器没有来源隔离；无信号说明第二视角没有提供区分证据。</li>
+<li>贡献：把 CompMVR 的几何一致机制改造成可证伪的三维 amodal 状态。</li>
+<li>风险：三场分解增加显存和候选管理成本。</li>
+<li>与原论文关系：从其 cross-view consistency 外推，不是原论文声称的能力。</li>
+</ul>
+<h3 id="10-paperforge">10. PaperForge 十二段式</h3>
+<ol>
+<li><strong>问题和实际重要性</strong>：压缩是三维重建部署中的常见输入条件，却常被当作纯画质问题。</li>
+<li><strong>相关工作为何不够</strong>：单图 restoration 的目标不包含跨视角几何；通用 multi-view diffusion 又没有 codec/QP 先验。</li>
+<li><strong>反向重建作者路径</strong>：先观察匹配数下降，再区分全局 codec/QP 与局部纹理伪影，最后把 correspondence 写进 diffusion 目标。</li>
+<li><strong>核心直觉</strong>：不同视角的错误必须共同修；边缘比平坦区更脆弱；几何可靠性要单独监督；恢复结果仍只是证据，不是隐藏真值。</li>
+<li><strong>真实输入例子</strong>：四张 HEVC QP42 的房间图→CPE 识别压缩→CAE 标记门框/文字边缘→多视角 diffusion→VGGT 估位姿→novel view。</li>
+<li><strong>公式来源与优化行为</strong>：$\mathcal{L}_{CaRL}$ 让 latent 携带压缩上下文；$e(I)$ 提供局部复杂度线索；$\mathcal{L}$ 把 artifact、correspondence 与 perceptual 三个目标合并。</li>
+<li><strong>实验设计→答案</strong>：是否损伤几何→多 codec/QP；是否有效→VGGT/MEt3R/NVS；组件是否必要→Table 8–12；是否可部署→Table 13。答案是几何改善伴随显存开销，不能外推到真实隐藏面。</li>
+<li><strong>论文真正留下的结论</strong>：多视角 restoration 需要显式几何目标；单图 PSNR 不是充分指标。</li>
+<li><strong>最脆弱隐含前提</strong>：对应关系大体可靠，场景静态，训练压缩链覆盖部署分布。</li>
+<li><strong>一周最小复现</strong>：只做合成四视角、两 codec、三 QP；训练小 CAE，比较独立 restoration 与 shared correspondence 的 inlier/Sampson/可见轮廓。</li>
+<li><strong>最强反例</strong>：四个视角都看不到柜子背面；模型可生成一致的门，却无法知道门是否存在。</li>
+<li><strong>非增量后续</strong>：把 compression-aware evidence router 与可撤销的三维 amodal posterior 合并，而不是继续堆更大的 diffusion。</li>
+</ol>
+<h3 id="_1">深层诊断卡</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面症状</td>
+<td>压缩后匹配少、位姿漂移、新视角闪烁</td>
+</tr>
+<tr>
+<td>第一层根因</td>
+<td>视角依赖的压缩伪影破坏对应</td>
+</tr>
+<tr>
+<td>第二层根因</td>
+<td>二维 restoration 与三维几何目标错配，且不可观测区域本来多解</td>
+</tr>
+<tr>
+<td>方法作用点</td>
+<td>codec/QP prior、CAE、cross-view loss、3D attention</td>
+</tr>
+<tr>
+<td>隐含前提</td>
+<td>对应正确、场景静态、压缩链可覆盖</td>
+</tr>
+<tr>
+<td>失败触发器</td>
+<td>重复纹理、反射透明、动态物体、OOD codec、所有视角都遮挡</td>
+</tr>
+<tr>
+<td>迁移必要条件</td>
+<td>visible/unknown/generated 分离，新增证据可撤销</td>
+</tr>
+<tr>
+<td>反证实验</td>
+<td>注入错误 correspondence，测几何损失是否放大共同错误</td>
+</tr>
+<tr>
+<td>证据边界</td>
+<td>证明几何输入可靠性提升，不证明真实隐藏几何恢复</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1scenebloom">泛读 1｜SceneBloom：把室内场景生成从“摆得像”变成“能在物理约束下运行”</h2>
+<p>原始出处：<a href="https://arxiv.org/abs/2610.32978">arXiv:2610.32978</a>，首次公开 <strong>2026 年 10 月</strong>；本次读取摘要和项目页，arXiv HTML 尚未提供，未下载 PDF。代码：<a href="https://github.com/Tinaliu0123/scenebloom">GitHub</a>。</p>
+<h3 id="_2">先说人话</h3>
+<p>SceneBloom 解决的是：给一个房间类型或语言要求，怎样批量生成既像真实房间、又能放进仿真器训练具身智能的 3D 室内环境。普通生成器会把沙发、桌子、门都摆出来，但可能互相穿插、超出房间边界或挡住可行走区域。它用 diffusion layout sampling 先产生多种家具布局，再用 contract-guided 3D compiler 做几何拟合和局部姿态修正。</p>
+<h3 id="_3">摘要拆解、术语与因果链</h3>
+<p>【原文事实】方法由 hierarchical sampler 和 compiler 组成；覆盖五种房间类型；作者声称无检测 mesh collision/out-of-bounds，并在 held-out real scans 上训练出的导航策略成功率更高。代码公开。</p>
+<p><strong>Contract-guided compilation</strong> 的直觉是把“布局提议”当成待编译程序：合同规定房间边界、功能区、接触和不碰撞条件；编译器不能只追求图像逼真，还要把违反约束的姿态修回可执行几何。输入文本/房间先验→功能区与家具候选→扩散布局→关系图/几何约束→局部 pose correction→可运行场景。失败触发器是合同没有表达的真实条件，例如软家具变形、开门扫掠、人体尺度变化。</p>
+<h3 id="_4">深层缺陷与迁移</h3>
+<p>第一层缺陷：无碰撞只是静态离散检查。第二层根因：物理可行性包含连续运动、接触力和可达性，检测器只覆盖实现的谓词。对三维 amodal 的迁移价值在于“生成完整场景后再用几何门禁筛选”；必要条件是可见 mask、空闲空间和物体关系可计算。若只用视觉评分，会奖励看起来合理但背后穿插的补全。</p>
+<h3 id="_5">实验与证据边界</h3>
+<p>摘要支持物理稳定性和导航迁移，但没有给出完整表格、场景数量以外的误差分解，不能据此声称真实世界几何恢复已解决。后续阅读应核对碰撞检测采样密度、导航策略是否利用了同一场景先验，以及“成功率更高”是否与真实扫描域差有关。</p>
+<h3 id="aris-3-idea">ARIS 问题诊断与 3 个 idea</h3>
+<ol>
+<li>真问题是可生成布局与可执行几何的接口缺口；需要 compiler 因为视觉合理不等于物理可行；可能有效的原因是把约束转成局部可测反馈。前提是关系抽取正确，失败于未知功能和动态物体。</li>
+<li><strong>Idea 1（前提检验）</strong>：把静态碰撞换成连续扫掠体检查；假设导航提升来自可达性而非“无碰撞”本身；最小实验 20 个房间比较静态/扫掠门禁，阳性是可达率显著提高，阴性说明布局先验已足够，无信号说明路径规划不是瓶颈。</li>
+<li><strong>Idea 2（反事实）</strong>：给同一布局注入一个不可见悬空物，观察视觉评估与几何门禁是否分歧；阳性说明门禁抓到代理盲区，阴性说明检查器覆盖不足，无信号说明反例太弱。</li>
+<li><strong>Idea 3（三维 amodal）</strong>：把可见家具表面、被遮挡体积和生成候选分开，新增视角只更新隐藏候选；最小实验是同一正面、不同背面房间对，测 hidden occupancy coverage 和撤销率。全部为研究假设，未运行。</li>
+</ol>
+<h3 id="paperforge">PaperForge 十二段式与诊断卡</h3>
+<p>重要性是仿真数据的物理有效性；相关工作常把布局采样和 mesh 修补分开；作者路径是采样多样性→合同约束→编译修正→导航验证。真实输入例子是“带窗客厅”→功能区→沙发/桌子布局→合同检查→局部平移→导航。公式/目标可核验程度受摘要限制，不能补写未读方法式。最强反例是静态不碰撞但开门时碰撞。非增量后续是带 belief 的可撤销场景编译。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面症状</td>
+<td>房间好看但导航失败</td>
+</tr>
+<tr>
+<td>第一层根因</td>
+<td>静态布局违反局部几何</td>
+</tr>
+<tr>
+<td>第二层根因</td>
+<td>物理/功能约束未被评分完整表达</td>
+</tr>
+<tr>
+<td>方法作用点</td>
+<td>layout sampler + contract compiler</td>
+</tr>
+<tr>
+<td>隐含前提</td>
+<td>关系抽取和合同足够覆盖任务</td>
+</tr>
+<tr>
+<td>失败触发器</td>
+<td>动态门、软体、未知功能、遮挡多解</td>
+</tr>
+<tr>
+<td>迁移必要条件</td>
+<td>visible/hidden/unknown 分离，门禁可解释</td>
+</tr>
+<tr>
+<td>反证实验</td>
+<td>静态过关、连续运动失败的配对场景</td>
+</tr>
+<tr>
+<td>证据边界</td>
+<td>摘要级证据，完整方法与数值需后续核验</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2citylift">泛读 2｜CityLift：先在共享场景坐标里搭骨架，再给每栋楼单独分配细节预算</h2>
+<p>原始出处：<a href="https://arxiv.org/abs/2610.32728">arXiv:2610.32728</a>，首次公开 <strong>2026 年 10 月</strong>；只读 HTML，不下载 PDF。项目页：<a href="https://ranhaogong.github.io/CityLift/">CityLift</a>。</p>
+<h3 id="_6">先说人话与摘要</h3>
+<p>单张城市斜视图同时包含两类信息：建筑彼此怎么摆，以及每栋楼自己长什么样。若整个街区用一个固定分辨率网格，楼的位置能对齐但立面细节不够；若每栋楼独立生成，细节好却容易漂移、比例错乱。CityLift 先生成共享 scene-space 的 urban scaffold，再把每栋楼的 occupancy 和 hidden feature field 通过同一个坐标映射送进 local volume，用 flow model 生成细节，最后按同一映射装回场景。</p>
+<h3 id="_7">方法、术语与深层因果</h3>
+<p>【原文事实】CityLift-5K 含 4,997 个合成场景；输入为斜视图和 building instance masks。Table 1 中 building CD 为 1.011、scene CD 为 1.079，scene F@2 为 0.855；UrbanScene3D 上 scene CD 1.577，InstanceBuilding 上 1.531。去掉 scene guidance 后 scene CD 从 1.079 变为 2.590；去掉 aligned hidden-feature injection 后 building CD 变为 2.510。</p>
+<p><strong>Generative spatial inheritance</strong> 不是普通 crop。它让 coarse scaffold 的空间坐标、occupancy 和 hidden features 一起继承到局部网格；因此“局部细节”不会丢掉“它在街区中的位置”。输入图像/实例 mask→scene/instance 双流→coarse occupancy+feature field→局部坐标传输→局部 flow→mesh→按原坐标装回。</p>
+<p>第一层根因是遮挡和透视造成楼高、相对尺度、朝向多解；第二层根因是布局与几何被放在不同坐标系统时，误差无法通过同一梯度路径互相约束。CityLift 的作用点是共享坐标和分辨率分配，不是从无信息中唯一恢复被遮挡立面。</p>
+<h3 id="aris">缺陷、迁移和 ARIS</h3>
+<p>缺陷一：合成城市的建筑功能、相机、光照和遮挡分布有限；真实 UAV 有长尾高度、树木遮挡、动态车辆、尺度变化。缺陷二：CD/F-score 奖励表面距离，不直接评估不可见屋顶拓扑或结构安全。缺陷三：scene guidance 错了会把错误位置传给每栋楼，局部生成再精细也只是“精细地错”。</p>
+<p>迁移到三维 amodal：共享 scaffold 可作为 observed geometry 的空间锚，local flow 作为 hidden completion；必要条件是把可见表面与隐藏候选分开，并让新视角可以推翻局部生成。若把所有 hidden feature 当真值，跨视角会形成一致但错误的城市背面。</p>
+<h3 id="paperforge-3-idea">PaperForge 十二段式、实验和 3 个 idea</h3>
+<p>作者路径是“单一全局网格细节不足→scene/instance 耦合→空间继承→局部高分辨率再装配”。真实例子是六栋楼的斜视图→mask→共同场景 scaffold→楼 A 局部生成→按 $T_i$ 装回。实验回答的是几何和布局是否同时改善；最脆弱前提是实例 mask、相机和共享坐标足够可靠。</p>
+<ol>
+<li><strong>前提检验</strong>：用相同共视率、不同基线的参考图替换，测 scaffold 误差；阳性说明坐标锚是瓶颈，阴性说明形状先验占主导，无信号说明数据太易。</li>
+<li><strong>反事实</strong>：固定局部生成器，只扰动 scene scaffold 的平移/高度，测错误是否被 inheritance 放大；阳性是局部 CD 随 scaffold 误差线性恶化，阴性表示生成器能自行纠正，无信号说明扰动被归一化。</li>
+<li><strong>三维 amodal</strong>：让每栋楼输出 observed/unknown/generated 三个 occupancy，第二视角只更新 unknown；最小实验用 CityLift-5K 的合成多视角，报告 hidden IoU、visible reprojection、撤销率。均未运行。</li>
+</ol>
+<h3 id="_8">深层诊断卡</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面症状</td>
+<td>建筑细节好但位置/尺度错</td>
+</tr>
+<tr>
+<td>第一层根因</td>
+<td>全局布局与局部几何分辨率冲突</td>
+</tr>
+<tr>
+<td>第二层根因</td>
+<td>坐标系和监督路径割裂，遮挡多解未显式建模</td>
+</tr>
+<tr>
+<td>方法作用点</td>
+<td>scene scaffold、spatial inheritance、local flow</td>
+</tr>
+<tr>
+<td>隐含前提</td>
+<td>instance mask/相机/scene coordinate 可学</td>
+</tr>
+<tr>
+<td>失败触发器</td>
+<td>树木/车辆遮挡、UAV尺度长尾、动态场景</td>
+</tr>
+<tr>
+<td>迁移必要条件</td>
+<td>observed/hidden 分离，新视角可撤销</td>
+</tr>
+<tr>
+<td>反证实验</td>
+<td>scaffold 错误的局部细节放大测试</td>
+</tr>
+<tr>
+<td>证据边界</td>
+<td>合成和两个外部场景的几何改善，不等于完整屋顶真值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3easy-3dfy">泛读 3｜Easy-3Dfy：把物体生成和场景布局拆开，再用几何对应接回去</h2>
+<p>原始出处：<a href="https://arxiv.org/abs/2610.32250">arXiv:2610.32250</a>，首次公开 <strong>2026 年 10 月</strong>；只读 HTML，不下载 PDF。项目页：<a href="https://easy3dfy.github.io">easy3dfy.github.io</a>。</p>
+<h3 id="_9">先说人话</h3>
+<p>端到端单图场景重建常见的两难是：强大的对象生成器能把一把椅子补得很细，但不知道椅子在房间里应放在哪里；场景模型知道布局，却生成不出高质量物体。Easy-3Dfy 让两者各自做擅长的事：对象模型生成完整 mesh，场景基础模型生成 partial pointmap，然后用 RPF-based aligner 对齐 object-local mesh 和场景点图，恢复物体的尺度、旋转和平移。</p>
+<h3 id="_10">方法与术语</h3>
+<p>【原文事实】方法强调 object generation 与 scene layout decoupling；不需要完整 scene-level supervision；在 Scene-Maker 和 3D-FUTURE200 多个几何指标上超过 SAM-3Dfy。RPF 对齐器建立局部 mesh 与 partial scene pointmap 的几何 correspondence。</p>
+<p><strong>RPF-based aligner</strong> 的直觉是先在几何空间中找“同一物体的局部结构”，再恢复相似变换，而不是让一个网络同时猜 mesh 和 pose。输入图像/物体 mask→对象裁剪和 amodal completion→专门 3D object generator→partial scene pointmap→RPF correspondence→similarity transform→scene assembly。</p>
+<p>缺陷的两层根因：第一层是部分点图只覆盖可见表面，匹配会在对称物体、重复纹理和稀疏点上多解；第二层是几何对齐损失默认 object-local mesh 与 scene pointmap 属于同一对象，错误的 mask 或遮挡会把“合理的另一个物体”对齐进去。它解决接口耦合，不能凭空创造未观测深度。</p>
+<h3 id="_11">实验、贡献、迁移</h3>
+<p>实验回答“拆分是否保留两边强项”。作者报告跨多个几何指标持续超过 SAM-3Dfy，但摘要没有给出完整数值与误差分层；应把结论限定在给定数据和协议。迁移到三维 amodal 时，RPF 可用作 visible surface anchoring，object generator 作为 hidden candidate generator；必须加入空闲空间、遮挡顺序和跨视角一致性，否则错 mesh 会被稳定地摆到正确位置。</p>
+<h3 id="aris-paperforge">ARIS 与 PaperForge</h3>
+<p>问题重要性是模块化降低场景重建耦合；相关工作端到端方案把对象和布局互相牵制；作者路径是“对象质量与场景空间是两种尺度→几何 correspondence 做桥”。最强反例是同类两把外观近似的椅子，partial pointmap 无法决定属于哪一把。</p>
+<ol>
+<li><strong>前提检验</strong>：把 RPF 对齐的局部点密度逐步降低，测 pose/hidden completion 的分界；阳性是点密度存在阈值，阴性说明语义先验主导，无信号表示对齐器不依赖点图。</li>
+<li><strong>反事实诊断</strong>：固定 object mesh，给 mask 做膨胀/收缩/交换，比较 RPF、ICP、语义匹配的错误传播；阳性说明 RPF 对错误 mask 更敏感或更稳健，阴性说明对象生成器先出错，无信号表示扰动太小。</li>
+<li><strong>三维 amodal</strong>：对齐 observed pointmap 后只生成 unknown surface 候选，不允许候选改写 observed points；新视角到来时用 visible reprojection 选择候选。最小实验是 30 个同正面异背面物体，测 hidden IoU、visible Chamfer、撤销率。均未运行。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面症状</td>
+<td>物体细节好但场景位置不稳</td>
+</tr>
+<tr>
+<td>第一层根因</td>
+<td>对象局部坐标与场景坐标接口断裂</td>
+</tr>
+<tr>
+<td>第二层根因</td>
+<td>部分观测对应多解，单一对齐结果过度自信</td>
+</tr>
+<tr>
+<td>方法作用点</td>
+<td>object/scene 解耦 + RPF correspondence</td>
+</tr>
+<tr>
+<td>隐含前提</td>
+<td>mask 和 partial pointmap 属于同一对象</td>
+</tr>
+<tr>
+<td>失败触发器</td>
+<td>对称、重复纹理、mask错、稀疏深度</td>
+</tr>
+<tr>
+<td>迁移必要条件</td>
+<td>observed/hidden 分离、跨视角验证</td>
+</tr>
+<tr>
+<td>反证实验</td>
+<td>同外观异背面、同类物体交换 mask</td>
+</tr>
+<tr>
+<td>证据边界</td>
+<td>摘要和 HTML 支持流程及相对优势，未核验完整数值表</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4part-dino">泛读 4｜Part-DINO：先修正边界，再使用语义特征发现部件</h2>
+<p>原始出处：<a href="https://arxiv.org/abs/2610.32293">arXiv:2610.32293</a>，首次公开 <strong>2026 年 10 月</strong>；只读 HTML，不下载 PDF。</p>
+<h3 id="_12">先说人话与摘要</h3>
+<p>DINO 的 patch token 有丰富语义，但一个 patch 跨过两个部件边界时，里面已经混进了两种像素。模型可能知道“这是鸟的身体”，却不知道身体和翅膀的精确分界。Part-DINO 不重训 DINO，而是用低层图像结构产生 region，再在 region 内池化 DINO 特征并聚类成 parts。</p>
+<p>【原文事实】作者在 26,459 个 foreground patches 上观察到，patch 与部件边界重叠越多，feature entropy 越高、top-2 assignment margin 越小。Part-DINO 在 CUB、CelebA、PartImageNet-OOD/Seg 上优于 patch-based training-free baseline。CUB $K=16$ 时，RAMP+Watershed 的 ARI 46.00，高于 SLIC 500 regions 的 38.64；总耗时约 680 ms，其中 DINO/SAM backbone 占主要部分。</p>
+<h3 id="_13">术语、方法与因果链</h3>
+<p><strong>Feature entropy</strong> 不是“敏感度指标”，这里表示一个区域特征对多个部件原型分配得有多不确定。边界混合导致一个 token 同时支持多个 part，分配概率变平，熵上升。若删掉 region 重分割，DINO 语义仍在，但边界错误会被聚类放大。</p>
+<p>输入图像→RAMP edge/Watershed regions→region pooling→global prototypes→region assignment→part clusters。第一层根因是 patch 网格与真实部件边界不对齐；第二层根因是 DINO 的 invariance 训练鼓励语义稳定，但没有训练信号要求 patch 内像素属于同一 part，所以“语义强”与“边界准”是两个目标。</p>
+<h3 id="aris_1">缺陷、迁移和 ARIS</h3>
+<p>论文承认两点：必须预设 part 数 $K$；RAMP 依赖局部对比度，低对比/均匀光照会漏边缘，强阴影会造出假边界。对 amodal 的迁移价值是把 visible mask/边界作为测量，把 hidden part 当候选；不能把低层边缘直接解释成真实三维 part boundary。透明、烟雾、反射和 UAV 远距小目标会触发错边界。</p>
+<p>PaperForge：问题是 training-free part boundaries；相关工作只聚类 patch；作者路径是先证实边界混合，再把边界来源从语义 backbone 拆出；真实例子是鸟图→Watershed region→DINO pooling→聚类；最强反例是阴影比真实结构更强；非增量后续是带来源和不确定度的三维 part belief。</p>
+<ol>
+<li><strong>前提检验</strong>：对同一图施加光照梯度和真实结构边界，比较 RAMP 与语义边界；阳性是结构边界更稳定，阴性说明低层结构已足够，无信号说明分辨率限制。</li>
+<li><strong>反事实</strong>：固定 DINO features，仅替换 patch/region assignment，测边界噪声如何传播；阳性是 region 单独解释大部分收益，阴性说明 prototype 更重要，无信号表示 region 不是真瓶颈。</li>
+<li><strong>三维 amodal</strong>：将 region token 与可见深度/遮挡 mask 一起 lift 到 3D part field；visible region 强约束，hidden part 输出多个候选。最小实验是 20 个具有相同前景边界、不同背面部件的对象。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面症状</td>
+<td>part boundary 模糊、语义串色</td>
+</tr>
+<tr>
+<td>第一层根因</td>
+<td>patch 跨越真实边界</td>
+</tr>
+<tr>
+<td>第二层根因</td>
+<td>语义不变性目标没有边界纯度监督</td>
+</tr>
+<tr>
+<td>方法作用点</td>
+<td>RAMP/Watershed region + DINO pooling</td>
+</tr>
+<tr>
+<td>隐含前提</td>
+<td>低层强边缘大致对应 part 边界</td>
+</tr>
+<tr>
+<td>失败触发器</td>
+<td>阴影、低对比、透明、烟雾、远距小目标</td>
+</tr>
+<tr>
+<td>迁移必要条件</td>
+<td>visible/hidden part 分离、跨视角约束</td>
+</tr>
+<tr>
+<td>反证实验</td>
+<td>结构边界与光照边界的配对扰动</td>
+</tr>
+<tr>
+<td>证据边界</td>
+<td>2D training-free part discovery 提升，不等于三维部件真值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5semgeo-gen">泛读 5｜SemGeo-Gen：用近似三维对应监督替代昂贵的人手点对点标注</h2>
+<p>原始出处：<a href="https://arxiv.org/abs/2610.32663">arXiv:2610.32663</a>，首次公开 <strong>2026 年 10 月</strong>；只读 HTML，不下载 PDF。项目页：<a href="https://bgu-cs-vil.github.io/SemGeo-Gen/">SemGeo-Gen</a>。</p>
+<h3 id="_14">先说人话</h3>
+<p>不同实例的“同一个部件”很难逐点标注：两辆车的车门形状不同，两把椅子的扶手也不在完全相同的位置。SemGeo-Gen 不假装能得到精确 correspondence，而是从大规模、粗旋转对齐的 3D 物体集合中，先把多视角 DINO 特征 lift 到 3D，再用 continuous piecewise-affine registration 对齐，最后用语义相似度剪掉不可信匹配。输出是可规模化、带覆盖率取舍的 approximate semantic-geometric correspondences。</p>
+<h3 id="_15">方法、术语和因果链</h3>
+<p>【原文事实】管线包含 feature lifting、semantic similarity、optional pair filtering、CPA registration、correspondence extraction、semantic consistency pruning、projection to 2D。KeypointNet 上报告 PCK@0.10 93%、PCK@0.15 97%，但 median GT-used rate 只有 57.6%；在 SPair-71k，预训练后 GeoAware-SC mean PCK 从 79.36 到 83.73，MARCO 从 86.34 到 89.30。</p>
+<p><strong>CPA registration</strong> 把形变分成局部 piecewise-affine 单元，比一个全局刚体/仿射更能容纳实例差异，但仍不是“真实对应”的证明。<strong>GT-used rate</strong> 很关键：算法可以删除难匹配点来提高 PCK，覆盖下降后指标看起来更好。它是证据边界，不是坏指标，但必须和 coverage 一起报告。</p>
+<p>输入弱对齐 3D 集合→多视角 DINO feature→3D feature lifting→CPA 局部变形→语义 pruning→3D-3D/3D-2D/2D-2D supervision。第一层根因是手工 correspondence 成本高；第二层根因是跨实例语义不是严格同构，若强行密集匹配会把结构差异当作噪声。语义过滤的作用是保守地丢弃无法解释的匹配，而不是恢复不存在的对应。</p>
+<h3 id="aris_2">缺陷、迁移与 ARIS</h3>
+<p>作者承认依赖 rigid、approximately aligned objects；CPA 对大结构差异不足；DINO 特征可能不稳；synthetic 3D 到 real image 有域差。对三维 amodal 的迁移价值是把“部件先验”从硬对应改成带 coverage 的候选约束。目标任务需要把 observed correspondence 与 hypothesized correspondence 分开；新视角可以拒绝候选。若把 93% PCK 当作完整几何正确率，会忽略 42.4% keypoints 未被使用。</p>
+<p>PaperForge：问题是可规模化监督；相关工作依赖人工点标注或昂贵 dense matching；作者路径是接受 approximate→用语义和局部几何共同筛选→投影生成多种监督；真实例子是两辆车的 3D meshes→DINO feature lift→CPA→车门候选→投影到图像；最强反例是同类对象结构缺失或左右对称；非增量后续是带 coverage、uncertainty 和可撤销更新的 3D part belief。</p>
+<ol>
+<li><strong>前提检验</strong>：对齐误差从 0°/5°/10°/20° 扰动，测 PCK 与 coverage；阳性是存在可识别阈值，阴性说明语义特征吸收错位，无信号说明数据太简单。</li>
+<li><strong>反事实</strong>：固定 DINO feature，只交换 semantic pruning 与 CPA 顺序，测错误对应是否在局部形变中自强化；阳性是先 pruning 更稳健，阴性说明注册先验占主导，无信号说明两者独立。</li>
+<li><strong>三维 amodal</strong>：把每个 approximate correspondence 作为隐空间候选，不把未观测部件强行对齐；新视角出现时按 visible evidence 更新候选权重。最小实验 30 个同正面异背面对象，报告 hidden part coverage、visible reprojection、候选撤销率。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面症状</td>
+<td>匹配点少、跨实例错配</td>
+</tr>
+<tr>
+<td>第一层根因</td>
+<td>实例形变和类别内差异</td>
+</tr>
+<tr>
+<td>第二层根因</td>
+<td>精确 correspondence 本身不可观测，强监督会制造假标签</td>
+</tr>
+<tr>
+<td>方法作用点</td>
+<td>DINO lift、CPA、semantic pruning</td>
+</tr>
+<tr>
+<td>隐含前提</td>
+<td>粗旋转对齐和语义特征足够稳定</td>
+</tr>
+<tr>
+<td>失败触发器</td>
+<td>大结构差异、非刚性、对称、真实域偏移</td>
+</tr>
+<tr>
+<td>迁移必要条件</td>
+<td>coverage/uncertainty 与 visible/hidden 分离</td>
+</tr>
+<tr>
+<td>反证实验</td>
+<td>同 PCK 不同 coverage 的候选配对</td>
+</tr>
+<tr>
+<td>证据边界</td>
+<td>近似监督提升 correspondence 模型，不等于真实隐藏表面恢复</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_16">今日来源与执行状态</h2>
+<ul>
+<li>精读原始出处：https://arxiv.org/abs/2610.32800；正式会议信息：SIGGRAPH Asia 2026 Conference Papers（arXiv v1）。</li>
+<li>精读 PDF 缓存：<code>D:\CV-Literature\commen\.work-2026-10-26\download-cache\CompMVR_2610.32800v1.pdf</code>；SHA256：<code>4be2731588e3273fdcea2917cd809efbe06550d3b320e078a228e68881aaa05a</code>。</li>
+<li>Zotero 条目：<code>F81MIUGM</code>；附件：<code>VZTQC6ZF</code>；月份集合：<code>每日精读论文/2026/10</code>。</li>
+<li>Nature Reader：<a href="../md/longform/2026-10/compmvr-reader/paper.md">source-grounded 读本</a>；ARIS 汇总：<a href="../md/../../research/aris/2026-10-26.json"><code>research/aris/2026-10-26.json</code></a>。</li>
+<li>五篇泛读未下载 PDF；SceneBloom 的 arXiv HTML 尚未提供，已明确标注为摘要+项目页证据。</li>
+</ul></body></html>

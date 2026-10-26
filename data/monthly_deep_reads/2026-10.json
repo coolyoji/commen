@@ -239,6 +239,20 @@
       "zotero_attachment_key": "6IERBDNB",
       "pdf_verified": true,
       "pdf_sha256": "a4976d13171eba4ca9e0c4c05b75821839bfef08624b7dbf18cbfa904bec0b39"
+    },
+    {
+      "date": "2026-10-26",
+      "paper_id": "arxiv:2610.32800",
+      "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction",
+      "publication_month": "2026-10",
+      "read_month": "2026-10",
+      "longform": "docs/md/longform/2026-10/compmvr.md",
+      "reader": "docs/md/longform/2026-10/compmvr-reader/paper.md",
+      "code": "https://mchaewon.github.io/CompMVR-project-page/",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "F81MIUGM",
+      "zotero_attachment_key": "VZTQC6ZF",
+      "pdf_verified": true
     }
   ]
 }

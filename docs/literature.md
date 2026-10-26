@@ -1,3 +1,7 @@
+## 2026-10-26
+
+精读 **CompMVR**（压缩感知多视角恢复，原始发表月份：2026-10）：[精读长文](md/longform/2026-10/compmvr.md)、[Nature Reader](md/longform/2026-10/compmvr-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/10`，条目 `F81MIUGM`、附件 `VZTQC6ZF`，下载/storage SHA256 一致。泛读补充 SceneBloom、CityLift、Easy-3Dfy、Part-DINO、SemGeo-Gen，重点覆盖场景编译、空间继承、对象-场景几何对齐、部件边界和近似三维对应；日报含六篇 ARIS、PaperForge 和深层诊断卡。
+
 # CV 文献长期归档
 
 ## 2026-10-25

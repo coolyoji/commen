@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-26",
+  "repo": "D:\\CV-Literature\\commen",
+  "deep_read": {
+    "paper_id": "arxiv:2610.32800",
+    "pdf_path": "D:\\CV-Literature\\commen\\.work-2026-10-26\\download-cache\\CompMVR_2610.32800v1.pdf",
+    "pdf_downloaded": true,
+    "pdf_sha256": "4be2731588e3273fdcea2917cd809efbe06550d3b320e078a228e68881aaa05a",
+    "source_format": "pdf-text"
+  },
+  "zotero": {
+    "data_dir": "C:\\Users\\华硕\\Zotero",
+    "sqlite_backup": "D:\\CV-Literature\\commen\\.work-2026-10-26\\zotero.sqlite.pre-import-20261026.bak",
+    "collection": "每日精读论文/2026/10",
+    "item_key": "F81MIUGM",
+    "attachment_key": "VZTQC6ZF",
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\VZTQC6ZF\\Kim et al - 2026 - CompMVR.pdf",
+    "download_storage_hash_match": true,
+    "top_level_item_verified": true,
+    "month_collection_verified": true,
+    "child_attachment_verified": true,
+    "storage_pdf_verified": true,
+    "sqlite_quick_check": "ok",
+    "running_during_backup": false,
+    "running_during_import": false
+  },
+  "browse": {
+    "count": 5,
+    "pdf_downloaded": false,
+    "source_formats": [
+      "HTML",
+      "arXiv abstract + project page"
+    ]
+  },
+  "nature_reader": {
+    "path": "docs/md/longform/2026-10/compmvr-reader/paper.md",
+    "source_grounded": true,
+    "equations": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "figure_crops": "not embedded; figure/table values recorded from HTML/PDF text"
+  },
+  "aris": {
+    "path": "research/aris/2026-10-26.json",
+    "paper_count": 6,
+    "ideas_per_paper": 3,
+    "gpu_started": false
+  },
+  "git": {
+    "remote": "https://github.com/coolyoji/commen.git",
+    "push_pending": true
+  }
+}

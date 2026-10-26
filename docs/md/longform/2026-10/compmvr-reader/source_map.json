@@ -1,0 +1,170 @@
+{
+  "paper": {
+    "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction",
+    "venue": "SIGGRAPH Asia 2026 Conference Papers（arXiv v1）",
+    "source_type": "pdf",
+    "language": "en",
+    "source_path": "D:\\CV-Literature\\commen\\.work-2026-10-26\\download-cache\\CompMVR_2610.32800v1.pdf"
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "paragraph",
+      "order": 1,
+      "original_text": "compression-induced cross-view geometric inconsistency",
+      "translation": "压缩导致的跨视角几何不一致",
+      "confidence": "high"
+    },
+    {
+      "id": "S002",
+      "page": 2,
+      "type": "paragraph",
+      "order": 2,
+      "original_text": "existing methods are primarily image or video centric",
+      "translation": "既有方法主要面向图像或视频恢复",
+      "confidence": "high"
+    },
+    {
+      "id": "S003",
+      "page": 4,
+      "type": "paragraph",
+      "order": 3,
+      "original_text": "Stage 1 learns a compression-aware latent; Stage 2 performs multi-view restoration",
+      "translation": "Stage 1学习压缩感知latent，Stage 2执行多视角恢复",
+      "confidence": "high"
+    },
+    {
+      "id": "S004",
+      "page": 8,
+      "type": "table",
+      "order": 4,
+      "original_text": "HEVC QP42 AUC@5 compressed 22.59, Ours 24.34, GT 24.55",
+      "translation": "HEVC QP42匹配指标从22.59升到24.34，未压缩GT为24.55",
+      "confidence": "high"
+    },
+    {
+      "id": "S005",
+      "page": 10,
+      "type": "table",
+      "order": 5,
+      "original_text": "correspondence loss improves inlier ratio, Sampson error, AUC@5 and MEt3R",
+      "translation": "对应损失改善几何指标",
+      "confidence": "high"
+    },
+    {
+      "id": "S006",
+      "page": 11,
+      "type": "paragraph",
+      "order": 6,
+      "original_text": "not yet fully feed-forward and requires additional GPU memory",
+      "translation": "尚非完全前馈且需要额外显存",
+      "confidence": "high"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "block_ids": [
+        "S001"
+      ]
+    },
+    {
+      "page": 2,
+      "block_ids": [
+        "S002"
+      ]
+    },
+    {
+      "page": 4,
+      "block_ids": [
+        "S003"
+      ]
+    },
+    {
+      "page": 8,
+      "block_ids": [
+        "S004"
+      ]
+    },
+    {
+      "page": 10,
+      "block_ids": [
+        "S005"
+      ]
+    },
+    {
+      "page": 11,
+      "block_ids": [
+        "S006"
+      ]
+    }
+  ],
+  "figures": [],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 4,
+      "equation_number": "1-3",
+      "latex": "\\mathcal{L}_{\\mathrm{CaRL}}=\\lVert I_{\\mathrm{recon}}-I_{\\mathrm{gt}}\\rVert_1+\\lambda_{\\mathrm{QP}}\\mathcal{L}_{\\mathrm{QP}}+\\lambda_{\\mathrm{codec}}\\mathcal{L}_{\\mathrm{codec}}",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "confidence": "high",
+      "image_path": null
+    },
+    {
+      "id": "E002",
+      "page": 5,
+      "equation_number": null,
+      "latex": "e(I)=|\\partial_x I|+|\\partial_y I|",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "confidence": "high",
+      "image_path": null
+    },
+    {
+      "id": "E003",
+      "page": 6,
+      "equation_number": "10",
+      "latex": "\\mathcal{L}=\\mathcal{L}_{\\mathrm{CAE}}+\\mathcal{L}_{\\mathrm{corr}}+\\mathcal{L}_{\\mathrm{per}},\\quad \\mathcal{L}_{\\mathrm{per}}=\\mathcal{L}_{\\mathrm{recon}}+\\mathcal{L}_{\\mathrm{DISTS}}",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "confidence": "high",
+      "image_path": null
+    }
+  ],
+  "glossary": [
+    {
+      "term": "compression prior",
+      "translation": "压缩先验",
+      "note": "codec/QP条件"
+    },
+    {
+      "term": "CAE",
+      "translation": "压缩伪影估计器",
+      "note": "空间残差图"
+    },
+    {
+      "term": "correspondence loss",
+      "translation": "跨视角对应损失",
+      "note": "依赖匹配正确"
+    },
+    {
+      "term": "MEt3R",
+      "translation": "多视角一致性指标",
+      "note": "不等于隐藏真值"
+    }
+  ]
+}

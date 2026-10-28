@@ -1,3 +1,11 @@
+## 2026-10-28
+
+精读 **FVQ**（原始发表月份2026-10，阅读月份2026-10）：[长文](md/longform/2026-10/fvq.md)、[Nature Reader](md/longform/2026-10/fvq-reader/paper.md)。Zotero条目`W0GRZR5H`、附件`0N82DQPR`，下载/storage哈希一致。泛读：honeycomb-surfels、thinkworld、imagirep、groundcontrol、scintbench；只读HTML、不下载PDF。[六篇完整深层分析及18项待验证idea](md/2026-10-28.md) · [网页](html/2026-10-28.html)。
+
+## 2026-10-27
+
+精读 **GPA-VGGT**（原始发表月份2026-10，阅读月份2026-10）：[长文](md/longform/2026-10/gpa-vggt.md)、[Nature Reader](md/longform/2026-10/gpa-vggt-reader/paper.md)。Zotero条目`SKVOF99Y`、附件`W8DOHV4M`，下载/storage哈希一致。本批于10月28日补更。泛读：holorecon、splatscout、gcsr-occ、geogsplat、activealign；只读HTML、不下载PDF。[六篇完整深层分析及18项待验证idea](md/2026-10-27.md) · [网页](html/2026-10-27.html)。
+
 ## 2026-10-26
 
 精读 **CompMVR**（压缩感知多视角恢复，原始发表月份：2026-10）：[精读长文](md/longform/2026-10/compmvr.md)、[Nature Reader](md/longform/2026-10/compmvr-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/10`，条目 `F81MIUGM`、附件 `VZTQC6ZF`，下载/storage SHA256 一致。泛读补充 SceneBloom、CityLift、Easy-3Dfy、Part-DINO、SemGeo-Gen，重点覆盖场景编译、空间继承、对象-场景几何对齐、部件边界和近似三维对应；日报含六篇 ARIS、PaperForge 和深层诊断卡。

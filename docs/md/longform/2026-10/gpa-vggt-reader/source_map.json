@@ -1,0 +1,353 @@
+{
+  "paper": {
+    "title": "GPA-VGGT",
+    "venue": "Accepted to WACV 2027. Project page: https://noheat61.github.io/GPA-VGGT/",
+    "source_type": "pdf",
+    "language": "en",
+    "source_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\download-cache\\gpa-vggt_2610.37000v1.pdf",
+    "source_url": "https://arxiv.org/abs/2610.37000",
+    "version": "2610.37000v1",
+    "sha256": "c6adb4c33b988433f0f8ecc1915a9ecb436e55b1512c124c9df7107f48651ec1"
+  },
+  "scope": "source-grounded thematic reader, not full translation",
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "note",
+      "order": 1,
+      "original_text": "",
+      "english_paraphrase": "GPA-VGGT accelerates a pretrained geometry transformer without additional training by preserving queries and compressing context selectively.",
+      "translation": "GPA-VGGT 不额外训练，保留所有 query，并选择性压缩被查询的上下文，减少几何 Transformer 的推理时间。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "S002",
+      "page": 3,
+      "type": "note",
+      "order": 2,
+      "original_text": "",
+      "english_paraphrase": "Merging queries ties outputs of distinct locations. Omitting group sizes also redistributes attention, so dense geometry can degrade through different mechanisms.",
+      "translation": "合并 query 会让不同位置共享输出；省略组大小又会重新分配注意力。两条路径都能损伤稠密几何。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "C001",
+      "page": 3,
+      "type": "caption",
+      "order": 3,
+      "original_text": "",
+      "english_paraphrase": "Fig.2: output diversity and attention mass",
+      "translation": "上：是否合并query影响输出多样性；下：log-size补偿影响各帧的注意力分配。",
+      "confidence": "high",
+      "bbox": null
+    },
+    {
+      "id": "S003",
+      "page": 5,
+      "type": "note",
+      "order": 4,
+      "original_text": "",
+      "english_paraphrase": "Early blocks use frame attention with shared pooled context. Later blocks merge keys and values, retain every query, and reduce merging in sensitive middle blocks.",
+      "translation": "早期层使用帧内 attention 与共享 pooled context；后期层只合并 keys/values，保留 query，并对敏感中间层减少合并。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "C002",
+      "page": 5,
+      "type": "caption",
+      "order": 5,
+      "original_text": "",
+      "english_paraphrase": "Fig.4: architecture and merging pathways",
+      "translation": "GPA-VGGT整体结构：早期共享跨帧K/V；后期保query、合并K/V并加log-size。",
+      "confidence": "high",
+      "bbox": null
+    },
+    {
+      "id": "S004",
+      "page": 8,
+      "type": "note",
+      "order": 6,
+      "original_text": "",
+      "english_paraphrase": "At two hundred frames runtime decreases from 86.78 to 33.65 seconds. Accuracy remains close to the baseline under the reported evaluation settings.",
+      "translation": "200帧时间从86.78秒降到33.65秒；在论文评测设置下精度接近原模型。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "S005",
+      "page": 10,
+      "type": "note",
+      "order": 7,
+      "original_text": "",
+      "english_paraphrase": "Peak memory remains almost unchanged because full-length feed-forward activations remain. Separate ablations support both query preservation and size correction.",
+      "translation": "峰值显存几乎不变，因为全长FFN激活仍保留；组合消融支持保query和大小补偿各自的作用。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "S006",
+      "page": 8,
+      "type": "note",
+      "order": 8,
+      "original_text": "",
+      "english_paraphrase": "The evidence concerns pose and visible-surface geometry. It does not establish reconstruction of unobserved complete shapes.",
+      "translation": "证据主要覆盖位姿和可见表面几何，未建立对未观测完整形状的恢复能力。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "E001",
+      "page": 4,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "1",
+      "latex": "o_i=\\sum_{j=1}^{N_{\\mathrm{merged}}}\\operatorname{softmax}_{j}\\left(\\frac{q_i^\\top\\bar{k}_j}{\\sqrt d}+\\log s_j\\right)\\bar{v}_j",
+      "bbox": [
+        83,
+        644,
+        298,
+        683
+      ],
+      "confidence": "high",
+      "image_path": "assets/E001.png"
+    },
+    {
+      "id": "E002",
+      "page": 5,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "2",
+      "latex": "d(i)=\\arg\\max_{j\\in\\mathcal{D}}\\cos(P^\\top x_i,P^\\top x_j)",
+      "bbox": [
+        350,
+        671,
+        556,
+        697
+      ],
+      "confidence": "high",
+      "image_path": "assets/E002.png"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "block_ids": [
+        "S001"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 2,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 3,
+      "block_ids": [
+        "S002",
+        "C001"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 4,
+      "block_ids": [
+        "E001"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 5,
+      "block_ids": [
+        "S003",
+        "C002",
+        "E002"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 6,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 7,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 8,
+      "block_ids": [
+        "S004",
+        "S006"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 9,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 10,
+      "block_ids": [
+        "S005"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 11,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 12,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 13,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 14,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 15,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 16,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    }
+  ],
+  "figures": [
+    {
+      "id": "F001",
+      "page": 3,
+      "caption_id": "C001",
+      "image_path": "assets/F001.png",
+      "bbox": [
+        316,
+        70,
+        558,
+        319
+      ],
+      "bbox_units": "PDF points",
+      "placement_hint": "near_first_mention",
+      "placed_after": "S002",
+      "alt_text": "上：是否合并query影响输出多样性；下：log-size补偿影响各帧的注意力分配。",
+      "crop_verified": true
+    },
+    {
+      "id": "F002",
+      "page": 5,
+      "caption_id": "C002",
+      "image_path": "assets/F002.png",
+      "bbox": [
+        65,
+        82,
+        550,
+        320
+      ],
+      "bbox_units": "PDF points",
+      "placement_hint": "near_first_mention",
+      "placed_after": "S003",
+      "alt_text": "GPA-VGGT整体结构：早期共享跨帧K/V；后期保query、合并K/V并加log-size。",
+      "crop_verified": true
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 4,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "1",
+      "latex": "o_i=\\sum_{j=1}^{N_{\\mathrm{merged}}}\\operatorname{softmax}_{j}\\left(\\frac{q_i^\\top\\bar{k}_j}{\\sqrt d}+\\log s_j\\right)\\bar{v}_j",
+      "bbox": [
+        83,
+        644,
+        298,
+        683
+      ],
+      "confidence": "high",
+      "image_path": "assets/E001.png"
+    },
+    {
+      "id": "E002",
+      "page": 5,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "2",
+      "latex": "d(i)=\\arg\\max_{j\\in\\mathcal{D}}\\cos(P^\\top x_i,P^\\top x_j)",
+      "bbox": [
+        350,
+        671,
+        556,
+        697
+      ],
+      "confidence": "high",
+      "image_path": "assets/E002.png"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "query preservation",
+      "translation": "保留查询",
+      "note": "保住输出身份，不能恢复已抹掉的K/V内容"
+    },
+    {
+      "term": "token-size correction",
+      "translation": "token大小补偿",
+      "note": "softmax恢复组计数，不保证独立证据"
+    },
+    {
+      "term": "pooled broadcast",
+      "translation": "池化广播",
+      "note": "共享跨帧低成本上下文"
+    },
+    {
+      "term": "sensitivity",
+      "translation": "扰动敏感性",
+      "note": "不是分类敏感度；指合并后表征偏差"
+    }
+  ]
+}

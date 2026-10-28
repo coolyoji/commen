@@ -1,0 +1,34 @@
+{
+  "parent_synthesis": "local balanced review; no independent novelty acceptance",
+  "read_only_shards": [
+    {
+      "agent": "/root/oct27_scene_sources",
+      "scope": "HoloRecon/SplatScout/GCSR-OCC",
+      "raw_path": ".work-2026-10-28/scene-shard.json"
+    },
+    {
+      "agent": "/root/geometry_active_sources",
+      "scope": "GeoGSplat/ActiveAlign/Honeycomb",
+      "raw_path": ".work-2026-10-28/geometry-shard.json"
+    },
+    {
+      "agent": "/root/oct28_world_sources",
+      "scope": "ThinkWorld/ImagiRep/GroundControl/ScIntBench",
+      "raw_path": ".work-2026-10-28/world-shard.json"
+    }
+  ],
+  "mechanical_dedup": "canonical arxiv id",
+  "ideas_proposed": 36,
+  "pilots": "skipped by user instruction",
+  "source_web_tool": "empty responses; official primary HTTP fallback",
+  "scope": "lite/balanced per-paper literature and candidate ideation, not full idea-discovery pipeline",
+  "fresh_claim_review": {
+    "agent": "/root/publication_review",
+    "route": "same-family provisional, fresh context",
+    "report": "research/audit/2026-10-28-claim-review.md",
+    "finding": "P3: attention operation wording",
+    "resolution": "corrected Q-to-K matching and V aggregation; copies regenerated",
+    "blocking_findings": 0,
+    "novelty_acceptance": false
+  }
+}

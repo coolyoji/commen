@@ -1,0 +1,453 @@
+{
+  "date": "2026-10-27",
+  "executed_at": "2026-10-28T23:02:31.214367+08:00",
+  "actually_processed": "2026-10-28",
+  "read_month": "2026-10",
+  "deep_count": 1,
+  "browse_count": 5,
+  "selection_reason": "精读已核验实际公开代码与全文；泛读补足几何/表示/世界推断，按ID与本地历史去重。",
+  "papers": [
+    {
+      "id": "arxiv:2610.37000",
+      "title": "GPA-VGGT: Geometry-Preserving Acceleration of VGGT",
+      "authors": [
+        "Muyeol Sung",
+        "Jangwon Kim",
+        "Jongwoo Lim"
+      ],
+      "published": "2026-10-27T10:46:52Z",
+      "updated": "2026-10-27T10:46:52Z",
+      "comment": "Accepted to WACV 2027. Project page: https://noheat61.github.io/GPA-VGGT/",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37000",
+      "day": "2026-10-27",
+      "slug": "gpa-vggt",
+      "deep": true,
+      "version_read": "2610.37000v1",
+      "html_url": "https://arxiv.org/html/2610.37000v1",
+      "pdf_downloaded": true,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\sources\\gpa-vggt.txt",
+      "html_sha256": "077e1c04a63e1818e3b31d129cc586f9ca0a9337c806801bb080818defdfd61d",
+      "source_links": [
+        "https://noheat61.github.io/GPA-VGGT/"
+      ],
+      "pdf_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\download-cache\\gpa-vggt_2610.37000v1.pdf",
+      "pdf_sha256": "c6adb4c33b988433f0f8ecc1915a9ecb436e55b1512c124c9df7107f48651ec1",
+      "paper_id": "arxiv:2610.37000",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "longform": "docs/md/longform/2026-10/gpa-vggt.md",
+      "reader": "docs/md/longform/2026-10/gpa-vggt-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "SKVOF99Y",
+      "zotero_attachment_key": "W8DOHV4M",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\W8DOHV4M\\Sung et al - 2026 - gpa-vggt.pdf",
+      "pdf_verified": true,
+      "zotero_imported": true,
+      "actually_processed": "2026-10-28",
+      "venue": "WACV 2027 (accepted; preprint 2026-10)",
+      "code": "https://github.com/noheat61/GPA-VGGT",
+      "code_verified": "implementation present; not executed"
+    },
+    {
+      "id": "arxiv:2610.36876",
+      "title": "HoloRecon: Incremental Reconstruction of Long-Range Panoramas with Global Consistency",
+      "authors": [
+        "Zhuoxiao Li",
+        "Xinyi Liu",
+        "Hongye Hou",
+        "Jing OU",
+        "Kang Du",
+        "Shuai Zhang",
+        "Dongli Wu",
+        "Taoyu Wu",
+        "Siyuan Feng",
+        "Xiaohui Zhu",
+        "Wufan Zhao"
+      ],
+      "published": "2026-10-27T09:17:38Z",
+      "updated": "2026-10-27T09:17:38Z",
+      "comment": "Project Page:https://zhuoxiaoli.github.io/HoloRecon_page/",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.36876",
+      "day": "2026-10-27",
+      "slug": "holorecon",
+      "deep": false,
+      "version_read": "2610.36876v1",
+      "html_url": "https://arxiv.org/html/2610.36876v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\sources\\holorecon.txt",
+      "html_sha256": "904b3113ff9b4485dfdcd2e1e2cb5c4fc258ec1535d85d1baf4a410b973ecdf2",
+      "source_links": [
+        "https://zhuoxiaoli.github.io/HoloRecon_page/"
+      ],
+      "paper_id": "arxiv:2610.36876",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-27.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.36876",
+        "https://arxiv.org/html/2610.36876v1",
+        "https://zhuoxiaoli.github.io/HoloRecon_page/",
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Guo_PanoVGGT_Feed-Forward_3D_Reconstruction_from_Panoramic_Imagery_CVPR_2026_paper.html",
+        "https://arxiv.org/abs/2507.16443"
+      ]
+    },
+    {
+      "id": "arxiv:2610.37098",
+      "title": "SplatScout: Query-Driven Part-Level Referring Segmentation in Gaussian Scenes",
+      "authors": [
+        "Yihan Zang",
+        "Da Li",
+        "Shinkyu Park",
+        "Ivan Viola",
+        "Dominik Engel"
+      ],
+      "published": "2026-10-27T12:02:36Z",
+      "updated": "2026-10-27T12:02:36Z",
+      "comment": "",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37098",
+      "day": "2026-10-27",
+      "slug": "splatscout",
+      "deep": false,
+      "version_read": "2610.37098v1",
+      "html_url": "https://arxiv.org/html/2610.37098v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\sources\\splatscout.txt",
+      "html_sha256": "f67a11cae31ea69b5317d067e25736e6775a2b88786a4be567324773896ee9b4",
+      "source_links": [
+        "https://github.com/kaust-violab/SplatScout"
+      ],
+      "paper_id": "arxiv:2610.37098",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-27.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.37098",
+        "https://arxiv.org/html/2610.37098v1",
+        "https://github.com/kaust-violab/SplatScout",
+        "https://arxiv.org/abs/2512.23020",
+        "https://why-102.github.io/openground.io/",
+        "https://arxiv.org/abs/2409.08270",
+        "https://github.com/florinshen/FlashSplat"
+      ]
+    },
+    {
+      "id": "arxiv:2610.37149",
+      "title": "GCSR-OCC: Geometry Calibration and Semantic Routing for Open-Vocabulary Occupancy Prediction",
+      "authors": [
+        "Bohua Wang",
+        "Congyang Zhao",
+        "Tianxiong Lv",
+        "Chenxu Zhao",
+        "He Zheng",
+        "Hangqi Fan",
+        "Leigang Luo",
+        "Zhihao Liao",
+        "Yihong Guo",
+        "Yang Cai"
+      ],
+      "published": "2026-10-27T12:47:53Z",
+      "updated": "2026-10-27T12:47:53Z",
+      "comment": "",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37149",
+      "day": "2026-10-27",
+      "slug": "gcsr-occ",
+      "deep": false,
+      "version_read": "2610.37149v1",
+      "html_url": "https://arxiv.org/html/2610.37149v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\sources\\gcsr-occ.txt",
+      "html_sha256": "595f801851d4c56c23a1de8d61a1e09ab9ec16d774f841b5c00638167df2a629",
+      "source_links": [
+        "https://surfsplatting.github.io/",
+        "https://vlmaps.github.io/"
+      ],
+      "paper_id": "arxiv:2610.37149",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-27.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.37149",
+        "https://arxiv.org/html/2610.37149v1",
+        "https://arxiv.org/abs/2602.22667",
+        "https://github.com/JuIvyy/LegoOcc",
+        "https://arxiv.org/abs/2412.13193"
+      ]
+    },
+    {
+      "id": "arxiv:2610.36760",
+      "title": "GeoGSplat: Geometry-Grounded Non-Pixel-Aligned Gaussian Splatting",
+      "authors": [
+        "Jiale Wang",
+        "Chen Zhao",
+        "Haoyang Zhang",
+        "Yanhao Wu",
+        "Fei He",
+        "Yanhu Shan",
+        "Rui Wu",
+        "Wei Ke",
+        "Tong Zhang"
+      ],
+      "published": "2026-10-27T07:15:03Z",
+      "updated": "2026-10-27T07:15:03Z",
+      "comment": "",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.36760",
+      "day": "2026-10-27",
+      "slug": "geogsplat",
+      "deep": false,
+      "version_read": "2610.36760v1",
+      "html_url": "https://arxiv.org/html/2610.36760v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\sources\\geogsplat.txt",
+      "html_sha256": "44199c4fe22209e75237c15c9c85dc825b649c88c9e17ebf96f7034776ba94a5",
+      "source_links": [
+        "https://comedy0913.github.io/projects/geogsplat"
+      ],
+      "paper_id": "arxiv:2610.36760",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-27.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.36760",
+        "https://arxiv.org/html/2610.36760v1",
+        "https://comedy0913.github.io/projects/geogsplat",
+        "https://arxiv.org/abs/2604.15239",
+        "https://arxiv.org/abs/2604.07053"
+      ]
+    },
+    {
+      "id": "arxiv:2610.36859",
+      "title": "ActiveAlign: Aligning Egocentric Manipulation via Active Perception",
+      "authors": [
+        "Ri-Zhao Qiu",
+        "Bowen Wen",
+        "Yifeng Jiang",
+        "Chen Tessler",
+        "Eric Heiden",
+        "Xue Bin Peng",
+        "Xiaolong Wang",
+        "Stan Birchfield",
+        "Erwin Coumans"
+      ],
+      "published": "2026-10-27T08:54:27Z",
+      "updated": "2026-10-27T08:54:27Z",
+      "comment": "",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.36859",
+      "day": "2026-10-27",
+      "slug": "activealign",
+      "deep": false,
+      "version_read": "2610.36859v1",
+      "html_url": "https://arxiv.org/html/2610.36859v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-27\\sources\\activealign.txt",
+      "html_sha256": "7376ba2442d9bf8eaa538232a27b589f22967bc9e2f538730b5455db7f4d8535",
+      "source_links": [],
+      "paper_id": "arxiv:2610.36859",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-27.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.36859",
+        "https://arxiv.org/html/2610.36859v1",
+        "https://arxiv.org/abs/2410.13851",
+        "https://arxiv.org/abs/2107.09584"
+      ]
+    }
+  ],
+  "retrieval": {
+    "executed_at": "2026-10-28T22:24:56.329076+08:00",
+    "arxiv_helper": "unresolved; direct official Atom API fallback",
+    "web_tool": "called but returned empty responses; direct primary HTTP used",
+    "zotero_mcp": "not exposed; authorized local SQLite read-only search used",
+    "local_papers_directories": "absent; configured Zotero library searched instead",
+    "papers": [
+      "2610.37000",
+      "2610.36876",
+      "2610.37098",
+      "2610.37149",
+      "2610.36760",
+      "2610.36859",
+      "2610.37662",
+      "2610.37668",
+      "2610.37666",
+      "2610.37437",
+      "2610.37545",
+      "2610.37326"
+    ]
+  },
+  "local_library_matches": {
+    "read_only_before_import": true,
+    "matches": [
+      {
+        "item_key": "749UDXSP",
+        "title": "UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes"
+      },
+      {
+        "item_key": "04E0D31B",
+        "title": "Amodal Completion and Size Constancy in Natural Scenes"
+      },
+      {
+        "item_key": "122A033D",
+        "title": "Amodal Instance Segmentation"
+      },
+      {
+        "item_key": "155A1FE7",
+        "title": "Semantic Amodal Segmentation"
+      },
+      {
+        "item_key": "597E7510",
+        "title": "Amodal Instance Segmentation With KINS Dataset"
+      },
+      {
+        "item_key": "FD7A1C52",
+        "title": "Deep Occlusion-Aware Instance Segmentation With Overlapping BiLayers"
+      },
+      {
+        "item_key": "2FFFEFF5",
+        "title": "Amodal Panoptic Segmentation"
+      },
+      {
+        "item_key": "01D81E03",
+        "title": "Coarse-to-Fine Amodal Segmentation with Shape Prior"
+      },
+      {
+        "item_key": "F9520972",
+        "title": "Amodal Ground Truth and Completion in the Wild"
+      },
+      {
+        "item_key": "EE86A398",
+        "title": "Towards Efficient Foundation Model for Zero-shot Amodal Segmentation"
+      },
+      {
+        "item_key": "184075BA",
+        "title": "Using Diffusion Priors for Video Amodal Segmentation"
+      },
+      {
+        "item_key": "PPWSC2XA",
+        "title": "Open-World Amodal Appearance Completion"
+      },
+      {
+        "item_key": "0170C307",
+        "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion"
+      },
+      {
+        "item_key": "1D0403E5",
+        "title": "PHAC: Promptable Human Amodal Completion"
+      },
+      {
+        "item_key": "6260CFD6",
+        "title": "Image Guides Images: Consistent Video Amodal Completion with Rectified In-Context Exemplar Guidance"
+      },
+      {
+        "item_key": "6EHPK5KV",
+        "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+      },
+      {
+        "item_key": "W2FAE2ZB",
+        "title": "Integrating Multimodal Large Language Model Knowledge into Amodal Completion"
+      },
+      {
+        "item_key": "MEF2ZUMP",
+        "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+      },
+      {
+        "item_key": "9UMBQC8B",
+        "title": "OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments"
+      },
+      {
+        "item_key": "5G6GWX4T",
+        "title": "Kim - 2026 - OP3DSG Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments.pdf"
+      },
+      {
+        "item_key": "48E8SIIL",
+        "title": "Relation-Transition-Aware Transformer for Video Scene Graph Generation"
+      },
+      {
+        "item_key": "QRMRASI3",
+        "title": "Heo et al. - 2026 - Relation-Transition-Aware Transformer for Video Scene Graph Generation.pdf"
+      },
+      {
+        "item_key": "4BS8IYJG",
+        "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+      },
+      {
+        "item_key": "T4BMVDRT",
+        "title": "Chen et al. - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf"
+      },
+      {
+        "item_key": "T3MJDPEW",
+        "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes"
+      },
+      {
+        "item_key": "JF6B62B3",
+        "title": "CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation"
+      },
+      {
+        "item_key": "NFQR9Z6N",
+        "title": "Reconstructing CLIP for Open-Vocabulary Dense Perception"
+      },
+      {
+        "item_key": "6ZUFWLCJ",
+        "title": "Open-Vocabulary Domain Generalization in Urban-Scene Segmentation"
+      },
+      {
+        "item_key": "5SP6T8EU",
+        "title": "MUVA: A New Large-Scale Benchmark for Multi-view Amodal Instance Segmentation in the Shopping Scenario"
+      },
+      {
+        "item_key": "TD5LA8C6",
+        "title": "Amodal Depth Anything: Amodal Depth Estimation in the Wild"
+      },
+      {
+        "item_key": "UM6KKHEX",
+        "title": "Li et al. - 2025 - Amodal Depth Anything.pdf"
+      },
+      {
+        "item_key": "LO1DWIQW",
+        "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation"
+      },
+      {
+        "item_key": "8SC9FOQH",
+        "title": "RelaxFlow: Text-Driven Amodal 3D Generation"
+      },
+      {
+        "item_key": "F81MIUGM",
+        "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction"
+      }
+    ],
+    "duplicate_selected_title": []
+  },
+  "excluded": []
+}

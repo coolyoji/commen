@@ -1,0 +1,429 @@
+{
+  "paper": {
+    "title": "FVQ",
+    "venue": "Project page: https://doctor-james.github.io/FVQ-Page/",
+    "source_type": "pdf",
+    "language": "en",
+    "source_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\download-cache\\fvq_2610.37662v1.pdf",
+    "source_url": "https://arxiv.org/abs/2610.37662",
+    "version": "2610.37662v1",
+    "sha256": "f2a0199b4e089821d9cecad2a45cd2ca247d7472e7984500b913d5da27b5b03e"
+  },
+  "scope": "source-grounded thematic reader, not full translation",
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "note",
+      "order": 1,
+      "original_text": "",
+      "english_paraphrase": "The paper studies semantic fidelity using multimodal understanding and finds that reconstruction error does not reliably rank downstream performance.",
+      "translation": "论文用多模态理解代理语义保真，发现特征重建误差不能可靠排序下游理解表现。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "S002",
+      "page": 3,
+      "type": "note",
+      "order": 2,
+      "original_text": "",
+      "english_paraphrase": "Adding codebooks can increase nominal capacity while their inputs become less informative. FVQ provides fixed-dimensional dense views to parallel codebooks.",
+      "translation": "增加码本会提高名义容量，但各码本输入可能越来越缺信息。FVQ向并行码本提供固定维度的稠密views。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "S003",
+      "page": 5,
+      "type": "note",
+      "order": 3,
+      "original_text": "",
+      "english_paraphrase": "A frozen visual encoder feeds projections and quantizers. Tokenizer training reconstructs features; later multimodal training consumes IDs through newly learned embeddings.",
+      "translation": "冻结视觉编码器提供特征，经投影与量化得到ID。tokenizer训练重建特征；后续多模态模型通过新学embeddings读取ID。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "C001",
+      "page": 5,
+      "type": "caption",
+      "order": 4,
+      "original_text": "",
+      "english_paraphrase": "Fig.3: tokenizer and multimodal training use different paths",
+      "translation": "上：tokenizer重建支路与VLM读ID支路；下：多个稠密投影与并行码本。",
+      "confidence": "high",
+      "bbox": null
+    },
+    {
+      "id": "S004",
+      "page": 4,
+      "type": "note",
+      "order": 5,
+      "original_text": "",
+      "english_paraphrase": "The odd-group residual representation has higher MSE than single-codebook VQ but stronger understanding. Sixteen-codebook FVQ reaches a higher eight-benchmark average than the continuous baseline.",
+      "translation": "RVQ奇数组合的MSE比单VQ高，理解均值却更好；16码本FVQ在八项平均上接近并超过所列连续基线。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "C002",
+      "page": 4,
+      "type": "caption",
+      "order": 6,
+      "original_text": "",
+      "english_paraphrase": "Table1: feature MSE versus understanding",
+      "translation": "Table1展示更大MSE可以对应更高理解均值；OCRBench除10后参与平均。",
+      "confidence": "high",
+      "bbox": null
+    },
+    {
+      "id": "S005",
+      "page": 7,
+      "type": "note",
+      "order": 7,
+      "original_text": "",
+      "english_paraphrase": "Industrial training uses four large stages. Nine-metric relative gains over discrete competitors and eight-metric controlled averages are separate comparisons.",
+      "translation": "工业训练有四个大规模阶段；对离散竞争者的九指标相对增幅，与受控实验的八指标均值是两种比较。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "S006",
+      "page": 17,
+      "type": "note",
+      "order": 8,
+      "original_text": "",
+      "english_paraphrase": "Tight-frame synthesis is exact before quantization. It does not prove that nearest-codeword replacement preserves every task-relevant distinction.",
+      "translation": "tight-frame合成在量化前可精确恢复；这不证明最近码字替换保留所有任务相关区分。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high",
+      "bbox": null,
+      "bbox_note": "section/page anchor; paragraph bbox not claimed"
+    },
+    {
+      "id": "E001",
+      "page": 6,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "1",
+      "latex": "\\begin{aligned}\\mathbf{u}_{i,\\ell}&=\\mathbf{R}_{\\ell}\\mathbf{z}_i,\\quad \\mathbf{R}_{\\ell}\\in\\mathbb{R}^{d\\times D},\\\\\\mathbf{A}&=\\begin{bmatrix}\\mathbf{R}_{1}^{\\top}&\\cdots&\\mathbf{R}_{L}^{\\top}\\end{bmatrix}^{\\top}\\in\\mathbb{R}^{Ld\\times D},\\\\\\mathbf{A}^{\\top}\\mathbf{A}&=\\rho\\mathbf{I}_D,\\quad\\rho=\\frac{Ld}{D}.\\end{aligned}",
+      "bbox": [
+        220,
+        73,
+        545,
+        134
+      ],
+      "confidence": "high",
+      "image_path": "assets/E001.png"
+    },
+    {
+      "id": "E002",
+      "page": 6,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "2",
+      "latex": "k_{i,\\ell}=\\arg\\min_{j\\in\\{1,\\ldots,C\\}}\\left\\|\\mathbf{u}_{i,\\ell}-\\mathbf{c}_{\\ell,j}\\right\\|_2^2",
+      "bbox": [
+        225,
+        294,
+        545,
+        318
+      ],
+      "confidence": "high",
+      "image_path": "assets/E002.png"
+    },
+    {
+      "id": "E003",
+      "page": 6,
+      "type": "equation",
+      "order": 11,
+      "equation_number": "3",
+      "latex": "\\begin{aligned}\\hat{\\mathbf z}_i&=\\frac1\\rho\\sum_{\\ell=1}^{L}\\mathbf R_\\ell^\\top\\mathbf c_{\\ell,k_{i,\\ell}},\\\\\\frac1\\rho\\mathbf A^\\top\\mathbf u_i&=\\frac1\\rho\\mathbf A^\\top\\mathbf A\\mathbf z_i=\\mathbf z_i.\\end{aligned}",
+      "bbox": [
+        244,
+        424,
+        545,
+        484
+      ],
+      "confidence": "high",
+      "image_path": "assets/E003.png"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "block_ids": [
+        "S001"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 2,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 3,
+      "block_ids": [
+        "S002"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 4,
+      "block_ids": [
+        "S004",
+        "C002"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 5,
+      "block_ids": [
+        "S003",
+        "C001"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 6,
+      "block_ids": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 7,
+      "block_ids": [
+        "S005"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 8,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 9,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 10,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 11,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 12,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 13,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 14,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 15,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 16,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 17,
+      "block_ids": [
+        "S006"
+      ],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 18,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 19,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 20,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 21,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 22,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    },
+    {
+      "page": 23,
+      "block_ids": [],
+      "extraction": "text extracted",
+      "translation_scope": "selected thematic blocks only"
+    }
+  ],
+  "figures": [
+    {
+      "id": "F001",
+      "page": 5,
+      "caption_id": "C001",
+      "image_path": "assets/F001.png",
+      "bbox": [
+        75,
+        62,
+        529,
+        305
+      ],
+      "bbox_units": "PDF points",
+      "placement_hint": "near_first_mention",
+      "placed_after": "S003",
+      "alt_text": "上：tokenizer重建支路与VLM读ID支路；下：多个稠密投影与并行码本。",
+      "crop_verified": true
+    },
+    {
+      "id": "F002",
+      "page": 4,
+      "caption_id": "C002",
+      "image_path": "assets/F002.png",
+      "bbox": [
+        69,
+        215,
+        541,
+        306
+      ],
+      "bbox_units": "PDF points",
+      "placement_hint": "near_first_mention",
+      "placed_after": "S004",
+      "alt_text": "Table1展示更大MSE可以对应更高理解均值；OCRBench除10后参与平均。",
+      "crop_verified": true
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 6,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "1",
+      "latex": "\\begin{aligned}\\mathbf{u}_{i,\\ell}&=\\mathbf{R}_{\\ell}\\mathbf{z}_i,\\quad \\mathbf{R}_{\\ell}\\in\\mathbb{R}^{d\\times D},\\\\\\mathbf{A}&=\\begin{bmatrix}\\mathbf{R}_{1}^{\\top}&\\cdots&\\mathbf{R}_{L}^{\\top}\\end{bmatrix}^{\\top}\\in\\mathbb{R}^{Ld\\times D},\\\\\\mathbf{A}^{\\top}\\mathbf{A}&=\\rho\\mathbf{I}_D,\\quad\\rho=\\frac{Ld}{D}.\\end{aligned}",
+      "bbox": [
+        220,
+        73,
+        545,
+        134
+      ],
+      "confidence": "high",
+      "image_path": "assets/E001.png"
+    },
+    {
+      "id": "E002",
+      "page": 6,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "2",
+      "latex": "k_{i,\\ell}=\\arg\\min_{j\\in\\{1,\\ldots,C\\}}\\left\\|\\mathbf{u}_{i,\\ell}-\\mathbf{c}_{\\ell,j}\\right\\|_2^2",
+      "bbox": [
+        225,
+        294,
+        545,
+        318
+      ],
+      "confidence": "high",
+      "image_path": "assets/E002.png"
+    },
+    {
+      "id": "E003",
+      "page": 6,
+      "type": "equation",
+      "order": 11,
+      "equation_number": "3",
+      "latex": "\\begin{aligned}\\hat{\\mathbf z}_i&=\\frac1\\rho\\sum_{\\ell=1}^{L}\\mathbf R_\\ell^\\top\\mathbf c_{\\ell,k_{i,\\ell}},\\\\\\frac1\\rho\\mathbf A^\\top\\mathbf u_i&=\\frac1\\rho\\mathbf A^\\top\\mathbf A\\mathbf z_i=\\mathbf z_i.\\end{aligned}",
+      "bbox": [
+        244,
+        424,
+        545,
+        484
+      ],
+      "confidence": "high",
+      "image_path": "assets/E003.png"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "tight frame",
+      "translation": "紧框架",
+      "note": "冗余线性测量整体各向同性，不保证量化后可逆"
+    },
+    {
+      "term": "nominal bit budget",
+      "translation": "名义比特预算",
+      "note": "码本组合上界；不等于熵或独立有效信息"
+    },
+    {
+      "term": "semantic fidelity",
+      "translation": "语义保真",
+      "note": "本文以理解基准代理，几何迁移须另验"
+    },
+    {
+      "term": "commitment",
+      "translation": "承诺约束",
+      "note": "稳定编码结果与所选码字的关系"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-27",
+  "actually_processed": "2026-10-28",
+  "executed_at": "2026-10-28T23:02:31.214367+08:00",
+  "backfill": true,
+  "repo": "D:\\CV-Literature\\commen",
+  "deep_read": {
+    "paper_id": "arxiv:2610.37000",
+    "pdf_downloaded": true,
+    "pdf_sha256": "c6adb4c33b988433f0f8ecc1915a9ecb436e55b1512c124c9df7107f48651ec1",
+    "source_format": "pdf-text"
+  },
+  "zotero": {
+    "status": "verified",
+    "data_dir": "C:\\Users\\华硕\\Zotero",
+    "sqlite_backup": "D:\\CV-Literature\\commen\\.work-2026-10-27\\zotero.sqlite.pre-import-20261027.bak",
+    "backup_sha256": "adec7926175176e75e750b6b4aa6d3eba93a9999fdc0ab21ca538283da72a5d4",
+    "collection": "每日精读论文/2026/10",
+    "collection_id": 17,
+    "item_key": "SKVOF99Y",
+    "attachment_key": "W8DOHV4M",
+    "top_level_item_id": 1389,
+    "attachment_id": 1390,
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\W8DOHV4M\\Sung et al - 2026 - gpa-vggt.pdf",
+    "download_sha256": "c6adb4c33b988433f0f8ecc1915a9ecb436e55b1512c124c9df7107f48651ec1",
+    "storage_sha256": "c6adb4c33b988433f0f8ecc1915a9ecb436e55b1512c124c9df7107f48651ec1",
+    "download_storage_hash_match": true,
+    "top_level_item_verified": true,
+    "month_collection_verified": true,
+    "child_attachment_verified": true,
+    "storage_pdf_verified": true,
+    "sqlite_quick_check": "ok",
+    "running_during_backup": false,
+    "running_during_import": false,
+    "new_foreign_key_violations": 0,
+    "publication_month": "2026-10",
+    "read_month": "2026-10",
+    "actually_processed": "2026-10-28"
+  },
+  "browse": {
+    "count": 5,
+    "pdf_downloaded": false,
+    "full_html": true
+  },
+  "nature_reader": {
+    "path": "docs/md/longform/2026-10/gpa-vggt-reader/paper.md",
+    "scope": "source-grounded thematic reader, not full translation",
+    "source_map": "docs/md/longform/2026-10/gpa-vggt-reader/source_map.json",
+    "figure_equation_crops": true,
+    "math_validator": "strict passed"
+  },
+  "aris": {
+    "paper_count": 6,
+    "ideas_per_paper_minimum": 3,
+    "gpu_started": false,
+    "novelty_adjudicated": false,
+    "independent_replication": false
+  },
+  "validation": {
+    "status": "passed",
+    "deep_count": 1,
+    "browse_count": 5,
+    "aris_paper_count": 6,
+    "idea_count": 18,
+    "all_local_links_exist": true,
+    "pdf_storage_and_backup_hashes_rechecked": true,
+    "top_level_collection_child_rechecked": true,
+    "monthly_prior_records_unchanged": true,
+    "actually_processed": "2026-10-28",
+    "independent_replication": false,
+    "gpu_started": false,
+    "browser": {
+      "desktop": "readable; no document horizontal overflow",
+      "mobile": "390px layout readable; no document horizontal overflow",
+      "mathjax": "rendered; zero mjx-merror",
+      "note": "static docs preview only; model results were not reproduced"
+    },
+    "claim_review": "provisional passed after one wording fix",
+    "claim_review_path": "research/audit/2026-10-28-claim-review.md"
+  },
+  "git": {
+    "remote": "https://github.com/coolyoji/commen.git",
+    "push_pending": true,
+    "state": "validated_ready_to_commit"
+  },
+  "source_fallback": {
+    "web_tool": "empty response",
+    "semantic_scholar": "HTTP 429 on saved recheck",
+    "primary_sources": "official arXiv Atom/HTML/PDF and actual author repositories",
+    "verification_record": "research/audit/2026-10-28-source-verification.json"
+  },
+  "prepared_at": "2026-10-28T23:04:58.107759+08:00"
+}

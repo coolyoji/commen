@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-28",
   "days": [
     {
       "date": "2026-09-23",
@@ -284,6 +284,38 @@
         "arxiv:2610.32663"
       ],
       "status": "daily_1_deep_5_browse"
+    },
+    {
+      "date": "2026-10-27",
+      "actually_processed": "2026-10-28",
+      "deep_read": [
+        "arxiv:2610.37000"
+      ],
+      "browse": [
+        "arxiv:2610.36876",
+        "arxiv:2610.37098",
+        "arxiv:2610.37149",
+        "arxiv:2610.36760",
+        "arxiv:2610.36859"
+      ],
+      "status": "backfilled_1_deep_5_browse",
+      "snapshot": "data/daily_batches/2026-10-27.json"
+    },
+    {
+      "date": "2026-10-28",
+      "actually_processed": "2026-10-28",
+      "deep_read": [
+        "arxiv:2610.37662"
+      ],
+      "browse": [
+        "arxiv:2610.37668",
+        "arxiv:2610.37666",
+        "arxiv:2610.37437",
+        "arxiv:2610.37545",
+        "arxiv:2610.37326"
+      ],
+      "status": "daily_1_deep_5_browse",
+      "snapshot": "data/daily_batches/2026-10-28.json"
     }
   ]
 }

@@ -1,0 +1,81 @@
+{
+  "retrieved_at": "2026-10-28T23:03:13.605101+08:00",
+  "code": [
+    {
+      "slug": "gpa-vggt",
+      "repository": "https://github.com/noheat61/GPA-VGGT",
+      "verified_commit": "d8f14caefdc7f50fb870b81b03b7c67d7e9c2971",
+      "file_count": 48,
+      "implementation_paths": [
+        "eval/bench_e2e.py",
+        "eval/eval_co3d.py",
+        "eval/eval_mv_recon.py",
+        "eval/eval_re10k.py",
+        "eval/mv_recon_data.py",
+        "eval/pose_metrics.py",
+        "eval/re10k_fetch.py",
+        "merging/__init__.py",
+        "merging/fused_attention.py",
+        "merging/fused_similarity.py",
+        "merging/merge.py",
+        "vggt/__init__.py",
+        "vggt/dependency/__init__.py",
+        "vggt/dependency/distortion.py",
+        "vggt/heads/camera_head.py",
+        "vggt/heads/dpt_head.py",
+        "vggt/heads/head_act.py",
+        "vggt/heads/track_head.py",
+        "vggt/heads/track_modules/__init__.py",
+        "vggt/heads/track_modules/base_track_predictor.py",
+        "vggt/heads/track_modules/blocks.py",
+        "vggt/heads/track_modules/modules.py",
+        "vggt/heads/track_modules/utils.py",
+        "vggt/heads/utils.py",
+        "vggt/layers/__init__.py"
+      ],
+      "status": "source files present; not executed"
+    },
+    {
+      "slug": "fvq",
+      "repository": "https://github.com/hustvl/FVQ",
+      "verified_commit": "5c5c97d7564adb10f079a7c46b39018a815a4654",
+      "file_count": 55,
+      "implementation_paths": [
+        "examples/chat.py",
+        "examples/encode_image.py",
+        "src/fvq/__init__.py",
+        "src/fvq/feature_decoder.py",
+        "src/fvq/processing.py",
+        "src/fvq/quantizer.py",
+        "src/fvq/tokenizer.py",
+        "src/fvq/vlm.py",
+        "tests/test_core.py",
+        "tests/test_data.py",
+        "tests/test_launch.py",
+        "tools/convert_checkpoint.py",
+        "tools/init_tokenizer.py",
+        "tools/make_demo_data.py",
+        "training/cache.py",
+        "training/common.py",
+        "training/data.py",
+        "training/processing.py",
+        "training/stream.py",
+        "training/train_tokenizer.py",
+        "training/train_vlm.py"
+      ],
+      "status": "source files present; not executed"
+    }
+  ],
+  "semantic_scholar": [
+    {
+      "arxiv": "2610.37000",
+      "query_url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2610.37000?fields=title,year,publicationDate,venue,externalIds,url",
+      "status": "HTTP Error 429: "
+    },
+    {
+      "arxiv": "2610.37662",
+      "query_url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2610.37662?fields=title,year,publicationDate,venue,externalIds,url",
+      "status": "HTTP Error 429: "
+    }
+  ]
+}

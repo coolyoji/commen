@@ -1,0 +1,452 @@
+{
+  "date": "2026-10-28",
+  "executed_at": "2026-10-28T23:02:31.214367+08:00",
+  "actually_processed": "2026-10-28",
+  "read_month": "2026-10",
+  "deep_count": 1,
+  "browse_count": 5,
+  "selection_reason": "精读已核验实际公开代码与全文；泛读补足几何/表示/世界推断，按ID与本地历史去重。",
+  "papers": [
+    {
+      "id": "arxiv:2610.37662",
+      "title": "Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?",
+      "authors": [
+        "Jialv Zou",
+        "Xiaotong Li",
+        "Zhengrong Yue",
+        "Xu Huang",
+        "Yaxin Luo",
+        "Wenhao Yan",
+        "Haodong Li",
+        "Wenyu Liu",
+        "Xinggang Wang"
+      ],
+      "published": "2026-10-27T17:59:22Z",
+      "updated": "2026-10-27T17:59:22Z",
+      "comment": "Project page: https://doctor-james.github.io/FVQ-Page/",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37662",
+      "day": "2026-10-28",
+      "slug": "fvq",
+      "deep": true,
+      "version_read": "2610.37662v1",
+      "html_url": "https://arxiv.org/html/2610.37662v1",
+      "pdf_downloaded": true,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\fvq.txt",
+      "html_sha256": "c27579c0cb01642fa8c0f9849fbbb7ab856830690361abd6c07f15e9271abf98",
+      "source_links": [
+        "https://doctor-james.github.io/FVQ-Page/",
+        "https://github.com/hustvl/FVQ",
+        "https://huggingface.co/datasets/xai-org/RealworldQA"
+      ],
+      "pdf_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\download-cache\\fvq_2610.37662v1.pdf",
+      "pdf_sha256": "f2a0199b4e089821d9cecad2a45cd2ca247d7472e7984500b913d5da27b5b03e",
+      "paper_id": "arxiv:2610.37662",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "longform": "docs/md/longform/2026-10/fvq.md",
+      "reader": "docs/md/longform/2026-10/fvq-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/10",
+      "zotero_item_key": "W0GRZR5H",
+      "zotero_attachment_key": "0N82DQPR",
+      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\0N82DQPR\\Zou et al - 2026 - fvq.pdf",
+      "pdf_verified": true,
+      "zotero_imported": true,
+      "actually_processed": "2026-10-28",
+      "venue": "arXiv preprint",
+      "code": "https://github.com/hustvl/FVQ",
+      "code_verified": "implementation present; not executed"
+    },
+    {
+      "id": "arxiv:2610.37668",
+      "title": "Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering and Reconstruction",
+      "authors": [
+        "Prakhar Kaushik",
+        "Soumava Paul",
+        "Alan Yuille"
+      ],
+      "published": "2026-10-27T17:59:59Z",
+      "updated": "2026-10-27T17:59:59Z",
+      "comment": "Project page at https://honeycomb-surfels.github.io/",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37668",
+      "day": "2026-10-28",
+      "slug": "honeycomb-surfels",
+      "deep": false,
+      "version_read": "2610.37668v1",
+      "html_url": "https://arxiv.org/html/2610.37668v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\honeycomb-surfels.txt",
+      "html_sha256": "3ae164f6602701804faa58f2a0549d2e5620fc28f776a293736fff3d103c4e30",
+      "source_links": [],
+      "paper_id": "arxiv:2610.37668",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-28.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.37668",
+        "https://arxiv.org/html/2610.37668v1",
+        "https://honeycomb-surfels.github.io/",
+        "https://github.com/honeycomb-surfels/hexels",
+        "https://arxiv.org/abs/2403.17888",
+        "https://arxiv.org/abs/2411.08508"
+      ]
+    },
+    {
+      "id": "arxiv:2610.37666",
+      "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
+      "authors": [
+        "Chaehyun Kim",
+        "Chi-Pin Huang",
+        "Jisoo Kim",
+        "Min-Hung Chen",
+        "Yu-Chiang Frank Wang",
+        "Seungryong Kim",
+        "Fu-En Yang"
+      ],
+      "published": "2026-10-27T17:59:52Z",
+      "updated": "2026-10-27T17:59:52Z",
+      "comment": "Project Page: https://thinkworld-project.github.io/",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37666",
+      "day": "2026-10-28",
+      "slug": "thinkworld",
+      "deep": false,
+      "version_read": "2610.37666v1",
+      "html_url": "https://arxiv.org/html/2610.37666v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\thinkworld.txt",
+      "html_sha256": "ea22f872e495ef756f5839c5a36cb5f450890b716474468198b7bbce8286bdf1",
+      "source_links": [
+        "https://github.com/huggingface/lerobot",
+        "https://thinkworld-project.github.io/"
+      ],
+      "paper_id": "arxiv:2610.37666",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-28.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.37666",
+        "https://arxiv.org/html/2610.37666v1",
+        "https://arxiv.org/abs/2410.11758",
+        "https://arxiv.org/abs/2602.10098"
+      ]
+    },
+    {
+      "id": "arxiv:2610.37437",
+      "title": "Representing the Unseen: Rethinking Visual Imagination for Spatial Reasoning",
+      "authors": [
+        "Zengqi Zhao",
+        "Zun Wang",
+        "Shoubin Yu",
+        "Mohit Bansal",
+        "Yue Zhang"
+      ],
+      "published": "2026-10-27T15:48:09Z",
+      "updated": "2026-10-27T15:48:09Z",
+      "comment": "Webpage:https://imagirep.github.io/",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37437",
+      "day": "2026-10-28",
+      "slug": "imagirep",
+      "deep": false,
+      "version_read": "2610.37437v1",
+      "html_url": "https://arxiv.org/html/2610.37437v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\imagirep.txt",
+      "html_sha256": "93fc2ae876927a88c7b5dbe2662a78808a386af785cb638a70c2171d2aadd86f",
+      "source_links": [
+        "https://imagirep.github.io/"
+      ],
+      "paper_id": "arxiv:2610.37437",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-28.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.37437",
+        "https://arxiv.org/html/2610.37437v1",
+        "https://imagirep.github.io/",
+        "https://arxiv.org/abs/2507.12508",
+        "https://arxiv.org/abs/2602.08236"
+      ]
+    },
+    {
+      "id": "arxiv:2610.37545",
+      "title": "GroundControl: Satellite-Conditioned Multi-View Diffusion for Reconstruction-Free Novel View Synthesis",
+      "authors": [
+        "Akshay Krishnan",
+        "Matias Turkulainen",
+        "Jamie Wynn",
+        "Zawar Qureshi",
+        "Mohamed Sayed",
+        "Guillermo Garcia-Hernando",
+        "Sara Vicente",
+        "James Hays",
+        "Michael Firman",
+        "Daniyar Turmukhambetov"
+      ],
+      "published": "2026-10-27T16:56:45Z",
+      "updated": "2026-10-27T16:56:45Z",
+      "comment": "Accepted to WACV 2027. Project page: https://nianticspatial.github.io/groundcontrol",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37545",
+      "day": "2026-10-28",
+      "slug": "groundcontrol",
+      "deep": false,
+      "version_read": "2610.37545v1",
+      "html_url": "https://arxiv.org/html/2610.37545v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\groundcontrol.txt",
+      "html_sha256": "be93c2e2a0a0b379bdafb0c383adf8858f19e53c82b4a78306243f36daceb019",
+      "source_links": [
+        "https://github.com/fferflo/tiledwebmaps",
+        "https://nianticspatial.github.io/groundcontrol"
+      ],
+      "paper_id": "arxiv:2610.37545",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-28.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.37545",
+        "https://arxiv.org/html/2610.37545v1",
+        "https://nianticspatial.github.io/groundcontrol",
+        "https://arxiv.org/abs/2503.14489",
+        "https://arxiv.org/abs/2303.14672"
+      ]
+    },
+    {
+      "id": "arxiv:2610.37326",
+      "title": "ScIntBench: Physical Interaction Plausibility in 3D Scene Generation",
+      "authors": [
+        "Wendi Ying",
+        "Daochang Liu",
+        "Leonid Sigal",
+        "Ajmal Saeed Mian"
+      ],
+      "published": "2026-10-27T14:36:04Z",
+      "updated": "2026-10-27T14:36:04Z",
+      "comment": "",
+      "doi": "",
+      "source": "https://arxiv.org/abs/2610.37326",
+      "day": "2026-10-28",
+      "slug": "scintbench",
+      "deep": false,
+      "version_read": "2610.37326v1",
+      "html_url": "https://arxiv.org/html/2610.37326v1",
+      "pdf_downloaded": false,
+      "fulltext_available": true,
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\scintbench.txt",
+      "html_sha256": "3bc454ed05657a41661be9357bc2ad1f330b9fc7e6ac818eda689317d4f1cfd6",
+      "source_links": [
+        "https://scintbench.github.io"
+      ],
+      "paper_id": "arxiv:2610.37326",
+      "read_month": "2026-10",
+      "publication_month": "2026-10",
+      "first_submitted": "2026-10-27",
+      "venue": "arXiv preprint",
+      "full_notes_path": "docs/md/2026-10-28.md",
+      "source_format": "official arXiv HTML",
+      "aris_ideas": 3,
+      "related_sources": [
+        "https://arxiv.org/abs/2610.37326",
+        "https://arxiv.org/html/2610.37326v1",
+        "https://scintbench.github.io",
+        "https://arxiv.org/abs/2602.09153",
+        "https://arxiv.org/abs/2603.29798"
+      ]
+    }
+  ],
+  "retrieval": {
+    "executed_at": "2026-10-28T22:24:56.329076+08:00",
+    "arxiv_helper": "unresolved; direct official Atom API fallback",
+    "web_tool": "called but returned empty responses; direct primary HTTP used",
+    "zotero_mcp": "not exposed; authorized local SQLite read-only search used",
+    "local_papers_directories": "absent; configured Zotero library searched instead",
+    "papers": [
+      "2610.37000",
+      "2610.36876",
+      "2610.37098",
+      "2610.37149",
+      "2610.36760",
+      "2610.36859",
+      "2610.37662",
+      "2610.37668",
+      "2610.37666",
+      "2610.37437",
+      "2610.37545",
+      "2610.37326"
+    ]
+  },
+  "local_library_matches": {
+    "read_only_before_import": true,
+    "matches": [
+      {
+        "item_key": "749UDXSP",
+        "title": "UniGeoSeg: Towards Unified Open-World Segmentation for Geospatial Scenes"
+      },
+      {
+        "item_key": "04E0D31B",
+        "title": "Amodal Completion and Size Constancy in Natural Scenes"
+      },
+      {
+        "item_key": "122A033D",
+        "title": "Amodal Instance Segmentation"
+      },
+      {
+        "item_key": "155A1FE7",
+        "title": "Semantic Amodal Segmentation"
+      },
+      {
+        "item_key": "597E7510",
+        "title": "Amodal Instance Segmentation With KINS Dataset"
+      },
+      {
+        "item_key": "FD7A1C52",
+        "title": "Deep Occlusion-Aware Instance Segmentation With Overlapping BiLayers"
+      },
+      {
+        "item_key": "2FFFEFF5",
+        "title": "Amodal Panoptic Segmentation"
+      },
+      {
+        "item_key": "01D81E03",
+        "title": "Coarse-to-Fine Amodal Segmentation with Shape Prior"
+      },
+      {
+        "item_key": "F9520972",
+        "title": "Amodal Ground Truth and Completion in the Wild"
+      },
+      {
+        "item_key": "EE86A398",
+        "title": "Towards Efficient Foundation Model for Zero-shot Amodal Segmentation"
+      },
+      {
+        "item_key": "184075BA",
+        "title": "Using Diffusion Priors for Video Amodal Segmentation"
+      },
+      {
+        "item_key": "PPWSC2XA",
+        "title": "Open-World Amodal Appearance Completion"
+      },
+      {
+        "item_key": "0170C307",
+        "title": "TACO: Taming Diffusion for in-the-wild Video Amodal Completion"
+      },
+      {
+        "item_key": "1D0403E5",
+        "title": "PHAC: Promptable Human Amodal Completion"
+      },
+      {
+        "item_key": "6260CFD6",
+        "title": "Image Guides Images: Consistent Video Amodal Completion with Rectified In-Context Exemplar Guidance"
+      },
+      {
+        "item_key": "6EHPK5KV",
+        "title": "Amodal Completion via Progressive Mixed Context Diffusion"
+      },
+      {
+        "item_key": "W2FAE2ZB",
+        "title": "Integrating Multimodal Large Language Model Knowledge into Amodal Completion"
+      },
+      {
+        "item_key": "MEF2ZUMP",
+        "title": "pix2gestalt: Amodal Segmentation by Synthesizing Wholes"
+      },
+      {
+        "item_key": "9UMBQC8B",
+        "title": "OP3DSG: Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments"
+      },
+      {
+        "item_key": "5G6GWX4T",
+        "title": "Kim - 2026 - OP3DSG Open-Vocabulary Part-Aware 3D Scene Graph Generation for Real-World Environments.pdf"
+      },
+      {
+        "item_key": "48E8SIIL",
+        "title": "Relation-Transition-Aware Transformer for Video Scene Graph Generation"
+      },
+      {
+        "item_key": "QRMRASI3",
+        "title": "Heo et al. - 2026 - Relation-Transition-Aware Transformer for Video Scene Graph Generation.pdf"
+      },
+      {
+        "item_key": "4BS8IYJG",
+        "title": "NOVA3R: Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction"
+      },
+      {
+        "item_key": "T4BMVDRT",
+        "title": "Chen et al. - 2026 - NOVA3R Non-Pixel-Aligned Visual Transformer for Amodal 3D Reconstruction.pdf"
+      },
+      {
+        "item_key": "T3MJDPEW",
+        "title": "S2C-3D: Sparse-to-Complete: From Sparse Image Captures to Complete 3D Scenes"
+      },
+      {
+        "item_key": "JF6B62B3",
+        "title": "CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation"
+      },
+      {
+        "item_key": "NFQR9Z6N",
+        "title": "Reconstructing CLIP for Open-Vocabulary Dense Perception"
+      },
+      {
+        "item_key": "6ZUFWLCJ",
+        "title": "Open-Vocabulary Domain Generalization in Urban-Scene Segmentation"
+      },
+      {
+        "item_key": "5SP6T8EU",
+        "title": "MUVA: A New Large-Scale Benchmark for Multi-view Amodal Instance Segmentation in the Shopping Scenario"
+      },
+      {
+        "item_key": "TD5LA8C6",
+        "title": "Amodal Depth Anything: Amodal Depth Estimation in the Wild"
+      },
+      {
+        "item_key": "UM6KKHEX",
+        "title": "Li et al. - 2025 - Amodal Depth Anything.pdf"
+      },
+      {
+        "item_key": "LO1DWIQW",
+        "title": "OccJEPA: Occlusion as Masking for Amodal Video Segmentation"
+      },
+      {
+        "item_key": "8SC9FOQH",
+        "title": "RelaxFlow: Text-Driven Amodal 3D Generation"
+      },
+      {
+        "item_key": "F81MIUGM",
+        "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction"
+      }
+    ],
+    "duplicate_selected_title": []
+  },
+  "excluded": [
+    {
+      "paper_id": "arxiv:2610.37633",
+      "title": "XTrack",
+      "reason": "仓库仅README和图像，未核验实际实现；候选评估阶段下载的PDF保留在忽略缓存，未入选/未导入Zotero。"
+    }
+  ]
+}

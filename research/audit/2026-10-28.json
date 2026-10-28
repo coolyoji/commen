@@ -80,8 +80,31 @@
   },
   "git": {
     "remote": "https://github.com/coolyoji/commen.git",
-    "push_pending": true,
-    "state": "validated_ready_to_commit"
+    "push_pending": false,
+    "state": "content_published_remote_verified",
+    "content_commit": "a1bfbe2d4b6ae14306f33bf43363a87a078cb4ee",
+    "push_succeeded": true,
+    "remote_branch": "refs/heads/main",
+    "remote_head_verified": "a1bfbe2d4b6ae14306f33bf43363a87a078cb4ee",
+    "verified_at": "2026-10-28T23:09:53+08:00",
+    "verification": "git ls-remote and raw GitHub content SHA256 comparison",
+    "remote_files": [
+      {
+        "path": "docs/md/2026-10-28.md",
+        "sha256": "6f9234a2a1f27a8e9ea7a22a73a36f085aa1b194488169ac52006cbf42839c1c",
+        "matches_local": true
+      },
+      {
+        "path": "docs/index.html",
+        "sha256": "abe6c46189a2d65ff5ca4bba0cb3b54b3abf05cbec307bfd68577dac099e1fec",
+        "matches_local": true
+      },
+      {
+        "path": "data/monthly_deep_reads/2026-10.json",
+        "sha256": "7a322234dcfd71d3d041e4ed44f853c0a96d926b9b71ca26abb032d3298ca419",
+        "matches_local": true
+      }
+    ]
   },
   "source_fallback": {
     "web_tool": "empty response",

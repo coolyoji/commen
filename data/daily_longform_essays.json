@@ -1,13 +1,13 @@
 {
-  "date": "2026-10-28",
-  "essays": [
-    {
-      "paper_id": "arxiv:2610.37662",
-      "path": "../docs/md/longform/2026-10/fvq.md",
-      "status": "pdf_zotero_hash_verified",
-      "publication_month": "2026-10",
-      "read_month": "2026-10",
-      "nature_reader": "../docs/md/longform/2026-10/fvq-reader/paper.md"
-    }
-  ]
+    "date":  "2026-10-29",
+    "essays":  [
+                   {
+                       "paper_id":  "arxiv:2407.01521",
+                       "path":  "../docs/md/longform/2026-10/daps.md",
+                       "status":  "pdf_zotero_hash_verified",
+                       "publication_month":  "2024-07",
+                       "read_month":  "2026-10",
+                       "nature_reader":  "../docs/md/longform/2026-10/daps-reader/paper.md"
+                   }
+               ]
 }

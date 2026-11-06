@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-29",
+  "actually_processed": "2026-10-29",
+  "deep_read": {
+    "paper_id": "arxiv:2407.01521",
+    "title": "Improving Diffusion Inverse Problem Solving with Decoupled Noise Annealing",
+    "publication_month": "2024-07",
+    "reason": "公开实现、全文与实验可核验；核心是复杂非线性逆问题中的后验探索，适合迁移到多解遮挡推理。",
+    "nature_reader": "docs/md/longform/2026-10/daps-reader/paper.md",
+    "zotero_collection": "每日精读论文/2026/10",
+    "zotero_item_key": "C0NGO8XF",
+    "zotero_attachment_key": "BFN3G3I3",
+    "pdf_hash_verified": true
+  },
+  "browse": [
+    {
+      "paper_id": "arxiv:2107.03502",
+      "title": "CSDI: Conditional Score-based Diffusion Models for Probabilistic Time Series Imputation",
+      "source_domain": "医疗与环境多变量时间序列的概率缺失值插补",
+      "method_family": "条件分布学习、结构化缺失与时空依赖",
+      "reason": "它把已知条件、待推断变量和不可监督的真正缺失分开，适合借来诊断非模态任务中遮挡物证据、可见目标证据和未知形状被混用的问题；选择的是机制，不把时间序列插补等同于完整形状恢复。",
+      "transfer_mechanism": "以可见实例证据为条件，只对待补变量建模条件分布；通过目标身份、可见性与空间/时间对应保留条件关系，并用多次采样表达隐藏多解。",
+      "strongest_counterexample": "训练集中只有容易显露的完整细杆，真实遮挡却总把特定长细杆全部遮住；两个完整物体产生相同可见部分。只从被观察部分自监督遮盖，无法确定真实隐藏长度或恢复缺失机制造成的选择偏差。",
+      "minimal_experiment": "先在完整二维形状合成集上控制随机点缺失与由遮挡者几何产生的结构缺失，保持可见比例相同；比较直接按 CSDI 随机掩码训练、加入目标坐标/真实遮挡条件的改造版、删除遮挡条件版。匹配参数/训练步数/候选数，报告隐藏区 IoU、可见违约、候选覆盖和校准。原型为一周内的小数据实验，本轮不运行。",
+      "evidence_status": "全文 HTML、关键表格及作者实现已核验；原论文没有本轮提出的 amodal 实验；未复现、未完成系统查新。",
+      "pdf_downloaded": false
+    },
+    {
+      "paper_id": "arxiv:2102.09844",
+      "title": "E(n) Equivariant Graph Neural Networks",
+      "source_domain": "粒子动力学、分子性质与图表示学习",
+      "method_family": "欧氏等变几何与坐标更新",
+      "reason": "非模态三维预测常把坐标系与形状本身混在一起。EGNN 用距离决定标量交互、用相对向量更新坐标，提供一个可严格检查的几何接口；其仿射包限制也恰好能揭示直接用于补全为何会失败。",
+      "transfer_mechanism": "对同一物体及相机共同换坐标时，形状推断应共同变换；通过不变距离决定交互、等变相对向量决定坐标更新，减少靠固定世界朝向记忆形状的自由度。",
+      "strongest_counterexample": "所有可见点及隐藏查询都初始化在 z=0 平面，使用纯 EGNN 式(4) 径向坐标更新，却要求恢复 z≠0 的背面。每层位移都由平面内相对向量线性组合，输出仍在平面；更多层和更大训练集也不能打破这个表示限制。",
+      "minimal_experiment": "先以 CPU 在一组共面节点上核验径向更新的仿射包限制，再构建同可见正面不同背面形状；比较原 EGNN 直接用法、含正确变换的相机法向/三维随机查询的改造、删除额外信息或破坏其变换规则的消融。分别评价坐标换系一致性和隐藏几何误差，避免用等变误差小替代补全正确。",
+      "evidence_status": "已读主文/附录 HTML、公式证明和作者实现；仿射包限制为由原式得到的本次推导；直接 amodal 设计待验证。有限查新已发现 ESCAPE，因此不声称把等变引入补全是新想法。",
+      "pdf_downloaded": false
+    },
+    {
+      "paper_id": "arxiv:1605.09674",
+      "title": "VIME: Variational Information Maximizing Exploration",
+      "source_domain": "连续控制与强化学习探索",
+      "method_family": "贝叶斯信息增益与主动感知",
+      "reason": "非模态补全中主动补充哪次观测，应围绕能区分隐藏形状的未知量设计；VIME提供信念更新驱动探索的源机制，同时暴露动力学参数与目标形状不一致的关键迁移风险。",
+      "transfer_mechanism": "将动作价值定义为对目标未知量的预期后验变化；从源动力学参数信念转为目标完整形状候选信念，明确可见性似然与观测来源。",
+      "strongest_counterexample": "随机闪烁屏幕引起预测误差和近似参数后验变化，但任何观察都没有区分目标物体的背面；或者所有可达视角对两个隐藏候选的观测分布完全相同。",
+      "minimal_experiment": "固定候选数、视角数、移动距离与渲染预算，比较直接模型参数KL、形状候选互信息、去信息项的覆盖/等距离随机策略；分别测隐藏误差、真候选后验、校准和动作成本，再加无关闪烁背景。",
+      "evidence_status": "原文是连续控制探索结果；目标amodal迁移为待验证研究假设，无实验与完整新颖性认证。",
+      "pdf_downloaded": false
+    },
+    {
+      "paper_id": "arxiv:1802.04687",
+      "title": "Neural Relational Inference for Interacting Systems",
+      "source_domain": "物理动力学、运动捕捉与多智能体轨迹",
+      "method_family": "离散潜在关系图与结构化动态推断",
+      "reason": "遮挡补全可借部件关系约束未知，但原NRI清楚区分关系变量和预测解码，适合诊断图是否被使用、是否可识别，以及未观察节点是否根本不在表示空间内。",
+      "transfer_mechanism": "以显式关系后验组织跨部件信息，并用多步/再显露预测迫使关系参与推断；目标应增加可见性、隐藏部件slots、几何解码与多候选而非直接补零。",
+      "strongest_counterexample": "两个可见节点被同一隐藏驱动同步推动，直接连边与共同驱动可产生同样轨迹；相同可见骨架也能对应不同隐藏姿态或外表面。",
+      "minimal_experiment": "用真值部件与相机制造遮挡序列，比较原NRI对补零输入、可见性/隐藏slots改造、同容量去潜图解码器；匹配节点、候选、参数和训练步，分开测可见、遮挡中、再显露误差与关系可识别性。",
+      "evidence_status": "原文有模拟真图恢复和轨迹预测证据；非模态几何及因果唯一性未被原文证明。",
+      "pdf_downloaded": false
+    },
+    {
+      "paper_id": "arxiv:2208.02814",
+      "title": "Conformal Risk Control",
+      "source_domain": "统计推断、预测集合与风险控制",
+      "method_family": "分布无关有限样本校准",
+      "reason": "非模态补全不仅要提出形状，还要知道允许漏掉多少隐藏区域；CRC提供后验决策层，能检验置信分数与使用承诺之间的缺口。",
+      "transfer_mechanism": "固定模型分数→嵌套预测集合→预先定义的隐藏区域有界单调损失→有限样本修正校准→控制指定平均损失；不生成新隐藏证据。",
+      "strongest_counterexample": "99%简单物体全对、1%严重遮挡物全部漏掉仍可总体达标；或者全图/全体积输出零漏检却无形状辨识力。",
+      "minimal_experiment": "冻结模型缓存，直接源方法/隐藏风险改造/无修正及无可见分区消融，配合等面积曲线与全域参照；1000–5000实例CPU校准一周，不启动GPU。",
+      "evidence_status": "原文证明指定期望风险并报告分割/分类例子；amodal与三维迁移均为未运行假设，非逐实例或任意漂移保证。",
+      "pdf_downloaded": false
+    }
+  ],
+  "diversity": {
+    "method_families": [
+      "conditional imputation",
+      "geometric equivariance",
+      "active sensing",
+      "latent relational graph",
+      "conformal risk control"
+    ],
+    "covered_domains": [
+      "time-series imputation",
+      "geometric deep learning",
+      "reinforcement learning",
+      "physical interaction modeling",
+      "statistical calibration"
+    ],
+    "rationale": "五篇来自五类机制，分别覆盖条件边界、几何约束、主动观察、关系可识别性和风险承诺。",
+    "limitation": "本批未运行迁移实验；VIME 为原始 PDF 只读提取，CRC 近期相关工作仅摘要级核验。"
+  },
+  "dedup": {
+    "local_zotero_matches": "查重结果见 .work-2026-10-29/local-library-matches.json；五篇泛读未导入 Zotero。",
+    "correction": "排除错误编号 2609.06866；CRC 采用 2208.02814v4，ReCIRC 仅保留官方摘要级相关工作信息。",
+    "vime": "官方 HTML/ar5iv 非完整页面；使用原始 PDF 内存只读提取，未保留泛读 PDF。"
+  },
+  "gpu_started": false,
+  "status": "committed_push_pending"
+}

@@ -1,280 +1,567 @@
 {
-  "date": "2026-10-28",
-  "deep_count": 1,
-  "browse_count": 5,
-  "deep_reads": [
-    {
-      "id": "arxiv:2610.37662",
-      "title": "Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?",
-      "authors": [
-        "Jialv Zou",
-        "Xiaotong Li",
-        "Zhengrong Yue",
-        "Xu Huang",
-        "Yaxin Luo",
-        "Wenhao Yan",
-        "Haodong Li",
-        "Wenyu Liu",
-        "Xinggang Wang"
-      ],
-      "published": "2026-10-27T17:59:22Z",
-      "updated": "2026-10-27T17:59:22Z",
-      "comment": "Project page: https://doctor-james.github.io/FVQ-Page/",
-      "doi": "",
-      "source": "https://arxiv.org/abs/2610.37662",
-      "day": "2026-10-28",
-      "slug": "fvq",
-      "deep": true,
-      "version_read": "2610.37662v1",
-      "html_url": "https://arxiv.org/html/2610.37662v1",
-      "pdf_downloaded": true,
-      "fulltext_available": true,
-      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\fvq.txt",
-      "html_sha256": "c27579c0cb01642fa8c0f9849fbbb7ab856830690361abd6c07f15e9271abf98",
-      "source_links": [
-        "https://doctor-james.github.io/FVQ-Page/",
-        "https://github.com/hustvl/FVQ",
-        "https://huggingface.co/datasets/xai-org/RealworldQA"
-      ],
-      "pdf_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\download-cache\\fvq_2610.37662v1.pdf",
-      "pdf_sha256": "f2a0199b4e089821d9cecad2a45cd2ca247d7472e7984500b913d5da27b5b03e",
-      "paper_id": "arxiv:2610.37662",
-      "read_month": "2026-10",
-      "publication_month": "2026-10",
-      "first_submitted": "2026-10-27",
-      "longform": "docs/md/longform/2026-10/fvq.md",
-      "reader": "docs/md/longform/2026-10/fvq-reader/paper.md",
-      "zotero_collection": "每日精读论文/2026/10",
-      "zotero_item_key": "W0GRZR5H",
-      "zotero_attachment_key": "0N82DQPR",
-      "pdf": "C:\\Users\\华硕\\Zotero\\storage\\0N82DQPR\\Zou et al - 2026 - fvq.pdf",
-      "pdf_verified": true,
-      "zotero_imported": true,
-      "actually_processed": "2026-10-28",
-      "venue": "arXiv preprint",
-      "code": "https://github.com/hustvl/FVQ",
-      "code_verified": "implementation present; not executed"
-    }
-  ],
-  "browse": [
-    {
-      "id": "arxiv:2610.37668",
-      "title": "Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering and Reconstruction",
-      "authors": [
-        "Prakhar Kaushik",
-        "Soumava Paul",
-        "Alan Yuille"
-      ],
-      "published": "2026-10-27T17:59:59Z",
-      "updated": "2026-10-27T17:59:59Z",
-      "comment": "Project page at https://honeycomb-surfels.github.io/",
-      "doi": "",
-      "source": "https://arxiv.org/abs/2610.37668",
-      "day": "2026-10-28",
-      "slug": "honeycomb-surfels",
-      "deep": false,
-      "version_read": "2610.37668v1",
-      "html_url": "https://arxiv.org/html/2610.37668v1",
-      "pdf_downloaded": false,
-      "fulltext_available": true,
-      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\honeycomb-surfels.txt",
-      "html_sha256": "3ae164f6602701804faa58f2a0549d2e5620fc28f776a293736fff3d103c4e30",
-      "source_links": [],
-      "paper_id": "arxiv:2610.37668",
-      "read_month": "2026-10",
-      "publication_month": "2026-10",
-      "first_submitted": "2026-10-27",
-      "venue": "arXiv preprint",
-      "full_notes_path": "docs/md/2026-10-28.md",
-      "source_format": "official arXiv HTML",
-      "aris_ideas": 3,
-      "related_sources": [
-        "https://arxiv.org/abs/2610.37668",
-        "https://arxiv.org/html/2610.37668v1",
-        "https://honeycomb-surfels.github.io/",
-        "https://github.com/honeycomb-surfels/hexels",
-        "https://arxiv.org/abs/2403.17888",
-        "https://arxiv.org/abs/2411.08508"
-      ]
-    },
-    {
-      "id": "arxiv:2610.37666",
-      "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
-      "authors": [
-        "Chaehyun Kim",
-        "Chi-Pin Huang",
-        "Jisoo Kim",
-        "Min-Hung Chen",
-        "Yu-Chiang Frank Wang",
-        "Seungryong Kim",
-        "Fu-En Yang"
-      ],
-      "published": "2026-10-27T17:59:52Z",
-      "updated": "2026-10-27T17:59:52Z",
-      "comment": "Project Page: https://thinkworld-project.github.io/",
-      "doi": "",
-      "source": "https://arxiv.org/abs/2610.37666",
-      "day": "2026-10-28",
-      "slug": "thinkworld",
-      "deep": false,
-      "version_read": "2610.37666v1",
-      "html_url": "https://arxiv.org/html/2610.37666v1",
-      "pdf_downloaded": false,
-      "fulltext_available": true,
-      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\thinkworld.txt",
-      "html_sha256": "ea22f872e495ef756f5839c5a36cb5f450890b716474468198b7bbce8286bdf1",
-      "source_links": [
-        "https://github.com/huggingface/lerobot",
-        "https://thinkworld-project.github.io/"
-      ],
-      "paper_id": "arxiv:2610.37666",
-      "read_month": "2026-10",
-      "publication_month": "2026-10",
-      "first_submitted": "2026-10-27",
-      "venue": "arXiv preprint",
-      "full_notes_path": "docs/md/2026-10-28.md",
-      "source_format": "official arXiv HTML",
-      "aris_ideas": 3,
-      "related_sources": [
-        "https://arxiv.org/abs/2610.37666",
-        "https://arxiv.org/html/2610.37666v1",
-        "https://arxiv.org/abs/2410.11758",
-        "https://arxiv.org/abs/2602.10098"
-      ]
-    },
-    {
-      "id": "arxiv:2610.37437",
-      "title": "Representing the Unseen: Rethinking Visual Imagination for Spatial Reasoning",
-      "authors": [
-        "Zengqi Zhao",
-        "Zun Wang",
-        "Shoubin Yu",
-        "Mohit Bansal",
-        "Yue Zhang"
-      ],
-      "published": "2026-10-27T15:48:09Z",
-      "updated": "2026-10-27T15:48:09Z",
-      "comment": "Webpage:https://imagirep.github.io/",
-      "doi": "",
-      "source": "https://arxiv.org/abs/2610.37437",
-      "day": "2026-10-28",
-      "slug": "imagirep",
-      "deep": false,
-      "version_read": "2610.37437v1",
-      "html_url": "https://arxiv.org/html/2610.37437v1",
-      "pdf_downloaded": false,
-      "fulltext_available": true,
-      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\imagirep.txt",
-      "html_sha256": "93fc2ae876927a88c7b5dbe2662a78808a386af785cb638a70c2171d2aadd86f",
-      "source_links": [
-        "https://imagirep.github.io/"
-      ],
-      "paper_id": "arxiv:2610.37437",
-      "read_month": "2026-10",
-      "publication_month": "2026-10",
-      "first_submitted": "2026-10-27",
-      "venue": "arXiv preprint",
-      "full_notes_path": "docs/md/2026-10-28.md",
-      "source_format": "official arXiv HTML",
-      "aris_ideas": 3,
-      "related_sources": [
-        "https://arxiv.org/abs/2610.37437",
-        "https://arxiv.org/html/2610.37437v1",
-        "https://imagirep.github.io/",
-        "https://arxiv.org/abs/2507.12508",
-        "https://arxiv.org/abs/2602.08236"
-      ]
-    },
-    {
-      "id": "arxiv:2610.37545",
-      "title": "GroundControl: Satellite-Conditioned Multi-View Diffusion for Reconstruction-Free Novel View Synthesis",
-      "authors": [
-        "Akshay Krishnan",
-        "Matias Turkulainen",
-        "Jamie Wynn",
-        "Zawar Qureshi",
-        "Mohamed Sayed",
-        "Guillermo Garcia-Hernando",
-        "Sara Vicente",
-        "James Hays",
-        "Michael Firman",
-        "Daniyar Turmukhambetov"
-      ],
-      "published": "2026-10-27T16:56:45Z",
-      "updated": "2026-10-27T16:56:45Z",
-      "comment": "Accepted to WACV 2027. Project page: https://nianticspatial.github.io/groundcontrol",
-      "doi": "",
-      "source": "https://arxiv.org/abs/2610.37545",
-      "day": "2026-10-28",
-      "slug": "groundcontrol",
-      "deep": false,
-      "version_read": "2610.37545v1",
-      "html_url": "https://arxiv.org/html/2610.37545v1",
-      "pdf_downloaded": false,
-      "fulltext_available": true,
-      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\groundcontrol.txt",
-      "html_sha256": "be93c2e2a0a0b379bdafb0c383adf8858f19e53c82b4a78306243f36daceb019",
-      "source_links": [
-        "https://github.com/fferflo/tiledwebmaps",
-        "https://nianticspatial.github.io/groundcontrol"
-      ],
-      "paper_id": "arxiv:2610.37545",
-      "read_month": "2026-10",
-      "publication_month": "2026-10",
-      "first_submitted": "2026-10-27",
-      "venue": "arXiv preprint",
-      "full_notes_path": "docs/md/2026-10-28.md",
-      "source_format": "official arXiv HTML",
-      "aris_ideas": 3,
-      "related_sources": [
-        "https://arxiv.org/abs/2610.37545",
-        "https://arxiv.org/html/2610.37545v1",
-        "https://nianticspatial.github.io/groundcontrol",
-        "https://arxiv.org/abs/2503.14489",
-        "https://arxiv.org/abs/2303.14672"
-      ]
-    },
-    {
-      "id": "arxiv:2610.37326",
-      "title": "ScIntBench: Physical Interaction Plausibility in 3D Scene Generation",
-      "authors": [
-        "Wendi Ying",
-        "Daochang Liu",
-        "Leonid Sigal",
-        "Ajmal Saeed Mian"
-      ],
-      "published": "2026-10-27T14:36:04Z",
-      "updated": "2026-10-27T14:36:04Z",
-      "comment": "",
-      "doi": "",
-      "source": "https://arxiv.org/abs/2610.37326",
-      "day": "2026-10-28",
-      "slug": "scintbench",
-      "deep": false,
-      "version_read": "2610.37326v1",
-      "html_url": "https://arxiv.org/html/2610.37326v1",
-      "pdf_downloaded": false,
-      "fulltext_available": true,
-      "text_path": "D:\\CV-Literature\\commen\\.work-2026-10-28\\sources\\scintbench.txt",
-      "html_sha256": "3bc454ed05657a41661be9357bc2ad1f330b9fc7e6ac818eda689317d4f1cfd6",
-      "source_links": [
-        "https://scintbench.github.io"
-      ],
-      "paper_id": "arxiv:2610.37326",
-      "read_month": "2026-10",
-      "publication_month": "2026-10",
-      "first_submitted": "2026-10-27",
-      "venue": "arXiv preprint",
-      "full_notes_path": "docs/md/2026-10-28.md",
-      "source_format": "official arXiv HTML",
-      "aris_ideas": 3,
-      "related_sources": [
-        "https://arxiv.org/abs/2610.37326",
-        "https://arxiv.org/html/2610.37326v1",
-        "https://scintbench.github.io",
-        "https://arxiv.org/abs/2602.09153",
-        "https://arxiv.org/abs/2603.29798"
-      ]
-    }
-  ]
+    "date":  "2026-10-29",
+    "deep_count":  1,
+    "browse_count":  5,
+    "deep_reads":  [
+                       {
+                           "id":  "arxiv:2407.01521",
+                           "title":  "Improving Diffusion Inverse Problem Solving with Decoupled Noise Annealing",
+                           "authors":  [
+                                           "Bingliang Zhang",
+                                           "Wenda Chu",
+                                           "Julius Berner",
+                                           "Chenlin Meng",
+                                           "Anima Anandkumar",
+                                           "Yang Song"
+                                       ],
+                           "published":  "2024-07-01T17:59:23Z",
+                           "updated":  "2025-08-15T22:30:53Z",
+                           "source":  "https://arxiv.org/abs/2407.01521",
+                           "version_read":  "2407.01521v3",
+                           "publication_month":  "2024-07",
+                           "read_month":  "2026-10",
+                           "day":  "2026-10-29",
+                           "slug":  "daps",
+                           "deep":  true,
+                           "html_url":  "https://arxiv.org/html/2407.01521v3",
+                           "fulltext_available":  true,
+                           "text_path":  "D:\\CV-Literature\\commen\\.work-2026-10-29\\sources\\daps.txt",
+                           "html_sha256":  "1beb6fda4a2ee753f76d53827d760440f167c56ce02aa6640157f6c100b45bb1",
+                           "source_links":  [
+                                                "https://github.com/zhangbingliang2019/DAPS"
+                                            ],
+                           "pdf_downloaded":  true,
+                           "pdf_path":  "D:\\CV-Literature\\commen\\.work-2026-10-29\\download-cache\\daps_2407.01521v3.pdf",
+                           "pdf_sha256":  "14e849b9d9e93e60da70d0db7bdafb225788180e4c611d5d77b70df653081a56",
+                           "paper_id":  "arxiv:2407.01521",
+                           "first_submitted":  "2024-07-01",
+                           "longform":  "docs/md/longform/2026-10/daps.md",
+                           "reader":  "docs/md/longform/2026-10/daps-reader/paper.md",
+                           "zotero_collection":  "每日精读论文/2026/10",
+                           "zotero_item_key":  "C0NGO8XF",
+                           "zotero_attachment_key":  "BFN3G3I3",
+                           "pdf":  "C:\\Users\\华硕\\Zotero\\storage\\BFN3G3I3\\Zhang et al - 2024 - daps.pdf",
+                           "pdf_verified":  true,
+                           "zotero_imported":  true,
+                           "actually_processed":  "2026-10-29",
+                           "venue":  "CVPR 2025",
+                           "doi":  "10.1109/CVPR52734.2025.01946",
+                           "code":  "https://github.com/zhangbingliang2019/DAPS",
+                           "code_commit_sha":  "0b182726f84df1ad26fde4dccebefda4747b82d8",
+                           "code_verified":  "implementation present; not executed",
+                           "nature_reader_status":  "source_grounded_reader_verified"
+                       }
+                   ],
+    "browse":  [
+                   {
+                       "id":  "arxiv:2107.03502",
+                       "title":  "CSDI: Conditional Score-based Diffusion Models for Probabilistic Time Series Imputation",
+                       "authors":  [
+                                       "Yusuke Tashiro",
+                                       "Jiaming Song",
+                                       "Yang Song",
+                                       "Stefano Ermon"
+                                   ],
+                       "published":  "2021-07-07T22:20:24Z",
+                       "updated":  "2021-10-27T16:22:29Z",
+                       "source":  "https://arxiv.org/abs/2107.03502",
+                       "version_read":  "2107.03502v2",
+                       "publication_month":  "2021-07",
+                       "read_month":  "2026-10",
+                       "day":  "2026-10-29",
+                       "slug":  "csdi",
+                       "deep":  false,
+                       "html_url":  "https://arxiv.org/html/2107.03502v2",
+                       "fulltext_available":  true,
+                       "text_path":  "D:\\CV-Literature\\commen\\.work-2026-10-29\\sources\\csdi.txt",
+                       "html_sha256":  "d7f4115ad4229c0155b66987bf2bb9201aafc0602754bf38d3ce771721a4d2fe",
+                       "source_links":  [
+                                            "https://github.com/awslabs/gluon-ts",
+                                            "https://github.com/dginev/ar5iv/issues/new?template=improve-article--arxiv-id-.md\u0026title=Improve+article+2107.03502",
+                                            "https://github.com/ermongroup/CSDI",
+                                            "https://github.com/lucidrains/linear-attention-transformer"
+                                        ],
+                       "pdf_downloaded":  false,
+                       "paper_id":  "arxiv:2107.03502",
+                       "venue":  "NeurIPS 2021",
+                       "source_domain":  "医疗与环境多变量时间序列的概率缺失值插补",
+                       "method_family":  "条件分布学习、结构化缺失与时空依赖",
+                       "related_sources":  [
+                                               "https://arxiv.org/abs/2107.03502",
+                                               "https://ar5iv.labs.arxiv.org/html/2107.03502",
+                                               "https://github.com/ermongroup/CSDI",
+                                               "https://raw.githubusercontent.com/ermongroup/CSDI/main/main_model.py",
+                                               "https://arxiv.org/abs/2403.01742",
+                                               "https://arxiv.org/html/2403.01742v3"
+                                           ],
+                       "full_notes_path":  "docs/md/2026-10-29.md",
+                       "aris_ideas":  [
+                                          {
+                                              "id":  "csdi-missing-mechanism",
+                                              "title":  "可见比例相同，缺失机制改变会不会击穿条件补全？",
+                                              "type":  "我们提出的研究假设：检验训练目标可代表真缺失的前提",
+                                              "method_steps":  [
+                                                                   "用同一批完整二维形状生成随机点遮盖、连块遮盖和由物体形状/遮挡者共同决定的遮盖，使各组可见比例匹配；训练和测试按完整物体身份划分。",
+                                                                   "比较按原随机自监督策略直接训练、加入目标坐标与结构遮挡条件的改造版、删除遮挡条件的消融版；模型规模、步数和生成候选数一致。",
+                                                                   "分别记录隐藏区质量、可见约束违约、候选覆盖与校准；使用只改变缺失机制的配对样本检验分布转移。"
+                                                               ],
+                                              "hypothesis":  "结构相关缺失会选择性移除任务最有辨识力的部位，性能差距不由可见率单独解释；加入代表性训练遮挡可能缓解，但不可识别的隐藏差异仍不能消除。",
+                                              "minimum_experiment":  "一周内在数千个低分辨率合成完整 mask/SDF 上做小型条件去噪诊断；先以 CPU 构造配对数据及检查标签，若另获资源授权再跑单卡小模型，预估不超过数小时/配置。本次不运行。",
+                                              "positive":  "随机遮盖测试良好而形状相关测试明显退化，改造仅在匹配遮挡机制时改善，支持选择偏差解释。",
+                                              "negative":  "三种缺失机制下差距接近且条件改造无益，当前数据可能由低阶上下文充分决定，不能声称结构缺失总是瓶颈。",
+                                              "null":  "任务过易、候选塌缩或掩码生成泄露标签，先修复诊断，再解释机制；不把无显著差异写成已证明鲁棒。",
+                                              "expected_contribution":  "把遮挡比例与缺失机制分开，给出从自监督插补迁移到真实遮挡的适用边界。",
+                                              "risk":  "合成遮挡机制可能不代表真实场景；完整标注与未见类别划分不严会制造虚假迁移。",
+                                              "relation_to_paper":  "直接检验 §4.2–4.3 的目标选择在 amodal 中的外推，不声称原文已经解决 MNAR 或首次提出掩码策略。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "csdi-hypothesis-averaging",
+                                              "title":  "平均多个合理补全，是否生成一个不合理拓扑？",
+                                              "type":  "我们提出的研究假设：反事实与目标函数诊断",
+                                              "method_steps":  [
+                                                                   "构造同一可见轮廓对应两种合法隐藏拓扑的配对数据，固定条件去噪器和候选预算。",
+                                                                   "比较逐候选保留、先平均 SDF/概率再取单形状、改造为证据约束的候选选择三种读出；再移除结构约束，保持输入和候选完全相同。",
+                                                                   "同时测单解隐藏 IoU、连通分量/孔洞、真值候选覆盖与可见违约，避免仅以 best-of-K 掩盖无用候选。"
+                                                               ],
+                                              "hypothesis":  "点估计对逐值误差可能合理，却可能跨越合法形状流形；拓扑多解应在候选层面保留，而不是逐坐标平均。",
+                                              "minimum_experiment":  "优先用预先构造的合法候选离线验证读出差异，CPU 可完成；随后才在同一个小型条件模型的缓存样本上复查，1–3 天，不启动 GPU。",
+                                              "positive":  "候选各自合法且覆盖真值，但平均后出现断杆/粘连，支持拓扑平均的目标错配。",
+                                              "negative":  "平均与候选选择均保留合法结构且误差无差别，说明该数据分布可能近似单峰，不应泛化为所有补全都必须多解。",
+                                              "null":  "候选本身缺乏多样性或两种拓扑并未在未知区形成真正歧义，需先改善构造。",
+                                              "expected_contribution":  "区分分布模型的表达能力与下游读出策略，指出概率插补如何在形状任务中被错误使用。",
+                                              "risk":  "人为拓扑反例可能过于特殊；best-of-K、阈值和概率校准会混淆结论，须事先固定。",
+                                              "relation_to_paper":  "借鉴 CSDI 多样本概率输出，拓展其点估计与分布评价区别；不是声称论文对时间序列的中位数读出错误。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "csdi-amodal-three-state",
+                                              "title":  "把条件插补改成三态证据约束的 amodal 形状分布",
+                                              "type":  "我们提出的研究假设：直接连接非模态与三维任务",
+                                              "method_steps":  [
+                                                                   "先在对象坐标把每个查询位置标为已见目标、确定自由/非目标、未知；三维使用真值相机与深度构建射线状态，避免把未知当背景。",
+                                                                   "将直接网格插补版改成条件 occupancy/SDF 去噪器，输入三态证据、目标身份及相机；训练只使用完整形状标签，隐藏区域保持多个候选。",
+                                                                   "比较直接沿用数值 mask 的原型、三态改造、删除 unknown 区别或目标身份的消融；加入新视角，只用新显露证据更新候选。"
+                                                               ],
+                                              "hypothesis":  "明确未知状态可避免用错误负监督消灭真实背面，条件采样可维护完整形状多解；但可见证据未区分的背面仍应不确定。",
+                                              "minimum_experiment":  "从公开完整 mesh 渲染少量同正面异背面的对象，先做低分辨率查询点原型与标签审计；一周内以固定候选集完成新视角更新诊断，模型训练另行授权。本轮未运行。",
+                                              "positive":  "三态改造减少可见/自由空间冲突，保留多解且新视角能淘汰错误候选，支持条件变量语义是关键。",
+                                              "negative":  "三态标签正确仍不改善隐藏覆盖，说明形状先验、候选模型或几何表示才是主要瓶颈。",
+                                              "null":  "相机误差导致三态错误，或新视角没有显露区别，不能据此判定条件机制无效。",
+                                              "expected_contribution":  "给出可追溯的观测—先验接口，并建立二维轮廓、可见重建与完整三维 amodal 的共同评价边界。",
+                                              "risk":  "三态推断在真实图像中有噪声；完整形状监督、相机标定和实例对应的获得成本较高。",
+                                              "relation_to_paper":  "使用 CSDI 的条件/目标分离思想，新增空间几何、可见性和完整形状监督；这些效果没有原文直接证据。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          }
+                                      ],
+                       "evidence_status":  "全文 HTML、关键表格及作者实现已核验；原论文没有本轮提出的 amodal 实验；未复现、未完成系统查新。"
+                   },
+                   {
+                       "id":  "arxiv:2102.09844",
+                       "title":  "E(n) Equivariant Graph Neural Networks",
+                       "authors":  [
+                                       "Victor Garcia Satorras",
+                                       "Emiel Hoogeboom",
+                                       "Max Welling"
+                                   ],
+                       "published":  "2021-02-19T10:25:33Z",
+                       "updated":  "2022-02-16T15:56:07Z",
+                       "source":  "https://arxiv.org/abs/2102.09844",
+                       "version_read":  "2102.09844v3",
+                       "publication_month":  "2021-02",
+                       "read_month":  "2026-10",
+                       "day":  "2026-10-29",
+                       "slug":  "egnn",
+                       "deep":  false,
+                       "html_url":  "https://arxiv.org/html/2102.09844v3",
+                       "fulltext_available":  true,
+                       "text_path":  "D:\\CV-Literature\\commen\\.work-2026-10-29\\sources\\egnn.txt",
+                       "html_sha256":  "719d1df05ef9dba94636b08a5b8899c5e9931de8f090357b5e278a5a071e5ae4",
+                       "source_links":  [
+                                            "https://github.com/dginev/ar5iv/issues/new?template=improve-article--arxiv-id-.md\u0026title=Improve+article+2102.09844"
+                                        ],
+                       "pdf_downloaded":  false,
+                       "paper_id":  "arxiv:2102.09844",
+                       "venue":  "preprint or published paper",
+                       "source_domain":  "粒子动力学、分子性质与图表示学习",
+                       "method_family":  "欧氏等变几何与坐标更新",
+                       "related_sources":  [
+                                               "https://arxiv.org/abs/2102.09844",
+                                               "https://ar5iv.labs.arxiv.org/html/2102.09844",
+                                               "https://proceedings.mlr.press/v139/satorras21a.html",
+                                               "https://github.com/vgsatorras/egnn",
+                                               "https://raw.githubusercontent.com/vgsatorras/egnn/main/models/egnn_clean/egnn_clean.py",
+                                               "https://arxiv.org/abs/2412.00952",
+                                               "https://arxiv.org/html/2412.00952v1"
+                                           ],
+                       "full_notes_path":  "docs/md/2026-10-29.md",
+                       "aris_ideas":  [
+                                          {
+                                              "id":  "egnn-affine-hull",
+                                              "title":  "先检验隐藏节点是否被锁在可见点的平面里",
+                                              "type":  "我们提出的研究假设：检验表示可表达性的隐含前提",
+                                              "method_steps":  [
+                                                                   "在 z=0 平面放置可见节点与隐藏查询，固定同一图，解析与数值检查多层径向更新是否保持平面；用固定有界标量权重先排除训练因素。",
+                                                                   "比较直接 EGNN、加入共同变换的相机方向/非共面随机查询的改造、移除这些条件的消融，并区分向量条件与任意绝对坐标拼接。",
+                                                                   "在同一组目标点上分别统计出平面表达范围、坐标变换一致性和目标几何误差，必要时使用可解小回归避免训练预算差异。"
+                                                               ],
+                                              "hypothesis":  "纯径向更新保持初始坐标的仿射包，共面隐藏查询无法恢复非共面背面；提供合规的额外向量或非共面随机变量可解除这一限制，但不保证辨认真实深度。",
+                                              "minimum_experiment":  "CPU 上数十节点和若干层坐标更新即可做闭包诊断；1–2 天完成解析检查及反例。小型学习版本若后续运行，匹配参数/步数，预计单卡短时任务；本次不运行。",
+                                              "positive":  "直接和消融版始终共面，改造版可表达非共面结构且共同换系一致，定位到表示自由度的缺口。",
+                                              "negative":  "直接版出现出平面坐标，先核查它是否已经注入非共面坐标、向量或数值噪声；若确有新增机制，则结论只针对纯式4结构，不扩大批评。",
+                                              "null":  "目标本身共面或只看二维投影，测试无法检验背面自由度，应换真正非共面目标。",
+                                              "expected_contribution":  "在训练前给补全架构做可表达性审计，区分结构不可能、优化失败与观测歧义。",
+                                              "risk":  "实际模型可能已有非共面查询，不能把纯层的限制归咎所有 EGNN 应用；噪声增长不等于学到正确背面。",
+                                              "relation_to_paper":  "直接从式4与作者 coord_model 推导并检验；原文面向完整粒子坐标等任务，不声称它对补全做出了错误结论。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "egnn-coordinate-camera",
+                                              "title":  "把共同换坐标与真正换视角分开，避免伪等变评价",
+                                              "type":  "我们提出的研究假设：反事实与失败诊断",
+                                              "method_steps":  [
+                                                                   "对同一完整场景设计两种干预：物体与相机共同刚体换系，保持投影观测；仅物体转动而相机固定，改变显露面。",
+                                                                   "比较直接把 RGB/相机数值当标量的源结构、相机射线按向量共同变换的改造、去掉正确类型处理的消融，匹配所有训练条件。",
+                                                                   "另做镜像配对，分别测坐标输出等变与反射不变标量头的手性判别；不要把这两种输出任务混成一个准确率。"
+                                                               ],
+                                              "hypothesis":  "相机条件类型错误可破坏等变；而正确共同换系等变仍不足以处理新显露证据。只依赖距离的标量读出不能区分距离完全相同的镜像。",
+                                              "minimum_experiment":  "以已缓存/合成几何和固定相机投影先做 CPU 变换与标签检查，2–3 天；若做学习诊断只用小样本，保持查询数和候选数，不在本轮运行 GPU。",
+                                              "positive":  "共同换系稳定但固定相机转动下隐藏误差仍高，明确几何对称约束与遮挡推理的责任边界；类型错误消融退化支持接口改造。",
+                                              "negative":  "各组同样稳定且新视角也准确，当前模型可能有充分几何/图像信息，不能归因为仅等变结构。",
+                                              "null":  "共同换系时渲染或标定没有同步、镜像配对泄露纹理标签，需要先修复数据，不下机制结论。",
+                                              "expected_contribution":  "建立不会混淆坐标系统、真实视角变化和手性任务的补全诊断协议。",
+                                              "risk":  "相机渲染细节和身份对应可能泄露差异；镜像是否应等价取决于目标，须明确任务标签。",
+                                              "relation_to_paper":  "检验 §3.1 的输入条件在相机条件 amodal 中是否保留；相关 ESCAPE 已探索等变补全，此项强调诊断而非宣称首次应用。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "egnn-visible-hidden-queries",
+                                              "title":  "固定观测节点，让隐藏查询维护可被反证的完整形状候选",
+                                              "type":  "我们提出的研究假设：直接连接三维非模态补全",
+                                              "method_steps":  [
+                                                                   "把可见点与隐藏查询分组，可见点由深度/重投影约束固定，隐藏查询用三维随机种子或合法向量条件初始化，并让随机种子在换系测试中共同变换。",
+                                                                   "采用 EGNN 细化候选，训练隐藏表面损失与可见证据一致性；多候选共享观测、保留不同背面，不能将其直接平均。",
+                                                                   "比较所有节点自由移动的直接版、观测固定且隐藏多候选的改造、删除可见/隐藏区分的消融；新增真实视角后用显露区域误差更新候选。"
+                                                               ],
+                                              "hypothesis":  "将测量节点与假设节点分工，可减少先验拉动真实观测，同时保留隐藏多解；等变只负责几何运算一致性，新增观测才负责淘汰错误背面。",
+                                              "minimum_experiment":  "用少量完整 mesh 渲染真值相机与正面深度，先在固定候选集上实现可见约束及新视角淘汰；一周内先完成离线几何评价，训练与模型推理另行授权。本次未运行。",
+                                              "positive":  "改造减少可见漂移、提高合理隐藏候选覆盖且新视角降低错误候选权重，支持分工机制。",
+                                              "negative":  "可见几何守住但隐藏覆盖仍无改善，表明瓶颈在形状先验或候选表达，不能继续以等变解释全部问题。",
+                                              "null":  "新增视角没有显露差异、相机错误把真候选剔除或候选几乎相同，需先校验数据与评价。",
+                                              "expected_contribution":  "构建观测与生成先验分离、能接受后续反证的等变非模态推理接口。",
+                                              "risk":  "候选数与计算成本、多解校准、薄结构点预算；随机种子联合等变不等于每次独立采样逐点输出相同。",
+                                              "relation_to_paper":  "借用 EGNN 坐标场，新增 hidden queries、完整形状监督和证据更新；与 ESCAPE 等直接补全工作需进一步系统查新，当前不认定创新。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          }
+                                      ],
+                       "evidence_status":  "已读主文/附录 HTML、公式证明和作者实现；仿射包限制为由原式得到的本次推导；直接 amodal 设计待验证。有限查新已发现 ESCAPE，因此不声称把等变引入补全是新想法。"
+                   },
+                   {
+                       "id":  "arxiv:1605.09674",
+                       "title":  "VIME: Variational Information Maximizing Exploration",
+                       "authors":  [
+                                       "Rein Houthooft",
+                                       "Xi Chen",
+                                       "Yan Duan",
+                                       "John Schulman",
+                                       "Filip De Turck",
+                                       "Pieter Abbeel"
+                                   ],
+                       "published":  "2016-05-31T15:34:36Z",
+                       "updated":  "2017-01-27T09:26:28Z",
+                       "source":  "https://arxiv.org/abs/1605.09674",
+                       "version_read":  "1605.09674v4",
+                       "publication_month":  "2016-05",
+                       "read_month":  "2026-10",
+                       "day":  "2026-10-29",
+                       "slug":  "vime",
+                       "deep":  false,
+                       "html_url":  null,
+                       "fulltext_available":  false,
+                       "text_path":  null,
+                       "html_sha256":  null,
+                       "source_links":  [
+                                            null
+                                        ],
+                       "pdf_downloaded":  false,
+                       "paper_id":  "arxiv:1605.09674",
+                       "venue":  "Published in Advances in Neural Information Processing Systems 29 (NIPS), pages 1109-1117",
+                       "source_domain":  "连续控制与强化学习探索",
+                       "method_family":  "贝叶斯信息增益与主动感知",
+                       "related_sources":  [
+                                               "https://arxiv.org/abs/1605.09674",
+                                               "https://arxiv.org/pdf/1605.09674",
+                                               "https://github.com/openai/vime",
+                                               "https://raw.githubusercontent.com/openai/vime/master/README.md",
+                                               "https://arxiv.org/abs/2610.37098",
+                                               "https://arxiv.org/html/2610.37098v1"
+                                           ],
+                       "full_notes_path":  "docs/md/2026-10-29.md",
+                       "aris_ideas":  [
+                                          {
+                                              "id":  "vime-premise-belief-target",
+                                              "title":  "参数KL何时代表真实信息，而非优化器忙碌",
+                                              "type":  "检验隐含前提",
+                                              "method_steps":  [
+                                                                   "构造CPU可解析的低维线性动态模型，同时保留真实参数后验和变分近似；生成未知规律改变、已知观测噪声增大两种匹配幅度的数据。",
+                                                                   "固定样本量与更新预算，对比直接VIME局部参数KL、以精确目标后验作信息量的改造、删KL改为预测误差的版本；分别改变近似族与更新步长。",
+                                                                   "以真实参数熵变化和后续预测为外部标准，检查各奖励排序是否与实际可学信息一致，而非只比较奖励自身。"
+                                                               ],
+                                              "hypothesis":  "VIME近似奖励能否区分可学未知和随机性，依赖后验族、似然和优化近似；大KL不是普遍可信的任务信息代理。",
+                                              "minimum_experiment":  "2-3天CPU合成数据与解析后验诊断，无GPU和RL训练；分开报告正确/错误噪声模型、步长和样本区间。本轮仅提出方案，未执行。",
+                                              "positive":  "在错似然或未收敛条件下出现大KL但真实熵不降，支持近似/目标错配解释；正确条件下排序恢复可定位边界。",
+                                              "negative":  "合理扰动范围内KL始终准确跟踪真实信息，当前模型下该风险不主导，不能推广为所有视觉BNN可靠。",
+                                              "null":  "模型过于容易、后验已收敛或扰动没有改变可学性；需增大参数混淆而非宣称机制成立。",
+                                              "expected_contribution":  "给出局部KL作为信息代理的可检查适用范围，明确迁移前应验证什么。",
+                                              "risk":  "低维可解析模型不代表高维视觉后验；结果只作诊断，不能替代实际相机实验。",
+                                              "relation_to_paper":  "检验原文Eq.7与Eq.16的近似信息增益路径，并非发明新的互信息准则。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "vime-counterfactual-distractor",
+                                              "title":  "无关闪烁是否偷走主动观察预算",
+                                              "type":  "反事实失败诊断",
+                                              "method_steps":  [
+                                                                   "固定目标形状、候选集和可达相机，复制场景仅改变无关屏幕的随机纹理；保持目标区域和几何完全一致。",
+                                                                   "比较直接模型参数KL、仅以目标形状后验互信息选视角、移除信息项的等成本随机/覆盖策略；匹配动作距离与候选渲染次数。",
+                                                                   "记录相机分配到屏幕方向的比例、真实隐藏形状候选权重变化和剩余不确定性，避免把视觉新颖性当任务进展。"
+                                                               ],
+                                              "hypothesis":  "若奖励变量未绑定目标形状，背景新颖性可能改变观察行为而不改善隐藏结构辨识；形状条件目标应对这种反事实更稳定。",
+                                              "minimum_experiment":  "3-4天小型合成候选集与预计算观测表，CPU离散更新，10-20对象、多次噪声种子；本轮不启动训练或机器人。",
+                                              "positive":  "参数KL策略被无关屏幕改变而目标后验策略保持对形状有用的视角，支持任务变量选择的重要性。",
+                                              "negative":  "原策略对屏幕稳定且同样降低隐藏不确定性，说明当前表示已过滤干扰，不能硬归因noisy-TV。",
+                                              "null":  "没有任何候选视角可区分形状，或背景未进入模型状态；应先查可辨识性与输入路径。",
+                                              "expected_contribution":  "将好奇探索与任务相关观测的区别转为反事实压力测试。",
+                                              "risk":  "合成闪烁不等于实际传感器噪声；必须分开检查模型未知与环境随机性。",
+                                              "relation_to_paper":  "扩展原文预测误差对照，检验VIME向视觉主动补全外推时的变量错配；原文未做此实验。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "vime-amodal-shape-information",
+                                              "title":  "用形状候选互信息选择最能否定错误背面的视角",
+                                              "type":  "直接连接二维及三维非模态补全",
+                                              "method_steps":  [
+                                                                   "从可见RGB-D与相机形成多个完整形状候选，记录观测约束、未知区域和候选权重；初期用固定候选库隔离生成误差。",
+                                                                   "对可达相机渲染候选的可见观测，按预期形状后验KL减运动成本选择动作，采集真实观测后更新候选，不把生成视图当真实证据。",
+                                                                   "与直接VIME参数KL、去形状信息项的覆盖策略做等候选/等渲染/等路径预算比较；二维输出候选投影mask，三维输出可见表面与隐藏完整形状分区。"
+                                                               ],
+                                              "hypothesis":  "主动补全的关键不是最大化通用模型学习，而是选择能区分当前互斥隐藏形状假设的观测。",
+                                              "minimum_experiment":  "一周内10-20个同正面异背面合成对象，先用真值相机与有限视角表；测隐藏IoU/表面误差、真候选覆盖和校准、错误候选淘汰率及动作成本。完整RL或机器人运行另需资源授权。",
+                                              "positive":  "在同预算下更多错误背面被真实新观察淘汰，且可见几何不退化，支持目标信息准则。",
+                                              "negative":  "覆盖策略同样好或更好，说明当前任务几何覆盖即可解释增益；不应声称互信息带来独立贡献。",
+                                              "null":  "真形状不在候选中、所有可达视角观测相同或似然过平；这首先是候选/可观测性瓶颈。",
+                                              "expected_contribution":  "建立目标形状可辨识性驱动的主动非模态补全接口与评估协议。",
+                                              "risk":  "错误标定/渲染似然会淘汰真候选；真实相机路径、安全和动态物体需额外建模。",
+                                              "relation_to_paper":  "继承动作驱动信念更新原则，将源动力学参数替换为完整形状假设，超出原文连续控制验证。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          }
+                                      ],
+                       "evidence_status":  "原文是连续控制探索结果；目标amodal迁移为待验证研究假设，无实验与完整新颖性认证。"
+                   },
+                   {
+                       "id":  "arxiv:1802.04687",
+                       "title":  "Neural Relational Inference for Interacting Systems",
+                       "authors":  [
+                                       "Thomas Kipf",
+                                       "Ethan Fetaya",
+                                       "Kuan-Chieh Wang",
+                                       "Max Welling",
+                                       "Richard Zemel"
+                                   ],
+                       "published":  "2018-02-13T15:35:11Z",
+                       "updated":  "2018-06-06T14:02:33Z",
+                       "source":  "https://arxiv.org/abs/1802.04687",
+                       "version_read":  "1802.04687v2",
+                       "publication_month":  "2018-02",
+                       "read_month":  "2026-10",
+                       "day":  "2026-10-29",
+                       "slug":  "nri",
+                       "deep":  false,
+                       "html_url":  "https://ar5iv.labs.arxiv.org/html/1802.04687v2",
+                       "fulltext_available":  true,
+                       "text_path":  "D:\\CV-Literature\\commen\\.work-2026-10-29\\sources\\nri.txt",
+                       "html_sha256":  "b4d2dab5d728e9b4e93c36306954ac8768c95b7500b0322b415f14263ae2e61e",
+                       "source_links":  [
+                                            "https://github.com/dginev/ar5iv/issues/new?template=improve-article--arxiv-id-.md\u0026title=Improve+article+1802.04687",
+                                            "https://github.com/ethanfetaya/nri"
+                                        ],
+                       "pdf_downloaded":  false,
+                       "paper_id":  "arxiv:1802.04687",
+                       "venue":  "ICML (2018). Code available under https://github.com/ethanfetaya/NRI",
+                       "source_domain":  "物理动力学、运动捕捉与多智能体轨迹",
+                       "method_family":  "离散潜在关系图与结构化动态推断",
+                       "related_sources":  [
+                                               "https://arxiv.org/abs/1802.04687",
+                                               "https://ar5iv.labs.arxiv.org/html/1802.04687v2",
+                                               "https://github.com/ethanfetaya/NRI",
+                                               "https://raw.githubusercontent.com/ethanfetaya/NRI/master/README.md",
+                                               "https://arxiv.org/abs/2610.37326",
+                                               "https://arxiv.org/html/2610.37326v1"
+                                           ],
+                       "full_notes_path":  "docs/md/2026-10-29.md",
+                       "aris_ideas":  [
+                                          {
+                                              "id":  "nri-premise-identifiability",
+                                              "title":  "共同驱动与直接连边能否被有限轨迹区分",
+                                              "type":  "检验结构可识别性前提",
+                                              "method_steps":  [
+                                                                   "构造有直接相互作用、以及由隐藏公共驱动造成相似可见轨迹的匹配系统，控制可见节点数、噪声和轨迹时长。",
+                                                                   "比较原NRI仅可见节点、加入公共隐节点的改造、同容量去关系解码器；先以预测等价程度分层，再施加只影响一个节点的受控扰动。",
+                                                                   "同时检查训练外轨迹误差、边后验、多图候选与干预响应，避免仅以观测预测准确率判定因果结构。"
+                                                               ],
+                                              "hypothesis":  "观测预测可使用显式图却仍无法唯一识别直接作用；加入潜在共同原因和有辨识力的干预才可能打破部分等价。",
+                                              "minimum_experiment":  "2-4天CPU低维模拟与解析匹配轨迹，不从RGB检测、不运行大型模型；固定参数和样本预算。本轮未执行。",
+                                              "positive":  "观测误差相近但原NRI边解释和干预预测失败，且显式隐因子改造改善，支持可识别性缺口。",
+                                              "negative":  "原NRI在已设计轨迹中稳定区分结构，说明数据已含足够非等价线索，应定位线索而不是宣称不存在混淆。",
+                                              "null":  "两系统并未达到预测匹配，或受控扰动太弱；实验未真正检验等价结构。",
+                                              "expected_contribution":  "区分关系被使用、关系预测正确和因果结构可识别三个不同主张。",
+                                              "risk":  "严格观测等价可能需特定生成机制；隐节点容量增加会混淆解释，必须匹配解码容量。",
+                                              "relation_to_paper":  "限定原文模拟图恢复结果的外推，补充未证明的潜在共同原因情况，不声称推翻其模拟实验。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "nri-counterfactual-graph-use",
+                                              "title":  "图只是可读装饰，还是实际约束了遮挡延续",
+                                              "type":  "反事实与失败诊断",
+                                              "method_steps":  [
+                                                                   "在同一已训练模型中保持节点状态不变，分别置换边标签、替换其他序列图和删除消息，控制扰动规模与图度数。",
+                                                                   "比较原短跨度训练、原文多步关系训练、可见性/再显露监督的改造；三组使用同参数、同数据与相同总更新预算。",
+                                                                   "按1/10/20步和遮挡前/中/后报告输出变化、真实误差与关系重要性；另用去潜图解码器控制模块容量收益。"
+                                                               ],
+                                              "hypothesis":  "图需要在预测中有因果作用才可能约束遮挡，但图干预造成变化仍不证明该图为真实物理关系；短期高分尤其可能掩盖绕过图的捷径。",
+                                              "minimum_experiment":  "3-4天已知节点的少量合成序列，优先现成小模型或缓存轨迹，预算匹配；若没有可用权重则先完成诊断协议，不冒称已验证。",
+                                              "positive":  "多步/再显露版本在真实边被破坏后显著损失预测，而短期版本几乎不变，支持关系使用机制。",
+                                              "negative":  "图置换都不影响结果，提示潜图仍被绕开；若所有版本都同样敏感，也不能单独归因新增监督。",
+                                              "null":  "样本近静止、边类别等价或扰动未改变有效消息；须先检查图干预是否触及解码路径。",
+                                              "expected_contribution":  "把注意力/图可视化解释转成路径干预证据，并明确这种证据与真实因果的差别。",
+                                              "risk":  "图置换产生分布外输入；需额外度数匹配与重训对照，不能只凭测试扰动定论。",
+                                              "relation_to_paper":  "直接检验§3.4避免解码器忽略潜变量的设计，扩展到遮挡再显露条件。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "nri-amodal-hidden-parts",
+                                              "title":  "把隐藏部件放进表示，再用关系约束而非补零",
+                                              "type":  "连接二维及三维非模态补全",
+                                              "method_steps":  [
+                                                                   "对有完整部件标注的铰链物体或人体构造遮挡序列，输入可见部件、置信度、相机与身份；明确增加隐藏部件slots和存在性变量。",
+                                                                   "缺失感知图编码器产生多种关系/姿态候选，图解码器推状态，独立形状头输出完整mask/表面；可见重投影约束与隐藏完整形状/再显露损失分开。",
+                                                                   "比较原NRI补零输入、目标改造、去潜图同容量解码器；匹配节点上限、参数、候选和训练预算，先真值跟踪再逐步加入检测误差。"
+                                                               ],
+                                              "hypothesis":  "关系只能约束表示中存在的未知量；显式隐藏slots与可见性建模，才能让部件关系对非模态几何发挥可检查作用。",
+                                              "minimum_experiment":  "一周内少量已知骨架/铰链合成对象；评价可见/隐藏/再显露几何、完整mask、候选覆盖和跨视图一致性。只做计划，完整训练需另行资源安排。",
+                                              "positive":  "相同预算下改造降低隐藏和再显露误差，图删除又损失该收益，且可见部分不退化，支持关系约束而非单纯容量。",
+                                              "negative":  "改造与去图相同，说明收益可能来自缺失标记或新增监督；拓扑先验错误时更差则说明类别前提过强。",
+                                              "null":  "隐藏部件从未被任何证据约束、候选不覆盖真解，或目标仅有骨架却以外表面指标评价；需先修表示与数据。",
+                                              "expected_contribution":  "建立可见证据、关系假设、隐藏几何三个层次的非模态推断接口与诊断。",
+                                              "risk":  "骨架不能决定衣物/体表，拓扑新颖物体不适配固定部件库；错误跟踪会沿图传播。",
+                                              "relation_to_paper":  "复用离散关系与消息机制，新增缺失节点、可见性和几何目标；这些不属于原NRI已证实能力。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          }
+                                      ],
+                       "evidence_status":  "原文有模拟真图恢复和轨迹预测证据；非模态几何及因果唯一性未被原文证明。"
+                   },
+                   {
+                       "id":  "arxiv:2208.02814",
+                       "title":  "Conformal Risk Control",
+                       "authors":  [
+                                       "Anastasios N. Angelopoulos",
+                                       "Stephen Bates",
+                                       "Adam Fisch",
+                                       "Lihua Lei",
+                                       "Tal Schuster"
+                                   ],
+                       "published":  "2022-08-04T17:59:44Z",
+                       "updated":  "2025-06-13T18:38:23Z",
+                       "source":  "https://arxiv.org/abs/2208.02814",
+                       "version_read":  "2208.02814v4",
+                       "publication_month":  "2022-08",
+                       "read_month":  "2026-10",
+                       "day":  "2026-10-29",
+                       "slug":  "crc",
+                       "deep":  false,
+                       "html_url":  "https://arxiv.org/html/2208.02814v4",
+                       "fulltext_available":  true,
+                       "text_path":  "D:\\CV-Literature\\commen\\.work-2026-10-29\\sources\\crc.txt",
+                       "html_sha256":  "e99cc6bf04f743cf4eb56c42f8cd23d28a764eb63c80ef6dc674863e6829333e",
+                       "source_links":  [
+                                            "https://github.com/aangelopoulos/conformal-risk"
+                                        ],
+                       "pdf_downloaded":  false,
+                       "paper_id":  "arxiv:2208.02814",
+                       "venue":  "Code available at https://github.com/aangelopoulos/conformal-risk",
+                       "source_domain":  "统计推断、预测集合与风险控制",
+                       "method_family":  "分布无关有限样本校准",
+                       "related_sources":  [
+                                               "https://arxiv.org/abs/2208.02814",
+                                               "https://arxiv.org/html/2208.02814v4",
+                                               "https://github.com/aangelopoulos/conformal-risk",
+                                               "https://raw.githubusercontent.com/aangelopoulos/conformal-risk/main/README.md",
+                                               "https://export.arxiv.org/api/query?id_list=2609.38112,2610.35035",
+                                               "https://arxiv.org/abs/2609.38112",
+                                               "https://arxiv.org/abs/2610.35035"
+                                           ],
+                       "full_notes_path":  "docs/md/2026-10-29.md",
+                       "aris_ideas":  [
+                                          {
+                                              "id":  "crc-premise-unit-shift",
+                                              "title":  "校准的是独立场景，还是伪装成大量样本的相邻帧？",
+                                              "type":  "我们提出的研究假设：隐含前提检验",
+                                              "method_steps":  [
+                                                                   "固定同一个amodal网络、缓存分数、可见mask和完整mask，预先锁定隐藏漏检损失与阈值网格。",
+                                                                   "建立按独立场景划分和按视频相邻帧随机划分两套协议；保持校准实例数、目标预算、模型参数和阈值候选数一致，记录每套协议的有效场景数。",
+                                                                   "分别测试相同分布、提高遮挡率、改变稀有类别比例三种测试集；再以去掉有限样本修正的经验阈值作消融，分组统计隐藏FNR、额外面积和失效率。"
+                                                               ],
+                                              "hypothesis":  "相邻帧泄露可能使校准显得过于有效，而平均风险合格可能隐藏严重遮挡和稀有结构的高风险；源定理不能直接保护被改变的分布或子群。",
+                                              "minimum_experiment":  "使用1000–5000实例的缓存数组和至少数十独立场景，做100–300次场景级重复拆分；CPU一天内完成阈值搜索，准备和审计约2–3天。直接源方法为全mask FNR校准，目标改造为隐藏FNR且按场景校准，消融为相同损失无修正；另做单因素拆分以避免把损失变化与样本单位变化混为一种原因。本次不运行。",
+                                              "positive":  "帧级拆分达标而场景外/高遮挡子群违约，或修正删除后系统性过冲，支持样本单位和目标风险错配解释。",
+                                              "negative":  "各协议在分层指标和多次拆分下均相近，说明该数据中的相关性或难度差异尚未主导结果，不证明任意视频交换性。",
+                                              "null":  "独立场景过少或隐藏真值噪声大，误差条覆盖差异；需增加场景而非重复抽同一视频帧。",
+                                              "expected_contribution":  "形成非模态校准的样本单位与分布条件审计，区分总体、子群和逐实例可靠性。",
+                                              "risk":  "以有限实验观察不到违约不等于证明交换性；场景难度变化也会与类别变化混淆，需配对/分层对照。",
+                                              "relation_to_paper":  "检验CRC Theorem 1的交换性与指定损失范围，连接2026年ReCIRC和Macro Mondrian CRC暴露的条件风险缺口；后两者仅完成官方摘要级对照，未宣称新颖性。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "crc-counterfactual-size-shortcut",
+                                              "title":  "风险达标究竟来自正确补全，还是把图画得越来越满？",
+                                              "type":  "我们提出的研究假设：反事实与失败诊断",
+                                              "method_steps":  [
+                                                                   "为同一缓存模型建立三个固定嵌套族：按语义分数扩张、围绕可见mask作纯形态膨胀、与图像无关的规则区域扩张；都保留最终全域端点。",
+                                                                   "在相同完整标签校准集上分别运行CRC，并加入全图/全体积零漏检作为病态参照；不把该参照当可用模型。",
+                                                                   "报告每个族校准工作点的真实风险和集合大小；另外在公共面积/体积预算处比较隐藏FNR、边界、拓扑和候选有效性，明确公共预算处只是诊断点，若改了校准阈值就不继续套原风险保证。"
+                                                               ],
+                                              "hypothesis":  "单独控制隐藏漏检能被无信息的大集合满足；有价值的迁移必须在相同覆盖成本下优于纯膨胀，而不是只让预测更多。",
+                                              "minimum_experiment":  "约1000个二维完整mask、缓存置信图及小型合成三维体素；CPU实现同样阈值网格和面积曲线，2天。直接源方法为全域FNR集合，目标改造为可见/未知分区的隐藏FNR，去掉关键机制版本为无图像语义的膨胀；模型、数据和候选数固定，本次不运行。",
+                                              "positive":  "多个方法均满足风险但面积差异巨大，或语义方法在等面积下并不优于膨胀，证明风险达标与有信息补全需要分开评价。",
+                                              "negative":  "语义方法在相同风险和等面积处持续更好，支持图像证据改善效率；仍不能把全局平均保证升级为每个物体真实。",
+                                              "null":  "各方法过于保守地达到全域或样本几乎无遮挡，曲线没有分辨力；应增加存在歧义和细结构的样本。",
+                                              "expected_contribution":  "给非模态风险控制增加反捷径评价，区分统计有效性、集合效率和完整形状合理性。",
+                                              "risk":  "面积匹配会改变原校准工作点；若不明确区分认证结果与离线曲线分析，会再次造成错误保证。IoU/拓扑等非单调指标不能直接继承同一阈值定理。",
+                                              "relation_to_paper":  "扩展原文同时报告risk和set size的思想，针对非模态任务补上完整形状与未知区域的代价诊断；不声称CRC原文承诺了几何正确。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          },
+                                          {
+                                              "id":  "crc-amodal-observation-hypothesis",
+                                              "title":  "把隐藏形状候选与可见证据分开校准，并显式检查无法认证",
+                                              "type":  "我们提出的研究假设：三维amodal具体改造",
+                                              "method_steps":  [
+                                                                   "用有完整mesh与真值相机的小数据构造可见相同、背面不同的形状配对，固定已有补全网络及候选数；用射线区分已见表面、确定自由空间与未知区。",
+                                                                   "可见观测作硬约束，隐藏分数只在未知区形成嵌套占用包络；以完整mesh定义隐藏漏检损失，在独立形状校准。候选形状本身独立保留，不能把多个互斥候选的并集叫成一个真实物体。",
+                                                                   "另建按固定排名增加形状候选的集合，用最优候选损失检查支持域；若全部有限候选仍达不到预算，明确记录端点条件失败，输出无法认证，不能沿用原定理。",
+                                                                   "在预先固定的新视角协议下测试显露证据是否淘汰错误候选；自适应观察策略若改变了样本分布，另设独立校准并重新验证，不能反复重用原校准保证。"
+                                                               ],
+                                              "hypothesis":  "把不确定性留在未知区域、把可见证据锁定，比对单一完整形状作全局阈值扩张更容易得到可解释的风险—体积权衡；但候选缺真解时统计校准应主动暴露无能力。",
+                                              "minimum_experiment":  "200–500个小型mesh渲染/体素和固定候选缓存，先用真值相机隔离几何误差，一周内完成CPU校准与指标；不训练大模型。直接源方法：完整占用分数统一CRC；目标改造：观测固定+隐藏损失CRC；消融：删除有限样本修正或删除可见/未知分离。匹配网络、候选数、数据与阈值预算。本次不执行。",
+                                              "positive":  "相同额外占用体积下隐藏漏检更低、已见几何不退化，且端点检查发现缺真解并拒绝认证；新视角能减少错误候选，支持接口分工。",
+                                              "negative":  "改造仅靠扩大未知区达标，或所有候选都漏掉真实背面，说明生成先验/表示支持而非校准阈值是瓶颈。",
+                                              "null":  "新视角没显露差异、候选没有真实多样性或校准样本量太小，无法判断机制，应先修实验可辨识性。",
+                                              "expected_contribution":  "将观测约束、隐藏候选分布和可认证条件组织为可被后来证据推翻的非模态决策接口。",
+                                              "risk":  "相机/深度噪声会把真表面划入自由空间；有限候选不满足可行端点，保守包络可能破坏拓扑；拒答策略本身需要单独定义风险与成本。",
+                                              "relation_to_paper":  "借用CRC的单调风险校准，不宣称它生成了三维几何；新增可见性分区、候选支持检查和新视角诊断，原文未验证，需另行系统查新。",
+                                              "validation_status":  "proposed_unrun_not_novelty_verified"
+                                          }
+                                      ],
+                       "evidence_status":  "原文证明指定期望风险并报告分割/分类例子；amodal与三维迁移均为未运行假设，非逐实例或任意漂移保证。"
+                   }
+               ]
 }

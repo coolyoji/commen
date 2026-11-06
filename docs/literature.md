@@ -1,3 +1,9 @@
+## 2026-10-29
+
+精读 **DAPS（Decoupled Annealing Posterior Sampling）**（arXiv 首发 2024-07，CVPR 2025）：[精读长文](md/longform/2026-10/daps.md)、[Nature Reader](md/longform/2026-10/daps-reader/paper.md)。PDF 已下载、导入 Zotero 每日精读论文/2026/10，条目 C0NGO8XF、附件 BFN3G3I3，下载/storage SHA-256 一致；官方代码提交已核验，未运行模型。
+
+泛读 **CSDI、EGNN、VIME、NRI、Conformal Risk Control**，分别来自条件插补、几何等变、主动感知、关系图和统计校准。五篇不下载 PDF；当天页面和 [ARIS](../research/aris/2026-10-29.json) 逐篇解释为什么可能迁移到非模态补全、最危险错配、反例与最小实验。
+
 ## 2026-10-28
 
 精读 **FVQ**（原始发表月份2026-10，阅读月份2026-10）：[长文](md/longform/2026-10/fvq.md)、[Nature Reader](md/longform/2026-10/fvq-reader/paper.md)。Zotero条目`W0GRZR5H`、附件`0N82DQPR`，下载/storage哈希一致。泛读：honeycomb-surfels、thinkworld、imagirep、groundcontrol、scintbench；只读HTML、不下载PDF。[六篇完整深层分析及18项待验证idea](md/2026-10-28.md) · [网页](html/2026-10-28.html)。

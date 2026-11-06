@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-29",
+  "actually_processed": "2026-10-29",
+  "repository": "D:\\CV-Literature\\commen",
+  "remote": "https://github.com/coolyoji/commen.git",
+  "counts": {
+    "deep": 1,
+    "browse": 5,
+    "total": 6
+  },
+  "scope": "amodal completion, 3D reconstruction, 3D amodal completion",
+  "paperforge": {
+    "applied": true,
+    "twelve_part_notes": true,
+    "all_six_have_deep_diagnostic_card": true
+  },
+  "aris": {
+    "path": "research/aris/2026-10-29.json",
+    "entries": 5,
+    "ideas_per_browse": 3,
+    "gpu_started": false,
+    "status": "written_unrun"
+  },
+  "nature_reader": {
+    "path": "docs/md/longform/2026-10/daps-reader/paper.md",
+    "source_format": "pdf-text",
+    "original_chinese_alignment": true,
+    "source_map_parse": "verified by JSON parse",
+    "formula_anchors": [
+      "E001",
+      "E002",
+      "E003",
+      "E004"
+    ],
+    "image_assets": "present",
+    "missing_pages": [],
+    "low_confidence": "formula assets are page-level crops; no unverified formula text added"
+  },
+  "zotero": {
+    "status": "verified",
+    "data_dir": "C:\\Users\\华硕\\Zotero",
+    "sqlite_backup": "D:\\CV-Literature\\commen\\.work-2026-10-29\\zotero.sqlite.pre-import-20261029.bak",
+    "backup_sha256": "d8101147f40a25da711300cad3e894f9921805f918111dbc55ee7c75ca822698",
+    "collection": "每日精读论文/2026/10",
+    "collection_id": 17,
+    "item_key": "C0NGO8XF",
+    "attachment_key": "BFN3G3I3",
+    "top_level_item_id": 1645,
+    "attachment_id": 1646,
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\BFN3G3I3\\Zhang et al - 2024 - daps.pdf",
+    "download_sha256": "14e849b9d9e93e60da70d0db7bdafb225788180e4c611d5d77b70df653081a56",
+    "storage_sha256": "14e849b9d9e93e60da70d0db7bdafb225788180e4c611d5d77b70df653081a56",
+    "download_storage_hash_match": true,
+    "top_level_item_verified": true,
+    "month_collection_verified": true,
+    "child_attachment_verified": true,
+    "storage_pdf_verified": true,
+    "sqlite_quick_check": "ok",
+    "new_foreign_key_violations": 0,
+    "running_during_backup": false,
+    "running_during_import": false,
+    "publication_month": "2024-07",
+    "conference_year": "2025",
+    "read_month": "2026-10",
+    "actually_processed": "2026-10-29"
+  },
+  "files_written": [
+    "docs/md/2026-10-29.md",
+    "docs/html/2026-10-29.html",
+    "docs/md/longform/2026-10/daps.md",
+    "data/monthly_deep_reads/2026-10.json",
+    "data/daily_browse_notes.json",
+    "data/latest_papers.json",
+    "data/daily_deep_read.json",
+    "data/daily_longform_essays.json",
+    "data/daily_paper_notes.json",
+    "data/daily_batches/2026-10-29.json",
+    "research/selection-log/2026-10-29.json",
+    "research/aris/2026-10-29.json",
+    "docs/md/longform/2026-10/index.md",
+    "docs/index.html",
+    "docs/literature.md",
+    "data/feed_history.json"
+  ],
+  "validation": {
+    "json_parse": "verified",
+    "markdown_nonempty": true,
+    "html_nonempty": true,
+    "zotero_hash_match": true,
+    "sqlite_quick_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "git": {
+    "commit": "68f1641",
+    "push": "pending",
+    "remote_reachable": true
+  }
+}

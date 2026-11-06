@@ -1,0 +1,193 @@
+{
+  "paper": {
+    "title": "Improving Diffusion Inverse Problem Solving with Decoupled Noise Annealing",
+    "venue": "CVPR 2025",
+    "source_type": "pdf-text",
+    "source_path": "D:\\CV-Literature\\commen\\.work-2026-10-29\\download-cache\\daps_2407.01521v3.pdf"
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "note",
+      "order": 1,
+      "original_text": "",
+      "english_paraphrase": "The paper studies Bayesian inverse problems with a learned diffusion prior and argues that tightly coupled denoising steps can fail on nonlinear measurements.",
+      "translation": "论文研究带学习型扩散先验的贝叶斯逆问题，并指出连续紧耦合的去噪步骤在非线性观测下可能失败。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S002",
+      "page": 3,
+      "type": "note",
+      "order": 2,
+      "original_text": "",
+      "english_paraphrase": "Small reverse-diffusion steps keep consecutive samples close, so a wrong early mode can be corrected only locally.",
+      "translation": "反向扩散的小步更新使相邻样本很接近，因此早期选错的模态只能被局部修正，难以跨越到另一个全局解。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S003",
+      "page": 3,
+      "type": "note",
+      "order": 3,
+      "original_text": "",
+      "english_paraphrase": "DAPS samples a measurement-conditioned time marginal at each noise level instead of forcing a Markov-like small step from the preceding sample.",
+      "translation": "DAPS 在每个噪声水平直接近似采样受观测条件约束的时间边缘分布，而不是强迫从前一步做很小的马尔可夫式移动。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S004",
+      "page": 3,
+      "type": "note",
+      "order": 4,
+      "original_text": "",
+      "english_paraphrase": "The conditional clean sample is approximated with a prior term and a measurement likelihood term, then Langevin dynamics explores this unnormalized posterior.",
+      "translation": "先用先验项和观测似然项构造干净样本的条件分布，再用 Langevin 动力学在这个未归一化后验中探索。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S005",
+      "page": 3,
+      "type": "note",
+      "order": 5,
+      "original_text": "",
+      "english_paraphrase": "A Gaussian approximation is cheaper than repeatedly evaluating the diffusion score, with a reported 6–7x speed advantage and a small task-dependent quality drop.",
+      "translation": "高斯近似比反复调用扩散 score 便宜；作者报告其速度约快 6–7 倍，但质量有依任务而定的小幅下降。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S006",
+      "page": 4,
+      "type": "note",
+      "order": 6,
+      "original_text": "",
+      "english_paraphrase": "On FFHQ, DAPS reports 30.72 dB PSNR for phase retrieval and 27.12 dB for HDR, and the paper reports 31.49 dB for a high-resolution latent experiment.",
+      "translation": "在 FFHQ 上，DAPS 报告 phase retrieval 的 PSNR 为 30.72 dB、HDR 为 27.12 dB；高分辨率 latent 实验报告 31.49 dB。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S007",
+      "page": 5,
+      "type": "note",
+      "order": 7,
+      "original_text": "",
+      "english_paraphrase": "DAPS produces diverse samples for sparse measurements, but a posterior sample is only a plausible explanation under the prior and measurement model.",
+      "translation": "对信息稀疏的观测，DAPS 可以产生多样样本；但后验样本只是满足先验和观测模型的合理解释。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S008",
+      "page": 5,
+      "type": "note",
+      "order": 8,
+      "original_text": "",
+      "english_paraphrase": "The contribution is a decoupled posterior-sampling path for nonlinear inverse problems; it depends on a usable forward operator and a prior that covers the target distribution.",
+      "translation": "贡献是为非线性逆问题提供解耦的后验采样路径；它依赖可用的前向算子以及覆盖目标分布的先验。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "E001",
+      "page": 3,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "2",
+      "latex": "\\mathbf{x}_{t_2}\\sim \\mathbb{E}_{\\mathbf{x}_0\\sim p(\\mathbf{x}_0\\mid\\mathbf{x}_{t_1},\\mathbf{y})}[\\mathcal{N}(\\mathbf{x}_{t_2};\\mathbf{x}_0,\\sigma_{t_2}^{2}\\mathbf{I})]",
+      "confidence": "medium",
+      "image_path": "assets/E001.png"
+    },
+    {
+      "id": "E002",
+      "page": 3,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "3",
+      "latex": "p(\\mathbf{x}_0\\mid\\mathbf{x}_t,\\mathbf{y})\\propto p(\\mathbf{x}_0\\mid\\mathbf{x}_t)p(\\mathbf{y}\\mid\\mathbf{x}_0)",
+      "confidence": "medium",
+      "image_path": "assets/E002.png"
+    },
+    {
+      "id": "E003",
+      "page": 3,
+      "type": "equation",
+      "order": 11,
+      "equation_number": "4",
+      "latex": "\\mathbf{x}_0^{(j+1)}=\\mathbf{x}_0^{(j)}+\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\log p(\\mathbf{x}_0^{(j)}\\mid\\mathbf{x}_t)+\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\log p(\\mathbf{y}\\mid\\mathbf{x}_0^{(j)})+\\sqrt{2\\eta}\\boldsymbol{\\epsilon}_j",
+      "confidence": "medium",
+      "image_path": "assets/E003.png"
+    },
+    {
+      "id": "E004",
+      "page": 3,
+      "type": "equation",
+      "order": 12,
+      "equation_number": "7",
+      "latex": "\\mathbf{x}_0^{(j+1)}=\\mathbf{x}_0^{(j)}-\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\frac{\\|\\mathbf{x}_0^{(j)}-\\hat{\\mathbf{x}}_0(\\mathbf{x}_t)\\|^2}{2r_t^2}-\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\frac{\\|\\mathcal{A}(\\mathbf{x}_0^{(j)})-\\mathbf{y}\\|^2}{2\\beta_{\\mathbf y}^2}+\\sqrt{2\\eta}\\boldsymbol{\\epsilon}_j",
+      "confidence": "medium",
+      "image_path": "assets/E004.png"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "posterior sampling",
+      "translation": "后验采样",
+      "note": "观测与先验共同约束的解分布"
+    },
+    {
+      "term": "forward operator",
+      "translation": "前向算子",
+      "note": "候选信号到观测的映射"
+    }
+  ],
+  "figures": [],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 3,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "2",
+      "latex": "\\mathbf{x}_{t_2}\\sim \\mathbb{E}_{\\mathbf{x}_0\\sim p(\\mathbf{x}_0\\mid\\mathbf{x}_{t_1},\\mathbf{y})}[\\mathcal{N}(\\mathbf{x}_{t_2};\\mathbf{x}_0,\\sigma_{t_2}^{2}\\mathbf{I})]",
+      "confidence": "medium",
+      "image_path": "assets/E001.png"
+    },
+    {
+      "id": "E002",
+      "page": 3,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "3",
+      "latex": "p(\\mathbf{x}_0\\mid\\mathbf{x}_t,\\mathbf{y})\\propto p(\\mathbf{x}_0\\mid\\mathbf{x}_t)p(\\mathbf{y}\\mid\\mathbf{x}_0)",
+      "confidence": "medium",
+      "image_path": "assets/E002.png"
+    },
+    {
+      "id": "E003",
+      "page": 3,
+      "type": "equation",
+      "order": 11,
+      "equation_number": "4",
+      "latex": "\\mathbf{x}_0^{(j+1)}=\\mathbf{x}_0^{(j)}+\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\log p(\\mathbf{x}_0^{(j)}\\mid\\mathbf{x}_t)+\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\log p(\\mathbf{y}\\mid\\mathbf{x}_0^{(j)})+\\sqrt{2\\eta}\\boldsymbol{\\epsilon}_j",
+      "confidence": "medium",
+      "image_path": "assets/E003.png"
+    },
+    {
+      "id": "E004",
+      "page": 3,
+      "type": "equation",
+      "order": 12,
+      "equation_number": "7",
+      "latex": "\\mathbf{x}_0^{(j+1)}=\\mathbf{x}_0^{(j)}-\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\frac{\\|\\mathbf{x}_0^{(j)}-\\hat{\\mathbf{x}}_0(\\mathbf{x}_t)\\|^2}{2r_t^2}-\\eta\\nabla_{\\mathbf{x}_0^{(j)}}\\frac{\\|\\mathcal{A}(\\mathbf{x}_0^{(j)})-\\mathbf{y}\\|^2}{2\\beta_{\\mathbf y}^2}+\\sqrt{2\\eta}\\boldsymbol{\\epsilon}_j",
+      "confidence": "medium",
+      "image_path": "assets/E004.png"
+    }
+  ]
+}

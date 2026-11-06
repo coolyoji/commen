@@ -2,6 +2,7 @@
 
 按**阅读月份**统一归档，不创建每日精读文件夹。原始出处与发表月份单列；Zotero集合为 `每日精读论文/2026/10`。
 
+- [DAPS：Improving Diffusion Inverse Problem Solving with Decoupled Noise Annealing](daps.md)；原始出处：arxiv:2407.01521；发表月份：2024-07；Zotero：`C0NGO8XF`；[Nature Reader](daps-reader/paper.md)。
 - [ConInfer: Context-Aware Inference for Training-Free Open-Vocabulary Remote Sensing Segmentation](coninfer.md)；原始出处：arxiv:2603.29271；发表月份：2026-03；Zotero：`VCDOBXPG`。
 - [Preference-Guided Adaptation for Open-Vocabulary Semantic Segmentation via Prompt Disagreement](preference-guided-adaptation.md)；原始出处：arxiv:2609.34528；发表月份：2026-09；Zotero：`HWLXZKU6`。
 - [JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning](jmt-yolo.md)；原始出处：arxiv:2610.12901；发表月份：2026-10；Zotero：`WAIK8K5P`。

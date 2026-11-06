@@ -98,5 +98,5 @@
     "vime": "官方 HTML/ar5iv 非完整页面；使用原始 PDF 内存只读提取，未保留泛读 PDF。"
   },
   "gpu_started": false,
-  "status": "committed_push_pending"
+  "status": "published_remote_main"
 }

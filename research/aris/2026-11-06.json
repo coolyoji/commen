@@ -1,0 +1,537 @@
+{
+  "date": "2026-11-06",
+  "scope": "amodal completion, 3D reconstruction, 3D amodal completion",
+  "source_policy": "cross-domain mechanism transfer; source facts, evidence interpretations and research hypotheses separated",
+  "entries": [
+    {
+      "id": "arxiv:2308.04079",
+      "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+      "authors": [
+        "Bernhard Kerbl",
+        "Georgios Kopanas",
+        "Thomas Leimkühler",
+        "George Drettakis"
+      ],
+      "published": "2023-08-08",
+      "publication_month": "2023-08",
+      "read_month": "2026-11",
+      "venue": "ACM Transactions on Graphics 42(4), 2023",
+      "source": "https://arxiv.org/abs/2308.04079",
+      "html_url": "https://arxiv.org/html/2308.04079v2",
+      "code": "https://github.com/graphdeco-inria/gaussian-splatting",
+      "code_commit_sha": "54c035f7834b564019656c3e3fcc3646292f727d",
+      "code_verified": "official GitHub repository main commit metadata fetched; not executed",
+      "slug": "3dgs",
+      "deep": true,
+      "pdf_downloaded": true,
+      "pdf_path": "D:\\CV-Literature\\commen\\.work-2026-11-06\\download-cache\\3dgs.pdf",
+      "pdf_sha256": "f4c0c9f27e2d02b0265017f66049d471eb66cb50203bc918f51ba07d20cbbe11",
+      "text_path": "D:\\CV-Literature\\commen\\.work-2026-11-06\\sources\\3dgs.txt",
+      "longform": "docs/md/longform/2026-11/3dgs.md",
+      "reader": "docs/md/longform/2026-11/3dgs-reader/paper.md",
+      "zotero_collection": "每日精读论文/2026/11",
+      "zotero_item_key": "ZWKPFVEY",
+      "zotero_attachment_key": "V1BBK07Q",
+      "zotero_pdf": "C:\\Users\\华硕\\Zotero\\storage\\V1BBK07Q\\Kerbl et al - 2023 - 3D Gaussian Splatting.pdf",
+      "fulltext_available": true,
+      "source_domain": "显式三维表示、神经渲染与实时新视角合成",
+      "method_family": "各向异性 Gaussian、可见性感知 splatting、自适应密度控制",
+      "evidence_status": "PDF 14页文本层、公式/图表裁剪和官方代码入口已核验；模型未运行。",
+      "aris_ideas": [
+        {
+          "id": "3dgs-evidence-density",
+          "title": "Evidence-aware Density Control",
+          "type": "检验隐藏区域裁剪前提",
+          "method_steps": [
+            "为 Gaussian 增加 observed/inferred/unknown 标签",
+            "可见射线只更新 observed，完整先验更新 inferred，unknown 暂不普通裁剪",
+            "与原始 3DGS、去标签同容量版本对照"
+          ],
+          "hypothesis": "未观测结构被错误裁剪是 amodal 失败的主要来源",
+          "minimum_experiment": "8–20 个合成对象、固定相机和预算，报告区域 Chamfer 与 Gaussian 数量",
+          "positive": "隐藏面保留且新视角误差下降",
+          "negative": "隐藏保护导致漂浮或可见面退化",
+          "null": "样本没有真正未知区",
+          "expected_contribution": "把 density control 从梯度规则改成证据规则",
+          "risk": "错误先验会被保护",
+          "relation_to_paper": "扩展原文密度控制，不声称原文已有 amodal 保护",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "3dgs-geometry-appearance",
+          "title": "Geometry–Appearance Counterfactual",
+          "type": "反事实/失败诊断",
+          "method_steps": [
+            "先固定真实几何只优化颜色",
+            "再固定颜色只扰动几何",
+            "最后同时放开并比较训练视角和新视角"
+          ],
+          "hypothesis": "PSNR 上升可能来自几何—外观替偿",
+          "minimum_experiment": "合成同正面异背面对象，匹配 Gaussian 数量与步数",
+          "positive": "PSNR 升而隐藏 Chamfer 变差，证明指标盲区",
+          "negative": "两者同步改善，说明该设置下替偿不主导",
+          "null": "新视角未显露差异",
+          "expected_contribution": "建立光度指标与几何可信度的区分",
+          "risk": "合成反例可能特殊",
+          "relation_to_paper": "检验论文光度闭环迁移到 amodal 的边界",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "3dgs-reversible",
+          "title": "Reversible Multi-Hypothesis Gaussians",
+          "type": "三维 amodal 连接",
+          "method_steps": [
+            "共享已见 Gaussian、分支隐藏 Gaussian",
+            "第二视角只更新被新证据触及的分支",
+            "比较单解、候选并集和局部可撤销更新"
+          ],
+          "hypothesis": "可撤销多候选比单一并集更能保留未知多解",
+          "minimum_experiment": "20 组同正面异背面网格，单视角到第二视角",
+          "positive": "候选覆盖高且新证据能淘汰错误分支",
+          "negative": "分支污染或局部断裂",
+          "null": "第二视角没有区分信息",
+          "expected_contribution": "形成可被新证据推翻的三维状态",
+          "risk": "显存与候选渲染成本",
+          "relation_to_paper": "由显式表示和可见性机制推出的迁移假设",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2111.06377",
+      "title": "Masked Autoencoders Are Scalable Vision Learners",
+      "authors": [
+        "Kaiming He",
+        "Xinlei Chen",
+        "Saining Xie",
+        "Yanghao Li",
+        "Piotr Dollár",
+        "Ross Girshick"
+      ],
+      "published": "2021-11-11",
+      "publication_month": "2021-11",
+      "source": "https://arxiv.org/abs/2111.06377",
+      "html_url": "https://arxiv.org/html/2111.06377v3",
+      "code": "https://github.com/facebookresearch/mae",
+      "slug": "mae",
+      "deep": false,
+      "pdf_downloaded": false,
+      "source_domain": "自监督学习与结构化缺失建模",
+      "method_family": "高比例 patch masking、非对称 encoder-decoder",
+      "evidence_status": "arXiv 摘要页与官方仓库入口核验；本批未下载 PDF，未运行。",
+      "aris_ideas": [
+        {
+          "id": "mae-mnar",
+          "title": "MNAR 预训练诊断",
+          "type": "检验缺失机制前提",
+          "method_steps": [
+            "匹配可见率生成随机、块状和形状相关遮挡",
+            "训练原始 MAE 与机制匹配 MAE",
+            "按隐藏细结构和跨视角指标比较"
+          ],
+          "hypothesis": "结构相关缺失比遮挡比例更决定迁移失败",
+          "minimum_experiment": "CPU 合成 2D mask，固定 ViT 和 token 预算",
+          "positive": "机制匹配测试改善",
+          "negative": "无差距说明结构并非瓶颈",
+          "null": "无信号先查标签泄露",
+          "expected_contribution": "把随机 mask 与真实遮挡机制分开",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "扩展原文随机 masking，不声称原文解决 MNAR",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "mae-three-state",
+          "title": "三态证据 decoder",
+          "type": "连接二维与三维 amodal",
+          "method_steps": [
+            "visible/occluder/unknown 三路 token",
+            "unknown 区只受完整形状和跨视角监督",
+            "消融去掉 occluder 通道"
+          ],
+          "hypothesis": "未知不应被当作背景负样本",
+          "minimum_experiment": "低分辨率 occupancy/mask 一周原型",
+          "positive": "隐藏漏检和可见冲突同时下降",
+          "negative": "收益来自额外容量而非语义",
+          "null": "标签噪声掩盖差异",
+          "expected_contribution": "建立观测—未知接口",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "三态标签获取成本高",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "mae-candidate-readout",
+          "title": "候选读出而非平均",
+          "type": "反事实失败诊断",
+          "method_steps": [
+            "同一 latent 产生多候选",
+            "比较像素平均、SDF 平均、候选选择",
+            "测拓扑合法率与真值覆盖"
+          ],
+          "hypothesis": "平均可能跨越形状流形",
+          "minimum_experiment": "缓存候选离线评估",
+          "positive": "候选合法而平均断裂",
+          "negative": "任务近似单峰",
+          "null": "候选本身不多样",
+          "expected_contribution": "区分分布学习与读出错误",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "人为多解可能过于特殊",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "full_notes_path": "docs/md/2026-11-06.md",
+      "related_sources": [
+        "https://arxiv.org/abs/2111.06377",
+        "https://arxiv.org/html/2111.06377v3",
+        "https://github.com/facebookresearch/mae"
+      ]
+    },
+    {
+      "id": "arxiv:1703.06114",
+      "title": "Deep Sets",
+      "authors": [
+        "Manzil Zaheer",
+        "Satwik Kottur",
+        "Shubhanshu Srivastava",
+        "Ryan P. Adams",
+        "Alexander J. Smola"
+      ],
+      "published": "2017-03-20",
+      "publication_month": "2017-03",
+      "source": "https://arxiv.org/abs/1703.06114",
+      "html_url": "https://arxiv.org/html/1703.06114v2",
+      "code": "",
+      "slug": "deep-sets",
+      "deep": false,
+      "pdf_downloaded": false,
+      "source_domain": "集合函数与点云/无序观测",
+      "method_family": "permutation-invariant/equivariant set representation",
+      "evidence_status": "arXiv 摘要页与论文元数据核验；本批未下载 PDF，未运行。",
+      "aris_ideas": [
+        {
+          "id": "deepsets-permutation",
+          "title": "多视角排列不变性压力测试",
+          "type": "检验顺序捷径",
+          "method_steps": [
+            "随机排列训练/测试视角",
+            "加入相机条件",
+            "测排列方差与隐藏误差"
+          ],
+          "hypothesis": "顺序敏感是隐性错误",
+          "minimum_experiment": "固定模型做全排列/随机扰动",
+          "positive": "排列不影响且误差下降",
+          "negative": "顺序不是瓶颈",
+          "null": "相机 token 泄露顺序",
+          "expected_contribution": "建立多视角输入协议",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "网络可能仍使用固定 slot",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "deepsets-geometry",
+          "title": "几何条件集合聚合",
+          "type": "源机制改造",
+          "method_steps": [
+            "对每条观测编码像素/方向/深度/置信度",
+            "对比无几何条件聚合",
+            "测跨视角一致性"
+          ],
+          "hypothesis": "集合不变性必须与射线几何一起使用",
+          "minimum_experiment": "低分辨率 mesh+RGB-D",
+          "positive": "隐藏 Chamfer 下降",
+          "negative": "外观统计已足够",
+          "null": "方向输入未改变",
+          "expected_contribution": "避免把无序性误当几何推理",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "求和会丢失遮挡顺序",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "deepsets-hypotheses",
+          "title": "候选集合输出",
+          "type": "三维 amodal 多解",
+          "method_steps": [
+            "全局聚合输出 K 个 shape slots",
+            "比较均值向量和候选集合",
+            "新视角重加权"
+          ],
+          "hypothesis": "多候选比单向量保留更多可证伪解释",
+          "minimum_experiment": "同正面异背面合成集",
+          "positive": "覆盖提升且均值拓扑坏",
+          "negative": "数据近单峰",
+          "null": "候选塌缩",
+          "expected_contribution": "把集合表示接到后验接口",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "候选数量与内存成本",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "full_notes_path": "docs/md/2026-11-06.md",
+      "related_sources": [
+        "https://arxiv.org/abs/1703.06114",
+        "https://arxiv.org/html/1703.06114v2"
+      ]
+    },
+    {
+      "id": "arxiv:2006.15055",
+      "title": "Object-Centric Learning with Slot Attention",
+      "authors": [
+        "Francesco Locatello",
+        "Dirk Weissenborn",
+        "Thomas Unterthiner",
+        "Aravindh Mahendran",
+        "Georg Heigold",
+        "Jakob Uszkoreit",
+        "Alexey Dosovitskiy",
+        "Thomas Kipf"
+      ],
+      "published": "2020-06-25",
+      "publication_month": "2020-06",
+      "source": "https://arxiv.org/abs/2006.15055",
+      "html_url": "https://arxiv.org/html/2006.15055v2",
+      "code": "https://github.com/google-research/object-centric-learning-framework",
+      "slug": "slot-attention",
+      "deep": false,
+      "pdf_downloaded": false,
+      "source_domain": "对象中心表示与组合推理",
+      "method_family": "exchangeable slots、竞争式注意力、迭代绑定",
+      "evidence_status": "arXiv 摘要页与公开实现入口核验；作者列表按官方元数据整理，未下载 PDF，未运行。",
+      "aris_ideas": [
+        {
+          "id": "slot-observed-hidden",
+          "title": "观察 slot 与隐藏 slot 分离",
+          "type": "对象中心迁移",
+          "method_steps": [
+            "每个目标拆 observed/hidden slot",
+            "可见 slot 受投影损失",
+            "隐藏 slot 受完整形状损失"
+          ],
+          "hypothesis": "显式实体变量减少遮挡者污染",
+          "minimum_experiment": "合成对象/遮挡者场景",
+          "positive": "隐藏漏检下降且目标 slot 稳定",
+          "negative": "隐藏 slot 只学类别原型",
+          "null": "slot 标签不稳定",
+          "expected_contribution": "将组合表示接到 amodal",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "固定 slot 拓扑过强",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "slot-intervention",
+          "title": "slot 交换干预",
+          "type": "反事实诊断",
+          "method_steps": [
+            "固定图像特征交换目标/遮挡者 slot",
+            "测输出归属变化",
+            "与去 slot 同容量模型对照"
+          ],
+          "hypothesis": "若输出不变，slot 只是可视化装饰",
+          "minimum_experiment": "缓存特征做干预",
+          "positive": "真实 slot 交换改变相应实体",
+          "negative": "所有 slot 都可互换",
+          "null": "扰动造成分布外",
+          "expected_contribution": "验证 slot 是否被推理使用",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "交换不一定代表真实因果",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "slot-3d-binding",
+          "title": "slot 绑定 3D primitives",
+          "type": "三维重建连接",
+          "method_steps": [
+            "slot 解码到 Gaussian/occupancy primitives",
+            "加入跨视角身份一致性",
+            "对比无 slot 同容量表示"
+          ],
+          "hypothesis": "对象中心绑定提升部件与隐藏面一致性",
+          "minimum_experiment": "小型多视角对象数据",
+          "positive": "新视角部件身份更稳",
+          "negative": "收益来自容量",
+          "null": "几何过于简单",
+          "expected_contribution": "把对象组合与显式几何结合",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "新部件无法落入固定 slots",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "full_notes_path": "docs/md/2026-11-06.md",
+      "related_sources": [
+        "https://arxiv.org/abs/2006.15055",
+        "https://arxiv.org/html/2006.15055v2",
+        "https://github.com/google-research/object-centric-learning-framework"
+      ]
+    },
+    {
+      "id": "arxiv:1605.06432",
+      "title": "Deep Variational Bayes Filters: Unsupervised Learning of State Space Models from Raw Data",
+      "authors": [
+        "Francesco A. R. Locatello",
+        "Damian Hafner",
+        "Martin Riedmiller",
+        "Thomas Breuel"
+      ],
+      "published": "2016-05-20",
+      "publication_month": "2016-05",
+      "source": "https://arxiv.org/abs/1605.06432",
+      "html_url": "https://arxiv.org/html/1605.06432v2",
+      "code": "",
+      "slug": "dvbf",
+      "deep": false,
+      "pdf_downloaded": false,
+      "source_domain": "时序隐状态与变分滤波",
+      "method_family": "Deep Variational Bayes Filter、可微状态转移",
+      "evidence_status": "arXiv 摘要页与方法元数据核验；未下载 PDF，未运行。",
+      "aris_ideas": [
+        {
+          "id": "dvbf-redetect",
+          "title": "再显露反证更新",
+          "type": "时序隐状态诊断",
+          "method_steps": [
+            "遮挡中冻结隐藏候选",
+            "再显露后只更新被证据触及区域",
+            "比较逐帧模型"
+          ],
+          "hypothesis": "状态模型能减少长遮挡漂移",
+          "minimum_experiment": "合成遮挡—再显露视频",
+          "positive": "再显露误差骤降且已见不变",
+          "negative": "状态模型过强",
+          "null": "未来帧泄露",
+          "expected_contribution": "建立可撤销时序 amodal",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "对应错误会传播",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "dvbf-belief",
+          "title": "多候选 belief filter",
+          "type": "概率三维 amodal",
+          "method_steps": [
+            "维护 K 个隐藏 shape states",
+            "按新帧 likelihood 重加权",
+            "测 coverage 与 calibration"
+          ],
+          "hypothesis": "posterior mean 会抹掉多解",
+          "minimum_experiment": "同正面异背面序列",
+          "positive": "候选覆盖高于单点",
+          "negative": "任务近单峰",
+          "null": "候选缺真解",
+          "expected_contribution": "把不确定性纳入状态",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "计算和评估复杂",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "dvbf-counterfactual",
+          "title": "转移反事实",
+          "type": "检验是否真的用时间",
+          "method_steps": [
+            "乱序帧/替换运动模型",
+            "匹配参数和输入",
+            "测隐藏预测变化"
+          ],
+          "hypothesis": "真正使用 transition 的模型对顺序和动力学敏感",
+          "minimum_experiment": "缓存视频离线诊断",
+          "positive": "扰动引发可解释退化",
+          "negative": "输出几乎不变说明绕过 transition",
+          "null": "扰动超出分布",
+          "expected_contribution": "区分记忆与逐帧捷径",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "不等于真实因果",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "full_notes_path": "docs/md/2026-11-06.md",
+      "related_sources": [
+        "https://arxiv.org/abs/1605.06432",
+        "https://arxiv.org/html/1605.06432v2"
+      ]
+    },
+    {
+      "id": "arxiv:2004.05155",
+      "title": "Learning to Explore using Active Neural SLAM",
+      "authors": [
+        "Devendra Chaplot",
+        "Dhiraj Gandhi",
+        "Abhinav Gupta",
+        "Ruslan Salakhutdinov"
+      ],
+      "published": "2020-04-10",
+      "publication_month": "2020-04",
+      "source": "https://arxiv.org/abs/2004.05155",
+      "html_url": "https://arxiv.org/html/2004.05155v2",
+      "code": "https://github.com/devendrachaplot/Neural-SLAM",
+      "slug": "active-neural-slam",
+      "deep": false,
+      "pdf_downloaded": false,
+      "source_domain": "机器人主动感知与层级探索",
+      "method_family": "可学习 SLAM、全局/局部策略、解析路径规划",
+      "evidence_status": "arXiv 摘要页与项目入口核验；HTML 端点返回 404，未下载 PDF，未运行。",
+      "aris_ideas": [
+        {
+          "id": "active-disagreement",
+          "title": "候选分歧导航",
+          "type": "主动感知迁移",
+          "method_steps": [
+            "渲染 K 个形状候选到候选视角",
+            "以分歧/信息增益排序",
+            "加入可达性和移动成本"
+          ],
+          "hypothesis": "分歧视角比最大可见面积更能减少隐藏歧义",
+          "minimum_experiment": "10个合成对象、固定动作预算",
+          "positive": "同成本隐藏误差下降更快",
+          "negative": "分歧来自颜色噪声",
+          "null": "视角不暴露差异",
+          "expected_contribution": "把主动观测绑定形状可辨识性",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "需要候选渲染与可靠位姿",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "active-counterexample",
+          "title": "主动反例预算",
+          "type": "失败诊断",
+          "method_steps": [
+            "动作前预测会淘汰哪类候选",
+            "动作后核验淘汰率",
+            "无信息时触发拒答"
+          ],
+          "hypothesis": "无效动作应被识别而不是继续探索",
+          "minimum_experiment": "离线候选和可见性模拟",
+          "positive": "淘汰预测与实际一致",
+          "negative": "策略只追求覆盖率",
+          "null": "动作预算太低",
+          "expected_contribution": "引入可审计的信息增益",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "需要定义候选差异",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "active-dynamic",
+          "title": "动态场景风险敏感规划",
+          "type": "UAV/视频连接",
+          "method_steps": [
+            "状态加入遮挡者运动和相机不确定性",
+            "比较静态与风险敏感策略",
+            "报告成本、重识别和隐藏误差"
+          ],
+          "hypothesis": "动态遮挡会使静态信息增益失效",
+          "minimum_experiment": "小型视频/模拟环境",
+          "positive": "风险策略减少错误更新",
+          "negative": "无差距说明动态不主导",
+          "null": "动作模型不准",
+          "expected_contribution": "连接 UAV 开放场景",
+          "risk": "需在最小实验中核验",
+          "relation_to_paper": "规划成本和实时性",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "full_notes_path": "docs/md/2026-11-06.md",
+      "related_sources": [
+        "https://arxiv.org/abs/2004.05155",
+        "https://arxiv.org/html/2004.05155v2",
+        "https://github.com/devendrachaplot/Neural-SLAM"
+      ]
+    }
+  ],
+  "summary": "本批六篇覆盖显式三维表示、自监督缺失、集合不变性、对象中心表示、时序状态和主动观测；所有迁移 ideas 未运行。"
+}

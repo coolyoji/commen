@@ -1,0 +1,20 @@
+{
+  "month": "2026-11",
+  "deep_reads": [
+    {
+      "date": "2026-11-06",
+      "paper_id": "arxiv:2308.04079",
+      "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+      "publication_month": "2023-08",
+      "read_month": "2026-11",
+      "longform": "docs/md/longform/2026-11/3dgs.md",
+      "reader": "docs/md/longform/2026-11/3dgs-reader/paper.md",
+      "code": "https://github.com/graphdeco-inria/gaussian-splatting",
+      "zotero_collection": "每日精读论文/2026/11",
+      "zotero_item_key": "ZWKPFVEY",
+      "zotero_attachment_key": "V1BBK07Q",
+      "pdf_verified": true,
+      "pdf_sha256": "f4c0c9f27e2d02b0265017f66049d471eb66cb50203bc918f51ba07d20cbbe11"
+    }
+  ]
+}

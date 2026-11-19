@@ -1,0 +1,206 @@
+{
+  "paper": {
+    "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+    "venue": "ACM Transactions on Graphics 42(4), 2023",
+    "source_type": "pdf-text",
+    "source_path": "D:\\CV-Literature\\commen\\.work-2026-11-06\\download-cache\\3dgs.pdf"
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "note",
+      "order": 1,
+      "original_text": "",
+      "english_paraphrase": "The paper targets the quality-speed gap in radiance-field rendering for complete scenes and 1080p novel views.",
+      "translation": "论文针对完整场景和 1080p 新视角渲染中的质量—速度鸿沟：NeRF 类方法质量高但训练/渲染昂贵，快速方法又牺牲质量。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S002",
+      "page": 2,
+      "type": "note",
+      "order": 2,
+      "original_text": "",
+      "english_paraphrase": "Continuous radiance fields waste computation in empty space, while explicit point methods often require expensive geometry initialization.",
+      "translation": "连续辐射场在空空间中反复采样；显式点方法虽然快，却常依赖 MVS 或低质量点初始化。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S003",
+      "page": 2,
+      "type": "note",
+      "order": 3,
+      "original_text": "",
+      "english_paraphrase": "The authors combine an explicit differentiable Gaussian representation, adaptive density control, and visibility-aware tile rasterization.",
+      "translation": "作者把问题拆成三件事：用可微显式 Gaussian 表示承载场景，用自适应密度控制调整容量，再用可见性感知的 tile rasterizer 快速合成。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S004",
+      "page": 2,
+      "type": "note",
+      "order": 4,
+      "original_text": "",
+      "english_paraphrase": "Calibrated cameras and sparse SfM points initialize 3D Gaussians; optimization alternates photometric updates and cloning, splitting, or pruning.",
+      "translation": "输入是已标定相机和 SfM 稀疏点。每个点变成带位置、各向异性协方差、不透明度和视角颜色的 Gaussian；光度损失更新参数，密度控制周期性克隆、分裂或裁剪。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S005",
+      "page": 4,
+      "type": "note",
+      "order": 5,
+      "original_text": "",
+      "english_paraphrase": "A Gaussian is a spatial density with a covariance matrix; projected Gaussians are alpha-composited in visibility order and optimized against rendered images.",
+      "translation": "Gaussian 用均值和协方差表达空间密度，投影后按深度/可见性排序，用 alpha compositing 形成像素；优化目标让渲染图接近训练照片，同时密度控制调节表示容量。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S006",
+      "page": 8,
+      "type": "note",
+      "order": 6,
+      "original_text": "",
+      "english_paraphrase": "The headline comparison reports real-time rendering, with the paper showing 135 fps at about 23.6 PSNR for a fast setting and 93 fps at about 25.2 PSNR for a longer setting in the overview figure.",
+      "translation": "概览图报告了两种设置：约 6 分钟训练、135 fps、PSNR 23.6；以及约 51 分钟训练、93 fps、PSNR 25.2。论文还在多个公开数据集上报告质量与速度折中。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S007",
+      "page": 12,
+      "type": "note",
+      "order": 7,
+      "original_text": "",
+      "english_paraphrase": "Explicit anisotropic Gaussians can make high-quality novel-view rendering practical, but the representation is optimized for explaining observed rays.",
+      "translation": "显式各向异性 Gaussian 能把高质量新视角合成变得实用；但它的主要监督仍来自已观测射线。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "S008",
+      "page": 12,
+      "type": "note",
+      "order": 8,
+      "original_text": "",
+      "english_paraphrase": "The method does not by itself guarantee watertight geometry, semantic parts, or correct hidden surfaces.",
+      "translation": "3DGS 本身不保证 watertight 实体、语义部件、拓扑连接或被完全遮挡表面的正确性。",
+      "source_kind": "paper-grounded-paraphrase",
+      "confidence": "high"
+    },
+    {
+      "id": "E001",
+      "page": 4,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "E001",
+      "latex": "\\mathcal{G}(\\mathbf{x})=\\exp\\left(-\\frac{1}{2}(\\mathbf{x}-\\boldsymbol{\\mu})^\\top\\boldsymbol{\\Sigma}^{-1}(\\mathbf{x}-\\boldsymbol{\\mu})\\right)",
+      "confidence": "medium",
+      "image_path": "assets/fig1-overview.png"
+    },
+    {
+      "id": "E002",
+      "page": 4,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "E002",
+      "latex": "\\boldsymbol{\\Sigma}=\\mathbf{R}\\mathbf{S}\\mathbf{S}^{\\top}\\mathbf{R}^{\\top}",
+      "confidence": "medium",
+      "image_path": "assets/fig1-overview.png"
+    },
+    {
+      "id": "E003",
+      "page": 8,
+      "type": "equation",
+      "order": 11,
+      "equation_number": "E003",
+      "latex": "C(\\mathbf{p})=\\sum_{i=1}^{N}T_i\\,\\alpha_i\\,\\mathbf{c}_i,\\qquad T_i=\\prod_{j<i}(1-\\alpha_j)",
+      "confidence": "medium",
+      "image_path": "assets/renderer.png"
+    },
+    {
+      "id": "E004",
+      "page": 6,
+      "type": "equation",
+      "order": 12,
+      "equation_number": "E004",
+      "latex": "\\mathcal{L}=(1-\\lambda)\\mathcal{L}_1+\\lambda\\,\\mathcal{L}_{D\\text{-}SSIM}",
+      "confidence": "medium",
+      "image_path": "assets/optimization.png"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "3D Gaussian",
+      "translation": "三维高斯",
+      "note": "显式空间密度核"
+    },
+    {
+      "term": "density control",
+      "translation": "密度控制",
+      "note": "自适应增加或删除表示元素"
+    }
+  ],
+  "figures": [
+    {
+      "id": "F001",
+      "page": 1,
+      "image_path": "assets/fig1-overview.png",
+      "confidence": "high"
+    },
+    {
+      "id": "F002",
+      "page": 4,
+      "image_path": "assets/gaussian-representation.png",
+      "confidence": "high"
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 4,
+      "type": "equation",
+      "order": 9,
+      "equation_number": "E001",
+      "latex": "\\mathcal{G}(\\mathbf{x})=\\exp\\left(-\\frac{1}{2}(\\mathbf{x}-\\boldsymbol{\\mu})^\\top\\boldsymbol{\\Sigma}^{-1}(\\mathbf{x}-\\boldsymbol{\\mu})\\right)",
+      "confidence": "medium",
+      "image_path": "assets/fig1-overview.png"
+    },
+    {
+      "id": "E002",
+      "page": 4,
+      "type": "equation",
+      "order": 10,
+      "equation_number": "E002",
+      "latex": "\\boldsymbol{\\Sigma}=\\mathbf{R}\\mathbf{S}\\mathbf{S}^{\\top}\\mathbf{R}^{\\top}",
+      "confidence": "medium",
+      "image_path": "assets/fig1-overview.png"
+    },
+    {
+      "id": "E003",
+      "page": 8,
+      "type": "equation",
+      "order": 11,
+      "equation_number": "E003",
+      "latex": "C(\\mathbf{p})=\\sum_{i=1}^{N}T_i\\,\\alpha_i\\,\\mathbf{c}_i,\\qquad T_i=\\prod_{j<i}(1-\\alpha_j)",
+      "confidence": "medium",
+      "image_path": "assets/renderer.png"
+    },
+    {
+      "id": "E004",
+      "page": 6,
+      "type": "equation",
+      "order": 12,
+      "equation_number": "E004",
+      "latex": "\\mathcal{L}=(1-\\lambda)\\mathcal{L}_1+\\lambda\\,\\mathcal{L}_{D\\text{-}SSIM}",
+      "confidence": "medium",
+      "image_path": "assets/optimization.png"
+    }
+  ]
+}

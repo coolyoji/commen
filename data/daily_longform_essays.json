@@ -1,13 +1,10 @@
 {
-    "date":  "2026-10-29",
-    "essays":  [
-                   {
-                       "paper_id":  "arxiv:2407.01521",
-                       "path":  "../docs/md/longform/2026-10/daps.md",
-                       "status":  "pdf_zotero_hash_verified",
-                       "publication_month":  "2024-07",
-                       "read_month":  "2026-10",
-                       "nature_reader":  "../docs/md/longform/2026-10/daps-reader/paper.md"
-                   }
-               ]
+    "date": "2026-11-06",
+    "essays": [
+        {
+            "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+            "path": "docs/md/longform/2026-11/3dgs.md",
+            "read_month": "2026-11"
+        }
+    ]
 }

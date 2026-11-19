@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-06",
+  "read_month": "2026-11",
+  "deep_count": 1,
+  "browse_count": 5,
+  "papers": [
+    {
+      "id": "arxiv:2308.04079",
+      "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+      "role": "deep",
+      "source_domain": "显式三维表示、神经渲染与实时新视角合成",
+      "method_family": "各向异性 Gaussian、可见性感知 splatting、自适应密度控制",
+      "selection_reason": "公开代码、PDF可核验、显式表示/可见性/密度控制对三维重建和三维amodal有结构迁移价值。"
+    },
+    {
+      "id": "arxiv:2111.06377",
+      "title": "Masked Autoencoders Are Scalable Vision Learners",
+      "role": "browse",
+      "source_domain": "自监督学习与结构化缺失建模",
+      "method_family": "高比例 patch masking、非对称 encoder-decoder",
+      "selection_reason": "跨领域机制可对应非模态补全的结构缺口；泛读不下载PDF。"
+    },
+    {
+      "id": "arxiv:1703.06114",
+      "title": "Deep Sets",
+      "role": "browse",
+      "source_domain": "集合函数与点云/无序观测",
+      "method_family": "permutation-invariant/equivariant set representation",
+      "selection_reason": "跨领域机制可对应非模态补全的结构缺口；泛读不下载PDF。"
+    },
+    {
+      "id": "arxiv:2006.15055",
+      "title": "Object-Centric Learning with Slot Attention",
+      "role": "browse",
+      "source_domain": "对象中心表示与组合推理",
+      "method_family": "exchangeable slots、竞争式注意力、迭代绑定",
+      "selection_reason": "跨领域机制可对应非模态补全的结构缺口；泛读不下载PDF。"
+    },
+    {
+      "id": "arxiv:1605.06432",
+      "title": "Deep Variational Bayes Filters: Unsupervised Learning of State Space Models from Raw Data",
+      "role": "browse",
+      "source_domain": "时序隐状态与变分滤波",
+      "method_family": "Deep Variational Bayes Filter、可微状态转移",
+      "selection_reason": "跨领域机制可对应非模态补全的结构缺口；泛读不下载PDF。"
+    },
+    {
+      "id": "arxiv:2004.05155",
+      "title": "Learning to Explore using Active Neural SLAM",
+      "role": "browse",
+      "source_domain": "机器人主动感知与层级探索",
+      "method_family": "可学习 SLAM、全局/局部策略、解析路径规划",
+      "selection_reason": "跨领域机制可对应非模态补全的结构缺口；泛读不下载PDF。"
+    }
+  ],
+  "diversity": {
+    "families": [
+      "explicit 3D representation",
+      "self-supervised masking",
+      "set functions",
+      "object-centric slots",
+      "variational filtering",
+      "active perception"
+    ],
+    "family_count": 6,
+    "why_not_same_model": "五篇泛读来自五类源问题；避免连续扩散/三维生成重复。",
+    "limitations": "Deep Sets 与 DVBF 的公开实现入口未独立验证；Active Neural SLAM 的 arXiv HTML 仅作摘要级核验。"
+  },
+  "retrieval": [
+    {
+      "id": "arxiv:2308.04079",
+      "source": "https://arxiv.org/abs/2308.04079",
+      "html": "https://arxiv.org/html/2308.04079v2",
+      "code": "https://github.com/graphdeco-inria/gaussian-splatting",
+      "fulltext_available": true
+    },
+    {
+      "id": "arxiv:2111.06377",
+      "source": "https://arxiv.org/abs/2111.06377",
+      "html": "https://arxiv.org/html/2111.06377v3",
+      "code": "https://github.com/facebookresearch/mae",
+      "fulltext_available": false
+    },
+    {
+      "id": "arxiv:1703.06114",
+      "source": "https://arxiv.org/abs/1703.06114",
+      "html": "https://arxiv.org/html/1703.06114v2",
+      "code": "",
+      "fulltext_available": false
+    },
+    {
+      "id": "arxiv:2006.15055",
+      "source": "https://arxiv.org/abs/2006.15055",
+      "html": "https://arxiv.org/html/2006.15055v2",
+      "code": "https://github.com/google-research/object-centric-learning-framework",
+      "fulltext_available": false
+    },
+    {
+      "id": "arxiv:1605.06432",
+      "source": "https://arxiv.org/abs/1605.06432",
+      "html": "https://arxiv.org/html/1605.06432v2",
+      "code": "",
+      "fulltext_available": false
+    },
+    {
+      "id": "arxiv:2004.05155",
+      "source": "https://arxiv.org/abs/2004.05155",
+      "html": "https://arxiv.org/html/2004.05155v2",
+      "code": "https://github.com/devendrachaplot/Neural-SLAM",
+      "fulltext_available": false
+    }
+  ]
+}

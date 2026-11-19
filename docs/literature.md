@@ -1,3 +1,9 @@
+## 2026-11-06
+
+精读 **3D Gaussian Splatting for Real-Time Radiance Field Rendering**（原始发表月份：2023-08）：[精读长文](md/longform/2026-11/3dgs.md)、[Nature Reader](md/longform/2026-11/3dgs-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/11`，条目 `ZWKPFVEY`、附件 `V1BBK07Q`，下载/storage SHA-256 一致；官方实现入口已核验，未运行模型。
+
+泛读 **MAE、Deep Sets、Slot Attention、DVBF、Active Neural SLAM**，来自自监督缺失、集合表示、对象中心表示、时序状态和主动感知。五篇不下载 PDF；[当天页面](md/2026-11-06.md)和[ARIS](../research/aris/2026-11-06.json)逐篇保留跨领域迁移、深层根因、反例与最小实验。
+
 ## 2026-10-29
 
 精读 **DAPS（Decoupled Annealing Posterior Sampling）**（arXiv 首发 2024-07，CVPR 2025）：[精读长文](md/longform/2026-10/daps.md)、[Nature Reader](md/longform/2026-10/daps-reader/paper.md)。PDF 已下载、导入 Zotero 每日精读论文/2026/10，条目 C0NGO8XF、附件 BFN3G3I3，下载/storage SHA-256 一致；官方代码提交已核验，未运行模型。

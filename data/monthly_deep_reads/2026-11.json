@@ -15,6 +15,21 @@
       "zotero_attachment_key": "V1BBK07Q",
       "pdf_verified": true,
       "pdf_sha256": "f4c0c9f27e2d02b0265017f66049d471eb66cb50203bc918f51ba07d20cbbe11"
+    },
+    {
+      "date": "2026-11-19",
+      "paper_id": "arxiv:2503.11651",
+      "title": "VGGT: Visual Geometry Grounded Transformer",
+      "publication_month": "2025-03",
+      "read_month": "2026-11",
+      "longform": "docs/md/longform/2026-11/vggt.md",
+      "reader": "docs/md/longform/2026-11/vggt-reader/paper.md",
+      "code": "https://github.com/facebookresearch/vggt",
+      "zotero_collection": "每日精读论文/2026/11",
+      "zotero_item_key": "N8WBQTKV",
+      "zotero_attachment_key": "D9DGA5DM",
+      "pdf_verified": true,
+      "pdf_sha256": "5D7AB44D129172F39EF5918FEB0014C4D041FD0E92F995D4DBBD7327A6E91D52"
     }
   ]
 }

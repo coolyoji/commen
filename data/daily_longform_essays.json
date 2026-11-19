@@ -1,10 +1,11 @@
 {
-    "date": "2026-11-06",
-    "essays": [
-        {
-            "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
-            "path": "docs/md/longform/2026-11/3dgs.md",
-            "read_month": "2026-11"
-        }
-    ]
+  "date": "2026-11-19",
+  "essays": [
+    {
+      "title": "VGGT: Visual Geometry Grounded Transformer",
+      "path": "docs/md/longform/2026-11/vggt.md",
+      "reader": "docs/md/longform/2026-11/vggt-reader/paper.md",
+      "status": "source_grounded"
+    }
+  ]
 }

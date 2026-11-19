@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-19",
+  "deep_read": {
+    "paper_id": "arxiv:2503.11651",
+    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "reason": "公开代码、跨视角共享几何、多任务一致性和对三维 amodal 的直接骨干价值。",
+    "publication_month": "2025-03",
+    "read_month": "2026-11"
+  },
+  "browse": [
+    {
+      "paper_id": "arxiv:1806.05034",
+      "title": "A Probabilistic U-Net for Segmentation of Ambiguous Images",
+      "source_domain": "概率分割与多模态预测",
+      "method_family": "conditional VAE + U-Net、多样本 mask、KL/BCE 训练",
+      "selection_reason": "处理部分证据下的多解、关系约束、坐标变化、后验采样或风险校准，且可设计最小迁移实验。",
+      "recommendation": "priority_trial"
+    },
+    {
+      "paper_id": "arxiv:2010.03409",
+      "title": "Learning Mesh-Based Simulation with Graph Networks",
+      "source_domain": "物理仿真与网格图学习",
+      "method_family": "mesh graph message passing、learned simulator、rollout",
+      "selection_reason": "处理部分证据下的多解、关系约束、坐标变化、后验采样或风险校准，且可设计最小迁移实验。",
+      "recommendation": "conditional_trial"
+    },
+    {
+      "paper_id": "arxiv:1802.08219",
+      "title": "Tensor Field Networks: Rotation- and Translation-Equivariant Neural Networks for 3D Point Clouds",
+      "source_domain": "三维群等变表示与点云学习",
+      "method_family": "SO(3)/E(3) equivariant tensor features、spherical harmonics、Clebsch-Gordan products",
+      "selection_reason": "处理部分证据下的多解、关系约束、坐标变化、后验采样或风险校准，且可设计最小迁移实验。",
+      "recommendation": "conditional_trial"
+    },
+    {
+      "paper_id": "arxiv:2209.14687",
+      "title": "Diffusion Posterior Sampling for General Noisy Inverse Problems",
+      "source_domain": "不适定逆问题与后验采样",
+      "method_family": "score-based diffusion prior、measurement likelihood guidance、posterior sampling",
+      "selection_reason": "处理部分证据下的多解、关系约束、坐标变化、后验采样或风险校准，且可设计最小迁移实验。",
+      "recommendation": "priority_trial"
+    },
+    {
+      "paper_id": "arxiv:1612.01474",
+      "title": "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+      "source_domain": "预测不确定性与校准",
+      "method_family": "独立随机初始化/训练的 deep ensemble、predictive variance、selective prediction",
+      "selection_reason": "处理部分证据下的多解、关系约束、坐标变化、后验采样或风险校准，且可设计最小迁移实验。",
+      "recommendation": "priority_trial"
+    }
+  ],
+  "diversity": {
+    "families": [
+      "概率分割",
+      "物理/图仿真",
+      "三维等变表示",
+      "逆问题后验采样",
+      "预测不确定性"
+    ],
+    "family_count": 5,
+    "requirement_met": true,
+    "不足": "本批经典论文比例较高，尚未系统核验近两年同机制的最新变体；已把后续查新写为限制。"
+  },
+  "evidence_status": "metadata_and_public_sources_verified; no browse PDFs downloaded; no models run"
+}

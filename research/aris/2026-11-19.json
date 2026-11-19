@@ -1,0 +1,1168 @@
+{
+  "date": "2026-11-19",
+  "scope": "amodal completion, 3D reconstruction, 3D amodal completion",
+  "source_policy": "cross-domain mechanism transfer; source facts, evidence interpretations and research hypotheses separated",
+  "deep_read": {
+    "id": "arxiv:2503.11651",
+    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "authors": [
+      "Jianyuan Wang",
+      "Minghao Chen",
+      "Nikita Karaev",
+      "Andrea Vedaldi",
+      "Christian Rupprecht",
+      "David Novotny"
+    ],
+    "published": "2025-03-14",
+    "publication_month": "2025-03",
+    "read_month": "2026-11",
+    "venue": "CVPR 2025",
+    "source": "https://arxiv.org/abs/2503.11651",
+    "html_url": "https://arxiv.org/html/2503.11651",
+    "code": "https://github.com/facebookresearch/vggt",
+    "slug": "vggt",
+    "deep": true,
+    "pdf_downloaded": true,
+    "pdf_path": ".work-2026-11-19/download-cache/vggt.pdf",
+    "pdf_sha256": "5D7AB44D129172F39EF5918FEB0014C4D041FD0E92F995D4DBBD7327A6E91D52",
+    "text_path": ".work-2026-11-19/sources/vggt.txt",
+    "longform": "docs/md/longform/2026-11/vggt.md",
+    "reader": "docs/md/longform/2026-11/vggt-reader/paper.md",
+    "zotero_collection": "每日精读论文/2026/11",
+    "zotero_item_key": "N8WBQTKV",
+    "zotero_attachment_key": "D9DGA5DM",
+    "zotero_aux_attachment_key": "E9ZCKCSW",
+    "zotero_pdf": "C:\\Users\\华硕\\Zotero\\storage\\D9DGA5DM\\Wang 等 - 2025 - VGGT Visual Geometry Grounded Transformer.pdf",
+    "fulltext_available": true,
+    "source_domain": "多视图几何、前馈三维重建和共享几何基础模型",
+    "method_family": "DINO patch token、交替 frame/global attention、多任务几何头、aleatoric uncertainty",
+    "evidence_status": "20页可选中文本层已提取；PDF与Zotero storage SHA-256一致；图表以页面资产核对；模型未运行。",
+    "problem": "传统 SfM/MVS 把匹配、三角化和 bundle adjustment 串成多阶段优化；双视图网络在多视图扩展时又依赖 pairwise 融合。表面问题是慢和复杂，第一层根因是每一对观测都重复求解几何，第二层根因是网络没有形成一个跨视角、共享坐标系的场景状态，因而无法把新增证据直接写入同一表示。",
+    "why_method": "VGGT 用一次前向传播把 camera、depth、viewpoint-invariant point map 和 tracking feature 放在一个共享 backbone 中预测。方法的必要性来自三个因果环节：global attention 汇聚跨视角证据；first-frame token 固定参考坐标系；多头监督迫使表示同时满足相机、深度、点图和对应关系，而不是只优化一种容易走捷径的几何输出。",
+    "causal_chain": "输入多视图 RGB → DINO patch tokens + camera/register tokens → frame-wise attention 保持帧内结构、global attention 建立跨帧对应 → camera/depth/point-map/tracking heads → Huber、uncertainty-weighted depth/point losses 与 tracking loss → 输出共享坐标的可见几何 → 当视角重叠不足、动态物体、未观测背面或主点假设错误时失效。",
+    "two_layer_root_cause": "表面症状是未知视角或稀疏视图下的几何误差；第一层根因是可见证据不足或对应不稳；第二层根因是三维场景存在不可观测多解，单一 deterministic point map 会把先验选择伪装成事实。",
+    "assumptions_failures": [
+      "第一帧作为世界参考并假定 principal point 在图像中心；广角、裁剪或相机内参偏离时会把坐标误差传播到所有头。",
+      "训练数据覆盖的物体和相机分布足以学习几何先验；开放场景、透明表面、反射和极端 UAV 视角可能落在支持集之外。",
+      "多视图主要观察同一静态场景；动态物体会让 tracking、depth 和 point map 的一致性目标互相冲突。",
+      "预测 point map 与 depth+camera 在训练时有冗余监督，但冗余不等于独立证据，可能共同继承同一数据偏差。"
+    ],
+    "claim_evidence": [
+      "论文报告 feed-forward 模式在 CO3Dv2/RealEstate10K 相机估计上优于比较方法，并在 H100 上约0.2秒完成推理；这是论文表格与正文的原文事实。",
+      "论文报告 depth、point map、camera 和 tracking 的联合训练有效，且 depth+camera 组合出的点图在 ETH3D 上优于直接 point-map head；这是作者实验结论，不等于隐藏表面恢复。",
+      "官方代码和模型入口已核验，本文没有运行代码。"
+    ],
+    "gaps": [
+      "未知表面没有像素或跨视角射线约束，point map 的确定性输出不能表达同一可见证据对应的多个完整形状。",
+      "论文的 uncertainty 主要服务于深度/点图损失加权，未证明它是校准的隐藏区域 epistemic uncertainty。",
+      "对三维 amodal 迁移，必须把 observed、inferred、unknown 分离，并允许后续视角否证先验。"
+    ],
+    "transfer": {
+      "source_mechanism": "跨视角 global attention + 共享参考坐标 + 相机/深度/点图/对应多任务一致性。",
+      "target_isomorphism": "目标中的多张遮挡图像也是对同一实体状态的部分观测；camera、visible depth、surface points 对应 VGGT 的几何变量，unknown volume/hidden surface 是源方法没有输出的扩展变量。",
+      "necessary_conditions": "对象身份对应可靠；至少有部分重叠视角或可校准相机；训练中有 observed/inferred/unknown 标注或可生成的合成监督；评估分别统计可见和隐藏区域。",
+      "mismatch": "VGGT 默认场景几何可以由训练分布选择一个合理解，而 amodal 任务必须区分证据和先验，不能把合理生成写成真实恢复。",
+      "adaptation": "保留共享 backbone 和 camera/depth heads，新增 occupancy/SDF belief head、可见硬约束和 K 个候选 shape states；对 unknown 区输出分布或候选集合，并用新视角重投影淘汰候选。",
+      "failure_trigger": "背面完全未观测、动态遮挡者、透明/镜面表面、内参错配或候选形状在当前动作集合下不可区分。"
+    },
+    "ideas": [
+      {
+        "id": "vggt-three-state-belief",
+        "title": "三态几何 belief head",
+        "type": "连接三维 amodal",
+        "method_steps": [
+          "在 VGGT 的 dense tokens 上增加 observed/inferred/unknown 三态 occupancy 与 confidence head。",
+          "observed 区用深度/点图硬一致性，unknown 区用完整 shape 监督和 K 个候选 latent。",
+          "用同一可见输入比较 deterministic point map、单候选 belief 和多候选 belief。"
+        ],
+        "hypothesis": "把未知区从“低置信度的已知几何”改成显式状态，会减少隐藏区域被错误当成背景或事实的伪确定性。",
+        "minimum_experiment": "用低分辨率 CAD 物体和两种同正面异背面配对，固定 backbone 和参数量，只训练新 head。",
+        "positive": "隐藏 Chamfer/occupancy coverage 提升，同时 observed reprojection error 不升高且新视角能淘汰错误候选。",
+        "negative": "如果只是增加容量而非三态语义起作用，去掉 state label 的同容量版本会一样好；若观测区退化则说明硬约束过强。",
+        "null": "同一输入下真实后验近似单峰，三态标签没有新增信息。",
+        "expected_contribution": "建立证据—先验分层的三维 amodal 输出接口。",
+        "risk": "需要额外 unknown 标注、候选解码成本和稳定的可见性标签。",
+        "relation_to_paper": "由 VGGT 的共享几何表示和多任务冗余推出的迁移假设，论文没有实现 hidden belief。",
+        "validation_status": "proposed_unrun_not_novelty_verified"
+      },
+      {
+        "id": "vggt-redundant-geometry-audit",
+        "title": "冗余几何头的反事实一致性审计",
+        "type": "反事实/失败诊断",
+        "method_steps": [
+          "分别取 point-map head、depth+camera 重建点图和 tracking triangulation。",
+          "在遮挡率、视角基线和动态干扰上做受控反事实，记录三种输出的 disagreement。",
+          "把 disagreement 与真实隐藏误差、可见误差和后续视角修正量对齐。"
+        ],
+        "hypothesis": "多头 disagreement 是数据支持不足或模型内部冲突的可用信号，比单一 uncertainty map 更能暴露伪确定性。",
+        "minimum_experiment": "合成同一可见投影对应多种背面，固定输入与模型，只改变隐藏真值；用 calibration curve 和 selective risk 评估。",
+        "positive": "disagreement 在隐藏多解样本上升且拒答/候选输出能降低风险。",
+        "negative": "disagreement 只反映头的共享偏差，和隐藏真值无关；说明多任务冗余不是独立证据。",
+        "null": "数据集本身几乎没有多解或隐藏真值噪声太大。",
+        "expected_contribution": "给出使用现有 VGGT 输出做 hidden-risk triage 的低成本诊断。",
+        "risk": "需要可对齐的隐藏真值和不把 disagreement 当成概率的校准协议。",
+        "relation_to_paper": "利用论文报告的 point 与 depth+camera 差异，但把其从精度分析改为可证伪的风险信号。",
+        "validation_status": "proposed_unrun_not_novelty_verified"
+      },
+      {
+        "id": "vggt-active-viewpoint",
+        "title": "以候选分歧驱动的 VGGT 主动视角",
+        "type": "主动感知连接",
+        "method_steps": [
+          "从 VGGT 的 K 个 hidden shape candidates 渲染候选深度/轮廓。",
+          "在可达相机集合中选择使候选观测差异最大且运动成本最小的视角。",
+          "取得新视图后只更新被新射线触及的区域，并记录候选淘汰率。"
+        ],
+        "hypothesis": "选择能最大区分候选的视角，比选择最大可见面积或随机视角更快减少 amodal 多解。",
+        "minimum_experiment": "10个合成对象、固定3次动作和路径预算，比较随机、最大面积、最大候选分歧三种策略。",
+        "positive": "相同成本下隐藏 Chamfer 和候选熵下降更快，且可见区域不被新优化破坏。",
+        "negative": "候选分歧来自颜色或渲染噪声而非几何，策略不优于随机。",
+        "null": "所有可达视角都不能暴露背面，信息增益为零；此时正确行为应是拒答。",
+        "expected_contribution": "把 VGGT 的批量几何预测接入 UAV/机器人可验证闭环。",
+        "risk": "需要相机运动、可达性和动态场景模拟，不能只在静态图像上比较。",
+        "relation_to_paper": "利用 global multi-view geometry，但主动动作和拒答是新的研究假设。",
+        "validation_status": "proposed_unrun_not_novelty_verified"
+      }
+    ],
+    "paperforge": {
+      "problem_and_importance": "从一张到数百张图像快速得到相机、深度、点图和跟踪，是把几何推理从逐对优化提升到共享场景状态的关键基础能力。",
+      "why_related_work_is_insufficient": "DUSt3R/MASt3R 依赖 pairwise reconstruction 和后处理；传统 SfM 的 BA 计算昂贵。相关方法的共同缺口是多视图信息在测试时才通过优化合并，网络本身没有稳定的全局坐标状态。",
+      "reverse_engineered_author_path": "作者先问“能否用大 transformer 一次性吸收多视图”，再用第一帧 token 解决参考系，用 alternating attention 控制复杂度，最后用多任务头把相机、深度、点图和 tracks 绑定起来。",
+      "core_intuition": "第一，几何一致性来自跨帧 token 交互而不是某个手工 3D 模块。第二，冗余任务在训练时是互相校正的监督，在推理时却可以选择更可靠的组合。第三，快速前馈输出适合作为后续 BA 的初始化，而不宣称消除所有优化。",
+      "concrete_pipeline": "例如给定房间的12张RGB图：DINO得到patch tokens；frame attention整理每张图，global attention建立跨图对应；camera token估计姿态；DPT head输出depth、point map和tracking features；depth+camera重建点云；若需要再用BA微调。",
+      "formula_reading": "主映射为 `f((I_i))=(g_i,D_i,P_i,T_i)`。训练损失是 `L=L_camera+L_depth+L_pmap+0.05L_track`；深度和点图用预测的 aleatoric uncertainty 加权。关键不是公式本身，而是 uncertainty 同时影响训练梯度和置信度读出：若模型把难点标高 uncertainty，损失惩罚会下降，但不代表隐藏真值更可靠。",
+      "experiment_question_design_answer": "问题：多视图相机是否准确？实验：CO3Dv2/RealEstate10K上比较AUC和时间；答案：前馈VGGT优于多种后处理基线且BA仍可继续提升。问题：多任务是否有益？实验：point head与depth+camera组合比较；答案：组合点图更好。实验没有回答完全未观测背面是否真实。",
+      "actual_conclusion": "真正留下的是一个强的共享几何 backbone 和可复用的多头输出，不是一个已经解决三维 amodal 的模型。",
+      "most_fragile_premise": "训练集覆盖足够、输入相对静态、参考帧和相机假设合理；否则全局 attention 会把错误对应传播到所有输出。",
+      "one_week_minimum_reproduction": "一周内用官方权重在DTU或小型合成场景跑10张图，复现camera/depth/point输出，做point-head与depth+camera的一致性对照；不启动大规模训练。",
+      "strongest_counterexample": "同一可见前半球对应两个不同背面，模型只能选一个；若它输出很低 uncertainty 仍错，说明 aleatoric map 不能表示不可辨识。",
+      "non_incremental_followup": "将VGGT改为证据分层、多候选、可被新视角否证的几何 belief model，并用多头 disagreement 做拒答。"
+    },
+    "diagnostic_card": {
+      "surface_symptom": "稀疏或遮挡视角下点图看似完整，但背面几何错误且置信度过高。",
+      "first_layer_root_cause": "输入只提供局部射线，unknown 区没有直接监督。",
+      "second_layer_root_cause": "deterministic 多任务损失要求单一答案，训练先验会被误读成观测事实；多个头共享同一偏差，不能保证独立校验。",
+      "method_intervention": "global attention、共享坐标和多任务冗余；迁移时再加三态 belief、候选和可见硬约束。",
+      "implicit_premise": "训练分布能覆盖目标实例，候选 latent 的后验可以被新视角更新。",
+      "failure_trigger": "主点错配、动态物体、透明/镜面材质、背面完全不可观测。",
+      "transfer_necessary_condition": "必须有跨视角身份对应或相机可校准，并分别评估 observed/hidden/unknown。",
+      "counterfactual_test": "同正面异背面配对；若输出不确定性不升、候选不分裂，则迁移前提被反驳。",
+      "evidence_boundary": "论文验证的是可见多视图几何与速度；隐藏表面真实性和不确定性校准未被证明。"
+    },
+    "aris_ideas": [
+      {
+        "id": "vggt-three-state-belief",
+        "title": "三态几何 belief head",
+        "type": "连接三维 amodal",
+        "method_steps": [
+          "在 VGGT 的 dense tokens 上增加 observed/inferred/unknown 三态 occupancy 与 confidence head。",
+          "observed 区用深度/点图硬一致性，unknown 区用完整 shape 监督和 K 个候选 latent。",
+          "用同一可见输入比较 deterministic point map、单候选 belief 和多候选 belief。"
+        ],
+        "hypothesis": "把未知区从“低置信度的已知几何”改成显式状态，会减少隐藏区域被错误当成背景或事实的伪确定性。",
+        "minimum_experiment": "用低分辨率 CAD 物体和两种同正面异背面配对，固定 backbone 和参数量，只训练新 head。",
+        "positive": "隐藏 Chamfer/occupancy coverage 提升，同时 observed reprojection error 不升高且新视角能淘汰错误候选。",
+        "negative": "如果只是增加容量而非三态语义起作用，去掉 state label 的同容量版本会一样好；若观测区退化则说明硬约束过强。",
+        "null": "同一输入下真实后验近似单峰，三态标签没有新增信息。",
+        "expected_contribution": "建立证据—先验分层的三维 amodal 输出接口。",
+        "risk": "需要额外 unknown 标注、候选解码成本和稳定的可见性标签。",
+        "relation_to_paper": "由 VGGT 的共享几何表示和多任务冗余推出的迁移假设，论文没有实现 hidden belief。",
+        "validation_status": "proposed_unrun_not_novelty_verified"
+      },
+      {
+        "id": "vggt-redundant-geometry-audit",
+        "title": "冗余几何头的反事实一致性审计",
+        "type": "反事实/失败诊断",
+        "method_steps": [
+          "分别取 point-map head、depth+camera 重建点图和 tracking triangulation。",
+          "在遮挡率、视角基线和动态干扰上做受控反事实，记录三种输出的 disagreement。",
+          "把 disagreement 与真实隐藏误差、可见误差和后续视角修正量对齐。"
+        ],
+        "hypothesis": "多头 disagreement 是数据支持不足或模型内部冲突的可用信号，比单一 uncertainty map 更能暴露伪确定性。",
+        "minimum_experiment": "合成同一可见投影对应多种背面，固定输入与模型，只改变隐藏真值；用 calibration curve 和 selective risk 评估。",
+        "positive": "disagreement 在隐藏多解样本上升且拒答/候选输出能降低风险。",
+        "negative": "disagreement 只反映头的共享偏差，和隐藏真值无关；说明多任务冗余不是独立证据。",
+        "null": "数据集本身几乎没有多解或隐藏真值噪声太大。",
+        "expected_contribution": "给出使用现有 VGGT 输出做 hidden-risk triage 的低成本诊断。",
+        "risk": "需要可对齐的隐藏真值和不把 disagreement 当成概率的校准协议。",
+        "relation_to_paper": "利用论文报告的 point 与 depth+camera 差异，但把其从精度分析改为可证伪的风险信号。",
+        "validation_status": "proposed_unrun_not_novelty_verified"
+      },
+      {
+        "id": "vggt-active-viewpoint",
+        "title": "以候选分歧驱动的 VGGT 主动视角",
+        "type": "主动感知连接",
+        "method_steps": [
+          "从 VGGT 的 K 个 hidden shape candidates 渲染候选深度/轮廓。",
+          "在可达相机集合中选择使候选观测差异最大且运动成本最小的视角。",
+          "取得新视图后只更新被新射线触及的区域，并记录候选淘汰率。"
+        ],
+        "hypothesis": "选择能最大区分候选的视角，比选择最大可见面积或随机视角更快减少 amodal 多解。",
+        "minimum_experiment": "10个合成对象、固定3次动作和路径预算，比较随机、最大面积、最大候选分歧三种策略。",
+        "positive": "相同成本下隐藏 Chamfer 和候选熵下降更快，且可见区域不被新优化破坏。",
+        "negative": "候选分歧来自颜色或渲染噪声而非几何，策略不优于随机。",
+        "null": "所有可达视角都不能暴露背面，信息增益为零；此时正确行为应是拒答。",
+        "expected_contribution": "把 VGGT 的批量几何预测接入 UAV/机器人可验证闭环。",
+        "risk": "需要相机运动、可达性和动态场景模拟，不能只在静态图像上比较。",
+        "relation_to_paper": "利用 global multi-view geometry，但主动动作和拒答是新的研究假设。",
+        "validation_status": "proposed_unrun_not_novelty_verified"
+      }
+    ]
+  },
+  "browse": [
+    {
+      "id": "arxiv:1806.05034",
+      "title": "A Probabilistic U-Net for Segmentation of Ambiguous Images",
+      "authors": [
+        "Simon Kohl",
+        "Bernhard Romera-Paredes",
+        "Cedric Meyer",
+        "Jens Garstenauer",
+        "William M. A. de Vries",
+        "Alexander S. Ecker",
+        "Matthias Bethge",
+        "Olaf Ronneberger",
+        "Philip H. S. Torr"
+      ],
+      "published": "2018-06-13",
+      "publication_month": "2018-06",
+      "venue": "NeurIPS 2018",
+      "source": "https://arxiv.org/abs/1806.05034",
+      "html_url": "https://arxiv.org/abs/1806.05034",
+      "code": "https://github.com/SimonKohl/probabilistic_unet",
+      "slug": "probabilistic-unet",
+      "source_domain": "概率分割与多模态预测",
+      "method_family": "conditional VAE + U-Net、多样本 mask、KL/BCE 训练",
+      "evidence_status": "arXiv/NeurIPS 摘要与公开实现入口核验；本批不下载PDF、不运行。",
+      "problem": "普通分割网络通常输出一个 mask；但相同影像可对应多个合理边界。第一层根因是标签或场景本身具有多解，第二层根因是像素级交叉熵把多解压成一个 mode 或平均边界，导致模型表面上校准却无法表达歧义。",
+      "why_method": "Probabilistic U-Net 将 U-Net 的像素细节与 conditional VAE 的 latent posterior 结合：训练时 posterior 看到目标 mask，prior 只看输入；推理时从 prior 采样多个 latent 得到多个 mask。latent 不是“加随机数”，而是把多解显式放进预测分布，前提是训练目标真的包含多种解。",
+      "causal_chain": "图像与可见/遮挡条件 → U-Net encoder → prior/posterior network → latent z → decoder mask → BCE/latent KL → 多个候选完整 mask；若训练标签只有一个、或 latent 只学注释者风格，输出的多样性会与真实隐藏形状无关。",
+      "two_layer_root_cause": "表面症状是遮挡区域补成平均轮廓或单一原型；第一层根因是输出空间多模态而模型只有单点头；第二层根因是隐藏区域的多解来源常与遮挡选择相关，随机采样不等于证据条件后验。",
+      "assumptions_failures": [
+        "训练数据需要多个有效 mask 或足够覆盖多解的样本；只有单一伪标签时会坍缩。",
+        "latent prior 必须识别可见证据，否则采样出的差异只是纹理噪声。",
+        "候选数量越多不等于真实性越高，需要 coverage、calibration 和可见硬一致性。"
+      ],
+      "claim_evidence": [
+        "原文的核心证据是多模态分割上的多样性与准确性权衡；本文不复述未核验的具体数值。",
+        "官方实现入口可查，未运行。"
+      ],
+      "gaps": [
+        "原任务的 ambiguity 可能来自人工标注者，而三维 amodal 的 ambiguity 来自不可观测背面；迁移必须分别建模。",
+        "二维 mask 多样性不能自动产生可跨视角一致的三维形状。"
+      ],
+      "transfer": {
+        "source_mechanism": "条件 latent posterior 让一个可见输入对应多个输出候选，并避免单点回归把多解平均掉。",
+        "target_isomorphism": "源变量是 image→mask distribution；目标变量是 visible evidence→complete mask/occupancy distribution。隐藏形状候选可被视为条件 mask 的 structured modes。",
+        "necessary_conditions": "有多解训练对、或能从 CAD/多视角渲染得到同一可见证据的不同完整实例；输出需硬满足已见边界。",
+        "mismatch": "原文主要处理分割 ambiguity，未处理相机几何、跨视角一致性和物理可行性。",
+        "adaptation": "prior 输入可见 mask、遮挡者、相机与深度；decoder 输出 mask+SDF/occupancy；加入 observed-region consistency、multi-view reprojection 和 candidate diversity regularizer。",
+        "failure_trigger": "真实后验是长尾单一实例而训练只见类别原型，或 latent 采样改变了 visible 区。"
+      },
+      "ideas": [
+        {
+          "id": "punet-mnar-latent",
+          "title": "结构相关缺失的 latent posterior",
+          "type": "检验隐含前提",
+          "method_steps": [
+            "用相同可见率生成随机遮挡、形状相关遮挡和深度排序遮挡。",
+            "训练普通 Probabilistic U-Net 与加入遮挡机制 token 的版本。",
+            "按 hidden IoU、candidate coverage 和 visible violation 比较。"
+          ],
+          "hypothesis": "学习缺失机制比增加 latent 维度更决定候选是否覆盖真实隐藏形状。",
+          "minimum_experiment": "低分辨率 CAD 渲染、固定 U-Net 与采样数，三种遮挡机制各1000例。",
+          "positive": "机制匹配版本在 MNAR 测试上 coverage 提高且 visible 区不降。",
+          "negative": "若所有版本相同，缺失机制不是主要瓶颈；若 latent 只产生纹理噪声，prior 没学到证据。",
+          "null": "没有多解或渲染对象过于简单。",
+          "expected_contribution": "把“多样性”从随机扰动改成缺失机制条件分布。",
+          "risk": "需机制标签和多解合成，不能用单一真实 mask 宣称后验正确。",
+          "relation_to_paper": "扩展原文 conditional VAE，不是论文已有的 amodal 模块。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "punet-hard-visible",
+          "title": "可见区硬约束的候选解码",
+          "type": "反事实/失败诊断",
+          "method_steps": [
+            "decoder 同时输出完整 mask 与 visible-consistency map。",
+            "对候选 mask 做投影层，把已观测边界写回输出。",
+            "比较无投影、软 consistency loss 和硬投影。"
+          ],
+          "hypothesis": "多解采样的主要风险不是 hidden diversity，而是候选污染 visible evidence。",
+          "minimum_experiment": "对同一输入采样20个候选，报告 visible boundary violation 与 hidden coverage。",
+          "positive": "硬约束显著减少可见区错误且隐藏 coverage保持。",
+          "negative": "硬投影造成不可连续边界或 hidden 退化，说明输出空间不适合后投影。",
+          "null": "观测 mask 本身有噪声，硬约束会放大检测错误。",
+          "expected_contribution": "提供“候选可被相信的证据边界”，而非只看样本数量。",
+          "risk": "需要可微或稳定的投影实现。",
+          "relation_to_paper": "由源方法的采样式输出和目标的可见证据约束推导。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "punet-3d-candidate",
+          "title": "二维多解到三维候选的一致性桥",
+          "type": "连接三维 amodal",
+          "method_steps": [
+            "用每个 latent 生成完整 mask，再通过可微 shape decoder 生成 SDF。",
+            "跨视角时共享 z 或用 view-conditioned z 分解观测与实例不确定性。",
+            "比较独立二维采样与共享三维 latent 的跨视角一致性。"
+          ],
+          "hypothesis": "三维共享 latent 能把二维候选的多模态从外观差异提升为一致的形状候选。",
+          "minimum_experiment": "合成两视角同一对象、同正面异背面配对，固定候选数和参数预算。",
+          "positive": "跨视角 candidate matching 提升且新视角重投影误差降低。",
+          "negative": "共享 latent 把错误视角强行绑定，或只学类别模板。",
+          "null": "只有单视角、无跨视角对应。",
+          "expected_contribution": "为三维 amodal 引入显式多候选而不是单一 posterior mean。",
+          "risk": "需要 shape decoder 和 3D 监督，成本高于二维方案。",
+          "relation_to_paper": "把 Probabilistic U-Net 的多模态输出接到三维表示，纯属研究假设。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "paperforge": {
+        "problem_and_importance": "解决同一输入对应多个合理分割的单点预测问题，直接关系到遮挡边界与未知形状的多解表示。",
+        "why_related_work_is_insufficient": "确定性 U-Net 和像素损失会把多解压成一个输出；普通 dropout 不能保证样本代表结构化 mode。",
+        "reverse_engineered_author_path": "先保留 U-Net 的空间建模，再引入 conditional VAE latent，让 posterior 只在训练时看到目标，prior 在测试时生成候选。",
+        "core_intuition": "不要把多样性当噪声；latent 必须控制结构 mode，且 visible evidence 仍要被硬满足。",
+        "concrete_pipeline": "可见 mask+图像→prior sample z→U-Net decoder→候选完整 mask→可见一致性检查。",
+        "formula_reading": "核心是重建项与 KL 之间的 trade-off；KL 太强会 posterior collapse，重建太强又会把 z 忽略。",
+        "experiment_question_design_answer": "问题：能否产生多种合理 mask？实验：多标注/歧义分割；答案：分布表达改善，但并未回答隐藏三维真值。",
+        "actual_conclusion": "留下的是条件多模态预测接口与评估思路，不是任意多解都真实。",
+        "most_fragile_premise": "训练样本覆盖真实 ambiguity，且 prior 和 posterior 的 gap 可学。",
+        "one_week_minimum_reproduction": "一周复现：用 ShapeNet 渲染前半球相同、后半球不同的轮廓，训练小 U-Net 与 latent 版本。",
+        "strongest_counterexample": "可见区域相同而背面完全不同；如果候选只输出平均轮廓，说明 latent 没有承载不可观测多解。",
+        "non_incremental_followup": "将 latent 分成观测噪声与实例形状两类，并让后续视角对候选做贝叶斯更新。"
+      },
+      "diagnostic_card": {
+        "surface_symptom": "输出一个平滑但错误的遮挡边界。",
+        "first_layer_root_cause": "输出头只能表示单一 mask。",
+        "second_layer_root_cause": "未知区的多解被像素损失平均，且缺失机制与训练标签不同。",
+        "method_intervention": "conditional latent + visible hard consistency + candidate coverage。",
+        "implicit_premise": "多解训练样本真实覆盖目标后验。",
+        "failure_trigger": "候选污染 visible 区、采样只改变颜色、标注 ambiguity 与物理 ambiguity 混淆。",
+        "transfer_necessary_condition": "二维与三维评估必须分开，且 hidden coverage 要有真值。",
+        "counterfactual_test": "同可见输入多个完整真值；若样本之间 mode 不稳定则否定迁移。",
+        "evidence_boundary": "原文证明概率分割，不证明三维完整形状。"
+      },
+      "aris_ideas": [
+        {
+          "id": "punet-mnar-latent",
+          "title": "结构相关缺失的 latent posterior",
+          "type": "检验隐含前提",
+          "method_steps": [
+            "用相同可见率生成随机遮挡、形状相关遮挡和深度排序遮挡。",
+            "训练普通 Probabilistic U-Net 与加入遮挡机制 token 的版本。",
+            "按 hidden IoU、candidate coverage 和 visible violation 比较。"
+          ],
+          "hypothesis": "学习缺失机制比增加 latent 维度更决定候选是否覆盖真实隐藏形状。",
+          "minimum_experiment": "低分辨率 CAD 渲染、固定 U-Net 与采样数，三种遮挡机制各1000例。",
+          "positive": "机制匹配版本在 MNAR 测试上 coverage 提高且 visible 区不降。",
+          "negative": "若所有版本相同，缺失机制不是主要瓶颈；若 latent 只产生纹理噪声，prior 没学到证据。",
+          "null": "没有多解或渲染对象过于简单。",
+          "expected_contribution": "把“多样性”从随机扰动改成缺失机制条件分布。",
+          "risk": "需机制标签和多解合成，不能用单一真实 mask 宣称后验正确。",
+          "relation_to_paper": "扩展原文 conditional VAE，不是论文已有的 amodal 模块。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "punet-hard-visible",
+          "title": "可见区硬约束的候选解码",
+          "type": "反事实/失败诊断",
+          "method_steps": [
+            "decoder 同时输出完整 mask 与 visible-consistency map。",
+            "对候选 mask 做投影层，把已观测边界写回输出。",
+            "比较无投影、软 consistency loss 和硬投影。"
+          ],
+          "hypothesis": "多解采样的主要风险不是 hidden diversity，而是候选污染 visible evidence。",
+          "minimum_experiment": "对同一输入采样20个候选，报告 visible boundary violation 与 hidden coverage。",
+          "positive": "硬约束显著减少可见区错误且隐藏 coverage保持。",
+          "negative": "硬投影造成不可连续边界或 hidden 退化，说明输出空间不适合后投影。",
+          "null": "观测 mask 本身有噪声，硬约束会放大检测错误。",
+          "expected_contribution": "提供“候选可被相信的证据边界”，而非只看样本数量。",
+          "risk": "需要可微或稳定的投影实现。",
+          "relation_to_paper": "由源方法的采样式输出和目标的可见证据约束推导。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "punet-3d-candidate",
+          "title": "二维多解到三维候选的一致性桥",
+          "type": "连接三维 amodal",
+          "method_steps": [
+            "用每个 latent 生成完整 mask，再通过可微 shape decoder 生成 SDF。",
+            "跨视角时共享 z 或用 view-conditioned z 分解观测与实例不确定性。",
+            "比较独立二维采样与共享三维 latent 的跨视角一致性。"
+          ],
+          "hypothesis": "三维共享 latent 能把二维候选的多模态从外观差异提升为一致的形状候选。",
+          "minimum_experiment": "合成两视角同一对象、同正面异背面配对，固定候选数和参数预算。",
+          "positive": "跨视角 candidate matching 提升且新视角重投影误差降低。",
+          "negative": "共享 latent 把错误视角强行绑定，或只学类别模板。",
+          "null": "只有单视角、无跨视角对应。",
+          "expected_contribution": "为三维 amodal 引入显式多候选而不是单一 posterior mean。",
+          "risk": "需要 shape decoder 和 3D 监督，成本高于二维方案。",
+          "relation_to_paper": "把 Probabilistic U-Net 的多模态输出接到三维表示，纯属研究假设。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2010.03409",
+      "title": "Learning Mesh-Based Simulation with Graph Networks",
+      "authors": [
+        "Tobias Pfaff",
+        "Meire Fortunato",
+        "Alvaro Sanchez-Gonzalez",
+        "Peter W. Battaglia"
+      ],
+      "published": "2020-10-07",
+      "publication_month": "2020-10",
+      "venue": "ICLR 2021",
+      "source": "https://arxiv.org/abs/2010.03409",
+      "html_url": "https://openreview.net/forum?id=raDqTR_jXx",
+      "code": "https://github.com/google-deepmind/deepmind-research/tree/master/meshgraphnets",
+      "slug": "meshgraphnets",
+      "source_domain": "物理仿真与网格图学习",
+      "method_family": "mesh graph message passing、learned simulator、rollout",
+      "evidence_status": "arXiv/OpenReview与官方代码路径核验；本批不下载PDF、不运行。",
+      "problem": "传统网格仿真昂贵且需要精确物理模型；第一层根因是局部状态更新与复杂边界条件耦合，第二层根因是离散化、材料参数和数值稳定性共同决定 rollout，而单步误差并不等于长期结构误差。",
+      "why_method": "MeshGraphNets 在 mesh 上进行 message passing，预测速度/位移等增量并迭代 rollout。它把拓扑邻接和局部守恒线索写入图结构，因果作用不是“图网络更强”，而是每一步只在局部邻域传递状态，再由长期 rollout 暴露不稳定。",
+      "causal_chain": "部分网格/边界观测 → 节点与边特征 → message passing → 预测下一状态 → rollout/物理损失 → 完整网格状态；如果拓扑错、边界未知或材料参数不识别，消息传播会把错误约束扩散。",
+      "two_layer_root_cause": "表面症状是遮挡区域的表面断裂或穿透；第一层根因是局部几何没有连续约束；第二层根因是可行物理状态集合大于真实实例集合，物理可行不等于正确恢复。",
+      "assumptions_failures": [
+        "mesh topology 与真实物体结构匹配；",
+        "动力学或材料参数在训练分布内；",
+        "rollout 中误差不会被邻域传播放大；",
+        "静态 amodal 补全可以借用物理约束，但对软体、铰接或非物理装饰需谨慎。"
+      ],
+      "claim_evidence": [
+        "论文原文展示了在 cloth、deformable solids、fluids 等场景的 learned simulation；本文不复述具体 benchmark 数字。",
+        "官方 DeepMind research 路径可查，未运行。"
+      ],
+      "gaps": [
+        "完整形状恢复需要实例证据，而不是只要满足运动方程；",
+        "未知接触、内部结构和边界条件会导致多解。"
+      ],
+      "transfer": {
+        "source_mechanism": "图邻域传递 + 迭代 rollout 把局部关系与长期可行性结合。",
+        "target_isomorphism": "源变量是节点状态/边约束；目标变量是可见表面点/部件节点及其拓扑关系，隐藏部分是待补全节点。",
+        "necessary_conditions": "目标能构建稳定的部件/mesh graph，至少有粗拓扑、相邻关系或可学习邻接；要区分物理约束与形状先验。",
+        "mismatch": "amodal 目标是静态实例识别，不是任意物理未来；把可行性损失当真值会排除真实但非典型结构或生成合理假体。",
+        "adaptation": "边节点携带 observed/inferred 标签，message passing 只传播跨未知边界的几何约束；加入可见重投影、拓扑一致性和接触/支撑可选项。",
+        "failure_trigger": "错误拓扑、材料/接触未知、细长结构断裂或物体本身不满足训练物理。"
+      },
+      "ideas": [
+        {
+          "id": "mgnets-topology-uncertainty",
+          "title": "拓扑不确定的 mesh completion",
+          "type": "连接三维 amodal",
+          "method_steps": [
+            "从可见点云构建多个候选邻接图，而非固定一个 mesh。",
+            "MeshGraphNet 在每个候选上 rollout 几何补全，使用 observed points 硬约束。",
+            "按隐藏 Chamfer、拓扑合法率和候选覆盖比较固定拓扑与多拓扑。"
+          ],
+          "hypothesis": "拓扑错误是隐藏补全失败的根因之一，多候选拓扑比更深 message passing 更有效。",
+          "minimum_experiment": "10类 CAD 物体，每类生成可见片段和两种错误邻接，固定网络层数与预算。",
+          "positive": "真实拓扑在候选集合中且可见区不退化。",
+          "negative": "候选拓扑只增加噪声或成本，说明几何误差而非拓扑是主要瓶颈。",
+          "null": "物体拓扑简单或可见片段已唯一决定拓扑。",
+          "expected_contribution": "将图仿真的离散结构假设转化为 amodal 的拓扑 belief。",
+          "risk": "需要可靠候选图生成和匹配评估。",
+          "relation_to_paper": "源论文使用已知 mesh；这里明确把未知拓扑作为迁移风险。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "mgnets-physical-counterfactual",
+          "title": "物理可行性与实例真实性反事实",
+          "type": "反事实/失败诊断",
+          "method_steps": [
+            "训练同一补全器，分别加入物理 rollout loss、可见重投影 loss 和二者联合。",
+            "构造两个同样可行但隐藏形状不同的对象对。",
+            "比较物理指标与 hidden reconstruction 是否脱钩。"
+          ],
+          "hypothesis": "物理损失可能提升可行性却不提升真实性，二者不能用一个全局分数代替。",
+          "minimum_experiment": "固定参数与训练步数，报告可见误差、hidden Chamfer、penetration/strain 与候选覆盖。",
+          "positive": "联合模型同时保持可见和隐藏真值，且反例中能暴露不可辨识。",
+          "negative": "物理 loss 使模型更平滑但隐藏真值更差，证明迁移被错误目标主导。",
+          "null": "数据中只有单一物理解，无法检验脱钩。",
+          "expected_contribution": "给出使用物理先验时的证据边界和拒答条件。",
+          "risk": "需简化物理模拟，不能把指标改善解释成真实恢复。",
+          "relation_to_paper": "把 learned simulator 的 rollout 误差诊断迁移为 amodal 目标错配诊断。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "mgnets-support-view",
+          "title": "支撑关系引导的隐藏部件候选",
+          "type": "可验证研究假设",
+          "method_steps": [
+            "从图中识别支撑/接触候选边和悬空节点。",
+            "用支撑约束筛掉明显不可能的 hidden shape candidates。",
+            "比较无物理筛选、硬筛选与软能量重排序。"
+          ],
+          "hypothesis": "支撑关系可减少形状候选，但只适合对象确有可识别接触语义的场景。",
+          "minimum_experiment": "合成桌面物体与悬挂物体，固定候选生成器，评估候选淘汰精度。",
+          "positive": "候选数减少而真值保留率不下降。",
+          "negative": "接触误检导致真值被筛掉，说明物理语义不应硬编码。",
+          "null": "物体没有稳定支撑或相机无法观察接触区域。",
+          "expected_contribution": "形成低成本的结构先验筛选器而非生成器。",
+          "risk": "接触标签和相机姿态误差会直接影响结论。",
+          "relation_to_paper": "从物理约束的可解释性出发，保留负结果价值。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "paperforge": {
+        "problem_and_importance": "用图网络替代昂贵物理仿真，核心价值是让局部关系和长期 rollout 都进入学习目标。",
+        "why_related_work_is_insufficient": "纯 MLP 或逐点补全没有拓扑和邻域，单帧 Chamfer 也无法发现长期穿透/断裂。",
+        "reverse_engineered_author_path": "作者先把连续物理状态离散到 mesh graph，再让消息传递预测增量，最后用多步 rollout 检验稳定性。",
+        "core_intuition": "局部邻域是传播约束的最小单位，但 rollout 才能揭示错误累积；物理先验提供可行性，不自动提供实例真值。",
+        "concrete_pipeline": "可见 mesh 节点+边特征→message passing→补全/下一状态→多步 rollout→形状与物理约束评估。",
+        "formula_reading": "更新通常是节点状态增量；若把未知节点当普通节点，梯度会把观测误差传播到隐藏区。",
+        "experiment_question_design_answer": "问题：学习仿真能否复现动力学？实验：多个物理系统跨 rollout；答案：可学到有效近似，但长时误差仍存在。",
+        "actual_conclusion": "留下图关系和 rollout 作为可验证结构先验。",
+        "most_fragile_premise": "拓扑、边界和材料参数足够可靠。",
+        "one_week_minimum_reproduction": "一周复现：二维布料或弹簧网格，比较局部图补全与不带拓扑的 MLP。",
+        "strongest_counterexample": "两个不同隐藏结构同样满足物理约束；若模型只给一个，说明物理不是识别器。",
+        "non_incremental_followup": "让物理约束只做候选筛选，并把拓扑不确定性显式化。"
+      },
+      "diagnostic_card": {
+        "surface_symptom": "补全表面局部平滑但整体穿透、断裂或不闭合。",
+        "first_layer_root_cause": "缺少邻域/拓扑约束。",
+        "second_layer_root_cause": "可行物理状态集合远大于真实实例集合，物理损失和目标错配。",
+        "method_intervention": "mesh message passing + rollout 诊断 + observed hard constraints。",
+        "implicit_premise": "粗拓扑、边界和物理参数至少部分可识别。",
+        "failure_trigger": "错误拓扑、接触误检、软体/铰接变化、内部结构不可见。",
+        "transfer_necessary_condition": "物理指标与隐藏真值分开报告。",
+        "counterfactual_test": "构造同物理不同形状对，测物理好但隐藏错的比例。",
+        "evidence_boundary": "源论文验证仿真，不验证 amodal 实例恢复。"
+      },
+      "aris_ideas": [
+        {
+          "id": "mgnets-topology-uncertainty",
+          "title": "拓扑不确定的 mesh completion",
+          "type": "连接三维 amodal",
+          "method_steps": [
+            "从可见点云构建多个候选邻接图，而非固定一个 mesh。",
+            "MeshGraphNet 在每个候选上 rollout 几何补全，使用 observed points 硬约束。",
+            "按隐藏 Chamfer、拓扑合法率和候选覆盖比较固定拓扑与多拓扑。"
+          ],
+          "hypothesis": "拓扑错误是隐藏补全失败的根因之一，多候选拓扑比更深 message passing 更有效。",
+          "minimum_experiment": "10类 CAD 物体，每类生成可见片段和两种错误邻接，固定网络层数与预算。",
+          "positive": "真实拓扑在候选集合中且可见区不退化。",
+          "negative": "候选拓扑只增加噪声或成本，说明几何误差而非拓扑是主要瓶颈。",
+          "null": "物体拓扑简单或可见片段已唯一决定拓扑。",
+          "expected_contribution": "将图仿真的离散结构假设转化为 amodal 的拓扑 belief。",
+          "risk": "需要可靠候选图生成和匹配评估。",
+          "relation_to_paper": "源论文使用已知 mesh；这里明确把未知拓扑作为迁移风险。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "mgnets-physical-counterfactual",
+          "title": "物理可行性与实例真实性反事实",
+          "type": "反事实/失败诊断",
+          "method_steps": [
+            "训练同一补全器，分别加入物理 rollout loss、可见重投影 loss 和二者联合。",
+            "构造两个同样可行但隐藏形状不同的对象对。",
+            "比较物理指标与 hidden reconstruction 是否脱钩。"
+          ],
+          "hypothesis": "物理损失可能提升可行性却不提升真实性，二者不能用一个全局分数代替。",
+          "minimum_experiment": "固定参数与训练步数，报告可见误差、hidden Chamfer、penetration/strain 与候选覆盖。",
+          "positive": "联合模型同时保持可见和隐藏真值，且反例中能暴露不可辨识。",
+          "negative": "物理 loss 使模型更平滑但隐藏真值更差，证明迁移被错误目标主导。",
+          "null": "数据中只有单一物理解，无法检验脱钩。",
+          "expected_contribution": "给出使用物理先验时的证据边界和拒答条件。",
+          "risk": "需简化物理模拟，不能把指标改善解释成真实恢复。",
+          "relation_to_paper": "把 learned simulator 的 rollout 误差诊断迁移为 amodal 目标错配诊断。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "mgnets-support-view",
+          "title": "支撑关系引导的隐藏部件候选",
+          "type": "可验证研究假设",
+          "method_steps": [
+            "从图中识别支撑/接触候选边和悬空节点。",
+            "用支撑约束筛掉明显不可能的 hidden shape candidates。",
+            "比较无物理筛选、硬筛选与软能量重排序。"
+          ],
+          "hypothesis": "支撑关系可减少形状候选，但只适合对象确有可识别接触语义的场景。",
+          "minimum_experiment": "合成桌面物体与悬挂物体，固定候选生成器，评估候选淘汰精度。",
+          "positive": "候选数减少而真值保留率不下降。",
+          "negative": "接触误检导致真值被筛掉，说明物理语义不应硬编码。",
+          "null": "物体没有稳定支撑或相机无法观察接触区域。",
+          "expected_contribution": "形成低成本的结构先验筛选器而非生成器。",
+          "risk": "接触标签和相机姿态误差会直接影响结论。",
+          "relation_to_paper": "从物理约束的可解释性出发，保留负结果价值。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ]
+    },
+    {
+      "id": "arxiv:1802.08219",
+      "title": "Tensor Field Networks: Rotation- and Translation-Equivariant Neural Networks for 3D Point Clouds",
+      "authors": [
+        "Nathaniel Thomas",
+        "T. E. Smidt",
+        "L. E. Kearnes",
+        "L. Yang",
+        "Liang Li",
+        "Kai Kohlhoff",
+        "T. S. Smidt"
+      ],
+      "published": "2018-02-22",
+      "publication_month": "2018-02",
+      "venue": "NeurIPS 2018",
+      "source": "https://arxiv.org/abs/1802.08219",
+      "html_url": "https://arxiv.org/abs/1802.08219",
+      "code": "",
+      "slug": "tensor-field-networks",
+      "source_domain": "三维群等变表示与点云学习",
+      "method_family": "SO(3)/E(3) equivariant tensor features、spherical harmonics、Clebsch-Gordan products",
+      "evidence_status": "arXiv/NeurIPS元数据核验；未找到并确认官方代码，本批不下载PDF、不运行。",
+      "problem": "普通点云网络依赖数据增强学习旋转鲁棒性；第一层根因是坐标系变化被当成新模式，第二层根因是模型把应由群作用解释的变化耗费在样本覆盖上，导致稀疏视角/跨相机泛化差。",
+      "why_method": "Tensor Field Networks 让隐藏特征按旋转群的表示变换，标量、向量和高阶张量分别承载不同几何信息。等变性是归纳偏置：输入旋转时输出按可预测规则旋转，而不是要求网络从数据中记忆所有姿态。",
+      "causal_chain": "带坐标的点/射线 → 球谐与径向基展开 → tensor field message passing → 等变几何特征 → 旋转相关的 shape/query 输出；若目标对象具有强非对称结构或遮挡选择随视角变化，等变性不能替代可见性建模。",
+      "two_layer_root_cause": "表面症状是换视角后形状/特征漂移；第一层根因是表示含有坐标系捷径；第二层根因是网络没有区分真正的几何变化和观测缺失变化，过强对称约束会把视角相关的可见性错误压平。",
+      "assumptions_failures": [
+        "目标任务确实满足所选群作用；",
+        "坐标和尺度可对齐；",
+        "反射、镜像和非刚体不被错误当作旋转；",
+        "等变特征仍需语义/可见性标签，不能独立解决多解。"
+      ],
+      "claim_evidence": [
+        "论文原文的核心是点云上的旋转/平移等变网络；本文不复述具体 benchmark 数字。",
+        "无代码执行证据。"
+      ],
+      "gaps": [
+        "真实遮挡是结构相关缺失，不是简单旋转；",
+        "对象内部对称性和相机群作用可能不一致。"
+      ],
+      "transfer": {
+        "source_mechanism": "让表示遵守旋转/平移群作用，减少坐标系变化造成的样本复杂度。",
+        "target_isomorphism": "多视角点、射线和局部表面 patch 在相机变换下存在同构几何；目标输出的 visible geometry 应等变，canonical shape query 可保持不变。",
+        "necessary_conditions": "相机姿态或相对坐标可估计；输入输出变换规则明确；评估能区分姿态误差和隐藏区域多解。",
+        "mismatch": "未知区域不是群变换的结果，镜像/非对称后面可能完全不同；强等变可能复制错误对称。",
+        "adaptation": "用等变 encoder 处理可见点和相机射线，另设 invariant latent 表示 canonical shape candidates，并加入 visibility gate 和 candidate posterior。",
+        "failure_trigger": "镜面物体、左右不对称对象、相机姿态错、遮挡者变化与目标旋转耦合。"
+      },
+      "ideas": [
+        {
+          "id": "tfn-visibility-gated",
+          "title": "等变几何与可见性门控",
+          "type": "连接三维重建",
+          "method_steps": [
+            "对可见点和射线用 TFN 等变编码。",
+            "另用 scalar visibility gate 区分观测变换与遮挡变化。",
+            "比较普通 PointNet、纯 TFN、TFN+gate 在跨姿态遮挡测试上的表现。"
+          ],
+          "hypothesis": "等变性降低姿态域偏移，但只有显式 visibility gate 才不会把遮挡变化当成旋转。",
+          "minimum_experiment": "同一 CAD 对象随机旋转并用不同遮挡者生成输入，固定点数和参数预算。",
+          "positive": "跨姿态 hidden Chamfer 与 visible consistency 同时改善。",
+          "negative": "纯 TFN 已足够或 gate 只学遮挡颜色，说明姿态不是主要瓶颈。",
+          "null": "数据姿态分布窄或对象近似球体。",
+          "expected_contribution": "给出等变与可见性分离的因果实验。",
+          "risk": "需要可控旋转和遮挡生成。",
+          "relation_to_paper": "源论文的群结构保留，visibility gate 是目标改造。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "tfn-symmetry-counterexample",
+          "title": "对称性最强反例集",
+          "type": "反事实/失败诊断",
+          "method_steps": [
+            "构造旋转对称、镜像非对称、局部重复纹理三组对象。",
+            "在相同可见证据下比较等变模型的候选覆盖。",
+            "测错误复制左右结构的频率，而非只看平均 Chamfer。"
+          ],
+          "hypothesis": "等变模型的失败主要集中在被错误假定对称的对象，而不是所有遮挡样本。",
+          "minimum_experiment": "小型合成集即可，评估 left-right swap error、topology error 和 abstention。",
+          "positive": "模型在对称组获益、非对称组自动提高不确定性。",
+          "negative": "模型强行复制镜像结构且置信度不升，说明群归纳偏置危险。",
+          "null": "对象本身全部近似对称。",
+          "expected_contribution": "形成迁移前必须通过的 symmetry audit。",
+          "risk": "需要精确的镜像/旋转标注。",
+          "relation_to_paper": "把原文等变优势转为可证伪的适用性边界。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "tfn-canonical-candidates",
+          "title": "canonical shape candidates",
+          "type": "可验证研究假设",
+          "method_steps": [
+            "把等变特征池化为 canonical-frame latent。",
+            "为每个 latent 解码一个完整形状候选，并用相机变换重投影。",
+            "比较单 canonical 输出与多候选输出的跨视角一致性。"
+          ],
+          "hypothesis": "把姿态变化和隐藏多解分到不同变量，能避免单一坐标系 latent 混合二者。",
+          "minimum_experiment": "两视角 CAD 片段，固定 latent 数、训练步数和采样预算。",
+          "positive": "候选在不同视角可对齐且能保留真实背面差异。",
+          "negative": "canonical pooling 丢掉方向性细节，或多候选只是随机重复。",
+          "null": "视角本身已包含足够几何，候选不需要多模态。",
+          "expected_contribution": "提出姿态不变、证据条件的三维 belief 表示。",
+          "risk": "需要 robust pose 和 candidate matching。",
+          "relation_to_paper": "由 TFN 的 canonical 几何表示推到 amodal belief，论文没有该任务实验。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "paperforge": {
+        "problem_and_importance": "让三维点云网络对旋转和平移有可预测响应，减少坐标域偏移。",
+        "why_related_work_is_insufficient": "数据增强只能近似覆盖群作用，且会把算力用于记忆姿态；普通网络的旋转鲁棒性没有结构保证。",
+        "reverse_engineered_author_path": "作者先识别坐标变换是可预见的，再用 irreducible representations 和 tensor products 构造等变层。",
+        "core_intuition": "等变是表示层的因果约束，但对遮挡多解没有任何保证；因此必须与 visibility 和概率输出配套。",
+        "concrete_pipeline": "点云/射线→球谐张量特征→消息传递→canonical shape/query→重投影。",
+        "formula_reading": "张量阶数越高能表达方向关系，但计算和噪声敏感性上升；删掉高阶项会降低方向分辨率。",
+        "experiment_question_design_answer": "问题：能否在点云任务中保持旋转等变？实验：旋转点云分类/分割；答案：结构约束有效，但不等于 amodal。",
+        "actual_conclusion": "留下的是可检验的群归纳偏置，而不是完整形状先验。",
+        "most_fragile_premise": "目标任务的对称群与输出变换必须定义正确。",
+        "one_week_minimum_reproduction": "一周复现：在小型点云上对比随机旋转测试的 PointNet 与简单 E(3) 等变层。",
+        "strongest_counterexample": "左右非对称对象的被遮挡一侧；等变模型若盲目镜像即为反例。",
+        "non_incremental_followup": "把等变 canonical latent 与多候选 hidden shape 结合，并显式审计错误对称。"
+      },
+      "diagnostic_card": {
+        "surface_symptom": "换视角后几何特征漂移或错误复制左右结构。",
+        "first_layer_root_cause": "表示把坐标变化当作新模式。",
+        "second_layer_root_cause": "任务中的遮挡变化不是群作用，强等变会把不可观测差异压成错误对称。",
+        "method_intervention": "TFN 等变 encoder + scalar visibility gate + candidate posterior。",
+        "implicit_premise": "相机/坐标可对齐且对象群假设真实。",
+        "failure_trigger": "镜像非对称、镜面、姿态错配、动态形变。",
+        "transfer_necessary_condition": "相机/坐标可对齐，且输出变换规则与目标任务一致。",
+        "counterfactual_test": "对称/非对称/重复纹理反例集与 selective risk。",
+        "evidence_boundary": "原文证明等变表示，不证明隐藏面识别。"
+      },
+      "aris_ideas": [
+        {
+          "id": "tfn-visibility-gated",
+          "title": "等变几何与可见性门控",
+          "type": "连接三维重建",
+          "method_steps": [
+            "对可见点和射线用 TFN 等变编码。",
+            "另用 scalar visibility gate 区分观测变换与遮挡变化。",
+            "比较普通 PointNet、纯 TFN、TFN+gate 在跨姿态遮挡测试上的表现。"
+          ],
+          "hypothesis": "等变性降低姿态域偏移，但只有显式 visibility gate 才不会把遮挡变化当成旋转。",
+          "minimum_experiment": "同一 CAD 对象随机旋转并用不同遮挡者生成输入，固定点数和参数预算。",
+          "positive": "跨姿态 hidden Chamfer 与 visible consistency 同时改善。",
+          "negative": "纯 TFN 已足够或 gate 只学遮挡颜色，说明姿态不是主要瓶颈。",
+          "null": "数据姿态分布窄或对象近似球体。",
+          "expected_contribution": "给出等变与可见性分离的因果实验。",
+          "risk": "需要可控旋转和遮挡生成。",
+          "relation_to_paper": "源论文的群结构保留，visibility gate 是目标改造。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "tfn-symmetry-counterexample",
+          "title": "对称性最强反例集",
+          "type": "反事实/失败诊断",
+          "method_steps": [
+            "构造旋转对称、镜像非对称、局部重复纹理三组对象。",
+            "在相同可见证据下比较等变模型的候选覆盖。",
+            "测错误复制左右结构的频率，而非只看平均 Chamfer。"
+          ],
+          "hypothesis": "等变模型的失败主要集中在被错误假定对称的对象，而不是所有遮挡样本。",
+          "minimum_experiment": "小型合成集即可，评估 left-right swap error、topology error 和 abstention。",
+          "positive": "模型在对称组获益、非对称组自动提高不确定性。",
+          "negative": "模型强行复制镜像结构且置信度不升，说明群归纳偏置危险。",
+          "null": "对象本身全部近似对称。",
+          "expected_contribution": "形成迁移前必须通过的 symmetry audit。",
+          "risk": "需要精确的镜像/旋转标注。",
+          "relation_to_paper": "把原文等变优势转为可证伪的适用性边界。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "tfn-canonical-candidates",
+          "title": "canonical shape candidates",
+          "type": "可验证研究假设",
+          "method_steps": [
+            "把等变特征池化为 canonical-frame latent。",
+            "为每个 latent 解码一个完整形状候选，并用相机变换重投影。",
+            "比较单 canonical 输出与多候选输出的跨视角一致性。"
+          ],
+          "hypothesis": "把姿态变化和隐藏多解分到不同变量，能避免单一坐标系 latent 混合二者。",
+          "minimum_experiment": "两视角 CAD 片段，固定 latent 数、训练步数和采样预算。",
+          "positive": "候选在不同视角可对齐且能保留真实背面差异。",
+          "negative": "canonical pooling 丢掉方向性细节，或多候选只是随机重复。",
+          "null": "视角本身已包含足够几何，候选不需要多模态。",
+          "expected_contribution": "提出姿态不变、证据条件的三维 belief 表示。",
+          "risk": "需要 robust pose 和 candidate matching。",
+          "relation_to_paper": "由 TFN 的 canonical 几何表示推到 amodal belief，论文没有该任务实验。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2209.14687",
+      "title": "Diffusion Posterior Sampling for General Noisy Inverse Problems",
+      "authors": [
+        "Hyungjin Chung",
+        "Jeongsol Kim",
+        "Michael T. Mccann",
+        "Marc L. Klasky",
+        "Jong Chul Ye"
+      ],
+      "published": "2022-09-29",
+      "publication_month": "2022-09",
+      "venue": "ICLR 2023 Spotlight",
+      "source": "https://arxiv.org/abs/2209.14687",
+      "html_url": "https://openreview.net/forum?id=OnD9zGAGT0k",
+      "code": "https://github.com/DPS2022/diffusion-posterior-sampling",
+      "slug": "diffusion-posterior-sampling",
+      "source_domain": "不适定逆问题与后验采样",
+      "method_family": "score-based diffusion prior、measurement likelihood guidance、posterior sampling",
+      "evidence_status": "arXiv/OpenReview与公开代码入口核验；本批不下载PDF、不运行。",
+      "problem": "逆问题从欠定/有噪观测恢复潜在图像；第一层根因是测量算子丢失信息，第二层根因是先验、似然和采样动力学共同决定后验，单点重建会把先验偏好误报成观测事实。",
+      "why_method": "DPS 不显式训练任务专用逆网络，而是用预训练 diffusion score 作为图像先验，并在采样过程中用 measurement likelihood 的梯度拉回观测一致性。它的迁移价值是把生成先验和观测硬约束放进同一迭代过程，允许多候选而非一个平均解。",
+      "causal_chain": "观测 y=A(x)+n → diffusion denoising state x_t → score prior → likelihood gradient/measurement consistency → posterior sample x_0；当 A 错、噪声估计错或先验不覆盖真实形状时，采样会产生看似合理但不可证伪的幻觉。",
+      "two_layer_root_cause": "表面症状是补全细节漂亮但不真实；第一层根因是欠定逆问题需要先验；第二层根因是生成 prior 的高概率并不等于该实例的真实隐藏部分，且测量算子对遮挡边界/跨视角遮挡可能是非线性、结构相关的。",
+      "assumptions_failures": [
+        "measurement operator 可写出且近似正确；",
+        "diffusion prior 覆盖目标形状/外观；",
+        "采样步数和 guidance 足以保持观测与先验平衡；",
+        "后验样本多样性不是随机噪声，而是证据条件多解。"
+      ],
+      "claim_evidence": [
+        "论文展示一般 noisy inverse problems 的 posterior sampling 框架；本文不复述具体 benchmark 数字。",
+        "官方代码路径可查，未运行。"
+      ],
+      "gaps": [
+        "遮挡补全的 measurement operator 含可见性、深度排序和相机投影，不能直接当像素 mask。",
+        "生成结果必须有 observed/hidden 分区和后续否证机制。"
+      ],
+      "transfer": {
+        "source_mechanism": "扩散先验与观测似然梯度交替作用，采样得到与观测一致的候选后验。",
+        "target_isomorphism": "源 latent image x 对应完整 mask/SDF/occupancy；观测 y 对应可见像素、深度、边界和跨视角重投影。",
+        "necessary_conditions": "可微或可近似的渲染/遮挡算子；先验覆盖对象；有隐藏真值评估多解与校准。",
+        "mismatch": "遮挡是结构相关缺失，unknown 区不应被 likelihood 当作零值；三维几何还需要相机与拓扑约束。",
+        "adaptation": "用可见投影算子、深度排序和 occupancy renderer 代替通用 A；采样中保持 observed 区硬一致，unknown 区输出 K 个候选并估计分歧。",
+        "failure_trigger": "operator 错误、先验覆盖不足、动态物体、透视/尺度错配、采样将幻觉放在高置信 hidden 区。"
+      },
+      "ideas": [
+        {
+          "id": "dps-visibility-operator",
+          "title": "可见性算子后验采样",
+          "type": "连接二维/三维 amodal",
+          "method_steps": [
+            "把目标的可见 mask、深度和相机写成可微 rendering operator。",
+            "在 diffusion posterior sampling 每一步先做 prior denoise，再做 visible-only likelihood correction。",
+            "比较普通 image inpainting、全图 likelihood、visible-only operator。"
+          ],
+          "hypothesis": "正确区分 observed 与 unknown 的测量算子比换更强 diffusion prior 更能减少隐藏幻觉。",
+          "minimum_experiment": "低分辨率体素/CAD合成，固定采样步数与UNet容量，报告 visible violation、hidden coverage、候选分歧。",
+          "positive": "visible 区误差不升且 hidden coverage 提高。",
+          "negative": "全图 likelihood 把未知区压成背景或出现边界伪影，证明 operator 错配。",
+          "null": "观测算子不可微或相机未知。",
+          "expected_contribution": "把“补全”明确写成后验采样而不是图像美化。",
+          "risk": "需要 differentiable renderer 和多候选评估。",
+          "relation_to_paper": "由 DPS 的 likelihood guidance 直接迁移，但 operator 是目标新增。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "dps-annealed-evidence",
+          "title": "证据强度退火与拒答",
+          "type": "检验隐含前提",
+          "method_steps": [
+            "按可见/边界/unknown 分区设置不同 guidance schedule。",
+            "在采样中逐步提高可见证据权重，unknown 保持 prior exploration。",
+            "若候选间分歧仍高，输出拒答和需要新视角提示。"
+          ],
+          "hypothesis": "统一 guidance 会在边界和未知区产生错误过度自信；分区退火可保留多解。",
+          "minimum_experiment": "同可见率下比较统一、分区退火和无 guidance；匹配采样步数。",
+          "positive": "hidden calibration 改善且新视角能淘汰错误候选。",
+          "negative": "退火只改变视觉平滑，不改变真实 coverage；说明瓶颈是 prior。",
+          "null": "unknown 区本来就是单峰或真值噪声大。",
+          "expected_contribution": "建立采样强度与证据边界的明确接口。",
+          "risk": "需要大量采样，计算成本高。",
+          "relation_to_paper": "把 DPS 采样动力学解释为证据/先验冲突实验。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "dps-3d-consistency",
+          "title": "跨视角三维后验采样",
+          "type": "连接三维重建",
+          "method_steps": [
+            "以共享 3D latent 生成多视角 RGB/深度/occupancy。",
+            "每个视角的观测 likelihood 共同更新同一 latent，而不是独立补全。",
+            "对比独立二维 DPS、共享3D DPS和确定性重建。"
+          ],
+          "hypothesis": "共享三维后验能把多视角一致性作为采样动力学的一部分，减少每帧不同背面。",
+          "minimum_experiment": "两到四视角合成对象，固定采样预算，报告跨视角 reprojection、hidden Chamfer 和样本覆盖。",
+          "positive": "共享模型在可见与隐藏指标均不劣于独立二维。",
+          "negative": "三维 latent 过强导致视角冲突时平均或模式坍缩。",
+          "null": "视角之间没有重叠或物体动态。",
+          "expected_contribution": "给出从二维生成先验到三维 amodal 后验的结构化路径。",
+          "risk": "需要 3D renderer 与较高显存/采样成本。",
+          "relation_to_paper": "不是论文原文的三维扩展，明确标为假设。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "paperforge": {
+        "problem_and_importance": "为欠定、带噪逆问题提供后验样本，核心不是生成好看图，而是把观测和先验同时写进恢复过程。",
+        "why_related_work_is_insufficient": "确定性 inverse network 通常为一个观测输出一个解，无法表达多解；单独 diffusion prior 又会忽略具体观测。",
+        "reverse_engineered_author_path": "作者先把逆问题写成 posterior，再用 score prior 与 likelihood gradient 交替近似采样。",
+        "core_intuition": "先验负责提出合理候选，似然负责拉回测量；两者任何一个错都会产生有说服力的错误。",
+        "concrete_pipeline": "可见 RGB/深度/边界→operator→diffusion state→likelihood correction→候选完整 mask/occupancy。",
+        "formula_reading": "采样步长和 guidance 直接决定 prior/measurement 平衡；过强似然会过拟合噪声，过弱会幻觉。",
+        "experiment_question_design_answer": "问题：无任务训练能否处理多种逆问题？实验：去噪、超分、修复等；答案：后验采样可泛化，但算力和算子依赖明显。",
+        "actual_conclusion": "留下“观测可否证、生成可多解”的推断框架。",
+        "most_fragile_premise": "测量算子和噪声模型正确，先验覆盖目标。",
+        "one_week_minimum_reproduction": "一周复现：二维矩形遮挡的 toy diffusion posterior sampling，比较 visible-only 与全图约束。",
+        "strongest_counterexample": "两种背面都符合可见图，采样却始终偏向训练集原型；证明 prior 偏好不能当真值。",
+        "non_incremental_followup": "让采样和主动视角选择闭环，后续观测淘汰候选。"
+      },
+      "diagnostic_card": {
+        "surface_symptom": "生成细节逼真但隐藏几何错误。",
+        "first_layer_root_cause": "逆问题是欠定，必须依赖先验。",
+        "second_layer_root_cause": "先验高概率不等于实例真值，且遮挡 operator 常被错误简化。",
+        "method_intervention": "visible-only likelihood + structured prior + multi-candidate sampling。",
+        "implicit_premise": "operator 可写、先验覆盖、hidden calibration 可评估。",
+        "failure_trigger": "先验外对象、动态、透明表面、相机/深度错。",
+        "transfer_necessary_condition": "观测算子和噪声模型可近似，且后验样本能够被隐藏真值或后续视角验证。",
+        "counterfactual_test": "同可见输入多背面和 operator ablation。",
+        "evidence_boundary": "原文验证一般逆问题，不验证 amodal 真实性。"
+      },
+      "aris_ideas": [
+        {
+          "id": "dps-visibility-operator",
+          "title": "可见性算子后验采样",
+          "type": "连接二维/三维 amodal",
+          "method_steps": [
+            "把目标的可见 mask、深度和相机写成可微 rendering operator。",
+            "在 diffusion posterior sampling 每一步先做 prior denoise，再做 visible-only likelihood correction。",
+            "比较普通 image inpainting、全图 likelihood、visible-only operator。"
+          ],
+          "hypothesis": "正确区分 observed 与 unknown 的测量算子比换更强 diffusion prior 更能减少隐藏幻觉。",
+          "minimum_experiment": "低分辨率体素/CAD合成，固定采样步数与UNet容量，报告 visible violation、hidden coverage、候选分歧。",
+          "positive": "visible 区误差不升且 hidden coverage 提高。",
+          "negative": "全图 likelihood 把未知区压成背景或出现边界伪影，证明 operator 错配。",
+          "null": "观测算子不可微或相机未知。",
+          "expected_contribution": "把“补全”明确写成后验采样而不是图像美化。",
+          "risk": "需要 differentiable renderer 和多候选评估。",
+          "relation_to_paper": "由 DPS 的 likelihood guidance 直接迁移，但 operator 是目标新增。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "dps-annealed-evidence",
+          "title": "证据强度退火与拒答",
+          "type": "检验隐含前提",
+          "method_steps": [
+            "按可见/边界/unknown 分区设置不同 guidance schedule。",
+            "在采样中逐步提高可见证据权重，unknown 保持 prior exploration。",
+            "若候选间分歧仍高，输出拒答和需要新视角提示。"
+          ],
+          "hypothesis": "统一 guidance 会在边界和未知区产生错误过度自信；分区退火可保留多解。",
+          "minimum_experiment": "同可见率下比较统一、分区退火和无 guidance；匹配采样步数。",
+          "positive": "hidden calibration 改善且新视角能淘汰错误候选。",
+          "negative": "退火只改变视觉平滑，不改变真实 coverage；说明瓶颈是 prior。",
+          "null": "unknown 区本来就是单峰或真值噪声大。",
+          "expected_contribution": "建立采样强度与证据边界的明确接口。",
+          "risk": "需要大量采样，计算成本高。",
+          "relation_to_paper": "把 DPS 采样动力学解释为证据/先验冲突实验。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "dps-3d-consistency",
+          "title": "跨视角三维后验采样",
+          "type": "连接三维重建",
+          "method_steps": [
+            "以共享 3D latent 生成多视角 RGB/深度/occupancy。",
+            "每个视角的观测 likelihood 共同更新同一 latent，而不是独立补全。",
+            "对比独立二维 DPS、共享3D DPS和确定性重建。"
+          ],
+          "hypothesis": "共享三维后验能把多视角一致性作为采样动力学的一部分，减少每帧不同背面。",
+          "minimum_experiment": "两到四视角合成对象，固定采样预算，报告跨视角 reprojection、hidden Chamfer 和样本覆盖。",
+          "positive": "共享模型在可见与隐藏指标均不劣于独立二维。",
+          "negative": "三维 latent 过强导致视角冲突时平均或模式坍缩。",
+          "null": "视角之间没有重叠或物体动态。",
+          "expected_contribution": "给出从二维生成先验到三维 amodal 后验的结构化路径。",
+          "risk": "需要 3D renderer 与较高显存/采样成本。",
+          "relation_to_paper": "不是论文原文的三维扩展，明确标为假设。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ]
+    },
+    {
+      "id": "arxiv:1612.01474",
+      "title": "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+      "authors": [
+        "Balaji Lakshminarayanan",
+        "Alexander Pritzel",
+        "Charles Blundell"
+      ],
+      "published": "2016-12-05",
+      "publication_month": "2016-12",
+      "venue": "NeurIPS 2017",
+      "source": "https://arxiv.org/abs/1612.01474",
+      "html_url": "https://papers.neurips.cc/paper/2017/hash/9ef2ed4b7b5ef5d7d6f8ec5e3d4c8e6e-Abstract.html",
+      "code": "",
+      "slug": "deep-ensembles",
+      "source_domain": "预测不确定性与校准",
+      "method_family": "独立随机初始化/训练的 deep ensemble、predictive variance、selective prediction",
+      "evidence_status": "arXiv/NeurIPS元数据核验；未找到并确认官方代码，本批不下载PDF、不运行。",
+      "problem": "单模型 softmax 或回归方差常过度自信。第一层根因是训练目标只要求平均预测正确，第二层根因是参数不确定性和分布外/缺失机制不确定性没有被单模型显式表示。",
+      "why_method": "独立训练多个模型，平均预测并用成员分歧估计不确定性。它的因果作用来自函数空间的多条解释路径，而不是在单模型末端加一个温度；当不同成员在隐藏区域给出不同结构时，分歧可用于拒答或候选输出。",
+      "causal_chain": "同一可见输入 → M个独立模型 → 分别预测 mask/geometry → 平均或保留候选 → variance/entropy → selective output；如果所有成员共享数据偏差，ensemble 会一致地错且方差很小。",
+      "two_layer_root_cause": "表面症状是隐藏区域置信度很高但错误；第一层根因是单模型不表达函数不确定性；第二层根因是 epistemic、aleatoric 和共同先验偏差混合，ensemble 不能自动发现支持集外错误。",
+      "assumptions_failures": [
+        "成员之间有足够函数多样性；",
+        "验证集覆盖真实遮挡机制用于 calibration；",
+        "像素方差能反映结构差异；",
+        "ensemble 成本可接受。"
+      ],
+      "claim_evidence": [
+        "原文提出 deep ensembles 在不确定性与校准任务上的简单性和效果；本文不复述具体数字。",
+        "本文未运行代码。"
+      ],
+      "gaps": [
+        "对 amodal，成员可共同复制类别原型，造成低方差错误；",
+        "需要结构化 candidate disagreement、选择性风险和可见/隐藏分区指标。"
+      ],
+      "transfer": {
+        "source_mechanism": "多独立函数解的预测分歧作为 epistemic/selection signal。",
+        "target_isomorphism": "源变量是预测分布与误差风险；目标变量是完整 mask/SDF/occupancy 的候选集合和 hidden risk。",
+        "necessary_conditions": "成员有不同 inductive path 或训练子集；校准集包含结构相关遮挡；输出保留候选而非仅平均。",
+        "mismatch": "共同 diffusion/shape prior 会让 ensemble 一致地产生同一幻觉；像素 variance 不等于拓扑 variance。",
+        "adaptation": "对 shape latent、topology、viewpoint 做结构化 ensemble，加入 candidate-level disagreement、visible hard check 和 selective abstention。",
+        "failure_trigger": "训练集偏差、成员相关、强单一先验、OOD 物体和计算预算过低。"
+      },
+      "ideas": [
+        {
+          "id": "ensemble-structural-risk",
+          "title": "结构化 ensemble risk map",
+          "type": "连接不确定性校准",
+          "method_steps": [
+            "训练5个轻量补全器，保留每个的完整 mask/SDF/occupancy。",
+            "计算 visible violation、hidden occupancy variance、拓扑 disagreement 三种信号。",
+            "比较像素方差、单模型 uncertainty 和结构化 risk 的 selective curve。"
+          ],
+          "hypothesis": "结构化 disagreement 比像素方差更能预测隐藏区域错误。",
+          "minimum_experiment": "固定参数总量和训练步数，合成同正面异背面与长尾对象。",
+          "positive": "在相同 coverage 下 selective risk 更低，且拒答集中于多解样本。",
+          "negative": "所有成员共同错且结构化风险仍低，说明共同先验偏差主导。",
+          "null": "真实后验单峰或成员太弱。",
+          "expected_contribution": "把不确定性从像素置信度升级为可解释的结构风险。",
+          "risk": "5倍推理成本和成员训练成本。",
+          "relation_to_paper": "直接继承 deep ensembles，输出接口按 amodal 重设计。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "ensemble-subset-shift",
+          "title": "遮挡机制子集 ensemble",
+          "type": "检验隐含前提",
+          "method_steps": [
+            "每个成员使用不同缺失机制/视角子集训练，而非只随机初始化。",
+            "测试在随机、结构相关和跨域遮挡上分解成员分歧。",
+            "比较机制多样性 ensemble 与普通 ensemble。"
+          ],
+          "hypothesis": "成员多样性必须来自缺失机制，随机初始化不足以发现结构域错配。",
+          "minimum_experiment": "同参数总量、同总训练样本数，替换样本分配而非增加预算。",
+          "positive": "机制子集 ensemble 在对应域 calibration 改善。",
+          "negative": "分歧增大但 coverage 不提升，说明多样性只是噪声。",
+          "null": "训练机制标签不可靠。",
+          "expected_contribution": "把 ensemble 设计成缺失机制审计工具。",
+          "risk": "需要分层数据和额外采样设计。",
+          "relation_to_paper": "由原文的独立成员假设推进到结构性成员差异。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "ensemble-abstain-active",
+          "title": "不确定性驱动主动视角与拒答",
+          "type": "主动感知连接",
+          "method_steps": [
+            "用 ensemble disagreement 选择候选分歧最大的可达新视角。",
+            "若视角成本高或 disagreement 不能下降，输出 abstain。",
+            "比较随机、单模型 uncertainty、ensemble structural risk 策略。"
+          ],
+          "hypothesis": "ensemble disagreement 可作为主动观测价值，但只有在能被新视角验证时才有用。",
+          "minimum_experiment": "10个合成对象、固定三次动作和推理预算，测 hidden risk、候选淘汰和成本。",
+          "positive": "相同成本下风险下降且拒答样本对应不可辨识场景。",
+          "negative": "分歧与视角信息无关，或共同错导致错误主动动作。",
+          "null": "所有视角都不可区分或动态场景。",
+          "expected_contribution": "形成预测—观测—拒答闭环。",
+          "risk": "训练/推理成本最高，需与规划器结合。",
+          "relation_to_paper": "连接 deep ensemble 的 selective prediction 与主动感知假设。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ],
+      "paperforge": {
+        "problem_and_importance": "用多个独立模型估计预测不确定性，解决单模型过度自信和校准不足。",
+        "why_related_work_is_insufficient": "单模型温度缩放不能揭示参数/函数多解；贝叶斯近似方法常带额外假设。",
+        "reverse_engineered_author_path": "作者选择简单而可并行的独立训练，让不同损失盆地的函数解释提供 ensemble variance。",
+        "core_intuition": "分歧是风险信号，不是保证；共享数据偏差会产生一致的低方差错误。",
+        "concrete_pipeline": "可见输入→M个补全器→候选完整结构→结构化分歧→selective output/主动动作。",
+        "formula_reading": "均值适合点预测，方差适合风险；若把候选平均成几何，可能再次产生不存在的形状。",
+        "experiment_question_design_answer": "问题：ensemble能否改善不确定性？实验：分类/回归/OOD；答案：通常简单有效，但成本和共同偏差仍在。",
+        "actual_conclusion": "留下的是拒答和校准协议，而非隐藏真值预测器。",
+        "most_fragile_premise": "成员真正多样且校准域覆盖部署分布。",
+        "one_week_minimum_reproduction": "一周复现：5个小模型在可控遮挡数据上比较像素方差和拓扑分歧。",
+        "strongest_counterexample": "所有成员共享同一个错误 shape prior，方差很小但 hidden 错。",
+        "non_incremental_followup": "与主动视角和候选后验结合，显式检测共同偏差。"
+      },
+      "diagnostic_card": {
+        "surface_symptom": "输出置信度高但背面错误，或平均结果拓扑断裂。",
+        "first_layer_root_cause": "单模型没有函数级多样性。",
+        "second_layer_root_cause": "成员共享训练偏差，像素 variance 与结构真实性不等价。",
+        "method_intervention": "结构化 ensemble + selective abstention + active view。",
+        "implicit_premise": "成员多样性和校准集覆盖结构相关遮挡。",
+        "failure_trigger": "共同先验、计算预算、成员相关、像素方差盲区。",
+        "transfer_necessary_condition": "成员路径确实多样，且校准集能代表部署时的缺失机制。",
+        "counterfactual_test": "同正面异背面与机制子集训练对照。",
+        "evidence_boundary": "原文支持不确定性估计，不证明三维 amodal calibration。"
+      },
+      "aris_ideas": [
+        {
+          "id": "ensemble-structural-risk",
+          "title": "结构化 ensemble risk map",
+          "type": "连接不确定性校准",
+          "method_steps": [
+            "训练5个轻量补全器，保留每个的完整 mask/SDF/occupancy。",
+            "计算 visible violation、hidden occupancy variance、拓扑 disagreement 三种信号。",
+            "比较像素方差、单模型 uncertainty 和结构化 risk 的 selective curve。"
+          ],
+          "hypothesis": "结构化 disagreement 比像素方差更能预测隐藏区域错误。",
+          "minimum_experiment": "固定参数总量和训练步数，合成同正面异背面与长尾对象。",
+          "positive": "在相同 coverage 下 selective risk 更低，且拒答集中于多解样本。",
+          "negative": "所有成员共同错且结构化风险仍低，说明共同先验偏差主导。",
+          "null": "真实后验单峰或成员太弱。",
+          "expected_contribution": "把不确定性从像素置信度升级为可解释的结构风险。",
+          "risk": "5倍推理成本和成员训练成本。",
+          "relation_to_paper": "直接继承 deep ensembles，输出接口按 amodal 重设计。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "ensemble-subset-shift",
+          "title": "遮挡机制子集 ensemble",
+          "type": "检验隐含前提",
+          "method_steps": [
+            "每个成员使用不同缺失机制/视角子集训练，而非只随机初始化。",
+            "测试在随机、结构相关和跨域遮挡上分解成员分歧。",
+            "比较机制多样性 ensemble 与普通 ensemble。"
+          ],
+          "hypothesis": "成员多样性必须来自缺失机制，随机初始化不足以发现结构域错配。",
+          "minimum_experiment": "同参数总量、同总训练样本数，替换样本分配而非增加预算。",
+          "positive": "机制子集 ensemble 在对应域 calibration 改善。",
+          "negative": "分歧增大但 coverage 不提升，说明多样性只是噪声。",
+          "null": "训练机制标签不可靠。",
+          "expected_contribution": "把 ensemble 设计成缺失机制审计工具。",
+          "risk": "需要分层数据和额外采样设计。",
+          "relation_to_paper": "由原文的独立成员假设推进到结构性成员差异。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        },
+        {
+          "id": "ensemble-abstain-active",
+          "title": "不确定性驱动主动视角与拒答",
+          "type": "主动感知连接",
+          "method_steps": [
+            "用 ensemble disagreement 选择候选分歧最大的可达新视角。",
+            "若视角成本高或 disagreement 不能下降，输出 abstain。",
+            "比较随机、单模型 uncertainty、ensemble structural risk 策略。"
+          ],
+          "hypothesis": "ensemble disagreement 可作为主动观测价值，但只有在能被新视角验证时才有用。",
+          "minimum_experiment": "10个合成对象、固定三次动作和推理预算，测 hidden risk、候选淘汰和成本。",
+          "positive": "相同成本下风险下降且拒答样本对应不可辨识场景。",
+          "negative": "分歧与视角信息无关，或共同错导致错误主动动作。",
+          "null": "所有视角都不可区分或动态场景。",
+          "expected_contribution": "形成预测—观测—拒答闭环。",
+          "risk": "训练/推理成本最高，需与规划器结合。",
+          "relation_to_paper": "连接 deep ensemble 的 selective prediction 与主动感知假设。",
+          "validation_status": "proposed_unrun_not_novelty_verified"
+        }
+      ]
+    }
+  ],
+  "status": "content_ready_zotero_verified_git_pending",
+  "gpu_started": false
+}

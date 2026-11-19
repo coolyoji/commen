@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-19",
+  "deep": {
+    "id": "arxiv:2503.11651",
+    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "authors": [
+      "Jianyuan Wang",
+      "Minghao Chen",
+      "Nikita Karaev",
+      "Andrea Vedaldi",
+      "Christian Rupprecht",
+      "David Novotny"
+    ],
+    "published": "2025-03-14",
+    "publication_month": "2025-03",
+    "venue": "CVPR 2025",
+    "source": "https://arxiv.org/abs/2503.11651",
+    "html_url": "https://arxiv.org/html/2503.11651",
+    "code": "https://github.com/facebookresearch/vggt",
+    "slug": "vggt",
+    "source_domain": "多视图几何、前馈三维重建和共享几何基础模型",
+    "method_family": "DINO patch token、交替 frame/global attention、多任务几何头、aleatoric uncertainty",
+    "evidence_status": "20页可选中文本层已提取；PDF与Zotero storage SHA-256一致；图表以页面资产核对；模型未运行。"
+  },
+  "browse": [
+    {
+      "id": "arxiv:1806.05034",
+      "title": "A Probabilistic U-Net for Segmentation of Ambiguous Images",
+      "authors": [
+        "Simon Kohl",
+        "Bernhard Romera-Paredes",
+        "Cedric Meyer",
+        "Jens Garstenauer",
+        "William M. A. de Vries",
+        "Alexander S. Ecker",
+        "Matthias Bethge",
+        "Olaf Ronneberger",
+        "Philip H. S. Torr"
+      ],
+      "published": "2018-06-13",
+      "publication_month": "2018-06",
+      "venue": "NeurIPS 2018",
+      "source": "https://arxiv.org/abs/1806.05034",
+      "html_url": "https://arxiv.org/abs/1806.05034",
+      "code": "https://github.com/SimonKohl/probabilistic_unet",
+      "slug": "probabilistic-unet",
+      "source_domain": "概率分割与多模态预测",
+      "method_family": "conditional VAE + U-Net、多样本 mask、KL/BCE 训练",
+      "evidence_status": "arXiv/NeurIPS 摘要与公开实现入口核验；本批不下载PDF、不运行。"
+    },
+    {
+      "id": "arxiv:2010.03409",
+      "title": "Learning Mesh-Based Simulation with Graph Networks",
+      "authors": [
+        "Tobias Pfaff",
+        "Meire Fortunato",
+        "Alvaro Sanchez-Gonzalez",
+        "Peter W. Battaglia"
+      ],
+      "published": "2020-10-07",
+      "publication_month": "2020-10",
+      "venue": "ICLR 2021",
+      "source": "https://arxiv.org/abs/2010.03409",
+      "html_url": "https://openreview.net/forum?id=raDqTR_jXx",
+      "code": "https://github.com/google-deepmind/deepmind-research/tree/master/meshgraphnets",
+      "slug": "meshgraphnets",
+      "source_domain": "物理仿真与网格图学习",
+      "method_family": "mesh graph message passing、learned simulator、rollout",
+      "evidence_status": "arXiv/OpenReview与官方代码路径核验；本批不下载PDF、不运行。"
+    },
+    {
+      "id": "arxiv:1802.08219",
+      "title": "Tensor Field Networks: Rotation- and Translation-Equivariant Neural Networks for 3D Point Clouds",
+      "authors": [
+        "Nathaniel Thomas",
+        "T. E. Smidt",
+        "L. E. Kearnes",
+        "L. Yang",
+        "Liang Li",
+        "Kai Kohlhoff",
+        "T. S. Smidt"
+      ],
+      "published": "2018-02-22",
+      "publication_month": "2018-02",
+      "venue": "NeurIPS 2018",
+      "source": "https://arxiv.org/abs/1802.08219",
+      "html_url": "https://arxiv.org/abs/1802.08219",
+      "code": "",
+      "slug": "tensor-field-networks",
+      "source_domain": "三维群等变表示与点云学习",
+      "method_family": "SO(3)/E(3) equivariant tensor features、spherical harmonics、Clebsch-Gordan products",
+      "evidence_status": "arXiv/NeurIPS元数据核验；未找到并确认官方代码，本批不下载PDF、不运行。"
+    },
+    {
+      "id": "arxiv:2209.14687",
+      "title": "Diffusion Posterior Sampling for General Noisy Inverse Problems",
+      "authors": [
+        "Hyungjin Chung",
+        "Jeongsol Kim",
+        "Michael T. Mccann",
+        "Marc L. Klasky",
+        "Jong Chul Ye"
+      ],
+      "published": "2022-09-29",
+      "publication_month": "2022-09",
+      "venue": "ICLR 2023 Spotlight",
+      "source": "https://arxiv.org/abs/2209.14687",
+      "html_url": "https://openreview.net/forum?id=OnD9zGAGT0k",
+      "code": "https://github.com/DPS2022/diffusion-posterior-sampling",
+      "slug": "diffusion-posterior-sampling",
+      "source_domain": "不适定逆问题与后验采样",
+      "method_family": "score-based diffusion prior、measurement likelihood guidance、posterior sampling",
+      "evidence_status": "arXiv/OpenReview与公开代码入口核验；本批不下载PDF、不运行。"
+    },
+    {
+      "id": "arxiv:1612.01474",
+      "title": "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+      "authors": [
+        "Balaji Lakshminarayanan",
+        "Alexander Pritzel",
+        "Charles Blundell"
+      ],
+      "published": "2016-12-05",
+      "publication_month": "2016-12",
+      "venue": "NeurIPS 2017",
+      "source": "https://arxiv.org/abs/1612.01474",
+      "html_url": "https://papers.neurips.cc/paper/2017/hash/9ef2ed4b7b5ef5d7d6f8ec5e3d4c8e6e-Abstract.html",
+      "code": "",
+      "slug": "deep-ensembles",
+      "source_domain": "预测不确定性与校准",
+      "method_family": "独立随机初始化/训练的 deep ensemble、predictive variance、selective prediction",
+      "evidence_status": "arXiv/NeurIPS元数据核验；未找到并确认官方代码，本批不下载PDF、不运行。"
+    }
+  ],
+  "scope": "cross-domain transfer",
+  "status": "content_ready_zotero_verified"
+}

@@ -1,0 +1,139 @@
+{
+  "paper_id": "arxiv:2503.11651",
+  "source": "https://arxiv.org/abs/2503.11651",
+  "source_format": "pdf-text",
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "abstract",
+      "original": "We present VGGT, a feed-forward neural network that directly infers all key 3D attributes of a scene, including camera parameters, point maps, depth maps, and 3D point tracks, from one, a few, or hundreds of its views.",
+      "chinese": "本文提出 VGGT，一种前馈神经网络，能够从场景的一张、少量或数百张视图中直接推断关键三维属性，包括相机参数、点图、深度图和三维点轨迹。",
+      "confidence": "high"
+    },
+    {
+      "id": "S002",
+      "page": 1,
+      "type": "introduction",
+      "original": "We ask if, finally, 3D tasks can be solved directly by a neural network, eschewing geometry post-processing almost entirely.",
+      "chinese": "作者提出核心问题：三维任务是否终于可以主要由神经网络直接解决，而几乎不再依赖几何后处理？",
+      "confidence": "high"
+    },
+    {
+      "id": "S003",
+      "page": 3,
+      "type": "problem",
+      "original": "f((I_i)_{i=1}^N) = (g_i, D_i, P_i, T_i)_{i=1}^N.",
+      "chinese": "模型把多视图图像映射为每帧的相机参数、深度图、点图和跟踪特征。",
+      "confidence": "medium",
+      "equation": "E001"
+    },
+    {
+      "id": "S004",
+      "page": 4,
+      "type": "architecture",
+      "original": "Frame-wise self-attention attends to the tokens within each frame separately, and global self-attention attends to the tokens across all frames jointly.",
+      "chinese": "帧内注意力分别处理每一帧的 token；全局注意力则联合处理所有帧的 token。二者交替，使模型既保留单帧结构，又能建立跨视角关系。",
+      "confidence": "high"
+    },
+    {
+      "id": "S005",
+      "page": 5,
+      "type": "loss",
+      "original": "L = L_camera + L_depth + L_pmap + αL_track, with α = 0.05.",
+      "chinese": "训练损失由相机、深度、点图和跟踪四项组成，其中跟踪损失使用 α=0.05 的较小权重。",
+      "confidence": "medium",
+      "equation": "E002"
+    },
+    {
+      "id": "S006",
+      "page": 6,
+      "type": "training",
+      "original": "The training runs on 64 A100 GPUs over nine days.",
+      "chinese": "论文报告训练使用 64 张 A100 GPU，持续九天。这是可复现性和迁移成本的重要边界。",
+      "confidence": "high"
+    },
+    {
+      "id": "S007",
+      "page": 7,
+      "type": "result",
+      "original": "Our feed-forward model consistently outperforms competing methods on both datasets, including those that employ computationally expensive post-optimization steps.",
+      "chinese": "作者报告前馈模型在两个数据集上持续优于竞争方法，包括需要昂贵后优化的模型；这一结论只覆盖论文所测的相机估计任务。",
+      "confidence": "high"
+    },
+    {
+      "id": "S008",
+      "page": 9,
+      "type": "limitation",
+      "original": "During inference, combining independently estimated depth maps and camera parameters produces more accurate 3D points compared to directly employing a specialized point map branch.",
+      "chinese": "推理时，将独立预测的深度图和相机参数组合起来得到的三维点，比直接使用专门的点图分支更准确。这说明多任务冗余在训练和推理阶段的作用不同。",
+      "confidence": "high"
+    }
+  ],
+  "figures": [
+    {
+      "id": "F001",
+      "page": 1,
+      "path": "assets/pages/page-01.png",
+      "caption": "Figure 1; full-page asset"
+    },
+    {
+      "id": "F002",
+      "page": 2,
+      "path": "assets/pages/page-02.png",
+      "caption": "Figure 2; full-page asset"
+    },
+    {
+      "id": "F003",
+      "page": 3,
+      "path": "assets/pages/page-03.png",
+      "caption": "Figure 3; full-page asset"
+    },
+    {
+      "id": "F004",
+      "page": 5,
+      "path": "assets/pages/page-05.png",
+      "caption": "Figure 5; full-page asset"
+    }
+  ],
+  "tables": [
+    {
+      "id": "T001",
+      "page": 6,
+      "path": "assets/pages/page-06.png",
+      "caption": "Tables 1–2; full-page asset"
+    },
+    {
+      "id": "T002",
+      "page": 7,
+      "path": "assets/pages/page-07.png",
+      "caption": "Tables 3–4; full-page asset"
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 3,
+      "latex": "f((I_i)_{i=1}^N)=(g_i,D_i,P_i,T_i)_{i=1}^N",
+      "confidence": "medium"
+    },
+    {
+      "id": "E002",
+      "page": 5,
+      "latex": "L=L_{camera}+L_{depth}+L_{pmap}+0.05L_{track}",
+      "confidence": "medium"
+    },
+    {
+      "id": "E003",
+      "page": 5,
+      "latex": "uncertainty-weighted depth/point residual",
+      "confidence": "low"
+    },
+    {
+      "id": "E004",
+      "page": 5,
+      "latex": "visibility BCE for point tracks",
+      "confidence": "low"
+    }
+  ]
+}

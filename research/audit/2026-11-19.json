@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-19",
+  "actually_processed": "2026-11-19",
+  "repository": "D:\\CV-Literature\\commen",
+  "remote": "https://github.com/coolyoji/commen.git",
+  "counts": {
+    "deep": 1,
+    "browse": 5,
+    "total": 6
+  },
+  "scope": "amodal completion, 3D reconstruction, 3D amodal completion",
+  "paperforge": {
+    "applied": true,
+    "twelve_part_notes": true,
+    "all_six_have_deep_diagnostic_card": true
+  },
+  "aris": {
+    "path": "research/aris/2026-11-19.json",
+    "entries": 6,
+    "ideas_per_entry": 3,
+    "gpu_started": false,
+    "status": "written_unrun"
+  },
+  "nature_reader": {
+    "path": "docs/md/longform/2026-11/vggt-reader/paper.md",
+    "source_format": "pdf-text",
+    "source_map_parse": "verified_after_generation",
+    "formula_anchors": [
+      "E001",
+      "E002",
+      "E003",
+      "E004"
+    ],
+    "image_assets": "pages 1-8 rendered; figures/tables linked as full-page assets",
+    "missing_pages": [],
+    "low_confidence": "PDF symbol encoding around E003/E004; marked in translation_notes.md"
+  },
+  "zotero": {
+    "status": "verified",
+    "data_dir": "C:\\Users\\华硕\\Zotero",
+    "sqlite_backup": ".work-2026-11-19/backups/zotero.sqlite.pre-vggt-20261119.bak",
+    "collection": "每日精读论文/2026/11",
+    "collection_id": 26,
+    "item_key": "N8WBQTKV",
+    "attachment_key": "D9DGA5DM",
+    "aux_attachment_key": "E9ZCKCSW",
+    "top_level_item_id": 1793,
+    "attachment_id": 1795,
+    "aux_attachment_id": 1796,
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\D9DGA5DM\\Wang 等 - 2025 - VGGT Visual Geometry Grounded Transformer.pdf",
+    "download_sha256": "5D7AB44D129172F39EF5918FEB0014C4D041FD0E92F995D4DBBD7327A6E91D52",
+    "storage_sha256": "5D7AB44D129172F39EF5918FEB0014C4D041FD0E92F995D4DBBD7327A6E91D52",
+    "download_storage_hash_match": true,
+    "top_level_item_verified": true,
+    "month_collection_verified": true,
+    "child_attachment_verified": true,
+    "storage_pdf_verified": true,
+    "sqlite_quick_check": "ok",
+    "new_foreign_key_violations": 0,
+    "running_during_backup": false,
+    "running_during_import": false,
+    "publication_month": "2025-03",
+    "read_month": "2026-11"
+  },
+  "files_written": [
+    "docs/md/2026-11-19.md",
+    "docs/html/2026-11-19.html",
+    "docs/md/longform/2026-11/vggt.md",
+    "docs/md/longform/2026-11/vggt-reader/paper.md",
+    "data/monthly_deep_reads/2026-11.json",
+    "data/daily_browse_notes.json",
+    "data/latest_papers.json",
+    "data/daily_deep_read.json",
+    "data/daily_longform_essays.json",
+    "data/daily_paper_notes.json",
+    "data/daily_batches/2026-11-19.json",
+    "research/selection-log/2026-11-19.json",
+    "research/aris/2026-11-19.json",
+    "research/audit/2026-11-19.json",
+    "docs/md/longform/2026-11/index.md",
+    "docs/index.html",
+    "docs/literature.md",
+    "data/feed_history.json"
+  ],
+  "validation": {
+    "json_parse": "verified_after_generation",
+    "markdown_nonempty": true,
+    "html_nonempty": true,
+    "zotero_hash_match": true,
+    "sqlite_quick_check": "ok",
+    "foreign_key_violations": 0,
+    "gpu_started": false
+  },
+  "git": {
+    "commit": "pending",
+    "push": "pending"
+  }
+}

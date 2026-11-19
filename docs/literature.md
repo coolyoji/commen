@@ -1,3 +1,9 @@
+## 2026-11-19
+
+精读 **VGGT: Visual Geometry Grounded Transformer**（原始发表月份：2025-03）：[精读长文](md/longform/2026-11/vggt.md)、[Nature Reader](md/longform/2026-11/vggt-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/11`，条目 `N8WBQTKV`、PDF附件 `D9DGA5DM`，下载/storage SHA-256 一致；官方代码入口已核验，未运行模型。
+
+泛读 **Probabilistic U-Net、MeshGraphNets、Tensor Field Networks、Diffusion Posterior Sampling、Deep Ensembles**，分别覆盖概率多解、物理/图关系、三维等变、逆问题后验和不确定性校准。五篇不下载 PDF；[当天页面](md/2026-11-19.md) 和 [ARIS](../research/aris/2026-11-19.json) 逐篇保留深层根因、迁移条件、反例和最小实验。
+
 ## 2026-11-06
 
 精读 **3D Gaussian Splatting for Real-Time Radiance Field Rendering**（原始发表月份：2023-08）：[精读长文](md/longform/2026-11/3dgs.md)、[Nature Reader](md/longform/2026-11/3dgs-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/11`，条目 `ZWKPFVEY`、附件 `V1BBK07Q`，下载/storage SHA-256 一致；官方实现入口已核验，未运行模型。

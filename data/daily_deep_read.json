@@ -1,39 +1,28 @@
 {
-    "date": "2026-11-06",
-    "paper": {
-        "id": "arxiv:2308.04079",
-        "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
-        "authors": [
-            "Bernhard Kerbl",
-            "Georgios Kopanas",
-            "Thomas Leimkühler",
-            "George Drettakis"
-        ],
-        "published": "2023-08-08",
-        "publication_month": "2023-08",
-        "read_month": "2026-11",
-        "venue": "ACM Transactions on Graphics 42(4), 2023",
-        "source": "https://arxiv.org/abs/2308.04079",
-        "html_url": "https://arxiv.org/html/2308.04079v2",
-        "code": "https://github.com/graphdeco-inria/gaussian-splatting",
-        "code_commit_sha": "54c035f7834b564019656c3e3fcc3646292f727d",
-        "code_verified": "official GitHub repository main commit metadata fetched; not executed",
-        "slug": "3dgs",
-        "deep": true,
-        "pdf_downloaded": true,
-        "pdf_path": "D:\\CV-Literature\\commen\\.work-2026-11-06\\download-cache\\3dgs.pdf",
-        "pdf_sha256": "f4c0c9f27e2d02b0265017f66049d471eb66cb50203bc918f51ba07d20cbbe11",
-        "text_path": "D:\\CV-Literature\\commen\\.work-2026-11-06\\sources\\3dgs.txt",
-        "longform": "docs/md/longform/2026-11/3dgs.md",
-        "reader": "docs/md/longform/2026-11/3dgs-reader/paper.md",
-        "zotero_collection": "每日精读论文/2026/11",
-        "zotero_item_key": "ZWKPFVEY",
-        "zotero_attachment_key": "V1BBK07Q",
-        "zotero_pdf": "C:\\Users\\华硕\\Zotero\\storage\\V1BBK07Q\\Kerbl et al - 2023 - 3D Gaussian Splatting.pdf",
-        "fulltext_available": true,
-        "source_domain": "显式三维表示、神经渲染与实时新视角合成",
-        "method_family": "各向异性 Gaussian、可见性感知 splatting、自适应密度控制",
-        "evidence_status": "PDF 14页文本层、公式/图表裁剪和官方代码入口已核验；模型未运行。"
-    },
-    "nature_reader": "docs/md/longform/2026-11/3dgs-reader/paper.md"
+  "date": "2026-11-19",
+  "paper": {
+    "id": "arxiv:2503.11651",
+    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "authors": [
+      "Jianyuan Wang",
+      "Minghao Chen",
+      "Nikita Karaev",
+      "Andrea Vedaldi",
+      "Christian Rupprecht",
+      "David Novotny"
+    ],
+    "published": "2025-03-14",
+    "publication_month": "2025-03",
+    "venue": "CVPR 2025",
+    "source": "https://arxiv.org/abs/2503.11651",
+    "html_url": "https://arxiv.org/html/2503.11651",
+    "code": "https://github.com/facebookresearch/vggt",
+    "slug": "vggt",
+    "source_domain": "多视图几何、前馈三维重建和共享几何基础模型",
+    "method_family": "DINO patch token、交替 frame/global attention、多任务几何头、aleatoric uncertainty",
+    "evidence_status": "20页可选中文本层已提取；PDF与Zotero storage SHA-256一致；图表以页面资产核对；模型未运行。"
+  },
+  "longform": "docs/md/longform/2026-11/vggt.md",
+  "reader": "docs/md/longform/2026-11/vggt-reader/paper.md",
+  "pdf_sha256": "5D7AB44D129172F39EF5918FEB0014C4D041FD0E92F995D4DBBD7327A6E91D52"
 }

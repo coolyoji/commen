@@ -92,7 +92,8 @@
     "gpu_started": false
   },
   "git": {
-    "commit": "pending",
-    "push": "pending"
+    "commit": "6f607dc",
+    "push": "completed",
+    "remote_head_after_push": "6f607dc"
   }
 }

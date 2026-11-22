@@ -93,7 +93,10 @@
     "push": "failed",
     "remote": "https://github.com/coolyoji/commen.git",
     "remote_commit_before_push": "099cd35182f946f7203dd55f4d0677003658686d",
-    "error": "git push origin main failed: Recv failure: Connection was reset",
+    "attempts": [
+      "git push origin main failed: Recv failure: Connection was reset",
+      "git push origin main failed: Failed to connect to github.com:443 after 21105 ms: Could not connect to server"
+    ],
     "local_ahead_of_remote": true,
     "working_tree_after_content_commit": "clean"
   }

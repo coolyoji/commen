@@ -57,8 +57,15 @@
     "pdf_and_backup_sha256_verified": true
   },
   "git": {
-    "status": "pending",
+    "status": "content_pushed",
+    "content_commit": "7ebb449fe859bd5d3b6e8ba98354f0ced7cea845",
+    "confirmed_remote_main_after_content_push": "7ebb449fe859bd5d3b6e8ba98354f0ced7cea845",
     "origin_main_local_tracking_before_push": "099cd35182f946f7203dd55f4d0677003658686d",
-    "preflight": "ls-remote HTTPS connection reset"
+    "preflight": "ls-remote HTTPS connection reset",
+    "push_attempts": [
+      {"command": "git push origin main", "status": "failed", "error": "Failed to connect to github.com:443 after 21079 ms"},
+      {"command": "git -c http.version=HTTP/1.1 push origin main", "status": "success", "ref_update": "099cd35..7ebb449 main -> main"}
+    ],
+    "previous_local_commits_included": ["d3e280d", "ea43db8", "9020a87"]
   }
 }

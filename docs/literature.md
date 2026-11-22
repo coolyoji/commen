@@ -1,3 +1,9 @@
+## 2026-11-21
+
+精读 **Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images**（原始发表月份：2025-03）：[精读长文](md/longform/2026-11/amodal3r.md)、[Nature Reader](md/longform/2026-11/amodal3r-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/11`，条目 `YFYH1YTH`、附件 `HL7OPESN`，下载/storage SHA-256 一致；官方代码入口已核验，未运行模型。
+
+泛读 **SAITS、Slot Attention、KalmanNet、FisherRF、I-JEPA**，分别覆盖结构相关缺失、对象中心组合表示、视频状态滤波、主动信息增益和自监督 latent prediction。五篇不下载 PDF；[当天页面](md/2026-11-21.md)和[ARIS](../research/aris/2026-11-21.json)逐篇解释为什么可以套用到二维非模态、可见三维和三维非模态，以及最危险错配、反例和最小实验。
+
 ## 2026-11-19
 
 精读 **VGGT: Visual Geometry Grounded Transformer**（原始发表月份：2025-03）：[精读长文](md/longform/2026-11/vggt.md)、[Nature Reader](md/longform/2026-11/vggt-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/11`，条目 `N8WBQTKV`、PDF附件 `D9DGA5DM`，下载/storage SHA-256 一致；官方代码入口已核验，未运行模型。

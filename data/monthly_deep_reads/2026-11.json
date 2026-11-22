@@ -30,6 +30,21 @@
       "zotero_attachment_key": "D9DGA5DM",
       "pdf_verified": true,
       "pdf_sha256": "5D7AB44D129172F39EF5918FEB0014C4D041FD0E92F995D4DBBD7327A6E91D52"
+    },
+    {
+      "date": "2026-11-21",
+      "paper_id": "arxiv:2503.13439",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "publication_month": "2025-03",
+      "read_month": "2026-11",
+      "longform": "docs/md/longform/2026-11/amodal3r.md",
+      "reader": "docs/md/longform/2026-11/amodal3r-reader/paper.md",
+      "code": "https://github.com/sm0kywu/Amodal3R",
+      "zotero_collection": "每日精读论文/2026/11",
+      "zotero_item_key": "YFYH1YTH",
+      "zotero_attachment_key": "HL7OPESN",
+      "pdf_verified": true,
+      "pdf_sha256": "73BC6ADA1E3127A537D91BB69AE78975E1EAF36EFAEC7608628D0863864EE917"
     }
   ]
 }

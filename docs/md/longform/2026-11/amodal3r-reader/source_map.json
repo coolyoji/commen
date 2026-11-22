@@ -1,0 +1,221 @@
+{
+  "source": {
+    "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+    "source_path": "C:\\Users\\华硕\\Zotero\\storage\\HL7OPESN\\Wu et al. - 2025 - Amodal3R Amodal 3D Reconstruction from Occluded 2D Images.pdf",
+    "source_format": "pdf-text",
+    "pages": 22
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "type": "text",
+      "section": "Abstract / Introduction",
+      "original_text": "Most image-based 3D object reconstructors assume that objects are fully visible, ignoring occlusions that commonly occur in real-world scenarios.",
+      "translation": "多数基于图像的三维物体重建器假设物体完全可见，忽略了真实场景中普遍存在的遮挡。",
+      "confidence": "high"
+    },
+    {
+      "id": "S002",
+      "page": 2,
+      "type": "text",
+      "section": "Problem definition",
+      "original_text": "We consider the problem of reconstructing 3D objects from one or more partially-occluded views, a novel task that we call amodal 3D reconstruction.",
+      "translation": "论文把从一个或多个部分遮挡视角恢复完整三维物体定义为 amodal 3D reconstruction。",
+      "confidence": "high"
+    },
+    {
+      "id": "S003",
+      "page": 2,
+      "type": "text",
+      "section": "Motivation",
+      "original_text": "2D amodal completion methods rely predominantly on appearance-based priors rather than explicit 3D structural cues.",
+      "translation": "二维非模态补全主要依赖外观先验，而不是显式三维结构线索；这会在复杂遮挡下产生物理上不合理的几何。",
+      "confidence": "high"
+    },
+    {
+      "id": "S004",
+      "page": 3,
+      "type": "text",
+      "section": "Method overview",
+      "original_text": "Amodal3R augments the foundation 3D generator TRELLIS with an additional branch to condition on occlusions.",
+      "translation": "Amodal3R 在 TRELLIS 这个 foundation 3D generator 上增加遮挡条件分支，在三维 latent 空间同时处理重建、补全和遮挡推理。",
+      "confidence": "high"
+    },
+    {
+      "id": "S005",
+      "page": 4,
+      "type": "text",
+      "section": "Flow objective",
+      "original_text": "The denoising network is trained to minimize the flow loss.",
+      "translation": "模型在 structured 3D latent 上用 flow matching 学习从噪声回到目标 latent 的速度场。",
+      "confidence": "high"
+    },
+    {
+      "id": "S006",
+      "page": 4,
+      "type": "text",
+      "section": "Mask-weighted attention",
+      "original_text": "We wish to bias the token similarity matrix towards the visible parts of the object.",
+      "translation": "visibility mask 被转成 patch 权重并加入 attention logits，使模型优先读取可见目标区域；完全不可见 patch 的权重为零。",
+      "confidence": "high"
+    },
+    {
+      "id": "S007",
+      "page": 5,
+      "type": "text",
+      "section": "Occlusion-aware attention",
+      "original_text": "It is not enough to specify the visible information; instead, we must also differentiate foreground occluders from the background.",
+      "translation": "只标记可见区域还不够，还要把前景遮挡者与背景区分开，因为前者解释了哪些区域可能属于目标却暂时不可见。",
+      "confidence": "high"
+    },
+    {
+      "id": "S008",
+      "page": 5,
+      "type": "text",
+      "section": "Synthetic data",
+      "original_text": "To efficiently generate such contact occlusion masks, we leverage 3D meshes during rendering.",
+      "translation": "论文利用三维 mesh 的邻接三角形随机游走生成接触遮挡，从而保证同一对象的多视角遮挡模式一致。",
+      "confidence": "high"
+    },
+    {
+      "id": "S009",
+      "page": 6,
+      "type": "text",
+      "section": "Evaluation",
+      "original_text": "Amodal3R significantly outperforms the baselines across all metrics in both single- and multi-view 3D reconstruction.",
+      "translation": "在 GSO 与 Toys4K 的单视图和多视图评测中，论文报告 Amodal3R 在渲染、语义一致性和点云几何指标上都优于基线。",
+      "confidence": "high"
+    },
+    {
+      "id": "S010",
+      "page": 7,
+      "type": "text",
+      "section": "Ablation",
+      "original_text": "The full model integrating both modules achieves optimal 3D generation results characterized by complete geometry and consistent textures.",
+      "translation": "消融显示两个模块互补：可见性加权更有利于外观，遮挡感知层更有利于几何，联合模型最稳定。",
+      "confidence": "high"
+    },
+    {
+      "id": "S011",
+      "page": 8,
+      "type": "text",
+      "section": "Real-world evidence",
+      "original_text": "Amodal3R generates reasonable 3D assets on Replica and in-the-wild images.",
+      "translation": "Replica 和真实图片结果支持模型的现实可用性，但这些样本缺少完整三维真值，因此不能由视觉合理性推出背面真实性。",
+      "confidence": "high"
+    },
+    {
+      "id": "S012",
+      "page": 16,
+      "type": "text",
+      "section": "Limitations",
+      "original_text": "Completions on some complex or out-of-distribution objects may fail or lead to unrealistic structures.",
+      "translation": "作者承认训练数据规模有限且主要是 furniture，复杂或分布外对象可能失败；真实数据适配和可控补全仍未解决。",
+      "confidence": "high"
+    },
+    {
+      "id": "E001",
+      "page": 4,
+      "type": "equation",
+      "section": "flow matching path",
+      "latex": "\\ell(t)=(1-t)\\ell^{(0)}+t\\epsilon,\\ \\epsilon\\sim\\mathcal{N}(0,I),\\ t\\in[0,1].",
+      "confidence": "medium"
+    },
+    {
+      "id": "E002",
+      "page": 4,
+      "type": "equation",
+      "section": "flow loss",
+      "latex": "\\min_\\theta\\mathbb{E}\\|\\upsilon_\\theta(\\ell(t),x,t)-(\\epsilon-\\ell^{(0)})\\|_2^2.",
+      "confidence": "medium"
+    },
+    {
+      "id": "E003",
+      "page": 4,
+      "type": "equation",
+      "section": "cross-attention score",
+      "latex": "q=W_q\\ell,\\ [k,v]=W_{kv}c_{\\mathrm{dino}},\\ S=qk^\\top/\\sqrt{D}.",
+      "confidence": "medium"
+    },
+    {
+      "id": "E004",
+      "page": 4,
+      "type": "equation",
+      "section": "visibility-weighted attention",
+      "latex": "A=\\operatorname{softmax}(S+\\log c_{\\mathrm{vis}}),\\ A_{ij}=\\frac{c_{\\mathrm{vis},j}\\exp(S_{ij})}{\\sum_k c_{\\mathrm{vis},k}\\exp(S_{ik})}.",
+      "confidence": "medium"
+    },
+    {
+      "id": "E005",
+      "page": 5,
+      "type": "equation",
+      "section": "visibility mask",
+      "latex": "M_{\\mathrm{vis}}=M_{\\mathrm{obj}}\\odot(1-M_{\\mathrm{occ}}).",
+      "confidence": "medium"
+    },
+    {
+      "id": "F001",
+      "page": 1,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-01.png",
+      "confidence": "medium"
+    },
+    {
+      "id": "F002",
+      "page": 2,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-02.png",
+      "confidence": "medium"
+    },
+    {
+      "id": "F003",
+      "page": 3,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-03.png",
+      "confidence": "medium"
+    },
+    {
+      "id": "F004",
+      "page": 4,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-04.png",
+      "confidence": "medium"
+    },
+    {
+      "id": "F005",
+      "page": 5,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-05.png",
+      "confidence": "medium"
+    },
+    {
+      "id": "F006",
+      "page": 6,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-06.png",
+      "confidence": "medium"
+    },
+    {
+      "id": "F007",
+      "page": 7,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-07.png",
+      "confidence": "medium"
+    },
+    {
+      "id": "F008",
+      "page": 8,
+      "type": "figure_or_table_asset",
+      "asset": "assets/pages/page-08.png",
+      "confidence": "medium"
+    }
+  ],
+  "glossary": {
+    "amodal 3D reconstruction": "完整三维对象推断，包含遮挡部分",
+    "mask-weighted cross-attention": "用 visibility patch ratio 调节 attention logits",
+    "occlusion-aware attention": "单独读取 occluder mask 以区分 unknown 与 background",
+    "SLAT": "Structured Latent 表示",
+    "3D-consistent mask": "跨视角一致的接触遮挡模拟"
+  }
+}

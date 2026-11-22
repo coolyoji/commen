@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-21",
   "essays": [
     {
-      "title": "VGGT: Visual Geometry Grounded Transformer",
-      "path": "docs/md/longform/2026-11/vggt.md",
-      "reader": "docs/md/longform/2026-11/vggt-reader/paper.md",
+      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+      "path": "docs/md/longform/2026-11/amodal3r.md",
+      "reader": "docs/md/longform/2026-11/amodal3r-reader/paper.md",
       "status": "source_grounded"
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19",
+  "updated_at": "2026-11-21",
   "days": [
     {
       "date": "2026-09-23",
@@ -368,6 +368,24 @@
         "arxiv:1612.01474"
       ],
       "status": "daily_1_deep_5_cross_domain_transfer"
+    },
+    {
+      "date": "2026-11-21",
+      "deep_read": [
+        "arxiv:2503.13439"
+      ],
+      "browse": [
+        "arxiv:2202.08516",
+        "arxiv:2006.15055",
+        "arxiv:2107.10043",
+        "arxiv:2311.17874",
+        "arxiv:2301.08243"
+      ],
+      "status": "daily_1_deep_5_cross_domain_transfer",
+      "markdown": "docs/md/2026-11-21.md",
+      "html": "docs/html/2026-11-21.html",
+      "aris": "research/aris/2026-11-21.json",
+      "selection_log": "research/selection-log/2026-11-21.json"
     }
   ]
 }

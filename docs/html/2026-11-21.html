@@ -1,0 +1,142 @@
+<!doctype html><meta charset='utf-8'><title>2026-11-21 CV 文献更新</title><style>body{max-width:1100px;margin:2rem auto;padding:0 1rem;font:16px/1.7 system-ui,sans-serif}pre{white-space:pre-wrap}a{color:#075c9b}</style><pre># 2026-11-21 CV 文献更新
+
+&gt; 本批 1 篇精读 + 5 篇跨领域泛读。精读 Amodal3R；泛读轮换到缺失数据、对象中心组合表示、状态估计、主动视角和自监督 latent prediction。所有迁移内容区分论文事实、基于证据的解释与研究假设；未启动 GPU。
+
+[精读长文](longform/2026-11/amodal3r.md) · [Nature Reader](longform/2026-11/amodal3r-reader/paper.md) · [ARIS](../../research/aris/2026-11-21.json) · [审计](../../research/audit/2026-11-21.json)
+
+## 精读：Amodal3R
+
+Amodal3R 的关键不是“生成一个更好看的背面”，而是把 visibility、occluder 原因和 3D latent 放在同一个推断路径中。论文证明了单阶段 3D 条件生成能避免二维补全的跨视角不一致，但完全未观测部分仍只是 plausible prior；因此本批把 candidate belief、主动观测和缺失机制审计列为未运行研究假设。
+
+[完整精读长文](longform/2026-11/amodal3r.md) · [Nature Reader](longform/2026-11/amodal3r-reader/paper.md)
+
+### 精读 ARIS 摘要
+
+- **真实问题：** 被遮挡图像到完整 3D asset 的 geometry/appearance 联合推断；直接原因是二维补全与三维结构错位，深层原因是不可观测多解和结构相关缺失。
+- **方法为什么可能有效：** mask-weighted attention 将可见证据写入 attention，occlusion-aware attention 区分遮挡者与背景，3D latent diffusion 让多视角补全共享一个结构空间。
+- **迁移边界：** 视觉合理性和高 COV 不等于隐藏面真实；需要 observed/hidden/unknown 分区、候选覆盖、跨视角一致性和新视角反证。
+- **三个未运行 idea：** 三态 belief Amodal3R；候选分歧驱动主动视角；合成缺失机制反事实审计。
+
+## 泛读：五个可以套用到非模态补全的机制
+
+### 1. SAITS: Self-Attention-based Imputation for Time Series
+
+出处：[arXiv](https://arxiv.org/abs/2202.08516)；发表月份：2022-02；源领域：缺失数据插补与缺失机制建模；方法家族：双 DMSA self-attention、mask-aware joint optimization、feature/temporal dependency。
+
+**为什么选它：** 非模态输入同样是结构相关缺失：遮挡不是随机删像素，而是由深度、形状和视角共同决定。SAITS把缺失掩码作为推理条件，并同时建模时间依赖与变量依赖，适合迁移成 visible/occluded/background 三态条件，而不是把未知区当零值。
+
+- 源问题与两层根因：源任务要从不完整多变量时间序列恢复缺失值。第一层根因是时间和变量维度的证据断裂；第二层根因是随机点缺失的训练分布常与连续、共缺失、传感器相关的真实缺失不匹配，导致模型学到错误的条件分布。
+- 目标对应：SAITS 的时间步 t、变量 j 和缺失指示 m_tj，对应 amodal 中的像素/体素射线、观测通道和 visibility state。二维目标可让 m 表示 visible/occluded/background；三维目标可把 m 扩展成 observed surface、inferred surface 和 unknown occupancy。
+- 迁移因果链：可见 RGB/depth/mask → mask-aware token 与跨视角/跨通道注意力 → 在 observed 区做重建监督、在 occluded 区做 masked modeling，并加入 multi-view reprojection → 推理时只用证据相容的上下文传播到未知区 → 获得结构连续但保留未知边界的候选补全。前两步有 SAITS 原文机制支持，三维渲染约束是研究假设。
+- 具体方案：把 SAITS 的双 DMSA 改成 image-patch × view 的双轴注意力；输入为目标实例的可见 RGB、深度、遮挡者 mask 和时间/视角索引；输出为完整 mask 或 occupancy logits 及 uncertainty；损失分区为 observed consistency、hidden reconstruction、cross-view consistency 和 missingness classification。先做 64³ voxel toy，再做真实多视图对象。
+- 必要条件与危险错配：必须有可代表真实遮挡机制的合成/真实 mask；最危险错配是 SAITS 常见的 MCAR/MAR 假设，而视觉遮挡更接近 MNAR，缺失概率依赖隐藏几何。若训练只随机擦除，注意力会错误地把遮挡当独立噪声。
+- 最小判别实验：相同 backbone、参数和训练步数，比较 random-mask SAITS、结构相关遮挡改造版、去掉 mask token 的版本；报告 visible violation、hidden Chamfer/IoU、跨视角一致性和 calibration。阳性说明 missingness conditioning 有效；阴性说明表示瓶颈或多解监督不足；无信号说明任务本身近似单峰。
+- 最强反例与推荐：同一可见前表面对应两个完全不同背面且无多视角证据时，SAITS 只能给先验分布，不能证明真实背面。推荐为高优先二维/低分辨率三维原型；不能直接把 MAE 改善写成真实隐藏结构恢复。
+
+**三个研究假设（均未运行）：**
+
+- **缺失机制分层训练：按随机、深度排序、接触遮挡和视角结构分层采样；假设结构匹配比增加注意力深度更重要；最小实验比较四种 mask protocol；结果只解释 coverage 与 calibration，不宣称真实部署收益。**
+- **双轴跨视角插补：把时间轴换成 view axis，比较独立视角补全和共享 view-token；若共享 token 提高重投影一致性，说明变量依赖迁移成立；若平均化遮挡差异，说明身份对应或视角排序错。**
+- **unknown-aware stopping：用 mask-aware attention 的置信度决定输出完整、候选或拒答；反事实是把 unknown 区强制填满，若 hidden 风险上升而可见指标不变，证明拒答接口有必要。**
+
+**深层诊断卡：** 表面症状是遮挡区域被平滑填平；第一层根因是缺失位置没有进入条件表示；第二层根因是训练缺失机制与真实遮挡机制错配；方法作用点是 mask-aware dependency；隐含前提是缺失模式可枚举且有验证真值；失败触发器是 MNAR 长尾遮挡与单一背面真值；反证实验是同 visible、异背面的结构化 holdout。
+
+### 2. Object-Centric Learning with Slot Attention
+
+出处：[arXiv](https://arxiv.org/abs/2006.15055)；发表月份：2020-06；源领域：对象中心表示与组合泛化；方法家族：exchangeable slots、竞争式 attention、iterative binding、object-centric decomposition。
+
+**为什么选它：** 非模态补全经常把目标、遮挡者和背景混在一个 feature map 中。Slot Attention 的交换 slots 和竞争绑定机制提供了对象级中间表示，能把“哪个区域属于目标、哪个区域是遮挡者、哪个关系仍未知”从像素纹理中拆出来。
+
+- 源问题与两层根因：源任务要从复杂场景得到可组合对象表示。第一层根因是分布式 feature 难以保持对象边界；第二层根因是没有显式对象槽位时，遮挡者与目标会共享纹理捷径，组合变化一来就失效。
+- 目标对应：source slot s_k 对应目标实例、遮挡实例、背景和 unknown-part slots；attention assignment 对应像素/点到实例的软归属；slot interaction 对应接触、前后遮挡和部件关系。
+- 因果链：RGB/depth/候选点 → exchangeable target/occluder slots → competitive iterative binding + visibility/type tokens → 对目标 slot 做完整形状解码、对 occluder slot 做深度排序约束 → 补全器只在 target-unknown 区域生成。原文支持对象中心绑定，遮挡和三维解码属于迁移假设。
+- 具体方案：在二维 amodal mask 任务中增加 K 个 instance slots 和一个 unknown slot，输入为实例提示、深度排序和可见 mask；slot decoder 输出 visible/occluded/background masks。三维版本把每个 slot 解码到 object-centric SDF/occupancy，并用跨视角 slot matching 保持身份。
+- 必要条件与危险错配：场景中目标数量可由上限 K 覆盖，且对象边界或深度有足够证据。最危险错配是 slot 数量或竞争机制把真实同一物体拆成多个 slot，或把相互接触的物体错误合并。
+- 最小判别实验：相同 encoder 与参数预算，比较 dense decoder、slot decoder、slot decoder 去掉竞争归一化；在合成接触遮挡和同纹理多物体上报告 instance ARI、hidden mask IoU、depth-order accuracy 与 3D consistency。阳性说明组合表示改善；阴性说明边界证据不足；无信号说明场景过于简单。
+- 最强反例与推荐：同颜色、同形状、互相穿插且深度不可辨的物体会让 slot assignment 不可识别。推荐为高优先的对象/遮挡关系前端；不能把 slot 可解释图直接当作真实部件分解。
+
+**三个研究假设（均未运行）：**
+
+- **目标/遮挡者双槽位：给 slot 类型加 visibility-state supervision；检验“遮挡者显式建模”是否比扩大 decoder 更有效；反例是纯背景遮挡或透明体。**
+- **跨视角 slot identity：用最小代价匹配绑定同一目标 slot，加入 reprojection loss；若 slot identity 在新视角不稳定，说明组合表示没有解决时空对应。**
+- **unknown slot 的可撤销解码：unknown slot 只输出候选分布，不直接并入目标 mesh；后续视角到来时用 slot-level Bayesian update；能把合理生成与证据恢复分开。**
+
+**深层诊断卡：** 表面症状是目标和遮挡者边界粘连；第一层根因是像素特征缺少对象单位；第二层根因是关系/身份没有显式状态；作用点是竞争绑定和 exchangeability；危险是 slot 数量偏置、透明体和接触不可分；反证实验是同纹理接触对象与跨视角身份保持。
+
+### 3. KalmanNet: Neural Network Aided Kalman Filtering for Partially Known Dynamics
+
+出处：[arXiv](https://arxiv.org/abs/2107.10043)；发表月份：2021-07；源领域：部分可知动力学下的状态估计与滤波；方法家族：Kalman structure + learned gain、recurrent innovation statistics、model-data hybrid。
+
+**为什么选它：** 视频非模态补全不是每帧独立生成：过去显露的表面应作为当前遮挡状态的 belief。KalmanNet 保留观测更新、预测和创新残差的结构，同时学习未知动力学，适合构造可解释的时序 amodal filter。
+
+- 源问题与两层根因：传统 Kalman filter 依赖准确的状态转移和观测模型；第一层根因是模型错配导致增益错误；第二层根因是完全黑盒 RNN 又丢掉了“预测—观测更新”的因果结构，难以诊断漂移。
+- 目标对应：状态 x_t 对应目标完整 shape/pose/visibility belief，观测 y_t 对应当前帧可见 mask、深度和相机，innovation 对应当前观测与历史预测的差异，Kalman gain 对应该帧应相信新证据还是历史形状。
+- 因果链：历史候选 shape + 当前可见证据 → learned transition/update gain → observed 区硬更新、unknown 区保持候选 belief → 产生时间一致的完整 mask/SDF → 新视角可纠正旧预测。KalmanNet 原文支持结构化滤波，形状状态和渲染观测是研究假设。
+- 具体方案：维护每个目标的 latent shape mean/covariance 及 pose；用可微渲染器把状态投影到当前视角；KalmanNet 学习增益，输入 innovation、mask overlap 和遮挡者变化；loss 包含 visible reprojection、hidden state supervision、temporal smoothness 与 covariance calibration。
+- 必要条件与危险错配：对象身份、相机和运动必须可跟踪；最危险错配是形状变化、拓扑变化或长时间完全不可见，导致滤波器把旧错误当先验。
+- 最小判别实验：相同 transformer backbone，比较独立帧、黑盒 GRU 和 Kalman-structured update；在遮挡出现/消失和相机跳变序列上报告 hidden IoU、reappearance correction time、identity switches 与 uncertainty coverage。
+- 最强反例与推荐：目标被完全替换、非刚体严重变形或 camera pose 错误时，滤波结构可能更慢地错。推荐作为视频 amodal 的高优先时序骨架，但必须保留 reset/abstain。
+
+**三个研究假设（均未运行）：**
+
+- **innovation-gated amodal memory：用观测残差决定历史 shape 的保留比例；反事实删除 innovation gate，若遮挡结束后恢复速度明显下降则支持机制。**
+- **协方差而非单点记忆：为 unknown surface 维护低秩 covariance，后续视角只收缩被观测方向；若协方差与 hidden error 无关，说明状态表示不足。**
+- **身份切换诊断：用对象级 matching 和可见区域重投影触发 filter reset；测试遮挡者交换、同类对象穿越的最强反例，避免错误记忆传播。**
+
+**深层诊断卡：** 表面症状是视频补全闪烁或遮挡恢复后仍沿用错误背面；第一层根因是每帧独立推断；第二层根因是状态转移、观测更新和身份对应未分离；作用点是 learned gain；失败触发器是身份切换、非刚体和长期无观测；反证实验是可控遮挡序列与强制 reset 对照。
+
+### 4. FisherRF: Active View Selection and Uncertainty Quantification for Radiance Fields using Fisher Information
+
+出处：[arXiv](https://arxiv.org/abs/2311.17874)；发表月份：2023-11；源领域：主动视角选择与信息增益；方法家族：Fisher information、expected information gain、radiance-field uncertainty。
+
+**为什么选它：** 非模态补全的关键不是在不可见区无限生成，而是选择能最大幅度区分候选形状的新观测。Fisher information 把“哪个视角最能减少参数不确定性”变成可计算的主动感知目标，直接连接三维 amodal 的候选淘汰。
+
+- 源问题与两层根因：源任务在视角采集成本有限时选择下一张图。第一层根因是不同视角对模型参数提供的信息不同；第二层根因是全局不确定性或渲染误差会被背景和表示容量污染，不能等同于目标对象隐藏面价值。
+- 目标对应：radiance-field 参数 θ 对应 shape/occupancy belief 参数，candidate camera v 对应可达新视角，Fisher information/Jacobian 对应该视角对候选形状的区分能力，EIG 对应后验熵下降。
+- 因果链：当前可见帧与候选 shape ensemble → 计算每个候选视角的预测差异/Jacobian/Fisher score → 选择最大信息增益动作 → 新观测更新候选后验 → hidden risk 下降。FisherRF 的信息增益机制有原文支持，amodal belief update 需改造。
+- 具体方案：不再对整场景 NeRF 求 EIG，而对目标实例的 SDF/occupancy ensemble 求 object-aware EIG；把遮挡者、相机可达性和动作成本加入 score；新观测到来后只更新与该视角相交的 unknown surface。
+- 必要条件与危险错配：要有可达视角集合、相机模型和候选后验；最危险错配是高 Fisher 视角只区分纹理而不区分几何，或者目标移动导致观测不可比。
+- 最小判别实验：随机、最大可见面积、候选分歧和 Fisher/EIG 四种策略，固定三次动作与渲染预算；报告 hidden Chamfer、候选淘汰率、动作长度、visible preservation。阳性说明信息增益确实对应未知几何；阴性说明 score 被纹理或背景主导；无信号说明新视角无法区分真解。
+- 最强反例与推荐：所有可达视角都被同一遮挡者覆盖时，主动策略只能正确拒答。推荐为三维 amodal 的高优先闭环模块，尤其适合 UAV/机器人，但不能把新视角选择结果当成补全本身。
+
+**三个研究假设（均未运行）：**
+
+- **candidate-disagreement EIG：以候选形状之间的渲染差异近似 Fisher；比较单模型 uncertainty 与 ensemble EIG，检验“分歧比误差更能指导动作”。**
+- **可达性约束的 unknown-first planning：加入相机运动成本和碰撞约束，优先看能暴露 unknown surface 的视角；阳性是同成本 hidden error 更低，阴性是信息分数偏向不可达视角。**
+- **主动观测反事实审计：把高分视角的真实新观测替换成与候选无关的遮挡帧；若系统仍宣称后验收缩，说明 EIG 只是自洽幻觉。**
+
+**深层诊断卡：** 表面症状是采集很多视角仍看不到关键隐藏面；第一层根因是视角没有按未知区域价值选择；第二层根因是全局 uncertainty 与目标几何信息混淆；作用点是 object-aware EIG；失败触发器是不可达/动态/纹理主导视角；反证实验是固定预算下候选淘汰与假观测替换。
+
+### 5. Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture
+
+出处：[arXiv](https://arxiv.org/abs/2301.08243)；发表月份：2023-01；源领域：自监督 latent prediction 与遮挡上下文建模；方法家族：joint-embedding predictive architecture、context/target blocks、non-generative latent prediction。
+
+**为什么选它：** 非模态补全需要从部分证据学习“哪些结构可由上下文推断”，但像素重建会鼓励纹理平均。I-JEPA 在 latent 空间预测被遮挡 target blocks，提供了把上下文结构学习与像素生成解耦的思路，适合预训练 amodal/3D belief backbone。
+
+- 源问题与两层根因：像素级自监督容易把局部纹理当目标，第一层根因是重建损失对低层统计过于敏感；第二层根因是随机小 mask 不要求模型理解跨区域结构，导致语义和几何长程关系不足。
+- 目标对应：context block 对应可见区域与多视角证据，target block 对应遮挡区域的形状/部件 latent；predictor 输出 latent belief，而不是直接声称真实 RGB 或完整几何。
+- 因果链：visible RGB/depth/instance tokens → context encoder + target predictor → latent consistency loss 与 observed reprojection/3D contrastive loss → 先学跨区域结构，再由任务 decoder 输出候选 mask/occupancy → 只把 hidden 预测当先验，保留证据边界。原文支持 latent target prediction，三维任务损失为研究假设。
+- 具体方案：将随机 target block 改成结构相关 occluded blocks、部件级区域和跨视角未见区域；context 输入可见 mask、深度、遮挡者和相机；target 是同一对象在另一个视角的 latent patch；预训练后接 amodal decoder，冻结/微调预算固定。
+- 必要条件与危险错配：目标块必须有可验证的跨视角或完整实例对应；最危险错配是 target latent 只编码类别语义，无法约束细几何，或训练 mask 过于规则导致 shortcut。
+- 最小判别实验：像素 MAE、I-JEPA 随机块、I-JEPA 结构相关块三者同参数预训练，再在二维 hidden mask、可见三维和三维 amodal 三任务微调；报告 hidden IoU/Chamfer、cross-view consistency 和 calibration。阳性说明 latent 结构学习有迁移，阴性说明 decoder 或数据覆盖主导，无信号说明 target 不具备稳定对应。
+- 最强反例与推荐：类别内背面差异大且无跨视角证据时，latent 只能学原型；推荐为高性价比预训练方向，但不能把 representation quality 当作隐藏真值证据。
+
+**三个研究假设（均未运行）：**
+
+- **occlusion curriculum JEPA：由随机块→深度相关块→接触遮挡→跨视角 unknown patch 逐步增加结构难度；检验 mask curriculum 是否改善长尾遮挡。**
+- **geometry-target JEPA：同时预测 RGB latent、depth latent 和 part-boundary latent；若只提高语义而不提高 hidden geometry，说明目标 latent 选择错误。**
+- **可证伪 latent prior：用后续真实视角对预训练预测做 leave-one-view-out 检验；若 latent 预测与新观测冲突却置信度不降，说明它只是不可校准的先验。**
+
+**深层诊断卡：** 表面症状是重建预训练后生成语义合理但几何平均；第一层根因是像素目标主导；第二层根因是 target 区域与结构缺失无对应；作用点是 context-target latent prediction；失败触发器是类别内多解、随机 mask shortcut 和无新观测；反证实验是跨视角 latent 预测与后续真实观测校验。
+
+## 本批跨领域选择审计
+
+- **多样性：** 五篇来自缺失数据插补、对象中心表示、混合状态估计、主动信息增益和自监督 latent prediction 五个方法家族，覆盖至少三类来源。
+- **共同结构：** 它们都处理部分证据下的隐变量推断，但缺失机制、状态转移、对象数、动作空间和先验含义不同，不能直接拼装成现成 amodal 模型。
+- **最危险错配：** 结构相关遮挡不是 MCAR；slot 不是可靠部件标注；滤波器会传播错误身份；信息增益可能只看纹理；latent prediction 学到的语义结构不等于隐藏几何。
+- **推荐优先级：** SAITS/Slot Attention 适合二维与低分辨率三维原型；KalmanNet 适合视频 belief；FisherRF 适合机器人主动观测；I-JEPA 适合低成本预训练。全部仍需最小判别实验。
+
+## 统一结论
+
+本批方法共同指向一个工作流：先估计证据状态和对象关系，再把历史/跨视角信息写进 belief，必要时主动获取新观测，最后才生成完整形状。对非模态补全最有价值的迁移不是模块名称，而是能否让隐藏结果被新证据否证，并在证据不足时拒答。
+</pre>

@@ -1,28 +1,27 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-21",
   "paper": {
-    "id": "arxiv:2503.11651",
-    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "id": "arxiv:2503.13439",
+    "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
     "authors": [
-      "Jianyuan Wang",
-      "Minghao Chen",
-      "Nikita Karaev",
+      "Tianhao Wu",
+      "Chuanxia Zheng",
+      "Frank Guan",
       "Andrea Vedaldi",
-      "Christian Rupprecht",
-      "David Novotny"
+      "Tat-Jen Cham"
     ],
-    "published": "2025-03-14",
+    "published": "2025-03-17",
     "publication_month": "2025-03",
     "venue": "CVPR 2025",
-    "source": "https://arxiv.org/abs/2503.11651",
-    "html_url": "https://arxiv.org/html/2503.11651",
-    "code": "https://github.com/facebookresearch/vggt",
-    "slug": "vggt",
-    "source_domain": "多视图几何、前馈三维重建和共享几何基础模型",
-    "method_family": "DINO patch token、交替 frame/global attention、多任务几何头、aleatoric uncertainty",
-    "evidence_status": "20页可选中文本层已提取；PDF与Zotero storage SHA-256一致；图表以页面资产核对；模型未运行。"
+    "source": "https://arxiv.org/abs/2503.13439",
+    "html_url": "https://arxiv.org/html/2503.13439",
+    "code": "https://github.com/sm0kywu/Amodal3R",
+    "slug": "amodal3r",
+    "source_domain": "遮挡条件下的单/多视图 amodal 3D reconstruction",
+    "method_family": "TRELLIS foundation 3D generator、mask-weighted cross-attention、occlusion-aware attention、3D latent diffusion",
+    "evidence_status": "22页PDF逐页提取；关键图表与公式页资产已核对；未运行模型；PDF/Zotero storage SHA-256一致。"
   },
-  "longform": "docs/md/longform/2026-11/vggt.md",
-  "reader": "docs/md/longform/2026-11/vggt-reader/paper.md",
-  "pdf_sha256": "5D7AB44D129172F39EF5918FEB0014C4D041FD0E92F995D4DBBD7327A6E91D52"
+  "longform": "docs/md/longform/2026-11/amodal3r.md",
+  "reader": "docs/md/longform/2026-11/amodal3r-reader/paper.md",
+  "pdf_sha256": "73BC6ADA1E3127A537D91BB69AE78975E1EAF36EFAEC7608628D0863864EE917"
 }

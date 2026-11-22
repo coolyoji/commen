@@ -1,0 +1,155 @@
+{
+  "source": {
+    "title": "PCN: Point Completion Network",
+    "url": "https://arxiv.org/pdf/1808.00671v3",
+    "source_format": "pdf-text",
+    "pages": 17,
+    "zotero_attachment_key": "DVOWU6PH",
+    "sha256": "cca7e3cf43f915670fe0b82452582fffb227ad6eed95cec0a268a2107a73b2d0"
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "location": "p.1 Abstract，p.1–2 §1–2。",
+      "type": "text",
+      "confidence": "high",
+      "original_text": "“Unlike existing shape completion methods, PCN directly operates on raw point clouds without any structural assumption (e.g. symmetry) or annotation (e.g. semantic class) about the underlying shape.”",
+      "translation": "与已有形状补全方法相比，PCN 直接处理原始点云，无需对底层形状提供对称性等显式结构假设或语义类别等标注。"
+    },
+    {
+      "id": "S002",
+      "page": 2,
+      "location": "p.2 §3，p.3–4 §4，p.12 App. B–C。",
+      "type": "text",
+      "confidence": "high",
+      "original_text": "“X is not necessarily a subset of Y and there is no explicit correspondence between points in X and points in Y”",
+      "translation": "输入点集 $X$ 不一定是目标点集 $Y$ 的子集，两个点集之间没有显式逐点对应。"
+    },
+    {
+      "id": "S003",
+      "page": 4,
+      "location": "p.4–7 §5.1–5.2，p.17 附表 4–7。",
+      "type": "text",
+      "confidence": "high",
+      "original_text": null,
+      "translation": null
+    },
+    {
+      "id": "S004",
+      "page": 7,
+      "location": "p.7–8 §5.3–5.4。",
+      "type": "text",
+      "confidence": "high",
+      "original_text": "“We do not have the complete ground truth point clouds for KITTI.”",
+      "translation": "KITTI 实验没有完整点云真值。"
+    },
+    {
+      "id": "S005",
+      "page": 8,
+      "location": "p.8 §6–7，p.9 Fig. 9，p.12–16 App. D–G。",
+      "type": "text",
+      "confidence": "high",
+      "original_text": null,
+      "translation": null
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "latex": "\\operatorname{CD}(S_1,S_2)=\\frac{1}{|S_1|}\\sum_{x\\in S_1}\\min_{y\\in S_2}\\|x-y\\|_2+\\frac{1}{|S_2|}\\sum_{y\\in S_2}\\min_{x\\in S_1}\\|x-y\\|_2.",
+      "page": 4,
+      "printed_number": 1,
+      "type": "equation",
+      "confidence": "high"
+    },
+    {
+      "id": "E002",
+      "latex": "\\operatorname{EMD}(S_1,S_2)=\\min_{\\phi:S_1\\rightarrow S_2}\\frac{1}{|S_1|}\\sum_{x\\in S_1}\\|x-\\phi(x)\\|_2.",
+      "page": 4,
+      "printed_number": 2,
+      "type": "equation",
+      "confidence": "high"
+    },
+    {
+      "id": "E003",
+      "latex": "L(Y_{\\rm coarse},Y_{\\rm detail},Y_{\\rm gt})=d_1(Y_{\\rm coarse},\\widetilde{Y}_{\\rm gt})+\\alpha d_2(Y_{\\rm detail},Y_{\\rm gt}).",
+      "page": 4,
+      "printed_number": 3,
+      "type": "equation",
+      "confidence": "high"
+    }
+  ],
+  "figure_table_pages": [
+    {
+      "page": 1,
+      "labels": [
+        "Fig. 1"
+      ]
+    },
+    {
+      "page": 3,
+      "labels": [
+        "Fig. 2"
+      ]
+    },
+    {
+      "page": 5,
+      "labels": [
+        "Fig. 3",
+        "Fig. 4"
+      ]
+    },
+    {
+      "page": 6,
+      "labels": [
+        "Fig. 5"
+      ]
+    },
+    {
+      "page": 7,
+      "labels": [
+        "Fig. 6",
+        "Tables 1–2"
+      ]
+    },
+    {
+      "page": 8,
+      "labels": [
+        "Fig. 7–8"
+      ]
+    },
+    {
+      "page": 12,
+      "labels": [
+        "Fig. 10"
+      ]
+    },
+    {
+      "page": 13,
+      "labels": [
+        "Fig. 12–14"
+      ]
+    },
+    {
+      "page": 14,
+      "labels": [
+        "Fig. 15"
+      ]
+    },
+    {
+      "page": 17,
+      "labels": [
+        "Tables 4–7"
+      ]
+    }
+  ],
+  "glossary": [
+    "Permutation invariance",
+    "Global max pooling",
+    "Local folding",
+    "Chamfer Distance",
+    "Earth Mover’s Distance",
+    "Minimal Matching Distance"
+  ]
+}

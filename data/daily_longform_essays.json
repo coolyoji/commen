@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "essays": [
     {
-      "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
-      "path": "docs/md/longform/2026-11/amodal3r.md",
-      "reader": "docs/md/longform/2026-11/amodal3r-reader/paper.md",
+      "title": "PCN: Point Completion Network",
+      "path": "docs/md/longform/2026-11/pcn.md",
+      "reader": "docs/md/longform/2026-11/pcn-reader/paper.md",
       "status": "source_grounded"
     }
   ]

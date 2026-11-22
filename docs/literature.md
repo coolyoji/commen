@@ -1,3 +1,9 @@
+## 2026-11-22
+
+精读 **PCN: Point Completion Network**。arXiv 首发 2018-08，正式发表于 3DV 2018-09。[精读长文](md/longform/2026-11/pcn.md) · [Nature Reader](md/longform/2026-11/pcn-reader/paper.md)
+
+五篇泛读分别研究 Deep Image Prior、G-CNN、Gumbel-Sinkhorn、Making Sense of Vision and Touch、MGLD-VSR。它们提供了图像逆问题先验、离散等变、可微匹配、接触约束和运动一致性的迁移线索。[日报](md/2026-11-22.md) · [ARIS](../research/aris/2026-11-22.json)
+
 ## 2026-11-21
 
 精读 **Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images**（原始发表月份：2025-03）：[精读长文](md/longform/2026-11/amodal3r.md)、[Nature Reader](md/longform/2026-11/amodal3r-reader/paper.md)。PDF 已导入 Zotero `每日精读论文/2026/11`，条目 `YFYH1YTH`、附件 `HL7OPESN`，下载/storage SHA-256 一致；官方代码入口已核验，未运行模型。

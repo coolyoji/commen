@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-22",
+  "counts": {
+    "deep": 1,
+    "browse": 5,
+    "ideas": 18
+  },
+  "repository_remote": "https://github.com/coolyoji/commen.git",
+  "zotero": {
+    "status": "verified",
+    "collection": "每日精读论文/2026/11",
+    "collection_id": 26,
+    "item_key": "3LZG57V3",
+    "attachment_key": "DVOWU6PH",
+    "top_level_item_id": 1799,
+    "attachment_id": 1800,
+    "sha256": "cca7e3cf43f915670fe0b82452582fffb227ad6eed95cec0a268a2107a73b2d0",
+    "storage_sha256": "cca7e3cf43f915670fe0b82452582fffb227ad6eed95cec0a268a2107a73b2d0",
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\DVOWU6PH\\Yuan et al - PCN.pdf",
+    "backup": ".work-2026-11-22\\backups\\zotero.sqlite.pre-pcn.bak",
+    "backup_sha256": "be0307510e899d8909de8a3f9aa4d22d4b460e6d49d8841038bdd19965ea4b76",
+    "sqlite_quick_check": "ok",
+    "foreign_key_violations": 0,
+    "closed_before_backup_and_import": true,
+    "publication_month": "2018-08",
+    "publication_month_conference": "2018-09",
+    "read_month": "2026-11"
+  },
+  "nature_reader": {
+    "path": "docs/md/longform/2026-11/pcn-reader/paper.md",
+    "source_format": "pdf-text",
+    "pages": 17,
+    "missing_pdf_pages": [],
+    "scope": "限量双语摘录与中文逐节解读，图表定位到原 PDF 页。",
+    "strict_math_validation": "passed"
+  },
+  "paperforge": {
+    "sections_per_paper": 12,
+    "source": "docs/paperforge-integration.md",
+    "upstream": "SKILL_CHN.md 直链返回 404，依仓库中文版接入说明执行。"
+  },
+  "aris": {
+    "path": "research/aris/2026-11-22.json",
+    "effort": "lite",
+    "count": 6,
+    "unrun_ideas": 18,
+    "gpu_started": false
+  },
+  "browse_pdfs_downloaded": 0,
+  "validation": {
+    "changed_json_parsed": true,
+    "selection_history_deduplication": true,
+    "daily_html_relative_links_verified": true,
+    "reader_excerpts_and_equation_anchors_verified": true,
+    "daily_html_viewport_widths_px": [390, 1280],
+    "daily_html_horizontal_overflow": false,
+    "pdf_and_backup_sha256_verified": true
+  },
+  "git": {
+    "status": "pending",
+    "origin_main_local_tracking_before_push": "099cd35182f946f7203dd55f4d0677003658686d",
+    "preflight": "ls-remote HTTPS connection reset"
+  }
+}

@@ -1,27 +1,42 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "paper": {
-    "id": "arxiv:2503.13439",
-    "title": "Amodal3R: Amodal 3D Reconstruction from Occluded 2D Images",
+    "id": "arxiv:1808.00671",
+    "title": "PCN: Point Completion Network",
     "authors": [
-      "Tianhao Wu",
-      "Chuanxia Zheng",
-      "Frank Guan",
-      "Andrea Vedaldi",
-      "Tat-Jen Cham"
+      "Wentao Yuan",
+      "Tejas Khot",
+      "David Held",
+      "Christoph Mertz",
+      "Martial Hebert"
     ],
-    "published": "2025-03-17",
-    "publication_month": "2025-03",
-    "venue": "CVPR 2025",
-    "source": "https://arxiv.org/abs/2503.13439",
-    "html_url": "https://arxiv.org/html/2503.13439",
-    "code": "https://github.com/sm0kywu/Amodal3R",
-    "slug": "amodal3r",
-    "source_domain": "遮挡条件下的单/多视图 amodal 3D reconstruction",
-    "method_family": "TRELLIS foundation 3D generator、mask-weighted cross-attention、occlusion-aware attention、3D latent diffusion",
-    "evidence_status": "22页PDF逐页提取；关键图表与公式页资产已核对；未运行模型；PDF/Zotero storage SHA-256一致。"
+    "published": "2018-08-02",
+    "publication_month": "2018-08",
+    "venue": "3DV 2018",
+    "slug": "pcn",
+    "source": "https://arxiv.org/abs/1808.00671",
+    "html_url": "https://wentaoyuan.github.io/pcn/",
+    "source_domain": "部分点云与对象形状补全",
+    "method_family": "粗到细点集解码",
+    "evidence_status": "arXiv v3 可检索 PDF，核验 §1–7、关键图表、主公式与补充表。",
+    "sources": [
+      "https://arxiv.org/abs/1808.00671",
+      "https://wentaoyuan.github.io/pcn/",
+      "https://arxiv.org/pdf/1808.00671v3",
+      "https://doi.org/10.1109/3DV.2018.00088",
+      "https://github.com/wentaoyuan/pcn"
+    ],
+    "publication_month_conference": "2018-09",
+    "read_version": "1808.00671v3",
+    "revised": "2019-09-26",
+    "code": "https://github.com/wentaoyuan/pcn",
+    "related": [
+      "https://arxiv.org/abs/2108.08839",
+      "https://arxiv.org/abs/2207.10315",
+      "https://arxiv.org/abs/2301.04545"
+    ]
   },
-  "longform": "docs/md/longform/2026-11/amodal3r.md",
-  "reader": "docs/md/longform/2026-11/amodal3r-reader/paper.md",
-  "pdf_sha256": "73BC6ADA1E3127A537D91BB69AE78975E1EAF36EFAEC7608628D0863864EE917"
+  "longform": "docs/md/longform/2026-11/pcn.md",
+  "reader": "docs/md/longform/2026-11/pcn-reader/paper.md",
+  "pdf_sha256": "cca7e3cf43f915670fe0b82452582fffb227ad6eed95cec0a268a2107a73b2d0"
 }

@@ -89,7 +89,12 @@
     "zotero_hash_match": true
   },
   "git": {
-    "commit": "pending",
-    "push": "pending"
+    "commit": "d3e280d71d54f53a2cc40e1d1bf9bf87b02ef00a",
+    "push": "failed",
+    "remote": "https://github.com/coolyoji/commen.git",
+    "remote_commit_before_push": "099cd35182f946f7203dd55f4d0677003658686d",
+    "error": "git push origin main failed: Recv failure: Connection was reset",
+    "local_ahead_of_remote": true,
+    "working_tree_after_content_commit": "clean"
   }
 }

@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "essays": [
     {
-      "title": "PCN: Point Completion Network",
-      "path": "docs/md/longform/2026-11/pcn.md",
-      "reader": "docs/md/longform/2026-11/pcn-reader/paper.md",
+      "title": "PoinTr: Diverse Point Cloud Completion with Geometry-Aware Transformers",
+      "path": "docs/md/longform/2026-11/pointr.md",
+      "reader": "docs/md/longform/2026-11/pointr-reader/paper.md",
       "status": "source_grounded"
     }
   ]

@@ -1,42 +1,37 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "paper": {
-    "id": "arxiv:1808.00671",
-    "title": "PCN: Point Completion Network",
+    "id": "arxiv:2108.08839",
+    "title": "PoinTr: Diverse Point Cloud Completion with Geometry-Aware Transformers",
     "authors": [
-      "Wentao Yuan",
-      "Tejas Khot",
-      "David Held",
-      "Christoph Mertz",
-      "Martial Hebert"
+      "Xumin Yu",
+      "Yongming Rao",
+      "Ziyi Wang",
+      "Zuyan Liu",
+      "Jiwen Lu",
+      "Jie Zhou"
     ],
-    "published": "2018-08-02",
-    "publication_month": "2018-08",
-    "venue": "3DV 2018",
-    "slug": "pcn",
-    "source": "https://arxiv.org/abs/1808.00671",
-    "html_url": "https://wentaoyuan.github.io/pcn/",
-    "source_domain": "部分点云与对象形状补全",
-    "method_family": "粗到细点集解码",
-    "evidence_status": "arXiv v3 可检索 PDF，核验 §1–7、关键图表、主公式与补充表。",
+    "published": "2021-08-19",
+    "publication_month": "2021-08",
+    "venue": "ICCV 2021",
+    "slug": "pointr",
+    "source": "https://arxiv.org/abs/2108.08839",
+    "html_url": "https://arxiv.org/html/2108.08839",
+    "source_domain": "点云补全与三维几何表示",
+    "method_family": "geometry-aware Transformer、动态 query、多尺度点生成",
+    "evidence_status": "14 页可选文本 PDF，核验摘要、方法、公式、表 1–5、消融和 KITTI 代理指标。",
     "sources": [
-      "https://arxiv.org/abs/1808.00671",
-      "https://wentaoyuan.github.io/pcn/",
-      "https://arxiv.org/pdf/1808.00671v3",
-      "https://doi.org/10.1109/3DV.2018.00088",
-      "https://github.com/wentaoyuan/pcn"
-    ],
-    "publication_month_conference": "2018-09",
-    "read_version": "1808.00671v3",
-    "revised": "2019-09-26",
-    "code": "https://github.com/wentaoyuan/pcn",
-    "related": [
       "https://arxiv.org/abs/2108.08839",
-      "https://arxiv.org/abs/2207.10315",
-      "https://arxiv.org/abs/2301.04545"
-    ]
-  },
-  "longform": "docs/md/longform/2026-11/pcn.md",
-  "reader": "docs/md/longform/2026-11/pcn-reader/paper.md",
-  "pdf_sha256": "cca7e3cf43f915670fe0b82452582fffb227ad6eed95cec0a268a2107a73b2d0"
+      "https://arxiv.org/pdf/2108.08839",
+      "https://github.com/yuxumin/PoinTr"
+    ],
+    "code": "https://github.com/yuxumin/PoinTr",
+    "related": [
+      "https://arxiv.org/abs/1808.00671",
+      "https://arxiv.org/abs/2207.10315"
+    ],
+    "longform": "docs/md/longform/2026-11/pointr.md",
+    "reader": "docs/md/longform/2026-11/pointr-reader/paper.md",
+    "pdf_sha256": "883b9964d90c160275b19fb3a219bb6adb6701a04e82c12c1e6e8f70b52ee79021"
+  }
 }

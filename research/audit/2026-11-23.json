@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-23",
+  "actually_processed": "2026-11-23",
+  "repository": "D:\\CV-Literature\\commen",
+  "remote": "https://github.com/coolyoji/commen.git",
+  "counts": {
+    "deep": 1,
+    "browse": 5,
+    "total": 6,
+    "ideas": 18
+  },
+  "scope": "amodal completion, 3D reconstruction, 3D amodal completion",
+  "paperforge": {
+    "applied": true,
+    "twelve_part_notes": true,
+    "all_six_have_deep_diagnostic_card": true
+  },
+  "aris": {
+    "path": "research/aris/2026-11-23.json",
+    "entries": 6,
+    "ideas_per_entry": 3,
+    "gpu_started": false,
+    "status": "written_unrun"
+  },
+  "nature_reader": {
+    "path": "docs/md/longform/2026-11/pointr-reader/paper.md",
+    "source_format": "pdf-text",
+    "source_map_parse": "verified",
+    "formula_anchors": [
+      "E001",
+      "E002",
+      "E003"
+    ],
+    "formula_index_present": true,
+    "source_blocks_with_translation": 4,
+    "missing_pages": [],
+    "low_confidence": "PDF 文字层可选；公式和表格按页定位，未发现缺页。"
+  },
+  "zotero": {
+    "status": "verified",
+    "collection": "每日精读论文/2026/11",
+    "collection_id": 26,
+    "item_key": "OMXAGO38",
+    "attachment_key": "SOQFFAA7",
+    "top_level_item_id": 1801,
+    "attachment_id": 1802,
+    "sha256": "883b9964d90c160275b19fb3a219bb6adb6701a04e82c12e6e8f70b52ee79021",
+    "storage_sha256": "883b9964d90c160275b19fb3a219bb6adb6701a04e82c12e6e8f70b52ee79021",
+    "storage_path": "C:\\Users\\华硕\\Zotero\\storage\\SOQFFAA7\\Yu et al. - 2021 - PoinTr.pdf",
+    "backup": "D:\\CV-Literature\\commen\\.work-2026-11-23\\backups\\zotero.sqlite.pre-pointr.bak",
+    "backup_sha256": "a1c2c1f5f7c88b10696e823a1b722e094a074e6a055bbb7f0719c10e2ff8e9a3",
+    "sqlite_quick_check": "ok",
+    "foreign_key_violations": 0,
+    "closed_before_backup_and_import": true
+  },
+  "files_written": [
+    "docs/md/2026-11-23.md",
+    "docs/html/2026-11-23.html",
+    "docs/md/longform/2026-11/pointr.md",
+    "docs/md/longform/2026-11/pointr-reader/paper.md",
+    "data/monthly_deep_reads/2026-11.json",
+    "data/daily_browse_notes.json",
+    "data/latest_papers.json",
+    "data/daily_deep_read.json",
+    "data/daily_longform_essays.json",
+    "data/daily_paper_notes.json",
+    "data/daily_batches/2026-11-23.json",
+    "research/selection-log/2026-11-23.json",
+    "research/aris/2026-11-23.json",
+    "research/audit/2026-11-23.json",
+    "docs/md/longform/2026-11/index.md",
+    "docs/index.html",
+    "docs/literature.md",
+    "data/feed_history.json"
+  ],
+  "validation": {
+    "gpu_started": false,
+    "browse_pdfs_downloaded": 0,
+    "json_parse": "verified",
+    "papers_exactly_six": true,
+    "ideas_exactly_eighteen": true,
+    "history_deduplication": "verified",
+    "markdown_nonempty": true,
+    "html_nonempty": true,
+    "daily_html_relative_links_verified": true,
+    "viewport_rendering": "unavailable: local browser use disabled in Work settings",
+    "zotero_hash_match": true,
+    "zotero_sqlite_quick_check": "ok",
+    "zotero_foreign_key_violations": 0
+  },
+  "git": {
+    "status": "pending_commit_push",
+    "remote": "https://github.com/coolyoji/commen.git"
+  }
+}

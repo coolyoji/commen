@@ -61,6 +61,22 @@
       "zotero_attachment_key": "DVOWU6PH",
       "pdf_verified": true,
       "pdf_sha256": "cca7e3cf43f915670fe0b82452582fffb227ad6eed95cec0a268a2107a73b2d0"
+    },
+    {
+      "date": "2026-11-23",
+      "paper_id": "arxiv:2108.08839",
+      "title": "PoinTr: Diverse Point Cloud Completion with Geometry-Aware Transformers",
+      "publication_month": "2021-08",
+      "publication_month_conference": "2021-10",
+      "read_month": "2026-11",
+      "longform": "docs/md/longform/2026-11/pointr.md",
+      "reader": "docs/md/longform/2026-11/pointr-reader/paper.md",
+      "code": "https://github.com/yuxumin/PoinTr",
+      "zotero_collection": "每日精读论文/2026/11",
+      "zotero_item_key": "OMXAGO38",
+      "zotero_attachment_key": "SOQFFAA7",
+      "pdf_verified": true,
+      "pdf_sha256": "883b9964d90c160275b19fb3a219bb6adb6701a04e82c12c1e6e8f70b52ee79021"
     }
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-23",
+  "deep_read": [
+    "arxiv:2108.08839"
+  ],
+  "browse": [
+    "arxiv:1812.02633",
+    "arxiv:1807.01622",
+    "arxiv:1904.12787",
+    "arxiv:2003.12039",
+    "arxiv:1810.00825"
+  ],
+  "status": "content_ready_zotero_verified_git_pending",
+  "files": [
+    "docs/md/2026-11-23.md",
+    "docs/html/2026-11-23.html",
+    "docs/md/longform/2026-11/pointr.md",
+    "docs/md/longform/2026-11/pointr-reader/paper.md",
+    "data/monthly_deep_reads/2026-11.json",
+    "data/daily_browse_notes.json",
+    "data/latest_papers.json",
+    "data/daily_deep_read.json",
+    "data/daily_longform_essays.json",
+    "data/daily_paper_notes.json",
+    "data/daily_batches/2026-11-23.json",
+    "research/selection-log/2026-11-23.json",
+    "research/aris/2026-11-23.json",
+    "research/audit/2026-11-23.json",
+    "docs/md/longform/2026-11/index.md",
+    "docs/index.html",
+    "docs/literature.md",
+    "data/feed_history.json"
+  ]
+}

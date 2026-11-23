@@ -1,3 +1,9 @@
+## 2026-11-23
+
+精读 **PoinTr: Diverse Point Cloud Completion with Geometry-Aware Transformers**（原始发表月份：2021-08，ICCV 2021-10）：[精读长文](md/longform/2026-11/pointr.md)、[Nature Reader](md/longform/2026-11/pointr-reader/paper.md)。PDF 已下载、导入 Zotero `每日精读论文/2026/11`，条目 `OMXAGO38`、附件 `SOQFFAA7`，下载/storage SHA-256 一致。
+
+泛读 **MIWAE、Neural Processes、Graph Matching Networks、RAFT、Set Transformer**，分别覆盖缺失数据后验、集合条件不确定性、跨图匹配、稠密时序对应和集合交互。五篇不下载 PDF；[当天页面](md/2026-11-23.md) 和 [ARIS](../research/aris/2026-11-23.json) 逐篇解释为什么可迁移到二维非模态、可见三维和完整三维 amodal，并保留反例、最小实验和证据边界。
+
 ## 2026-11-22
 
 精读 **PCN: Point Completion Network**。arXiv 首发 2018-08，正式发表于 3DV 2018-09。[精读长文](md/longform/2026-11/pcn.md) · [Nature Reader](md/longform/2026-11/pcn-reader/paper.md)

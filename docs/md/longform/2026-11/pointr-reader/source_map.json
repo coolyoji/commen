@@ -1,0 +1,84 @@
+{
+  "source": {
+    "title": "PoinTr: Diverse Point Cloud Completion with Geometry-Aware Transformers",
+    "url": "https://arxiv.org/pdf/2108.08839",
+    "source_format": "pdf-text",
+    "pages": 14
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "page": 1,
+      "location": "p.1 Abstract / Introduction",
+      "type": "text",
+      "confidence": "high",
+      "original_text": "we present a new method that reformulates point cloud completion as a set-to-set translation problem",
+      "translation": "论文把点云补全重写为集合到集合的翻译问题。"
+    },
+    {
+      "id": "S002",
+      "page": 2,
+      "location": "p.2–4 §3",
+      "type": "text",
+      "confidence": "high",
+      "original_text": "we represent the point cloud as a set of unordered groups of points with position embeddings",
+      "translation": "模型把点云表示成带位置嵌入的无序点组集合。"
+    },
+    {
+      "id": "S003",
+      "page": 4,
+      "location": "p.4–8 §3.6–4.7",
+      "type": "text",
+      "confidence": "high",
+      "original_text": "Our final objective function is the sum of these two objectives J = J0 + J1.",
+      "translation": "最终目标函数是两个 Chamfer 目标之和。"
+    },
+    {
+      "id": "S004",
+      "page": 7,
+      "location": "p.7–8 §4.6–5",
+      "type": "text",
+      "confidence": "high",
+      "original_text": "The geometry-aware block introduces the inductive bias about 3D geometric structures.",
+      "translation": "geometry-aware block 为 Transformer 引入三维几何结构归纳偏置。"
+    }
+  ],
+  "equations": [
+    {
+      "id": "E001",
+      "page": 3,
+      "type": "equation",
+      "confidence": "high",
+      "latex": "V=M_E(F),\\qquad H=M_D(Q,V)."
+    },
+    {
+      "id": "E002",
+      "page": 4,
+      "type": "equation",
+      "confidence": "high",
+      "latex": "F_i=F'_i+\\phi(q_i)."
+    },
+    {
+      "id": "E003",
+      "page": 4,
+      "type": "equation",
+      "confidence": "high",
+      "latex": "P_i=f(H_i)+c_i,\\qquad i=1,\\ldots,M."
+    }
+  ],
+  "figure_table_pages": [
+    {"page": 1, "labels": ["Fig. 1"]},
+    {"page": 3, "labels": ["Fig. 2"]},
+    {"page": 4, "labels": ["Fig. 3"]},
+    {"page": 6, "labels": ["Tables 1–2"]},
+    {"page": 7, "labels": ["Tables 3–4", "Fig. 4–6"]},
+    {"page": 8, "labels": ["Table 5"]}
+  ],
+  "glossary": [
+    "Point proxy",
+    "Geometry-aware block",
+    "Dynamic query",
+    "Set-to-set translation",
+    "Chamfer Distance"
+  ]
+}

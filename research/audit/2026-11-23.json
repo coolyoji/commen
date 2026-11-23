@@ -89,7 +89,11 @@
     "zotero_foreign_key_violations": 0
   },
   "git": {
-    "status": "pending_commit_push",
-    "remote": "https://github.com/coolyoji/commen.git"
+    "status": "pushed",
+    "commit": "09635dd",
+    "remote": "https://github.com/coolyoji/commen.git",
+    "remote_main": "09635dd",
+    "push": "success",
+    "push_command": "git -c http.version=HTTP/1.1 push origin main"
   }
 }
